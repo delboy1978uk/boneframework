@@ -12,16 +12,22 @@ class Application
 {
     private $config;
 
-    public function __construct()
-    {
-        // no construction, this is a singleton object!
-    }
-    public function __clone()
-    {
-        // no cloning mofo, this is a singleton!
-    }
+    /**
+     *  There be nay feckin wi' constructors on board this ship
+     *  There be nay copyin' o' th'ship either
+     *  This ship is a singleton!
+     */
+    public function __construct(){}
+    public function __clone(){}
 
-    public static function init(array $config)
+
+    /**
+     *  Ahoy! There nay be boardin without yer configuration
+     *
+     * @param array $config
+     * @return Application
+     */
+    public static function ahoy(array $config)
     {
         static $inst = null;
         if($inst === null)
@@ -32,7 +38,10 @@ class Application
         return $inst;
     }
 
-    public function run()
+    /**
+     *  T' the high seas! Garrr!
+     */
+    public function setSail()
     {
         die('<div style="text-align: center;"><br />&nbsp;<br /><img src="/img/skull_and_crossbones.gif" /><br />&nbsp;<br /><h1>Bone MVC</h1></h1></div>');
     }

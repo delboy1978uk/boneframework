@@ -1,6 +1,9 @@
 Bone MVC Framework
 ==================
-Quite literally the most basic framework you'll find out here!
-Just playing around. Who knows, one day it might even be usable!
+Be ye wantin an MVC framework peppered with local pirate lingo?<br />
+It be the most bare bones framework in the seven seas!<br />
+Just playin' around. Who knows, mibbes one day it might even be usable! Garr!<br />
 
-Run composer install to begin!
+Installation
+------------
+composer create-project delboy1978uk/bonemvc your/path/here dev-master
