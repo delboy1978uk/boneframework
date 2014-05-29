@@ -4,3 +4,45 @@
 [Thu May 29 14:04:30 2014] [error] [client 192.168.200.56] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to load Bone. Run `php composer.phar install` or define a ZF2_PATH environment variable.' in /home/derek/www/bone/public/index.php:10\nStack trace:\n#0 {main}\n  thrown in /home/derek/www/bone/public/index.php on line 10
 [Thu May 29 14:04:31 2014] [error] [client 192.168.200.56] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to load Bone. Run `php composer.phar install` or define a ZF2_PATH environment variable.' in /home/derek/www/bone/public/index.php:10\nStack trace:\n#0 {main}\n  thrown in /home/derek/www/bone/public/index.php on line 10
 [Thu May 29 14:04:31 2014] [error] [client 192.168.200.56] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to load Bone. Run `php composer.phar install` or define a ZF2_PATH environment variable.' in /home/derek/www/bone/public/index.php:10\nStack trace:\n#0 {main}\n  thrown in /home/derek/www/bone/public/index.php on line 10
+[Thu May 29 14:15:01 2014] [error] [client 192.168.200.56] PHP Fatal error:  Class 'Bone\\Mvc\\Application' not found in /home/derek/www/bone/public/index.php on line 35
+[Thu May 29 14:15:01 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:01 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:15:02 2014] [error] [client 192.168.200.56] PHP Fatal error:  Class 'Bone\\Mvc\\Application' not found in /home/derek/www/bone/public/index.php on line 35
+[Thu May 29 14:15:02 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:02 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:48 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:15:49 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:30 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:31 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:58 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/lib/php:/usr/local/lib/php:../:./:../Zend:../../Zend') in /home/derek/www/bone/public/index.php on line 17
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP Stack trace:
+[Thu May 29 14:17:59 2014] [error] [client 192.168.200.56] PHP   1. {main}() /home/derek/www/bone/public/index.php:0
