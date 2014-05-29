@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="1" selection-start="529" selection-end="529" vertical-scroll-proportion="-13.730769">
+            <state line="17" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.34040046">
               <folding />
             </state>
           </provider>
@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_log" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="error_log" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/error_log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.118329465">
+            <state line="6" column="0" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -321,13 +321,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="529" selection-end="529" vertical-scroll-proportion="-13.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -356,7 +349,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/error_log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.118329465">
+        <state line="6" column="0" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.34040046">
           <folding />
         </state>
       </provider>
