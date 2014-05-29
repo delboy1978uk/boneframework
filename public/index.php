@@ -8,7 +8,7 @@ chdir(dirname(__DIR__));
 
 if (!file_exists('vendor/autoload.php')) {
     throw new RuntimeException(
-        'Unable to load Bone. Run `php composer.phar install` or define a ZF2_PATH environment variable.'
+        'Unable to load Bone. Run `composer install` or `php composer.phar install`'
     );
 }
 
