@@ -11,6 +11,9 @@ namespace Bone\Mvc;
 class Application
 {
     private $registry;
+    private $router;
+    private $request;
+    private $response;
 
     /**
      *  There be nay feckin wi' constructors on board this ship
@@ -47,6 +50,9 @@ class Application
      */
     public function setSail()
     {
+        $this->router = new Router();
+        $this->request = new Request();
+        $this->response = new Response();
         die('<div style="text-align: center;"><br />&nbsp;<br /><img src="/img/skull_and_crossbones.gif" /><br />&nbsp;<br /><h1>Bone MVC</h1></h1></div>');
     }
 }
