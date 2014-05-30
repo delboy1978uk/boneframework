@@ -1,0 +1,12 @@
+<?php
+
+return array(
+    'db-adapters' => array(
+        'db' => array(
+            'host' => '127.0.0.1',
+            'database' => '',
+            'user' => '',
+            'pass' => ''
+        ),
+    ),
+);

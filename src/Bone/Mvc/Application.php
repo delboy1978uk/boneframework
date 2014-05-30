@@ -10,7 +10,7 @@
 namespace Bone\Mvc;
 class Application
 {
-    private $config;
+    private $registry;
 
     /**
      *  There be nay feckin wi' constructors on board this ship
@@ -33,7 +33,11 @@ class Application
         if($inst === null)
         {
             $inst = new Application();
-            $inst->config = $config;
+            $inst->registry = new Registry();
+            foreach($config as $key => $value)
+            {
+                $inst->registry->$key = $value;
+            }
         }
         return $inst;
     }
