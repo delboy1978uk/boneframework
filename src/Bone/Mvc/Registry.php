@@ -17,12 +17,37 @@ class Registry
      */
     private $vars = array();
 
+
+    /**
+     *  There be nay feckin wi' constructors on board this ship
+     *  There be nay copyin' o' th'ship either
+     *  This ship is a singleton!
+     */
+    public function __construct(){}
+    public function __clone(){}
+
+
+    /**
+     *  Ahoy! There nay be boardin without yer configuration
+
+     * @return Registry
+     */
+    public static function ahoy()
+    {
+        static $inst = null;
+        if($inst === null)
+        {
+            $inst = new Registry();
+        }
+        return $inst;
+    }
+
     /**
      * What would you like us t' remember for you?
      * @param $index
      * @param $value
      */
-    public function __set($index, $value)
+    public function set($index, $value)
     {
         $this->vars[$index] = $value;
     }
@@ -32,7 +57,7 @@ class Registry
      * @param $index
      * @return mixed
      */
-    public function __get($index)
+    public function get($index)
     {
         return $this->vars[$index];
     }

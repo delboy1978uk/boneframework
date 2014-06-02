@@ -9,7 +9,7 @@ class Request
      *
      * @var array
      */
-    protected $_data = array();
+    public $_data = array();
 
 
     /**
@@ -36,6 +36,14 @@ class Request
     protected $_cookie = array();
 
 
+    /**
+     * This be the uri of the address
+     *
+     * @var string
+     */
+    protected $_request_uri;
+
+
 
     /**
      *  Cap'n! Incoming vessel!
@@ -50,6 +58,7 @@ class Request
         $this->_get = array_merge($this->_get, $_GET);
         $this->_post = array_merge($this->_post, $_POST);
         $this->_cookie = array_merge($this->_cookie, $_COOKIE);
+        $this->_request_uri = $_SERVER['REQUEST_URI'];
         $this->_clean();
     }
 
@@ -139,5 +148,11 @@ class Request
         } else {
             return stripslashes($value);
         }
+    }
+
+
+    public function getURI()
+    {
+        return $this->_request_uri;
     }
 }

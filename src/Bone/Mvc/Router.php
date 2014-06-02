@@ -2,6 +2,7 @@
 
 namespace Bone\Mvc;
 
+
 class Router
 {
     private $controller;
@@ -13,11 +14,11 @@ class Router
 
     /**
      *  We be needin' t' look at th' map
-     *  @param $route
+     *  @param Request $request
      */
-    public function __construct($route)
+    public function __construct(Request $request)
     {
-        $this->route = $route;
+        $this->route = $request->getURI();
         $this->controller = 'Controller';
         $this->action = 'index';
         $this->params = array();
@@ -31,10 +32,15 @@ class Router
         // Has th'route been set?
         if (isset($this->route))
         {
-            // which way be we goin' ?www
+            // which way be we goin' ?
             $path = $this->route;
 
-            // voodoo black magic spells
+            // we be checkin' our treasure map lookin' fer a route
+            $routes = Registry::ahoy()->get('routes');
+            // die(print_r($routes));
+
+
+            // feckin' voodoo black magic spells
             $cai =  '/^([\w]+)\/([\w]+)\/([\d]+).*$/';  //  controller/action/id
             $ci =   '/^([\w]+)\/([\d]+).*$/';           //  controller/id
             $ca =   '/^([\w]+)\/([\w]+).*$/';           //  controller/action
@@ -118,4 +124,45 @@ class Router
             $this->_params = array($this->_params);
         }
     }
+
+
+
+    public function dispatch()
+    {
+        $this->parseRoute();
+//        $controllerName = $this->_controller;
+//        $model = $this->_controller.'Model';
+//        $model = class_exists($model) ? $model : 'Model';
+//        $this->_controller .= 'Controller';
+//        $this->_controller = class_exists($this->_controller) ? $this->_controller : 'Controller';
+//        $dispatch = new $this->_controller($model, $controllerName, $this->_action);
+//        $hasActionFunction = (int)method_exists($this->_controller, $this->_action);
+//
+//        // we need to reference the parameters to a correct order in order to match the arguments order
+//        // of the calling function
+//        $c = new ReflectionClass($this->_controller);
+//        $m = $hasActionFunction ? $this->_action : 'defaultAction';
+//        $f = $c->getMethod($m);
+//        $p = $f->getParameters();
+//        $params_new = array();
+//        $params_old = $this->_params;
+//        // re-map the parameters
+//        for($i = 0; $i<count($p);$i++){
+//            $key = $p[$i]->getName();
+//            if(array_key_exists($key,$params_old)){
+//                $params_new[$i] = $params_old[$key];
+//                unset($params_old[$key]);
+//            }
+//        }
+//        // after reorder, merge the leftovers
+//        $params_new = array_merge($params_new, $params_old);
+//        // call the action method
+//        $this->_view = call_user_func_array(array($dispatch, $m), $params_new);
+//        // finally, we print it out
+//        if($this->_view){
+//            echo $this->_view;
+//        }
+        return new Response();
+    }
+
 }

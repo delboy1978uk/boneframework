@@ -38,10 +38,10 @@ class Application
         if($inst === null)
         {
             $inst = new Application();
-            $inst->registry = new Registry();
+            $inst->registry = Registry::ahoy();
             foreach($config as $key => $value)
             {
-                $inst->registry->$key = $value;
+                $inst->registry->set($key,$value);
             }
         }
         return $inst;
@@ -53,10 +53,9 @@ class Application
     public function setSail()
     {
         $this->request = new Request();
-//        $this->router = new Router();
-
-        $this->response = new Response();
-        die('<div style="text-align: center;"><br />&nbsp;<br /><img src="/img/skull_and_crossbones.gif" /><br />&nbsp;<br /><h1>Bone MVC</h1></h1></div>');
+        $this->router = new Router($this->request);
+        $response =  $this->router->dispatch();
+        echo $response->send();
     }
 
 

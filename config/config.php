@@ -12,9 +12,12 @@ return array(
         '/' => array(
             'controller' => 'index',
             'action' => 'index',
-            'params' => array(
-
-            ),
+            'params' => array(),
+        ),
+        '/error' => array(
+            'controller' => 'error',
+            'action' => 'index',
+            'params' => array(),
         ),
     ),
     'db-adapters' => array(
