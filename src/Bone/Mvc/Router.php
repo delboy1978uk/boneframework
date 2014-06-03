@@ -2,7 +2,6 @@
 
 namespace Bone\Mvc;
 
-
 class Router
 {
     private $controller;
@@ -45,16 +44,42 @@ class Router
             // check fer a match from the configgered routes?
             foreach($routes as $route => $options)
             {
-                if (preg_match($replace, $route, $matches))
+                //check fer optional variables in th' uri
+                $opts = '/\[\/:(\w+)\]/';
+                if (preg_match($opts, $route, $matches))
                 {
                     foreach($matches as $match)
                     {
-                        // turn the :variable part o' th' route int' some black magic voodoo regex
-                        $replace_array[] = str_replace(':'.$match,$replace,$route);
+                        $alt_route = str_replace($match,'',$route);
+                        // copy th' route
+                        $array = array(
+                            'controller' => $options['controller'],
+                            'action' => $options['action'],
+                            'params' => $options['params'],
+                        );
+                        array_push($routes[$alt_route],$array);
                     }
                 }
+//                foreach($routes as $key => $val)
+//                {
+//                    echo print_r($key).'<br />&nbsp;&nbsp;'.print_r($val).'<br />';
+//                }
+//                die();
+//                if (preg_match($replace, $route, $matches))
+//                {
+//                    foreach($matches as $match)
+//                    {
+//                        // turn the :variable part o' th' route int' some black magic voodoo regex
+//                        $check = str_replace(':'.$match,$replace,$route);
+//                        $replace_array[] = $check;
+//                    }
+//                }
             }
-            
+            echo '<hr />';
+            foreach($replace_array as $p)
+            {
+                echo $p.'<br />';
+            }
 
 
 
