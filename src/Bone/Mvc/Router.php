@@ -88,7 +88,7 @@ class Router
             }
 
 
-            die(var_dump($route_check));
+//            die(var_dump($route_check));
 //                foreach($routes as $key => $val)
 //                {
 //                    echo print_r($key).'<br />&nbsp;&nbsp;'.print_r($val).'<br />';
