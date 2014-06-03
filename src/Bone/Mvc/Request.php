@@ -63,12 +63,11 @@ class Request
     }
 
 
-
     /**
-     *  We be setting arrays here by key
+     * We be setting arrays here by key
      *
-     * @param string $key
-     * @param mixed $value
+     * @param $key
+     * @param $value
      */
     public function set($key, $value)
     {

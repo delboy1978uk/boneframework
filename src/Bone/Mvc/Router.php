@@ -37,26 +37,49 @@ class Router
 
             // we be checkin' our treasure map lookin' fer a route
             $routes = Registry::ahoy()->get('routes');
-            // die(print_r($routes));
+
+            // look fer a feckin colon :variable in the defined route
+            $replace = '/:(\w+)/';
+            $replace_array = array();
+
+            // check fer a match from the configgered routes?
+            foreach($routes as $route => $options)
+            {
+                if (preg_match($replace, $route, $matches))
+                {
+                    foreach($matches as $match)
+                    {
+                        // turn the :variable part o' th' route int' some black magic voodoo regex
+                        $replace_array[] = str_replace(':'.$match,$replace,$route);
+                    }
+                }
+            }
+            
+
 
 
             // feckin' voodoo black magic spells
-            $cai =  '/^([\w]+)\/([\w]+)\/([\d]+).*$/';  //  controller/action/id
-            $ci =   '/^([\w]+)\/([\d]+).*$/';           //  controller/id
-            $ca =   '/^([\w]+)\/([\w]+).*$/';           //  controller/action
-            $c =    '/^([\w]+).*$/';                    //  action
-            $i =    '/^([\d]+).*$/';                    //  id
+            // default t' either /controller/action/var/val/var/val/etc
+            $cavvv = '/^\/(?<controller>[^\/]+)\/(?<action>[^\/]+)\/(?<varvalpairs>(?:[^\/]+\/[^\/]+\/?)*)/';
+            // or /controller/action/id
+            $cai =  '/^([\w]+)\/([\w]+)\/([\d]+).*$/';
 
             // we be listin' the matches in an array
             $matches = array();
 
             // default t't' index controller
             if (empty($path)){$this->controller = 'index'; $this->action = 'index';}
-            else if (preg_match($cai, $path, $matches)){$this->controller = $matches[1];$this->action = $matches[2];$id = $matches[3];}
-            else if (preg_match($ci, $path, $matches)){$this->controller = $matches[1];$id = $matches[2];}
-            else if (preg_match($ca, $path, $matches)){$this->controller = $matches[1];$this->action = $matches[2];}
-            else if (preg_match($c, $path, $matches)){$this->controller = $matches[1];$this->action = 'index';}
-            else if (preg_match($i, $path, $matches)){$id = $matches[1];}
+            elseif (preg_match($cavvv, $path, $matches))
+            {
+                die(var_dump($matches));
+                $this->controller = $matches[1];$this->action = $matches[2];$id = $matches[3];
+            }
+            elseif (preg_match($cai, $path, $matches))
+            {
+                $this->controller = $matches[1];
+                $this->action = $matches[2];
+                $id = $matches[3];
+            }
 
             // get query string from url
             $query = array();
@@ -88,7 +111,7 @@ class Router
                 // we need to remove _route in the $_GET params
                 unset($_GET['_route']);
                 // merege the params
-                $this->_params = array_merge($this->_params, $_GET);
+                $this->params = array_merge($this->params, $_GET);
                 break;
             case "POST": // create
             case "PUT":  // update
@@ -97,9 +120,12 @@ class Router
                 // ignore the file upload
                 if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
                 {
-                    if($method == "POST"){
-                        $this->_params = array_merge($this->_params, $_POST);
-                    }else{
+                    if($method == "POST")
+                    {
+                        $this->_params = array_merge($this->params, $_POST);
+                    }
+                    else
+                    {
                         // temp params
                         $p = array();
                         // the request payload
@@ -109,7 +135,7 @@ class Router
                         // if we have data field
                         $p = json_decode($content, true);
                         // merge the data to existing params
-                        $this->_params = array_merge($this->_params, $p);
+                        $this->params = array_merge($this->params, $p);
                     }
                 }
             }
@@ -117,11 +143,11 @@ class Router
         }
         // set param id to the id we have
         if(!empty($id)){
-            $this->_params['id']=$id;
+            $this->params['id']=$id;
         }
 
-        if($this->_controller == 'index'){
-            $this->_params = array($this->_params);
+        if($this->controller == 'index'){
+            $this->params = array($this->params);
         }
     }
 

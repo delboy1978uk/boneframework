@@ -5,7 +5,7 @@ namespace Bone\Mvc;
 
 /**
  * Ahoy there! This here class will store all o' t' configuration
- * variables we have for our appication
+ * variables we have for our app'ication
  * Class Registry
  * @package Bone\Mvc
  */
@@ -28,7 +28,7 @@ class Registry
 
 
     /**
-     *  Ahoy! There nay be boardin without yer configuration
+     *  Ahoy! There nay be boardin' without yer configuration
 
      * @return Registry
      */

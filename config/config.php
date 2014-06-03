@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Derek.mclean
- * Date: 29/05/14
- * Time: 14:02
- * To change this template use File | Settings | File Templates.
- */
 
+/**
+ *  We be feckin' around with t'configuration
+ */
 return array(
     'routes' => array(
         '/' => array(
@@ -16,6 +12,21 @@ return array(
         ),
         '/error' => array(
             'controller' => 'error',
+            'action' => 'index',
+            'params' => array(),
+        ),
+        '/mandatory/:id' => array(
+            'controller' => 'index',
+            'action' => 'index',
+            'params' => array(),
+        ),
+        '/optional[/:id]' => array(
+            'controller' => 'index',
+            'action' => 'index',
+            'params' => array(),
+        ),
+        '/both/:mandatory[/:optional]' => array(
+            'controller' => 'index',
             'action' => 'index',
             'params' => array(),
         ),
