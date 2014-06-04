@@ -17,7 +17,7 @@ return array(
         ),
         '/swashbuckling/:id' => array(
             'controller' => 'events',
-            'action' => 'index',
+            'action' => 'view',
             'params' => array(
                 'time' => time(),
                 'mandatory_param_regex' => \Bone\Regex\Url::URL_MANDATORY_PARAM
