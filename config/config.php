@@ -15,10 +15,13 @@ return array(
             'action' => 'index',
             'params' => array(),
         ),
-        '/mandatory/:id' => array(
-            'controller' => 'index',
+        '/swashbuckling/:id' => array(
+            'controller' => 'events',
             'action' => 'index',
-            'params' => array(),
+            'params' => array(
+                'time' => time(),
+                'mandatory_param_regex' => \Bone\Regex\Url::URL_MANDATORY_PARAM
+            ),
         ),
         '/optional[/:id]' => array(
             'controller' => 'index',

@@ -60,7 +60,6 @@ class Router
                     $this->controller = $route->getControllerName();
                     $this->action = $route->getActionName();
                     $this->params = $route->getParams();
-                    echo('Array merge Params!<br />');
                 }
             }
             if(!$match)
