@@ -50,6 +50,13 @@ class Route
     private $matched_uri_parts;
 
 
+
+
+
+
+
+
+
     /**
      * The key an' value from th' configgerashun
      *
@@ -124,6 +131,18 @@ class Route
     }
 
 
+
+
+
+
+
+
+    /**
+     * checks t' see if th' uri matches the regex routes
+     *
+     * @param $uri
+     * @return bool
+     */
     public function checkRoute($uri)
     {
         // is the uri the same?
@@ -145,8 +164,19 @@ class Route
         return false;
     }
 
+
+
+
+
+
+
+
+
+
+
+
     /**
-     * th' patterns the route wants to match
+     * th' patterns the route wants t' match
      *
      * @return array
      */
@@ -155,15 +185,36 @@ class Route
         return $this->strings;
     }
 
+
+
+
+
+
+
+
+
     public function getControllerName()
     {
         return $this->config['controller'];
     }
 
+
+
+
+
+
+
     public function getActionName()
     {
         return $this->config['action'];
     }
+
+
+
+
+
+
+
 
     public function getParams()
     {

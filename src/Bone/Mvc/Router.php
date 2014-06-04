@@ -72,6 +72,7 @@ class Router
                 $regex = new Regex(Regex\Url::CONTROLLER_ACTION_VARS);
                 if($matches = $regex->getMatches($this->uri))
                 {
+                    $match = true;
                     $this->controller = $matches['controller'];
                     $this->action = $matches['action'];
                     $ex = explode('/',$matches['varvalpairs']);
@@ -79,6 +80,26 @@ class Router
                     {
                         $this->params[$ex[$x]] = $ex[$x+1];
                     }
+                }
+                if(!$match)
+                {
+                    $regex = new Regex(Regex\Url::CONTROLLER_ACTION);
+                    if($matches = $regex->getMatches($this->uri))
+                    {
+                        $match = true;
+                        $this->controller = $matches['controller'];
+                        $this->action = $matches['action'];
+                        $ex = explode('/',$matches['varvalpairs']);
+                        for($x = 0; $x <= count($ex)-1 ; $x += 2)
+                        {
+                            $this->params[$ex[$x]] = $ex[$x+1];
+                        }
+                    }
+                }
+                if(!$match)
+                {
+                    $this->controller = 'error';
+                    $this->action = 'not-found';
                 }
             }
             echo $this->uri.'<br />';
