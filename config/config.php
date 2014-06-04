@@ -25,7 +25,7 @@ return array(
             'action' => 'index',
             'params' => array(),
         ),
-        '/both/:mandatory[/:optional]' => array(
+        '/both/:mandatory/:and[/:optional]' => array(
             'controller' => 'index',
             'action' => 'index',
             'params' => array(),

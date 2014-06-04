@@ -1,14 +1,15 @@
 <?php
 
 namespace Bone\Mvc;
+use Bone\Mvc\Router\Route;
+use Bone\Regex;
 
 class Router
 {
     private $controller;
     private $action;
-    private $view;
     private $params;
-    private $route;
+    private $routes;
 
 
     /**
@@ -17,123 +18,75 @@ class Router
      */
     public function __construct(Request $request)
     {
-        $this->route = $request->getURI();
-        $this->controller = 'Controller';
+        $this->uri = $request->getURI();
+        $this->controller = 'index';
         $this->action = 'index';
         $this->params = array();
-        $this->view = false;
+        $this->routes = array();
     }
 
 
-
+    /**
+     *  Figger out where we be goin'
+     */
     private function parseRoute()
     {
+        // which way be we goin' ?
+        $path = $this->uri;
+
         // Has th'route been set?
-        if (isset($this->route))
+        if (isset($path) && $path != '/')
         {
-            // which way be we goin' ?
-            $path = $this->route;
 
-            // we be checkin' our treasure map lookin' fer a route
-            $routes = Registry::ahoy()->get('routes');
 
-            // look fer feckin colon :variables in the defined route
-            $mandatory_param = '/(\/:\w+)/';
-            $optional_param = '/(\[\/:\w+\])/';
-            $route_check = array();
+            // we be checkin' our instruction fer configgered routes
+            $configgeration = Registry::ahoy()->get('routes');
 
-            // check fer a match from the configgered routes?
-            $x = 0;
-            foreach($routes as $route => $options)
+            // stick some voodoo pins in the map
+            foreach($configgeration as $route => $options)
             {
-                $route_check[$x] = array();
-                $route_check[$x]['route'] = $route;
-                $route_check[$x]['params'] = array(
-                    'controller' => $options['controller'],
-                    'action' => $options['action'],
-                    'params' => $options['params'],
-                );
-                if(!strstr($route,':'))
-                {
-                    $route_check[$x]['matches'] = array($route);
-                }
-
-                //check fer optional variables in th' uri
-                if (preg_match($optional_param, $route, $matches))
-                {
-                    foreach($matches as $match)
-                    {
-                        $route_check[$x]['matches'][] = str_replace($match,'',$route);
-                    }
-                    // now check fer optional
-                    foreach($matches as $match)
-                    {
-                        $route_check[$x]['matches'][] = str_replace($match,$optional_param,$route);
-                    }
-                }
-
-                //check fer mandatory variables in th' uri
-                if (preg_match($mandatory_param, $route, $matches))
-                {
-                    foreach($matches as $match)
-                    {
-                        $r = str_replace($match,$optional_param,$route);
-                        if(strstr($match,':'))
-                        {
-                            $route_check[$x]['matches'][] = $r;
-                        }
-                    }
-                }
-                $x ++;
+                // add the route t' the map
+                $this->routes[] = new Route($route,$options);
             }
 
+            // try an' match each route with th' uri
+            $match = false;
+            /** @var \Bone\Mvc\Router\Route $route */
+            foreach($this->routes as $route)
+            {
+                if($route->getRegexStrings()[0] != '\/' && $matches = $route->checkRoute($this->uri))
+                {
+                    $match = true;
+                    $this->controller = $route->getControllerName();
+                    $this->action = $route->getActionName();
+                    $this->params = $route->getParams();
+                    echo('Array merge Params!<br />');
+                }
+            }
+            if(!$match)
+            {
+                /**
+                 * not a configgered route then
+                 * probably a standard controller/action/var/val/etc route then?
+                 */
+                $regex = new Regex(Regex\Url::CONTROLLER_ACTION_VARS);
+                if($matches = $regex->getMatches($this->uri))
+                {
+                    $this->controller = $matches['controller'];
+                    $this->action = $matches['action'];
+                    $ex = explode('/',$matches['varvalpairs']);
+                    for($x = 0; $x <= count($ex)-1 ; $x += 2)
+                    {
+                        $this->params[$ex[$x]] = $ex[$x+1];
+                    }
+                }
+            }
+            echo $this->uri.'<br />';
+            echo $this->controller.' controller and '.$this->action.' action.<br />';
+            echo 'Params:';
+            var_dump($this->params);
 
-//            die(var_dump($route_check));
-//                foreach($routes as $key => $val)
-//                {
-//                    echo print_r($key).'<br />&nbsp;&nbsp;'.print_r($val).'<br />';
-//                }
-//                die();
-//                if (preg_match($replace, $route, $matches))
-//                {
-//                    foreach($matches as $match)
-//                    {
-//                        // turn the :variable part o' th' route int' some black magic voodoo regex
-//                        $check = str_replace(':'.$match,$replace,$route);
-//                        $replace_array[] = $check;
-//                    }
-//                }
-//            }
-//            echo '<hr />';
-//
-//
-//
-//            // feckin' voodoo black magic spells
-//            // default t' either /controller/action/var/val/var/val/etc
-//            $cavvv = '/^\/(?<controller>[^\/]+)\/(?<action>[^\/]+)\/(?<varvalpairs>(?:[^\/]+\/[^\/]+\/?)*)/';
-//            // or /controller/action/id
-//            $cai =  '/^([\w]+)\/([\w]+)\/([\d]+).*$/';
-//
-//            // we be listin' the matches in an array
-//            $matches = array();
-//
-//            // default t't' index controller
-//            if (empty($path)){$this->controller = 'index'; $this->action = 'index';}
-//            elseif (preg_match($cavvv, $path, $matches))
-//            {
-//                die(var_dump($matches));
-//                $this->controller = $matches[1];$this->action = $matches[2];$id = $matches[3];
-//            }
-//            elseif (preg_match($cai, $path, $matches))
-//            {
-//                $this->controller = $matches[1];
-//                $this->action = $matches[2];
-//                $id = $matches[3];
-//            }
-//
-//            // get query string from url
-//            $query = array();
-//            $parse = parse_url($path);
+
 //
 //            // if we have query string
 //            if(!empty($parse['query']))
