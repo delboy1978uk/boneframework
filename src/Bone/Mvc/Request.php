@@ -43,6 +43,10 @@ class Request
      */
     protected $_request_uri;
 
+    private $controller;
+    private $actions;
+    private $params;
+
 
 
     /**
@@ -154,4 +158,45 @@ class Request
     {
         return $this->_request_uri;
     }
+
+
+    public function getGET()
+    {
+        return $this->_get;
+    }
+
+    public function setActions($actions)
+    {
+        $this->actions = $actions;
+        return $this;
+    }
+
+    public function getActions()
+    {
+        return $this->actions;
+    }
+
+    public function setController($controller)
+    {
+        $this->controller = $controller;
+        return $this;
+    }
+
+    public function getController()
+    {
+        return $this->controller;
+    }
+
+    public function setParams($params)
+    {
+        $this->params = $params;
+        return $this;
+    }
+
+    public function getParams()
+    {
+        return $this->params;
+    }
+
+
 }

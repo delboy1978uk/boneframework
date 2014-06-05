@@ -6,6 +6,7 @@ use Bone\Regex;
 
 class Router
 {
+    private $request;
     private $controller;
     private $action;
     private $params;
@@ -18,6 +19,7 @@ class Router
      */
     public function __construct(Request $request)
     {
+        $this->request = $request;
         $this->uri = $request->getURI();
         $this->controller = 'index';
         $this->action = 'index';
@@ -71,6 +73,8 @@ class Router
                 $regex = new Regex(Regex\Url::CONTROLLER_ACTION_VARS);
                 if($matches = $regex->getMatches($this->uri))
                 {
+                    // we have a controller action var val match Cap'n!
+                    // settin' the destination controller and action and params
                     $match = true;
                     $this->controller = $matches['controller'];
                     $this->action = $matches['action'];
@@ -85,85 +89,88 @@ class Router
                     $regex = new Regex(Regex\Url::CONTROLLER_ACTION);
                     if($matches = $regex->getMatches($this->uri))
                     {
+                        // we have a controller action match Cap'n!
+                        // settin' the destination controller and action and params
                         $match = true;
                         $this->controller = $matches['controller'];
                         $this->action = $matches['action'];
                         $ex = explode('/',$matches['varvalpairs']);
-                        for($x = 0; $x <= count($ex)-1 ; $x += 2)
-                        {
-                            $this->params[$ex[$x]] = $ex[$x+1];
-                        }
                     }
                 }
                 if(!$match)
                 {
+                    // theres nay route that matches cap'n
+                    // settin' the destination controller and action and params
                     $this->controller = 'error';
                     $this->action = 'not-found';
                 }
             }
+
+            // get query string from url
+            $query = array();
+            $parse = parse_url($path);
+
+
+            // be there a query string?
+            if(!empty($parse['query']))
+            {
+                // parse query string
+                parse_str($parse['query'], $query);
+                // if query paramater is parsed
+                if(!empty($query)){
+                    // merge the query parameters to $_GET variables
+                    $_GET = array_merge($_GET, $query);
+                    // merge the query parameters to $_REQUEST variables
+                    $_REQUEST = array_merge($_REQUEST, $query);
+                }
+            }
+
+
+
             echo $this->uri.'<br />';
             echo $this->controller.' controller and '.$this->action.' action.<br />';
             echo 'Params:';
             var_dump($this->params);
 
+            // what type o' request is the request sendin' ?
+            $method = $_SERVER["REQUEST_METHOD"];
 
-//
-//            // if we have query string
-//            if(!empty($parse['query']))
-//            {
-//                // parse query string
-//                parse_str($parse['query'], $query);
-//
-//                // if query paramater is parsed
-//                if(!empty($query))
-//                {
-//                    // merge the query parameters to $_GET variables
-//                    $_GET = array_merge($_GET, $query);
-//
-//                    // merge the query parameters to $_REQUEST variables
-//                    $_REQUEST = array_merge($_REQUEST, $query);
-//                }
-//            }
-//        }
-//        // gets the request method
-//        $method = $_SERVER["REQUEST_METHOD"];
-//
-//        // assign params by methods
-//        switch($method){
-//            case "GET": // view
-//                // we need to remove _route in the $_GET params
-//                unset($_GET['_route']);
-//                // merege the params
-//                $this->params = array_merge($this->params, $_GET);
-//                break;
-//            case "POST": // create
-//            case "PUT":  // update
-//            case "DELETE": // delete
-//            {
-//                // ignore the file upload
-//                if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
-//                {
-//                    if($method == "POST")
-//                    {
-//                        $this->_params = array_merge($this->params, $_POST);
-//                    }
-//                    else
-//                    {
-//                        // temp params
-//                        $p = array();
-//                        // the request payload
-//                        $content = file_get_contents("php://input");
-//                        // parse the content string to check we have [data] field or not
-//                        parse_str($content, $p);
-//                        // if we have data field
-//                        $p = json_decode($content, true);
-//                        // merge the data to existing params
-//                        $this->params = array_merge($this->params, $p);
-//                    }
-//                }
-//            }
-//                break;
-//        }
+        // assign params by methods
+        switch($method){
+            case "GET": // view
+                // we need to remove _route in the $_GET params
+                unset($_GET['_route']);
+                // merege the params
+                $this->params = array_merge($this->params, $_GET);
+                break;
+            case "POST": // create
+            case "PUT":  // update
+            case "DELETE": // delete
+            {
+                // ignore the file upload
+                if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
+                {
+                    if($method == "POST")
+                    {
+                        $this->_params = array_merge($this->params, $_POST);
+                    }
+                    else
+                    {
+                        // temp params
+                        $p = array();
+                        // the request payload
+                        $content = file_get_contents("php://input");
+                        // parse the content string to check we have [data] field or not
+                        parse_str($content, $p);
+                        // if we have data field
+                        $p = json_decode($content, true);
+                        // merge the data to existing params
+                        $this->params = array_merge($this->params, $p);
+                    }
+                }
+            }
+                break;
+        }
 //        // set param id to the id we have
 //        if(!empty($id)){
 //            $this->params['id']=$id;
