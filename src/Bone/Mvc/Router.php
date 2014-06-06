@@ -42,7 +42,7 @@ class Router
         $path = $this->uri;
 
         // Has th'route been set?
-        if (isset($path) && $path != '/')
+        if ($path != '/')
         {
             // we be checkin' our instruction fer configgered routes
             $configgeration = Registry::ahoy()->get('routes');
@@ -132,12 +132,18 @@ class Router
                 $this->params = array_merge($this->params, $this->request->getPost());
             }
             $this->params = array_merge($this->params, $this->request->getGet());
-
-            echo $this->uri.'<br />';
-            echo $this->controller.' controller and '.$this->action.' action.<br />';
-            echo 'Params:';
-            var_dump($this->params);
         }
+        else
+        {
+            //it be the home page
+            $home_page = Registry::ahoy()->get('routes')['/'];
+            $this->controller = $home_page['controller'];
+            $this->action = $this->
+        }
+        echo $this->uri.'<br />';
+        echo $this->controller.' controller and '.$this->action.' action.<br />';
+        echo 'Params:';
+        var_dump($this->params);
     }
 
 
@@ -154,7 +160,7 @@ class Router
         {
             $controller = '\App\Controller\ErrorController';
             $action = 'errorAction';
-//            $dispatch = new $controller($this->request);
+            $dispatch = new $controller($this->request);
         }
         else
         {
@@ -163,11 +169,11 @@ class Router
             {
                 $controller = 'ErrorController';
                 $this->action = 'errorAction';
-//                $dispatch = new $controller($this->request);
+                $dispatch = new $controller($this->request);
             }
         }
 
-//        $result = $dispatch->$action();
+        $result = $dispatch->$action();
 
         return new Response();
     }
