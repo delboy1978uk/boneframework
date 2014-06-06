@@ -25,6 +25,11 @@ class Router
         $this->action = 'index';
         $this->params = array();
         $this->routes = array();
+
+        // get th' path 'n' query string from url
+        $parse = parse_url($this->uri);
+        $this->uri = $parse['path'];
+
     }
 
 
@@ -39,8 +44,6 @@ class Router
         // Has th'route been set?
         if (isset($path) && $path != '/')
         {
-
-
             // we be checkin' our instruction fer configgered routes
             $configgeration = Registry::ahoy()->get('routes');
 
@@ -56,6 +59,7 @@ class Router
             /** @var \Bone\Mvc\Router\Route $route */
             foreach($this->routes as $route)
             {
+                // if the regex ain't for the home page an' it matches our route
                 if($route->getRegexStrings()[0] != '\/' && $matches = $route->checkRoute($this->uri))
                 {
                     $match = true;
@@ -94,7 +98,6 @@ class Router
                         $match = true;
                         $this->controller = $matches['controller'];
                         $this->action = $matches['action'];
-                        $ex = explode('/',$matches['varvalpairs']);
                     }
                 }
                 if(!$match)
@@ -106,26 +109,8 @@ class Router
                 }
             }
 
-            // get query string from url
-            $query = array();
-            $parse = parse_url($path);
-
-
-            // be there a query string?
-            if(!empty($parse['query']))
-            {
-                // parse query string
-                parse_str($parse['query'], $query);
-                // if query paramater is parsed
-                if(!empty($query)){
-                    // merge the query parameters to $_GET variables
-                    $_GET = array_merge($_GET, $query);
-                    // merge the query parameters to $_REQUEST variables
-                    $_REQUEST = array_merge($_REQUEST, $query);
-                }
-            }
-
-
+            //merge config file options an' query strings int' t' params
+            $this->params = array_merge($this->params, $this->request->getGET());
 
             echo $this->uri.'<br />';
             echo $this->controller.' controller and '.$this->action.' action.<br />';
@@ -133,51 +118,39 @@ class Router
             var_dump($this->params);
 
             // what type o' request is the request sendin' ?
-            $method = $_SERVER["REQUEST_METHOD"];
+            $method = $this->request->getMethod();
 
-        // assign params by methods
-        switch($method){
-            case "GET": // view
-                // we need to remove _route in the $_GET params
-                unset($_GET['_route']);
-                // merege the params
-                $this->params = array_merge($this->params, $_GET);
-                break;
-            case "POST": // create
-            case "PUT":  // update
-            case "DELETE": // delete
+            // assign params by methods
+            switch($method)
             {
-                // ignore the file upload
-                if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
+                case "GET": // view
+                    $this->params = array_merge($this->params, $this->request->getGET());
+                    break;
+                case "POST": // create
+                case "PUT":  // update
+                case "DELETE": // delete
                 {
-                    if($method == "POST")
+                    // ignore the file upload
+                    if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
                     {
-                        $this->_params = array_merge($this->params, $_POST);
-                    }
-                    else
-                    {
-                        // temp params
-                        $p = array();
-                        // the request payload
-                        $content = file_get_contents("php://input");
-                        // parse the content string to check we have [data] field or not
-                        parse_str($content, $p);
-                        // if we have data field
-                        $p = json_decode($content, true);
-                        // merge the data to existing params
-                        $this->params = array_merge($this->params, $p);
+                        if($method == "POST")
+                        {
+                            $this->_params = array_merge($this->params, $this->request->getPost());
+                            $this->_params = array_merge($this->params, $this->request->getGet());
+                        }
+                        else
+                        {
+                            // temp params
+                            $p = array();
+                            $content = file_get_contents("php://input");
+                            parse_str($content, $p);
+                            $p = json_decode($content, true);
+                            $this->params = array_merge($this->params, $p);
+                        }
                     }
                 }
-            }
                 break;
-        }
-//        // set param id to the id we have
-//        if(!empty($id)){
-//            $this->params['id']=$id;
-//        }
-//
-//        if($this->controller == 'index'){
-//            $this->params = array($this->params);
+            }
         }
     }
 

@@ -44,7 +44,7 @@ class Request
     protected $_request_uri;
 
     private $controller;
-    private $actions;
+    private $action;
     private $params;
 
 
@@ -153,50 +153,95 @@ class Request
         }
     }
 
-
+    /**
+     *  Where th' feck are we?
+     *
+     * @return string
+     */
     public function getURI()
     {
         return $this->_request_uri;
     }
 
-
+    /**
+     *  We be wantin' the GET variables
+     * @return array
+     */
     public function getGET()
     {
         return $this->_get;
     }
 
-    public function setActions($actions)
+    /**
+     *  Set the action name
+     * @param $action
+     * @return $this
+     */
+    public function setAction($action)
     {
-        $this->actions = $actions;
+        $this->action = $action;
         return $this;
     }
 
-    public function getActions()
+    /**
+     * Give us the action name ya scurvy seadog
+     */
+    public function getAction()
     {
-        return $this->actions;
+        return $this->action;
     }
 
+
+    /**
+     * set the controls for th' heart of the sun
+     *
+     * @param $controller
+     * @return $this
+     */
     public function setController($controller)
     {
         $this->controller = $controller;
         return $this;
     }
 
+
+    /**
+     *   What be the controller we have?
+     */
     public function getController()
     {
         return $this->controller;
     }
 
+
+    /**
+     * set the params
+     * @param $params
+     * @return $this
+     */
     public function setParams($params)
     {
         $this->params = $params;
         return $this;
     }
 
+
+    /**
+     * give us the params
+     */
     public function getParams()
     {
         return $this->params;
     }
 
 
+
+    /**
+     * What type o' request be we havin' here?
+     * @return mixed
+     */
+    public function getMethod()
+    {
+        return $_SERVER["REQUEST_METHOD"];
+    }
 }
