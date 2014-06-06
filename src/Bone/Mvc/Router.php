@@ -109,13 +109,7 @@ class Router
                 }
             }
 
-            //merge config file options an' query strings int' t' params
-            $this->params = array_merge($this->params, $this->request->getGET());
 
-            echo $this->uri.'<br />';
-            echo $this->controller.' controller and '.$this->action.' action.<br />';
-            echo 'Params:';
-            var_dump($this->params);
 
             // what type o' request is the request sendin' ?
             $method = $this->request->getMethod();
@@ -124,7 +118,7 @@ class Router
             switch($method)
             {
                 case "GET": // view
-                    $this->params = array_merge($this->params, $this->request->getGET());
+                    $this->params = array_merge($this->params, $this->request->getGet());
                     break;
                 case "POST": // create
                 case "PUT":  // update
@@ -151,6 +145,10 @@ class Router
                 }
                 break;
             }
+            echo $this->uri.'<br />';
+            echo $this->controller.' controller and '.$this->action.' action.<br />';
+            echo 'Params:';
+            var_dump($this->params);
         }
     }
 
@@ -159,11 +157,29 @@ class Router
     public function dispatch()
     {
         $this->parseRoute();
-//        $controllerName = $this->_controller;
-//        $model = $this->_controller.'Model';
-//        $model = class_exists($model) ? $model : 'Model';
-//        $this->_controller .= 'Controller';
-//        $this->_controller = class_exists($this->_controller) ? $this->_controller : 'Controller';
+        $controller = ucwords($this->controller).'Controller';
+        if(!class_exists($controller))
+        {
+            $this->controller ='ErrorController';
+            $this->action = 'errorAction';
+        }
+        else
+        {
+            $dispatch = new $this->controller;
+            if(!method_exists($dispatch,$this->action)
+            {
+                $this->controller = 'ErrorController';
+                $this->action = 'errorAction';
+                $dispatch = new $this->controller;
+            }
+
+        }
+
+
+        $this->request->setController($controller);
+        $this->request->setAction($this->action);
+        $this->request->setParams($this->params);
+
 //        $dispatch = new $this->_controller($model, $controllerName, $this->_action);
 //        $hasActionFunction = (int)method_exists($this->_controller, $this->_action);
 //

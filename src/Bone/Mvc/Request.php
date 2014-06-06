@@ -167,10 +167,21 @@ class Request
      *  We be wantin' the GET variables
      * @return array
      */
-    public function getGET()
+    public function getGet()
     {
         return $this->_get;
     }
+
+
+    /**
+     *  We be wantin' the POST variables
+     * @return array
+     */
+    public function getPost()
+    {
+        return $this->_post;
+    }
+
 
     /**
      *  Set the action name
