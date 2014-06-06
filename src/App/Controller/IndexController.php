@@ -3,7 +3,10 @@
 namespace App\Controller;
 use Bone\Mvc\Controller;
 
-class ErrorController extends Controller
+class IndexController extends Controller
 {
-
+    public function indexAction()
+    {
+        echo 'Hello World!';
+    }
 }

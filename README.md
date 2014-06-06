@@ -6,4 +6,10 @@ Just playin' around. Who knows, mibbes one day it might even be usable! Garr!<br
 
 Installation
 ------------
-composer create-project delboy1978uk/bonemvc your/path/here dev-master
+composer create-project delboy1978uk/bonemvc your/path/here dev-master<br />
+
+So far...
+---------
+Th' system be readin' URI's in a /controller/action/param/val/param/val/etc structure.<br />
+However ye can also be configgerin' yer custom routes in config/config.php<br />
+

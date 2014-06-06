@@ -12,7 +12,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Bone": "src/"
+            "Bone": "src/",
+            "App": "src/"
         }
     }
 }

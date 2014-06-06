@@ -62,6 +62,7 @@ class Router
                 // if the regex ain't for the home page an' it matches our route
                 if($route->getRegexStrings()[0] != '\/' && $matches = $route->checkRoute($this->uri))
                 {
+                    // Garrr me hearties! It be a custom route from th' configgeration!
                     $match = true;
                     $this->controller = $route->getControllerName();
                     $this->action = $route->getActionName();
@@ -103,6 +104,19 @@ class Router
                 }
                 if(!$match)
                 {
+                    $regex = new Regex(Regex\Url::CONTROLLER);
+                    if($matches = $regex->getMatches($this->uri))
+                    {
+                        // we have a controller action match Cap'n!
+                        // settin' the destination controller and action and params
+                        $match = true;
+                        $this->controller = $matches['controller'];
+                        $this->action = 'index';
+
+                    }
+                }
+                if(!$match)
+                {
                     // theres nay route that matches cap'n
                     // settin' the destination controller and action and params
                     $this->controller = 'error';
@@ -111,41 +125,14 @@ class Router
             }
 
 
-
-            // what type o' request is the request sendin' ?
+            // be addin' the $_GET an' $_POST t' th' params!
             $method = $this->request->getMethod();
-
-            // assign params by methods
-            switch($method)
+            if($method == "POST")
             {
-                case "GET": // view
-                    $this->params = array_merge($this->params, $this->request->getGet());
-                    break;
-                case "POST": // create
-                case "PUT":  // update
-                case "DELETE": // delete
-                {
-                    // ignore the file upload
-                    if(!array_key_exists('HTTP_X_FILE_NAME',$_SERVER))
-                    {
-                        if($method == "POST")
-                        {
-                            $this->_params = array_merge($this->params, $this->request->getPost());
-                            $this->_params = array_merge($this->params, $this->request->getGet());
-                        }
-                        else
-                        {
-                            // temp params
-                            $p = array();
-                            $content = file_get_contents("php://input");
-                            parse_str($content, $p);
-                            $p = json_decode($content, true);
-                            $this->params = array_merge($this->params, $p);
-                        }
-                    }
-                }
-                    break;
+                $this->params = array_merge($this->params, $this->request->getPost());
             }
+            $this->params = array_merge($this->params, $this->request->getGet());
+
             echo $this->uri.'<br />';
             echo $this->controller.' controller and '.$this->action.' action.<br />';
             echo 'Params:';
@@ -159,55 +146,29 @@ class Router
     {
         $this->parseRoute();
         $controller = ucwords($this->controller).'Controller';
-        if(!class_exists($controller))
-        {
-            $this->controller ='ErrorController';
-            $this->action = 'errorAction';
-        }
-        else
-        {
-            $dispatch = new $this->controller;
-            if(!method_exists($dispatch,$this->action))
-            {
-                $this->controller = 'ErrorController';
-                $this->action = 'errorAction';
-                $dispatch = new $this->controller;
-            }
-        }
-
-
-
+        $action = $this->action.'Action';
         $this->request->setController($controller);
         $this->request->setAction($this->action);
         $this->request->setParams($this->params);
+        if(!class_exists($controller))
+        {
+            $controller = '\App\Controller\ErrorController';
+            $action = 'errorAction';
+//            $dispatch = new $controller($this->request);
+        }
+        else
+        {
+            $dispatch = new $controller($this->request);
+            if(!method_exists($dispatch,$this->action))
+            {
+                $controller = 'ErrorController';
+                $this->action = 'errorAction';
+//                $dispatch = new $controller($this->request);
+            }
+        }
 
-//        $dispatch = new $this->_controller($model, $controllerName, $this->_action);
-//        $hasActionFunction = (int)method_exists($this->_controller, $this->_action);
-//
-//        // we need to reference the parameters to a correct order in order to match the arguments order
-//        // of the calling function
-//        $c = new ReflectionClass($this->_controller);
-//        $m = $hasActionFunction ? $this->_action : 'defaultAction';
-//        $f = $c->getMethod($m);
-//        $p = $f->getParameters();
-//        $params_new = array();
-//        $params_old = $this->_params;
-//        // re-map the parameters
-//        for($i = 0; $i<count($p);$i++){
-//            $key = $p[$i]->getName();
-//            if(array_key_exists($key,$params_old)){
-//                $params_new[$i] = $params_old[$key];
-//                unset($params_old[$key]);
-//            }
-//        }
-//        // after reorder, merge the leftovers
-//        $params_new = array_merge($params_new, $params_old);
-//        // call the action method
-//        $this->_view = call_user_func_array(array($dispatch, $m), $params_new);
-//        // finally, we print it out
-//        if($this->_view){
-//            echo $this->_view;
-//        }
+//        $result = $dispatch->$action();
+
         return new Response();
     }
 
