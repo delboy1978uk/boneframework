@@ -88,7 +88,7 @@ class Router
                         $match = true;
                         $this->controller = $matches['controller'];
                         $this->action = $matches['action'];
-                        $ex = explode('/',$matches['varvalpairs']);
+                        $ex = (isset($matches['varvalpairs'])) ? explode('/',$matches['varvalpairs']) : null;
                         for($x = 0; $x <= count($ex)-1 ; $x += 2)
                         {
                             $this->params[$ex[$x]] = $ex[$x+1];
