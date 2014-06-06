@@ -138,7 +138,8 @@ class Router
             //it be the home page
             $home_page = Registry::ahoy()->get('routes')['/'];
             $this->controller = $home_page['controller'];
-            $this->action = $this->
+            $this->action = $home_page['action'];
+            $this->params = $home_page['params'];
         }
         echo $this->uri.'<br />';
         echo $this->controller.' controller and '.$this->action.' action.<br />';
@@ -151,7 +152,7 @@ class Router
     public function dispatch()
     {
         $this->parseRoute();
-        $controller = ucwords($this->controller).'Controller';
+        $controller = '\App\Controller\\'.ucwords($this->controller).'Controller';
         $action = $this->action.'Action';
         $this->request->setController($controller);
         $this->request->setAction($this->action);
@@ -165,9 +166,9 @@ class Router
         else
         {
             $dispatch = new $controller($this->request);
-            if(!method_exists($dispatch,$this->action))
+            if(!method_exists($dispatch,$action))
             {
-                $controller = 'ErrorController';
+                $controller = '\App\Controller\ErrorController';
                 $this->action = 'errorAction';
                 $dispatch = new $controller($this->request);
             }
