@@ -141,14 +141,14 @@ class Router
             $this->action = $home_page['action'];
             $this->params = $home_page['params'];
         }
-        echo $this->uri.'<br />';
-        echo $this->controller.' controller and '.$this->action.' action.<br />';
-        echo 'Params:';
-        var_dump($this->params);
     }
 
 
-
+    /**
+     *  Garrr, we be makin' sure what they says
+     *
+     * @return Response
+     */
     public function dispatch()
     {
         $this->parseRoute();
