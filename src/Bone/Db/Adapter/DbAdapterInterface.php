@@ -1,6 +1,6 @@
 <?php
 
-use Bone\Mvc\Db\Adapter;
+namespace Bone\Db\Adapter;
 
 interface DbAdapterInterface
 {

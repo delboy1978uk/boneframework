@@ -72,7 +72,7 @@ $config = require_once APPLICATION_PATH . '/config/config.php';
  */
 if (file_exists( APPLICATION_PATH . '/config/config.dev.php'))
 {
-    require_once ( APPLICATION_PATH . '/config/config.dev.php');
+    $config = array_merge($config, require_once ( APPLICATION_PATH . '/config/config.dev.php'));
 }
 
 /**

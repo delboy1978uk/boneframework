@@ -34,12 +34,10 @@ return array(
             'params' => array(),
         ),
     ),
-    'db-adapters' => array(
-        'db' => array(
+    'db' => array(
             'host' => '127.0.0.1',
-            'database' => '',
-            'user' => '',
-            'pass' => ''
-        ),
+            'database' => 'selmalda',
+            'user' => 'root',
+            'pass' => '[123456]'
     ),
 );
