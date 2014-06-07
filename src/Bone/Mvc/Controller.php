@@ -57,6 +57,11 @@ class Controller
         // extend this t' initialise th' controller
     }
 
+    public function getParams()
+    {
+        return $this->_request->getParams();
+    }
+
     /**
      *  runs after yer work is done
      */
