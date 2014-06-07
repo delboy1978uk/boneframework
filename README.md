@@ -12,4 +12,4 @@ So far...
 ---------
 Th' system be readin' URI's in a /controller/action/param/val/param/val/etc structure.<br />
 However ye can also be configgerin' yer custom routes in config/config.php<br />
-
+Ye can connect to a MySQL database by puttin' yer connection details in th' config

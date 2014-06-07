@@ -170,13 +170,20 @@ class Router
             {
                 $controller = '\App\Controller\ErrorController';
                 $this->action = 'errorAction';
+                /** @var Controller $dispatch  */
                 $dispatch = new $controller($this->request);
             }
         }
 
-        $result = $dispatch->$action();
+        $dispatch->init();
+        $dispatch->$action();
+        $dispatch->postDispatch();
+        /** @var \stdClass $view_vars  */
+        $view_vars = (array) $dispatch->view;
+        $view = $this->controller.'/'.$this->action.'.twig';
+        $response_body = $dispatch->getTwig()->render($view, $view_vars);
 
-        return new Response();
+        return new Response($response_body);
     }
 
 }
