@@ -60,7 +60,8 @@ class Router
             foreach($this->routes as $route)
             {
                 // if the regex ain't for the home page an' it matches our route
-                if($route->getRegexStrings()[0] != '\/' && $matches = $route->checkRoute($this->uri))
+                $strings = $route->getRegexStrings();
+                if($strings[0] != '\/' && $matches = $route->checkRoute($this->uri))
                 {
                     // Garrr me hearties! It be a custom route from th' configgeration!
                     $match = true;
