@@ -11,5 +11,6 @@ class IndexController extends Controller
 //        $dogs = $query->fetchAll();
 //        var_dump($dogs);
 //        $this->view->dogs = $dogs;
+        $this->view->message = 'awesome';
     }
 }

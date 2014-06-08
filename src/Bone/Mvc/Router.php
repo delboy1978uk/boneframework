@@ -152,38 +152,14 @@ class Router
     public function dispatch()
     {
         $this->parseRoute();
-        $controller = '\App\Controller\\'.ucwords($this->controller).'Controller';
-        $action = $this->action.'Action';
+        $controller = $this->controller;
+        $action = $this->action;
+
         $this->request->setController($controller);
-        $this->request->setAction($this->action);
+        $this->request->setAction($action);
         $this->request->setParams($this->params);
-        if(!class_exists($controller))
-        {
-            $controller = '\App\Controller\ErrorController';
-            $action = 'errorAction';
-            $dispatch = new $controller($this->request);
-        }
-        else
-        {
-            $dispatch = new $controller($this->request);
-            if(!method_exists($dispatch,$action))
-            {
-                $controller = '\App\Controller\ErrorController';
-                $this->action = 'errorAction';
-                /** @var Controller $dispatch  */
-                $dispatch = new $controller($this->request);
-            }
-        }
 
-        $dispatch->init();
-        $dispatch->$action();
-        $dispatch->postDispatch();
-        /** @var \stdClass $view_vars  */
-        $view_vars = (array) $dispatch->view;
-        $view = $this->controller.'/'.$this->action.'.twig';
-        $response_body = $dispatch->getTwig()->render($view, $view_vars);
-
-        return new Response($response_body);
+        return new Response($this->request);
     }
 
 }

@@ -7,6 +7,6 @@ class ErrorController extends Controller
 {
     public function errorAction()
     {
-        echo 'Goodbye World!';
+        $this->view->error = 'Goodbye World!';
     }
 }

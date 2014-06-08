@@ -59,6 +59,6 @@ class Registry
      */
     public function get($index)
     {
-        return $this->vars[$index];
+        return isset($this->vars[$index]) ? $this->vars[$index] : null;
     }
 }

@@ -40,4 +40,7 @@ return array(
             'user' => 'root',
             'pass' => '[123456]'
     ),
+    'templates' => array(
+        'layout'
+    ),
 );

@@ -15,6 +15,10 @@ class Controller
 
     protected $_twig;
 
+    protected $controller;
+
+    protected $action;
+
     public $view;
 
     /**
@@ -69,4 +73,5 @@ class Controller
     {
         // extend this t' run code after yer controller is finished
     }
+
 }
