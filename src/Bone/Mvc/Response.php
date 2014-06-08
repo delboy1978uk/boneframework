@@ -52,7 +52,7 @@ class Response
         $response_body = $dispatch->getTwig()->render($view, $view_vars);
         //check we be usin' th' templates in th' config
         $templates = Registry::ahoy()->get('templates');
-        $template = ($templates != null) ? Registry::ahoy()->get('templates')[0] : null;
+        $template = ($templates != null) ? $templates[0] : null;
         if($template)
         {
             $response_body = $dispatch->getTwig()->render('layouts/'.$template.'.twig',array('content' => $response_body));
