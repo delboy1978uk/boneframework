@@ -2,6 +2,8 @@
 
 namespace Bone\Mvc;
 
+use Bone\Filter;
+
 class Response
 {
     protected $body;
@@ -14,8 +16,11 @@ class Response
     public function __construct(Request $request)
     {
         // what be we talkin about?
-        $controller_name = '\App\Controller\\'.ucwords($request->getController()).'Controller';
-        $action_name = $request->getAction().'Action';
+        $filtered = Filter::filterString($request->getController(),'DashToCamelCase');
+        $controller_name = '\App\Controller\\'.ucwords($filtered).'Controller';
+
+        $filtered = Filter::filterString($request->getAction(),'DashToCamelCase');
+        $action_name = $filtered.'Action';
         $controller = $request->getController();
         $action = $request->getAction();
 
@@ -25,7 +30,7 @@ class Response
             $controller_name = '\App\Controller\ErrorController';
             $action_name = 'errorAction';
             $controller = 'error';
-            $action = 'error';
+            $action = 'not-found';
             $dispatch = new $controller_name($request);
         }
         else
@@ -34,11 +39,11 @@ class Response
             if(!method_exists($dispatch,$action_name))
             {
                 $controller_name = '\App\Controller\ErrorController';
-                $action_name = 'error';
+                $action_name = 'errorAction';
                 /** @var Controller $dispatch  */
-                $dispatch = new $controller($request);
+                $dispatch = new $controller_name($request);
                 $controller = 'error';
-                $action = 'error';
+                $action = 'not-found';
             }
         }
 

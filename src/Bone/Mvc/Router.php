@@ -87,7 +87,10 @@ class Router
                     $ex = explode('/',$matches['varvalpairs']);
                     for($x = 0; $x <= count($ex)-1 ; $x += 2)
                     {
-                        $this->params[$ex[$x]] = $ex[$x+1];
+                        if(isset($ex[$x+1]))
+                        {
+                            $this->params[$ex[$x]] = $ex[$x+1];
+                        }
                     }
                 }
                 if(!$match)
