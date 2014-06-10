@@ -31,9 +31,9 @@ return array(
     ),
     'db' => array(
             'host' => '127.0.0.1',
-            'database' => 'selmalda',
-            'user' => 'root',
-            'pass' => '[123456]'
+            'database' => '',
+            'user' => '',
+            'pass' => ''
     ),
     'templates' => array(
         'layout'

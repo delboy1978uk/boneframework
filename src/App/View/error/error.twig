@@ -1,2 +1,19 @@
-<h1>Shiver me timbers!</h1>
-{{ error }}
+<section class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <img src="/img/skull_and_crossbones.png" />
+                    <h1 class="brand-heading">Shiver Me Timbers</h1>
+                    <p class="intro-text">{{ message }}</p>
+
+                    <pre>
+                        Error {{ code }} - {{ message }}
+                        {{ dump(trace) }}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

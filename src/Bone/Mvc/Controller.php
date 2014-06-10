@@ -4,7 +4,9 @@ namespace Bone\Mvc;
 use Bone\Db\Adapter\MySQL;
 use Twig_Loader_Filesystem;
 use Twig_Environment;
+use Twig_Extension_Debug;
 use stdClass;
+use \Exception;
 
 class Controller
 {
@@ -32,7 +34,8 @@ class Controller
         $config = Registry::ahoy()->get('db');
         $this->_db = new MySQL($config);
         $loader = new Twig_Loader_Filesystem(APPLICATION_PATH.'/src/App/View/');
-        $this->_twig = new Twig_Environment($loader);
+        $this->_twig = new Twig_Environment($loader,array('debug' => true));
+        $this->_twig->addExtension(new Twig_Extension_Debug());
         $this->view = new stdClass();
     }
 
@@ -63,7 +66,16 @@ class Controller
 
     public function getParams()
     {
-        return $this->_request->getParams();
+        return new stdClass($this->_request->getParams());
+    }
+
+    /**
+     * @param $param
+     * @return mixed
+     */
+    public function getParam($param)
+    {
+        return $this->_request->getParam($param);
     }
 
     /**

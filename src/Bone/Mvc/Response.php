@@ -28,7 +28,7 @@ class Response
         if(!class_exists($controller_name))
         {
             $controller_name = '\App\Controller\ErrorController';
-            $action_name = 'errorAction';
+            $action_name = 'not-foundAction';
             $controller = 'error';
             $action = 'not-found';
             $dispatch = new $controller_name($request);
@@ -39,7 +39,7 @@ class Response
             if(!method_exists($dispatch,$action_name))
             {
                 $controller_name = '\App\Controller\ErrorController';
-                $action_name = 'errorAction';
+                $action_name = 'notFoundAction';
                 /** @var Controller $dispatch  */
                 $dispatch = new $controller_name($request);
                 $controller = 'error';
@@ -47,21 +47,45 @@ class Response
             }
         }
 
-        $dispatch->init();
-        $dispatch->$action_name();
-        $dispatch->postDispatch();
-
-        /** @var \stdClass $view_vars  */
-        $view_vars = (array) $dispatch->view;
-        $view = $controller.'/'.$action.'.twig';
-        $response_body = $dispatch->getTwig()->render($view, $view_vars);
-        //check we be usin' th' templates in th' config
-        $templates = Registry::ahoy()->get('templates');
-        $template = ($templates != null) ? $templates[0] : null;
-        if($template)
+        try
         {
-            $response_body = $dispatch->getTwig()->render('layouts/'.$template.'.twig',array('content' => $response_body));
+            // run th' controller action
+
+            $dispatch->init();
+            $dispatch->$action_name();
+            $dispatch->postDispatch();
+
+            /** @var \stdClass $view_vars  */
+            $view_vars = (array) $dispatch->view;
+            $view = $controller.'/'.$action.'.twig';
+            $response_body = $dispatch->getTwig()->render($view, $view_vars);
+            //check we be usin' th' templates in th' config
+            $templates = Registry::ahoy()->get('templates');
+            $template = ($templates != null) ? $templates[0] : null;
+            if($template)
+            {
+                $response_body = $dispatch->getTwig()->render('layouts/'.$template.'.twig',array('content' => $response_body));
+            }
         }
+        catch(Exception $e)
+        {
+            $request->setParam('error',$e);
+            $dispatch = new \App\Controller\ErrorController($request);
+            $dispatch->errorAction();
+            /** @var \stdClass $view_vars  */
+            $view_vars = (array) $dispatch->view;
+            $view_vars = array_merge($view_vars,array('error' => $e));
+            $view = 'error/error.twig';
+            $response_body = $dispatch->getTwig()->render($view, $view_vars);
+            //check we be usin' th' templates in th' config
+            $templates = Registry::ahoy()->get('templates');
+            $template = ($templates != null) ? $templates[0] : null;
+            if($template)
+            {
+                $response_body = $dispatch->getTwig()->render('layouts/'.$template.'.twig',array('content' => $response_body));
+            }
+        }
+
         $this->body = $response_body;
     }
 

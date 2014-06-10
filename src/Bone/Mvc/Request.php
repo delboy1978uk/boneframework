@@ -226,7 +226,7 @@ class Request
 
 
     /**
-     * set the params
+     * set th' params
      * @param $params
      * @return $this
      */
@@ -236,13 +236,33 @@ class Request
         return $this;
     }
 
+    /**
+     * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function setParam($key, $value)
+    {
+        $this->params[$key] = $value;
+        return $this;
+    }
+
 
     /**
-     * give us the params
+     * give us th' params
      */
     public function getParams()
     {
         return $this->params;
+    }
+
+    /**
+     * give us th' params
+     * @param param
+     */
+    public function getParam($key)
+    {
+        return $this->params[$key];
     }
 
 
