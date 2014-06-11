@@ -28,7 +28,7 @@ class Response
         if(!class_exists($controller_name))
         {
             $controller_name = '\App\Controller\ErrorController';
-            $action_name = 'not-foundAction';
+            $action_name = 'notFoundAction';
             $controller = 'error';
             $action = 'not-found';
             $dispatch = new $controller_name($request);
