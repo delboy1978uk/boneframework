@@ -1,6 +1,6 @@
 {
     "name": "delboy1978uk/bonemvc",
-    "description": "Bone Micro MVC Framework",
+    "description": "Bone MVC Framework",
     "authors": [
         {
             "name": "Derek McLean",
@@ -8,11 +8,10 @@
         }
     ],
     "require": {
-        "twig/twig": "1.*"
+	    "delboy1978uk/bone": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "Bone": "src/",
             "App": "src/"
         }
     }
