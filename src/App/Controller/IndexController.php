@@ -11,4 +11,16 @@ class IndexController extends Controller
     {
 
     }
+
+    public function testAction()
+    {
+        // example of a Json page
+        $this->disableLayout();
+        $array = array(
+          'Rum',
+          'Grog'
+        );
+        $this->getHeaders()->setJsonResponse();
+        $this->setBody(json_encode($array));
+    }
 }
