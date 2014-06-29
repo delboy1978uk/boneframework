@@ -16,6 +16,7 @@ class IndexController extends Controller
     {
         // example of a Json page
         $this->disableLayout();
+        $this->disableView();
         $array = array(
           'Rum',
           'Grog'
