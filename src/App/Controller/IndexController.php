@@ -12,7 +12,12 @@ class IndexController extends Controller
 
     }
 
-    public function testAction()
+    public function learnAction()
+    {
+
+    }
+
+    public function jsonAction()
     {
         // example of a Json page
         $this->disableLayout();

@@ -10,6 +10,11 @@ return array(
             'action' => 'index',
             'params' => array(),
         ),
+        '/learn' => array(
+            'controller' => 'index',
+            'action' => 'learn',
+            'params' => array(),
+        ),
         '/swashbuckling/:id' => array(
             'controller' => 'events',
             'action' => 'view',
