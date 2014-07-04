@@ -1,9 +1,10 @@
 html body p {
   margin-top: 35px;
 }
-html body code {
+html body code,
+html body div.code {
   color: #00ff00;
-  white-space: nowrap;
+  white-space: pre;
   background-color: #003300;
   border-radius: 4px;
   padding: 15px;
