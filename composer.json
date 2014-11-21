@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-	    "delboy1978uk/bone": "dev-master"
+	    "delboy1978uk/bone": "dev-master",
+            "codeception/codeception": "*"
     },
     "autoload": {
         "psr-0": {

@@ -9,3 +9,5 @@ composer.lock
 *.dev.php
 error_log
 /vendor/
+
+tests/_output/*
