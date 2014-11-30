@@ -1,4 +1,4 @@
-Bone MVC Framework [![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=master)](https://travis-ci.org/delboy1978uk/bonemvc)
+Bone MVC Framework 
 ==================
 Be ye wantin an MVC framework peppered with local pirate lingo?<br />
 It be the most bare bones framework in the seven seas!<br />
