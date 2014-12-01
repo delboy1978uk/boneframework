@@ -23,14 +23,13 @@ install:
 
 
 before_script:
-  - sudo echo bone 127.0.0.1 > /etc/hosts
+  - hostname bone
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 5
   - java -jar selenium-server-standalone-2.42.2.jar -port 4444 &
   - "mysql -e 'create database codeception_test;'"
-  - php -S bone:8000 -t tests/data/app &
-  - php -S bone:8010 -t tests/data &
+  - php -S bone:8000 -t public/index.php
 
 script:
   - php vendor/bin/codecept run  # self tests
