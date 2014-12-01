@@ -23,7 +23,7 @@ install:
 
 
 before_script:
-  - echo bone 127.0.0.1 > /etc/hosts
+  - sudo echo bone 127.0.0.1 > /etc/hosts
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 5
