@@ -17,4 +17,4 @@ env:
          modules:
             config:
                 PhpBrowser:
-            		url: 'http://bone:8000'
+                    url: 'http://bone:8000'
