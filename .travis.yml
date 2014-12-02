@@ -33,3 +33,4 @@ before_script:
   - nohup php -S bone:8000 public &
 script:
   - php vendor/bin/codecept run  --env travis
+  - cat tests/_output/AhoyCept.fail.html
