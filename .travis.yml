@@ -29,7 +29,7 @@ before_script:
   - sleep 5
   - java -jar selenium-server-standalone-2.42.2.jar -port 4444 &
   - "mysql -e 'create database codeception_test;'"
-  - php -S local host:80 -t public/index.php
+  - php -S localhost:80 -t public/index.php
 
 script:
   - php vendor/bin/codecept run  # self tests
