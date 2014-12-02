@@ -12,3 +12,9 @@ modules:
     config:
         PhpBrowser:
             url: 'http://bone/'
+env:
+    travis:
+         modules:
+            config:
+                PhpBrowser:
+            	url: 'http://bone:8000'
