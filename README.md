@@ -1,7 +1,7 @@
 Bone MVC Framework
 ==================
 [![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=master)](https://travis-ci.org/delboy1978uk/bonemvc)
-[![Coverage Status](https://coveralls.io/repos/delboy1978uk/bonebonemvc/badge.png)](https://coveralls.io/r/delboy1978uk/bonemvc)
+[![Coverage Status](https://img.shields.io/coveralls/delboy1978uk/bonemvc.svg)](https://coveralls.io/r/delboy1978uk/bonemvc)
 
 Be ye wantin an MVC framework peppered with local pirate lingo?<br />
 It be the most bare bones framework in the seven seas!<br />
