@@ -9,10 +9,7 @@
     ],
     "require": {
 	    "delboy1978uk/bone": "dev-master",
-            "codeception/codeception": "*"
-    },
-    "require-dev": {
-        "satooshi/php-coveralls": "dev-master"
+        "codeception/codeception": "*"
     },
     "autoload": {
         "psr-0": {
