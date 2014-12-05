@@ -16,7 +16,7 @@ modules:
             password: ''
             dump: tests/_data/dump.sql
 coverage:
-    enable: true
+    enabled: true
     remote: false
     include:
-        - src/App/Controller/*
+        - src/*
