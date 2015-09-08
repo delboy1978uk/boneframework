@@ -16,8 +16,8 @@
         "codeception/aspect-mock": "*"
     },
     "autoload": {
-        "psr-0": {
-            "App": "src/"
+        "psr-4": {
+            "App\\": "src/App/"
         }
     }
 }
