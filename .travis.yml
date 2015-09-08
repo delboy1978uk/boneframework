@@ -18,6 +18,7 @@ addons:
   hosts:
     - bone
 
+sudo: false
 
 
 install:
