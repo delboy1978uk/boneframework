@@ -19,4 +19,6 @@ coverage:
     enable: true
     remote: false
     include:
-        - src/App/Controller/*
+        - src/*
+    exclude:
+        - src/App/View/*
