@@ -33,6 +33,5 @@ before_script:
 script:
   - php vendor/bin/codecept run  --coverage-xml --env travis
 after_script:
-  - phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/_output/coverage.xml
