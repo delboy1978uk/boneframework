@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Controller;
+
 use Bone\Mvc\Controller;
-use Bone\Mvc\Exception;
+use Exception;
 
 class ErrorController extends Controller
 {
+
     public function errorAction()
     {
-        /** @var Exception $e  */
+        /** @var Exception $e */
         $e = $this->getParam('error');
         $this->view->message = $e->getMessage();
         $this->view->code = $e->getCode();

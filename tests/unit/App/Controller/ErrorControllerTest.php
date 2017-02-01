@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use Bone\Mvc\Request;
+use Zend\Diactoros\ServerRequest;
 use ReflectionClass;
 use Exception;
 
@@ -20,9 +20,10 @@ class ErrorControllerTest extends \Codeception\TestCase\Test
         if (!defined('APPLICATION_PATH')){
             define('APPLICATION_PATH','.');
         }
-        $request = new Request([],[],[],[]);
-        $request->setParam('error',new Exception('garrr'));
+        $request = new ServerRequest();
+
         $this->controller = new ErrorController($request);
+        $this->controller->setParam('error', new Exception('bang!'));
     }
 
     protected function _after()
@@ -32,7 +33,8 @@ class ErrorControllerTest extends \Codeception\TestCase\Test
     // tests
     public function testErrorAction()
     {
-        $this->assertNull($this->controller->errorAction());
+        $this->controller->errorAction();
+        $this->assertEquals('bang!', $this->controller->view->message);
     }
 
     public function testNotFoundAction()

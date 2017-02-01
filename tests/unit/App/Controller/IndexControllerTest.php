@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use Bone\Mvc\Request;
+use Zend\Diactoros\ServerRequest;
 
 class IndexControllerTest extends \Codeception\TestCase\Test
 {
@@ -18,7 +18,7 @@ class IndexControllerTest extends \Codeception\TestCase\Test
         if (!defined('APPLICATION_PATH')){
             define('APPLICATION_PATH','.');
         }
-        $request = new Request([],[],[],[]);
+        $request = new ServerRequest();
         $this->controller = new IndexController($request);
     }
 

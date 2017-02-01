@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}Bone MVC Framework{% endblock %}</title>
+    <title><?= isset($title) ? $this->e($title) : 'Bone MVC Framework';?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -25,15 +25,9 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-{% block header %}
-
-
-
-{% endblock %}{{ content | raw }}{% block footer %}
-
-
-
-{% endblock %}
+<?= $this->section('header'); ?>
+<?= $content ;?>
+<?= $this->section('footer'); ?>
 </body>
 </html>
 

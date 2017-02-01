@@ -26,7 +26,7 @@ class IndexController extends Controller
           'Rum',
           'Grog'
         );
-        $this->getHeaders()->setJsonResponse();
+//        $this->setJsonResponse();
         $this->setBody(json_encode($array));
     }
 }
