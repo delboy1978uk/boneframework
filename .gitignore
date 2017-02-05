@@ -8,6 +8,6 @@
 composer.lock
 *.dev.php
 error_log
-/vendor/
+vendor/*
 
 tests/_output/*

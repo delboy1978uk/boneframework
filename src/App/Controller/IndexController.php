@@ -20,13 +20,10 @@ class IndexController extends Controller
     public function jsonAction()
     {
         // example of a Json page
-        $this->disableLayout();
-        $this->disableView();
         $array = array(
-          'Rum',
-          'Grog'
+          'Rum' => 'tasty',
+          'Grog' => 'the best!',
         );
-        $this->getHeaders()->setJsonResponse();
-        $this->setBody(json_encode($array));
+        $this->sendJsonResponse($array);
     }
 }
