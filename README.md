@@ -103,6 +103,17 @@ $this->sendJsonResponse($array);
 Bone be all shiny and new these days, and we be usin' PSR-7 Request and Response objects. Ye can get them using th' 
 ```getHeaders()``` method, or individual headers with the ```getHeader($key)``` method. ```$this->getRequest()``` be 
 returnin' an instance of ```Psr\Http\Message\ServerRequestInterface```.
+##Views
+We pirates be luvvin' PHP, and as such v2.0.0 of Bone MVC has made Twig walk the plank! We now be using th' fantastic 
+Plates (http://platesphp.com/). Anything ye send up t' th' view like ```$this->view->drink = 'grog';``` can be output
+in the view by a simple:
+```php
+echo $drink;
+```
+Of course, ye be wantin' to escape your output too! So do it like this:
+```php
+echo $this->e($drink);
+```
 ##Registry
 Bone be usin' a Registry to store stuff in. Soon we'll be changin' that to use Barnacle, a plundered version of th' 
 awesome Pimple dependency injection container. T' use it, just do the followin':
