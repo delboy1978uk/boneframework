@@ -94,6 +94,11 @@ return [
 ####init() and postDispatch()
 Th' init(); and postDispatch() methods will run before and after your controller action does, so ye can do stuff in 
 there too if need be!
+####JSON Content Type
+Buildin' an API, aye? Ye can send ```application/json``` by callin' the followin' method in yer controller action:
+```php
+$this->sendJsonResponse($array);
+```
 ####HTTP Requests, Responses, and Headers
 Bone be all shiny and new these days, and we be usin' PSR-7 Request and Response objects. Ye can get them using th' 
 ```getHeaders()``` method, or individual headers with the ```getHeader($key)``` method. ```$this->getRequest()``` be 
