@@ -1,3 +1,6 @@
+<?php
+use Del\Cdn;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +14,8 @@
     <title><?= isset($title) ? $this->e($title) : 'Bone MVC Framework';?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <?= Cdn::bootstrapCssLink() ;?>
+    <?= Cdn::delCssLink() ;?>
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -21,6 +25,10 @@
     <!-- Custom Theme CSS -->
     <link href="/css/grayscale.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css"/>
+
+    <!-- Javascript -->
+    <?= Cdn::jQueryJavascript() ;?>
+    <?= Cdn::bootstrapJavascript() ;?>
 
 </head>
 

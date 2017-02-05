@@ -113,4 +113,18 @@ Registry::set('name' => 'Guybrush');
 echo Registry::set('name'); // outputs 'Guybrush'
 ```
 Ye can store whatever th' hell be needin' stored, objects, or whatever!
+##Additional Libraries
+Avast ye! We be usin' some additional libs by th' Cap'n (delboy1978uk), namely:
+```
+delboy1978uk/cdn
+delboy1978uk/form
+delboy1978uk/image
+delboy1978uk/session
+```
+Fer the CDN lib, ye can quickly echo out javascript and css using ```Del\Cdn```, see ```App\View\layouts\layout.php``` fer an example.<br />
+See also use ```Del\Icon``` and ```Del\Css```, which come as part of the cdn lib.<br />
+Ye can create custom Bootstrap ready forms usin' ```delboy1978uk/form```, see the Github page fer details.<br />
+Ye can manipulate images usin' the gd PHP functions, with the ```Del\Image``` class.
+Ye can set Session variables usin' ```Del\SessionManager```, see GitHub for info.
+
 ####Get Swashbucklin'! Gaarrrrr!
