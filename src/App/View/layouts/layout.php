@@ -16,6 +16,7 @@ use Del\Cdn;
     <!-- Bootstrap Core CSS -->
     <?= Cdn::bootstrapCssLink() ;?>
     <?= Cdn::delCssLink() ;?>
+    <?= Cdn::fontAwesomeCssLink() ;?>
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
