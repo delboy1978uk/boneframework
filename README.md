@@ -1,16 +1,15 @@
 Bone MVC Framework
 ==================
-[![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=master)](https://travis-ci.org/delboy1978uk/bonemvc) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master) master<br />
-[![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=dev-master)](https://travis-ci.org/delboy1978uk/bonemvc) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/coverage.png?b=dev-master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=dev-master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/quality-score.png?b=dev-master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=dev-master) dev-master
-
+[![Latest Stable Version](https://poser.pugx.org/delboy1978uk/bonemvc/v/stable)](https://packagist.org/packages/delboy1978uk/bonemvc) [![Total Downloads](https://poser.pugx.org/delboy1978uk/bonemvc/downloads)](https://packagist.org/packages/delboy1978uk/bonemvc) [![Latest Unstable Version](https://poser.pugx.org/delboy1978uk/bonemvc/v/unstable)](https://packagist.org/packages/delboy1978uk/bonemvc) [![License](https://poser.pugx.org/delboy1978uk/bonemvc/license)](https://packagist.org/packages/delboy1978uk/bonemvc)<br />
+[![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=master)](https://travis-ci.org/delboy1978uk/bonemvc) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master)<br />
 Be ye wantin an MVC framework peppered with local pirate lingo?<br />
 It be the most bare bones framework in the seven seas!<br />
 http://bonemvc.delboysplace.co.uk
 
 Installation
 ------------
-composer create-project delboy1978uk/bonemvc your/path/here dev-master<br />
-###Apache setup
+composer create-project delboy1978uk/bonemvc your/path/here <br />
+### Apache setup
 We don't need tellin' ye, t' be sure, but a typical Apache vhost settin' might be lookin' like this:
 ```apacheconfig
 <VirtualHost *:80>
@@ -31,9 +30,9 @@ We don't need tellin' ye, t' be sure, but a typical Apache vhost settin' might b
 ```
 Project Folders
 ---------
-###config
+### config
 Garr! In the config folder be two files, config.php, and config.dev.php.dist.
-####routes
+#### routes
 Th' default route matchin' system follows the followin' pattern:
 ```
 /controller/action/param1/value1/param2/value2/etc/etc
@@ -56,7 +55,7 @@ Ye can configure mandatory and optional paramaters in your routes like this:
 /my-route/:mandatory[/:optional]
 ```
 In yer controller, ye would ask fer ```$this->getParam('mandatory');``` and ```$this->getParam('optional');```<br />
-####db
+#### db
 Ye can connect to a MySQL database by puttin' yer connection details in th' config<br />
 ```php
     'db' => array(
@@ -70,7 +69,7 @@ Then in yer controller, ye can get a PDO connection by saying:
 ```php
 $this->getDbAdapter();
 ```
-###templates
+### templates
 Ye can put a master template in here. Bone be lookin' in App\View\layouts fer a PHP file by th' same name.
 ```php
     'templates' => array(
@@ -78,9 +77,9 @@ Ye can put a master template in here. Bone be lookin' in App\View\layouts fer a 
     ),
 ```
 Be checkin' th' folder fer an example!
-###config.dev.php.dist
+### config.dev.php.dist
 This be a config which can override th' production settin's. Remove the .dist extension, and ye can add details for your dev environment. 
-##Controllers
+## Controllers
 Make yer controller extend ```Bone\Mvc\Controller```, and name your controller actions like pirateAction() etc.<br />
 T' send data t' th' view, ye can either return an array, or call 
 ```php
@@ -91,19 +90,19 @@ return [
     'someVar' => 'gaaarrrr!',    
 ];
 ```
-####init() and postDispatch()
+#### init() and postDispatch()
 Th' init(); and postDispatch() methods will run before and after your controller action does, so ye can do stuff in 
 there too if need be!
-####JSON Content Type
+#### JSON Content Type
 Buildin' an API, aye? Ye can send ```application/json``` by callin' the followin' method in yer controller action:
 ```php
 $this->sendJsonResponse($array);
 ```
-####HTTP Requests, Responses, and Headers
+#### HTTP Requests, Responses, and Headers
 Bone be all shiny and new these days, and we be usin' PSR-7 Request and Response objects. Ye can get them using th' 
 ```getHeaders()``` method, or individual headers with the ```getHeader($key)``` method. ```$this->getRequest()``` be 
 returnin' an instance of ```Psr\Http\Message\ServerRequestInterface```.
-##Views
+## Views
 We pirates be luvvin' PHP, and as such v2.0.0 of Bone MVC has made Twig walk the plank! We now be using th' fantastic 
 Plates (http://platesphp.com/). Anything ye send up t' th' view like ```$this->view->drink = 'grog';``` can be output
 in the view by a simple:
@@ -114,17 +113,17 @@ Of course, ye be wantin' to escape your output too! So do it like this:
 ```php
 echo $this->e($drink);
 ```
-##Registry
+## Registry
 Bone be usin' a Registry to store stuff in. Soon we'll be changin' that to use Barnacle, a plundered version of th' 
 awesome Pimple dependency injection container. T' use it, just do the followin':
 ```php
 use Bone\Mvc\Registry;
 
 Registry::set('name' => 'Guybrush');
-echo Registry::set('name'); // outputs 'Guybrush'
+echo Registry::get('name'); // outputs 'Guybrush'
 ```
 Ye can store whatever th' hell be needin' stored, objects, or whatever!
-##Additional Libraries
+## Additional Libraries
 Avast ye! We be usin' some additional libs by th' Cap'n (delboy1978uk), namely:
 ```
 delboy1978uk/cdn
@@ -138,4 +137,4 @@ Ye can create custom Bootstrap ready forms usin' ```delboy1978uk/form```, see th
 Ye can manipulate images usin' the gd PHP functions, with the ```Del\Image``` class.
 Ye can set Session variables usin' ```Del\SessionManager```, see GitHub for info.
 
-####Get Swashbucklin'! Gaarrrrr!
+#### Get Swashbucklin'! Gaarrrrr!
