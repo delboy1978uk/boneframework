@@ -11,10 +11,10 @@ modules:
         - AcceptanceHelper
     config:
         PhpBrowser:
-            url: 'http://bone/'
+            url: 'http://192.168.99.100'
 env:
     travis:
          modules:
             config:
                 PhpBrowser:
-                    url: 'http://bone:8000'
+                    url: 'http://awesome.scot:8000'

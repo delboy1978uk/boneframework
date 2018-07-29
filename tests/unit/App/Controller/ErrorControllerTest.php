@@ -23,7 +23,8 @@ class ErrorControllerTest extends \Codeception\TestCase\Test
         $request = new ServerRequest();
 
         $this->controller = new ErrorController($request);
-        $this->controller->setParam('error', new Exception('bang!'));
+        $e =  new Exception('bang!');
+        $this->controller->setParam('error', $e);
     }
 
     protected function _after()

@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Controller;
+
+use AspectMock\Test;
 use Bone\Mvc\Controller;
-use Bone\Mvc\Exception;
+use Bone\Mvc\Dispatcher;
+use Bone\Mvc\Registry;
+use Bone\Mvc\View\PlatesEngine;
+use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\TextResponse;
 
 
 class IndexController extends Controller

@@ -16,7 +16,7 @@ branches:
 
 addons:
   hosts:
-    - bone
+    - awesome.scot
 
 sudo: false
 
@@ -32,7 +32,7 @@ before_script:
   - sleep 5
   - java -jar selenium-server-standalone-2.42.2.jar -port 4444 &
   - "mysql -e 'create database codeception_test;'"
-  - nohup php -S bone:8000 public/index.php &
+  - nohup php -S awesome.scot:8000 public/index.php &
 script:
   - php vendor/bin/codecept run  --coverage-xml --env travis
 after_script:
