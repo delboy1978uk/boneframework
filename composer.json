@@ -16,7 +16,8 @@
   },
   "require-dev": {
     "codeception/codeception": "*",
-    "codeception/aspect-mock": "*"
+    "codeception/aspect-mock": "*",
+    "codeception/c3": "*"
   },
   "autoload": {
     "psr-4": {
