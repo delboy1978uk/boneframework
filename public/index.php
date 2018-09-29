@@ -55,6 +55,7 @@ if (!file_exists('vendor/autoload.php'))
     );
 }
 $loader = require_once 'vendor/autoload.php';
+require_once '../c3.php';
 
 
 /**
