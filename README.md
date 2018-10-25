@@ -31,7 +31,8 @@ We don't need tellin' ye, t' be sure, but a typical Apache vhost settin' might b
 Project Folders
 ---------
 ### config
-Garr! In the config folder be two files, config.php, and config.dev.php.dist.
+Garr! In the config folder be yer main config.php, and ye can have as many other config files (*.php) as ye want in a 
+folder with th' same name as th' environment variable `APPLICATION_ENV`.  Just get each file to return an array.
 #### routes
 Th' default route matchin' system follows the followin' pattern:
 ```
