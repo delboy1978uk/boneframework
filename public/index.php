@@ -30,54 +30,45 @@
 //                                     (____/ \__/ \_)__)(____)\_)(_/ \__/  \___)
 
 
-
 /**
  *
  * I be settin' up th'application path
  *
  */
 chdir(dirname(__DIR__));
-if (!defined('APPLICATION_PATH'))
-{
+if (!defined('APPLICATION_PATH')) {
     define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
 }
 
+/**
+ *  Now whit environment be this?
+ */
+if (!defined('APPLICATION_ENV'))
+{
+    define('APPLICATION_ENV', (getenv('APPLICATION_ENV')
+        ? getenv('APPLICATION_ENV')
+        : 'production'));
+}
+
+if (file_exists('../c3.php') && APPLICATION_ENV == 'travis') {
+    require_once '../c3.php';
+}
 
 /**
  *
  * I be autoloadin' th'composer or else shiver me timbers
  *
  */
-if (!file_exists('vendor/autoload.php'))
-{
+if (!file_exists('vendor/autoload.php')) {
     throw new RuntimeException(
         'Garrrr! Unable t\'load Bone. Run `composer install` or `php composer.phar install`'
     );
 }
 $loader = require_once 'vendor/autoload.php';
 
-//if (!file_exists('../c3.php')) {
-//    require_once '../c3.php';
-//}
 
-
-/**
- *
- *  Whit be yer configuration, sonny?
- *
- */
-$config = require_once APPLICATION_PATH . '/config/config.php';
-
-
-/**
- *
- *  Be ye on the practice ship?
- *
- */
-if (file_exists( APPLICATION_PATH . '/config/config.dev.php'))
-{
-    $config = array_merge($config, require_once ( APPLICATION_PATH . '/config/config.dev.php'));
-}
+$server = new \Bone\Server\Environment($_SERVER);
+$config = $server->fetchConfig(APPLICATION_PATH .'/config', APPLICATION_ENV);
 
 /**
  *

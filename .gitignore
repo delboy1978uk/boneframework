@@ -9,5 +9,5 @@ composer.lock
 *.dev.php
 error_log
 vendor/*
-
+c3tmp/*
 tests/_output/*
