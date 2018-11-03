@@ -18,16 +18,16 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#about">About</a>
+                    <a href="#about"><?= $this->t('about') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#download">Download</a>
+                    <a href="#download"><?= $this->t('download') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#contribute">Contribute</a>
+                    <a href="#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="/learn">Learn</a>
+                    <a href="/learn"><?= $this->t('learn') ;?></a>
                 </li>
             </ul>
         </div>
@@ -44,7 +44,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <img src="/img/skull_and_crossbones.png" />
                     <h1 class="brand-heading">Bone MVC Framework</h1>
-                    <p class="intro-text">It be yet another PHP framework swashbucklin' ont' th' scene!</p>
+                    <p class="intro-text"><?= $this->t('home.intro') ;?></p>
                     <div class="page-scroll">
                         <a href="#about" class="btn btn-circle">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -59,7 +59,7 @@
 <section id="about" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>About Bone</h2>
+            <h2><?= $this->t('about') ;?> Bone</h2>
             <p>Be ye wantin an MVC framework peppered with local pirate lingo? It be the most bare bones framework in the seven seas! Garr!</p>
             <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
         </div>
@@ -70,7 +70,7 @@
     <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Download Bone MVC</h2>
+                <h2><?= $this->t('download') ;?> Bone MVC</h2>
                 <p>Ye can download th' Bone MVC source code by sailin' over t' Github. But the Cap'n recommends ye install <a target="_blank" href="http://getcomposer.org">Composer</a> 'n' do it that way.</p>
                 <a target="_blank" href="https://github.com/delboy1978uk/bonemvc" class="btn btn-default btn-lg"><i class="fa fa-github"></i> Visit Github</a>
             </div>
@@ -81,7 +81,7 @@
 <section id="contribute" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Contribute</h2>
+            <h2><?= $this->t('contribute') ;?></h2>
             <p>Gaarrrr! We be needin' a foul-mouthed grog swillin' crew<br />t' sail th' ship t' th' fabled Monkey Island.<br />
                 If ye like Bone an' want t' help conquer the seven seas, fork it and get aboard!</p>
             <p>delboy1978uk@gmail.com</p>
