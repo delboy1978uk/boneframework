@@ -13,6 +13,12 @@ use Zend\Diactoros\Response\TextResponse;
 
 class IndexController extends Controller
 {
+    public function init()
+    {
+        $locale = $this->getParam('locale') ?: Registry::ahoy()->get('i18n')['default_locale'];
+        $this->getTranslator()->setLocale($locale);
+    }
+
     public function indexAction()
     {
 

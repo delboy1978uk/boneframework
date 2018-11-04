@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BoneMVC\n"
+"POT-Creation-Date: 2018-11-04 00:41+0100\n"
+"PO-Revision-Date: 2018-11-04 00:45+0100\n"
+"Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: translate;t;gettext_noop\n"
+"X-Poedit-Basepath: ../../../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: src\n"
+
+#: src/App/View/index/index.php:21
+msgid "about"
+msgstr "About"
+
+#: src/App/View/index/index.php:24
+msgid "download"
+msgstr "Download"
+
+#: src/App/View/index/index.php:27
+msgid "contribute"
+msgstr "Contribute"
+
+#: src/App/View/index/index.php:30
+msgid "learn"
+msgstr "Learn"
+
+#: src/App/View/index/index.php:47
+msgid "home.intro"
+msgstr "It be yet another PHP framework swashbucklin' ont' th' scene!"
