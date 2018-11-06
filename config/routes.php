@@ -15,6 +15,16 @@ return [
             'action' => 'learn',
             'params' => [],
         ],
+        '/:locale' => [
+            'controller' => 'index',
+            'action' => 'index',
+            'params' => [],
+        ],
+        '/:locale/learn' => [
+            'controller' => 'index',
+            'action' => 'learn',
+            'params' => [],
+        ],
         '/swashbuckling/:id' => [
             'controller' => 'events',
             'action' => 'view',

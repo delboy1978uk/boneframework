@@ -18,16 +18,16 @@
                     <a href="/#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#about">About</a>
+                    <a href="/#about"><?= $this->t('about') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#download">Download</a>
+                    <a href="/#download"><?= $this->t('download') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#contribute">Contribute</a>
+                    <a href="/#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="#">Learn</a>
+                    <a href="#"><?= $this->t('learn') ;?></a>
                 </li>
             </ul>
         </div>
@@ -43,8 +43,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <img height="64" src="/img/skull_and_crossbones.png" />
-                    <h2 class="">Learn Bone MVC Framework</h2>
-                    <p class="intro-text">All our crew be trained by the Melee Island Swordmaster!</p>
+                    <h2 class=""><?= $this->t('learn.learn') ;?></h2>
+                    <p class="intro-text"><?= $this->t('learn.tagline') ;?></p>
                     <div class="page-scroll">
                         <a href="#installation" class="btn btn-circle">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -59,10 +59,10 @@
 <section id="installation" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Installation</h2>
-            <p>Ahoy matey! First ye be needin' <a href="https://getcomposer.org/">Composer</a>! Then install Bone.</p>
+            <h2><?= $this->t('installation') ;?></h2>
+            <p><?= $this->t('learn.composer') ;?> <a href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?></p>
             <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
-            <p class="clear">or if ye haven't installed composer globally ...</p>
+            <p class="clear"><?= $this->t('learn.globally') ;?></p>
             <code>php composer.phar create-project delboy1978uk/bonemvc your/path/here dev-master</code>
 
         </div>
@@ -73,11 +73,25 @@
     <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Configger</h2>
-                <p>Ye can see ye have a config, data, public, and src folder. Dinnae be touchin' th' vendor folder or th' Cap'n will make ye walk the plank!</p>
-                <p>Make th' data folder writable. 777 be lettin' every landlubber have write access, so if ye can we prefer 775 with yer Apache user in th' group.</p>
+                <h2><?= $this->t('configure') ;?></h2>
+                <p><?= $this->t('learn.folders') ;?></p>
+                <p><?= $this->t('learn.777') ;?></p>
                 <code>chmod -R 775 data</code>
-                <p>In yer apache virtual hosts, set the document root as th' public folder</p>
+                <p><?= $this->t('learn.vhosts') ;?></p>
+                <div class="code tl">
+        &lt;VirtualHost *:80&gt;
+                DocumentRoot "/var/www/bonemvc/public"
+                ServerName awesome.scot
+                SetEnv APPLICATION_ENV development
+                &lt;Directory "/var/www/bonemvc"&gt;
+                        DirectoryIndex index.php
+                        FallbackResource /index.php
+                        Options -Indexes +FollowSymLinks
+                        AllowOverride all
+                        Require all granted
+                &lt;/Directory&gt;
+        &lt;/VirtualHost&gt;
+                </div>
             </div>
         </div>
     </div>
@@ -86,8 +100,7 @@
 <section id="contribute" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Th' config folder</h2>
-            <p>Avast ye! In yer config folder there be a config.dev.php.dist. reaname this to config.dev.php if ye be workin' on yer development ship.</p>
+            <h2><?= $this->t('learn.config') ;?></h2>
             <p>In th' config.php, ye can add anything ye want! It gets stored in th' Bone Registry. Bone looks fer the followin' keys: routes, db, templates</p>
             <br />
             <h3>Routes</h3>

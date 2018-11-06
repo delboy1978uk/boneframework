@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-04 00:39+0100\n"
-"PO-Revision-Date: 2018-11-04 01:48+0100\n"
+"POT-Creation-Date: 2018-11-06 15:29+0100\n"
+"PO-Revision-Date: 2018-11-06 15:37+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -15,22 +15,109 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:62
+#: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "Sur"
 
-#: src/App/View/index/index.php:24
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:73
+#: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Télécharger"
 
-#: src/App/View/index/index.php:27
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:84
+#: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Contribuer"
 
-#: src/App/View/index/index.php:30
+#: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
 msgstr "Apprendre"
 
 #: src/App/View/index/index.php:47
 msgid "home.intro"
 msgstr "Un framework PHP pour les pirates"
+
+#: src/App/View/index/index.php:63
+#, fuzzy
+msgid "index.intro"
+msgstr "Un framework PHP pour les pirates"
+
+#: src/App/View/index/index.php:74
+msgid "index.install"
+msgstr ""
+"You can download the Bone MVC source code by browsing over to Github. But we "
+"recommend you install "
+
+#: src/App/View/index/index.php:74
+msgid "index.install2"
+msgstr "et le faire de cette façon."
+
+#: src/App/View/index/index.php:75
+msgid "visit"
+msgstr "Visite"
+
+#: src/App/View/index/index.php:85
+msgid "index.crew"
+msgstr "Nous sommes toujours à la recherche de contributeurs"
+
+#: src/App/View/index/index.php:85
+msgid "index.crew2"
+msgstr "pour aider Bone MVC à être encore meilleur."
+
+#: src/App/View/index/index.php:86
+msgid "index.crew3"
+msgstr ""
+"Si vous aimez Bone et souhaitez contribuer à son développement, rejoignez-le!"
+
+#: src/App/View/index/learn.php:46
+msgid "learn.learn"
+msgstr "Apprendre Bone Framework MVC"
+
+#: src/App/View/index/learn.php:47
+msgid "learn.tagline"
+msgstr "Il est facile de se lancer avec un nouveau projet"
+
+#: src/App/View/index/learn.php:62
+msgid "installation"
+msgstr "Installation"
+
+#: src/App/View/index/learn.php:63
+msgid "learn.composer"
+msgstr "D'abord, assurez-vous d'avoir"
+
+#: src/App/View/index/learn.php:63
+msgid "learn.install.bone"
+msgstr "Ensuite, installez Bone."
+
+#: src/App/View/index/learn.php:65
+msgid "learn.globally"
+msgstr "ou si vous n'avez pas installé le compositeur globalement ..."
+
+#: src/App/View/index/learn.php:76
+msgid "configure"
+msgstr "Configurer"
+
+#: src/App/View/index/learn.php:77
+msgid "learn.folders"
+msgstr ""
+"Vous pouvez voir un dossier config, data, public et src. Conserver le "
+"dossier du fournisseur, c’est là que composeur installe les dépendances du "
+"projet."
+
+#: src/App/View/index/learn.php:78
+msgid "learn.777"
+msgstr ""
+"Rendez le dossier de données accessible en écriture. 777 donne à tout le "
+"monde un accès en écriture, donc définissez-le à 775 avec votre utilisateur "
+"Apache du groupe."
+
+#: src/App/View/index/learn.php:80
+msgid "learn.vhosts"
+msgstr ""
+"Dans vos hôtes virtuels Apache, définissez la racine du document en tant que "
+"dossier public."
+
+#: src/App/View/index/learn.php:103
+msgid "learn.config"
+msgstr "Le dossier de configuration"

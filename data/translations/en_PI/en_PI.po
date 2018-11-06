@@ -1,122 +1,122 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-06 15:17+0100\n"
-"PO-Revision-Date: 2018-11-06 15:27+0100\n"
+"Project-Id-Version: Bone\n"
+"POT-Creation-Date: 2018-11-06 15:03+0100\n"
+"PO-Revision-Date: 2018-11-06 15:28+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
-"Language: nl_BE\n"
+"Language: en_PI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.3\n"
 "X-Poedit-KeywordsList: t;translate;gettext_noop\n"
-"X-Poedit-Basepath: ../../../\n"
+"X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
 #: src/App/View/index/index.php:21 src/App/View/index/index.php:62
 #: src/App/View/index/learn.php:21
 msgid "about"
-msgstr "Over"
+msgstr "About"
 
 #: src/App/View/index/index.php:24 src/App/View/index/index.php:73
 #: src/App/View/index/learn.php:24
 msgid "download"
-msgstr "Downloaden"
+msgstr "Loot"
 
 #: src/App/View/index/index.php:27 src/App/View/index/index.php:84
 #: src/App/View/index/learn.php:27
 msgid "contribute"
-msgstr "Bijdragen"
+msgstr "Contribute"
 
 #: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
-msgstr "Leren"
+msgstr "Learn"
 
 #: src/App/View/index/index.php:47
 msgid "home.intro"
-msgstr "Een PHP-raamwerk voor piraten"
+msgstr "It be yet another PHP framework swashbucklin' ont' th' scene!"
 
 #: src/App/View/index/index.php:63
-#, fuzzy
 msgid "index.intro"
-msgstr "Een PHP-raamwerk voor piraten"
+msgstr ""
+"Be ye wantin an MVC framework peppered with local pirate lingo? It be the "
+"most bare bones framework in the seven seas! Garr!"
 
 #: src/App/View/index/index.php:74
 msgid "index.install"
 msgstr ""
-"Je kunt de Bone MVC-broncode downloaden door naar Github te bladeren. Maar "
-"we raden aan om"
+"Ye can download th' Bone MVC source code by sailin' over t' Github. But the "
+"Cap'n recommends ye install "
 
 #: src/App/View/index/index.php:74
 msgid "index.install2"
-msgstr "te installeren, en doe het op die manier"
+msgstr "'n' do it that way."
 
 #: src/App/View/index/index.php:75
 msgid "visit"
-msgstr "Bezoek"
+msgstr "Visit"
 
 #: src/App/View/index/index.php:85
 msgid "index.crew"
-msgstr "We zijn altijd op zoek naar medewerekers"
+msgstr "Gaarrrr! We be needin' a foul-mouthed grog swillin' crew"
 
 #: src/App/View/index/index.php:85
 msgid "index.crew2"
-msgstr "om Bone MVC nog beter te maken."
+msgstr "t' sail th' ship t' th' fabled Monkey Island."
 
 #: src/App/View/index/index.php:86
 msgid "index.crew3"
 msgstr ""
-"Als je van Bone houdt en zou willen bijdragen aan de ontwikkeling ervan, "
-"ervoor en aan boord gaan!"
+"If ye like Bone an' want t' help conquer the seven seas, fork it and get "
+"aboard!"
 
 #: src/App/View/index/learn.php:46
-#, fuzzy
 msgid "learn.learn"
-msgstr "Leren"
+msgstr "Learn Bone MVC Framework"
 
 #: src/App/View/index/learn.php:47
 msgid "learn.tagline"
-msgstr "Het is gemakkelijk om met een nieuw project aan de slag te gaan"
+msgstr "All our crew be trained by the Melee Island Swordmaster!"
 
 #: src/App/View/index/learn.php:62
 msgid "installation"
-msgstr "Installatie"
+msgstr "Installation"
 
 #: src/App/View/index/learn.php:63
 msgid "learn.composer"
-msgstr "Zorg eerst dat je "
+msgstr "Ahoy matey! First ye be needin'"
 
 #: src/App/View/index/learn.php:63
 msgid "learn.install.bone"
-msgstr "hebt. Installeer vervolgens 'Bone MVC'"
+msgstr "Then install Bone."
 
 #: src/App/View/index/learn.php:65
 msgid "learn.globally"
-msgstr "als je Composer niet wereldwijd hebt geïnstalleerd ..."
+msgstr "or if ye haven't installed composer globally ..."
 
 #: src/App/View/index/learn.php:76
 msgid "configure"
-msgstr "Configureren"
+msgstr "Configger"
 
 #: src/App/View/index/learn.php:77
 msgid "learn.folders"
 msgstr ""
-"U ziet een map config, data, public en src. Laat de leveranciersmap staan, "
-"dat is waar Composer projectafhankelijkheden installeert."
+"Ye can see ye have a config, data, public, and src folder. Dinnae be "
+"touchin' th' vendor folder or th' Cap'n will make ye walk the plank!"
 
 #: src/App/View/index/learn.php:78
 msgid "learn.777"
 msgstr ""
-"Maak de datamap schrijfbaar. 777 geeft iedereen schrijftoegang, dus plaats "
-"het in 775 met uw Apache-gebruiker in de groep."
+"Make th' data folder writable. 777 be lettin' every landlubber have write "
+"access, so if ye can we prefer 775 with yer Apache user in th' group."
 
 #: src/App/View/index/learn.php:80
 msgid "learn.vhosts"
 msgstr ""
-"Stel in uw Apache virtuele hosts de documentroot in als de openbare map"
+"In yer apache virtual hosts, set the document root as th' public folder"
 
 #: src/App/View/index/learn.php:103
 msgid "learn.config"
-msgstr "De configuratiemap"
+msgstr "Th' config folder"

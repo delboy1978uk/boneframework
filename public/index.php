@@ -66,13 +66,9 @@ if (!file_exists('vendor/autoload.php')) {
 }
 $loader = require_once 'vendor/autoload.php';
 
-
-$server = new \Bone\Server\Environment($_SERVER);
-$config = $server->fetchConfig(APPLICATION_PATH .'/config', APPLICATION_ENV);
-
 /**
  *
  *  Time t'begin th'voyage me hearties!
  *
  */
-Bone\Mvc\Application::ahoy($config)->setSail();
+Bone\Mvc\Application::ahoy()->setSail();

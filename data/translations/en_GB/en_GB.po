@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-04 00:41+0100\n"
-"PO-Revision-Date: 2018-11-04 00:45+0100\n"
+"POT-Creation-Date: 2018-11-05 23:48+0100\n"
+"PO-Revision-Date: 2018-11-06 15:32+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -15,22 +15,108 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:62
+#: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "About"
 
-#: src/App/View/index/index.php:24
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:73
+#: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Download"
 
-#: src/App/View/index/index.php:27
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:84
+#: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Contribute"
 
-#: src/App/View/index/index.php:30
+#: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
 msgstr "Learn"
 
 #: src/App/View/index/index.php:47
 msgid "home.intro"
-msgstr "It be yet another PHP framework swashbucklin' ont' th' scene!"
+msgstr "A easy to use PHP Framework with a pirate theme"
+
+#: src/App/View/index/index.php:63
+msgid "index.intro"
+msgstr ""
+"Be ye wantin an MVC framework peppered with local pirate lingo? It be the "
+"most bare bones framework in the seven seas! Garr!"
+
+#: src/App/View/index/index.php:74
+msgid "index.install"
+msgstr ""
+"You can download the Bone MVC source code by browsing over to Github. But we "
+"recommend you install "
+
+#: src/App/View/index/index.php:74
+msgid "index.install2"
+msgstr "and do it that way."
+
+#: src/App/View/index/index.php:75
+msgid "visit"
+msgstr "Visit"
+
+#: src/App/View/index/index.php:85
+msgid "index.crew"
+msgstr "We're always looking for contributors"
+
+#: src/App/View/index/index.php:85
+msgid "index.crew2"
+msgstr "to help make Bone MVC even better."
+
+#: src/App/View/index/index.php:86
+msgid "index.crew3"
+msgstr ""
+"If you like Bone and would like to help contribute in its ddevelopment, fork "
+"it and get on board!"
+
+#: src/App/View/index/learn.php:46
+msgid "learn.learn"
+msgstr "Learn Bone MVC Framework"
+
+#: src/App/View/index/learn.php:47
+msgid "learn.tagline"
+msgstr "It's easy to get up and running with a new project"
+
+#: src/App/View/index/learn.php:62
+msgid "installation"
+msgstr "Installation"
+
+#: src/App/View/index/learn.php:63
+msgid "learn.composer"
+msgstr "First make sure you have"
+
+#: src/App/View/index/learn.php:63
+msgid "learn.install.bone"
+msgstr "Then install Bone."
+
+#: src/App/View/index/learn.php:65
+msgid "learn.globally"
+msgstr "or if you haven't installed composer globally ..."
+
+#: src/App/View/index/learn.php:76
+msgid "configure"
+msgstr "Configure"
+
+#: src/App/View/index/learn.php:77
+msgid "learn.folders"
+msgstr ""
+"You can see a config, data, public, and src folder. Leave be vendor folder, "
+"that's where composer installs project dependencies."
+
+#: src/App/View/index/learn.php:78
+msgid "learn.777"
+msgstr ""
+"Make the data folder writable. 777 gives everyone write access, so instead "
+"set it to 775 with yer Apache user in the group."
+
+#: src/App/View/index/learn.php:80
+msgid "learn.vhosts"
+msgstr ""
+"In your Apache virtual hosts, set the document root as the public folder"
+
+#: src/App/View/index/learn.php:89
+msgid "learn.config"
+msgstr "The config folder"
