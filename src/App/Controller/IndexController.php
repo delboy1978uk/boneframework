@@ -4,9 +4,7 @@ namespace App\Controller;
 
 use Bone\Mvc\Controller;
 use Bone\Mvc\Registry;
-use Bone\Mvc\Router;
 use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
 
 
 class IndexController extends Controller
@@ -15,7 +13,7 @@ class IndexController extends Controller
 
     public function init()
     {
-        $this->locale = $this->getParam('locale', Registry::ahoy()->get('i18n')['default_locale']);
+        $this->locale = $this->view->locale = $this->getParam('locale', Registry::ahoy()->get('i18n')['default_locale']);
         $this->getTranslator()->setLocale($this->locale);
     }
 

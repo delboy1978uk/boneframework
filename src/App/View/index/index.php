@@ -27,7 +27,7 @@
                     <a href="#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="/learn"><?= $this->t('learn') ;?></a>
+                    <a href="/<?= $this->e($locale)?>/learn"><?= $this->t('learn') ;?></a>
                 </li>
             </ul>
         </div>
