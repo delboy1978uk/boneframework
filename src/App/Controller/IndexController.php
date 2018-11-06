@@ -26,7 +26,7 @@ class IndexController extends Controller
 
     public function learnAction()
     {
-        
+
     }
 
     public function jsonAction()
