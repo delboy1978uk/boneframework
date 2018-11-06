@@ -4,7 +4,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="/#page-top">
+            <a class="navbar-brand" href="/<?= $this->e($locale) ;?>#page-top">
                 <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> MVC Framework
             </a>
         </div>
@@ -28,6 +28,15 @@
                 </li>
                 <li class="">
                     <a href="#"><?= $this->t('learn') ;?></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->t('language') ;?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/en_PI/learn">Pirate</a></li>
+                        <li><a href="/en_GB/learn">English</a></li>
+                        <li><a href="/nl_BE/learn">Nederlands</a></li>
+                        <li><a href="/fr_BE/learn">Français</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
