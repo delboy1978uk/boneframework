@@ -74,10 +74,8 @@
             <p class="clear"><?= $this->t('learn.globally') ;?></p>
             <code>php composer.phar create-project delboy1978uk/bonemvc your/path/here dev-master</code>
             <br class="mb50">
-            <h2><?= $this->t('docker.devbox') ;?>Docker Dev Box</h2>
-            <p><?= $this->t('docker.about') ;?>Bone comes with a docker-compose.yml in the project, so you can instantly
-                get a dev server running if you use Docker (Tested using a default VirtualBox VM). Just add this to your
-                hosts file<br class="mb20" />
+            <h2><?= $this->t('docker.devbox') ;?></h2>
+            <p><?= $this->t('docker.about') ;?><br class="mb20" />
                 <code>awesome.scot 192.168.99.100</code></p>
             <div class="code tl">
                 docker-machine start
@@ -85,8 +83,7 @@
                 cd /path/to/project
                 docker-compose up
             </div>
-            <p>Then you can access the site at https://awesome.scot in your browser. Of course if you don't use docker
-                you can add it to your LAMP stack in the usual way.</p>
+            <p><?= $this->t('docker.browse') ;?></p>
         </div>
     </div>
 </section>
@@ -123,12 +120,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('learn.config') ;?></h2>
-            <p>You can drop in any number of <span class="label label-success">.php</span> files into the
-                <span class="label label-success">config/</span> folder. Make sure they return an array with the config
-                . You can override configuration based on environment var
-                <span class="label label-success">APPLICATION_ENV</span>, so for instance if the environment was production
-            it would load the additional config the production subdirectory.</p>
-            <p>There are several config files by default:</p>
+            <p><?= $this->t('learn.config.drop') ;?></p>
             <div class="code tl">
                 db.php
                 i18n.php
@@ -137,11 +129,10 @@
                 routes.php
                 templates.php
             </div>
-            <p>In your config files, you can add anything you want. It gets stored in the Bone\Mvc\Registry.</p>
+            <p><?= $this->t('learn.config.registry') ;?></p>
             <br>
-            <h3>Database</h3>
-            <p>Set your default db credentials in the main config/db.php, and any environment specific configs in a
-                subdirectory</p>
+            <h3><?= $this->t('database') ;?></h3>
+            <p><?= $this->t('learn.db') ;?></p>
             <div class="code tl">
                 'db' => array(
                 'host' => '127.0.0.1',
@@ -151,10 +142,8 @@
                 ),
             </div>
             <br>
-            <h3>Internationalisation</h3>
-            <p>Bone supports translation into different locales. Translation files (gettext .po and .mo) should be
-                placed in data/translations, under a subdirectory of the locale, eg data/translations/en_GB/en_GB.po.
-                You can set the default locale and an array of supported locales.</p>
+            <h3><?= $this->t('i18n') ;?></h3>
+            <p><?= $this->t('learn.i18n.about') ;?></p>
             <div class="code tl">
                 &lt;?php
 
@@ -167,7 +156,7 @@
                         ]
                     ];
             </div>
-            <p>To use the translator, you can simply call:</p>
+            <p><?= $this->t('learn.i18n.usage') ;?>To use the translator, you can simply call:</p>
             <div class="code tl">
                 // from a controller:
                 $this->getTranslator()->translate('placeholder.string');
@@ -178,9 +167,8 @@
                 $this->t('placeholder');
             </div>
             <br>
-            <h3>Logs</h3>
-            <p>Bone uses monolog/monolog, and logs can be found in <span class="label label-success">data/logs</span>.
-            Currently we only support writing to files, but you can add as many channels as you like:</p>
+            <h3><?= $this->t('logs') ;?></h3>
+            <p><?= $this->t('learn.logs') ;?></p>
             <div class="code tl">
                 &lt;?php
 
@@ -192,13 +180,13 @@
                     ],
                 ];
             </div>
-            <p>To use the logger in a controller:</p>
+            <p><?= $this->t('learn.logs.usage') ;?></p>
             <div class="code tl">
                 $this->getLog()->debug($message) // or error(), etc, see PSR-3
             </div>
             <br>
-            <h3>Mail</h3>
-            <p>Bone uses Zend Mail. To configure the mail client, just drop in your config (see zend mail docs)</p>
+            <h3><?= $this->t('mail') ;?></h3>
+            <p><?= $this->t('learn.mail') ;?></p>
             <div class="code tl">
                 &lt;?php
 
@@ -215,13 +203,10 @@
                     ],
                 ];
             </div>
-            <p>If you are using the Docker Box provided by bone, you also have the awesome MailHog at your disposal.
-            Browse to awesome.scot:8025 and you'll see a catch all email inbox, so you never need to worry about development
-            emails reaching the real world.</p>
+            <p><?= $this->t('learn.mail.hog') ;?></p>
             <br />
-            <h3>Routes</h3>
-            <p>Routes follow a default pattern of /controller/action/param/value/nextparam/nextvalue/etc/etc</p>
-            <p>You can also override routes by defining them in the config array:</p>
+            <h3><?= $this->t('routes') ;?></h3>
+            <p><?= $this->t('learn.routes') ;?></p>
             <div class="code tl">&lt;?php
 
             return [
@@ -244,12 +229,11 @@
                 ],
             ];
             </div>
-            <p>When defining routes, mandatory variables in the uri have a colon like :id<br /> Optional uri vars have
-                [ ] surrounding them like [:id]</p>
+            <p><?= $this->t('learn.routes.params') ;?></p>
 
             <br />
-            <h3>Layouts</h3>
-            <p>Ignore this config. It's old deprecated nonsense.</p>
+            <h3><?= $this->t('layouts') ;?></h3>
+            <p><?= $this->t('learn.layouts') ;?></p>
         </div>
     </div>
 </section>

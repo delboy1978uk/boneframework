@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bone\n"
-"POT-Creation-Date: 2018-11-06 15:03+0100\n"
-"PO-Revision-Date: 2018-11-06 15:28+0100\n"
+"POT-Creation-Date: 2018-11-06 18:48+0100\n"
+"PO-Revision-Date: 2018-11-06 19:43+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_PI\n"
@@ -15,108 +15,231 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21 src/App/View/index/index.php:62
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:72
 #: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "About"
 
-#: src/App/View/index/index.php:24 src/App/View/index/index.php:73
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:83
 #: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Loot"
 
-#: src/App/View/index/index.php:27 src/App/View/index/index.php:84
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:94
 #: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Contribute"
 
 #: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
-msgstr "Learn"
+msgstr "Learn Bone MVC Framework"
 
-#: src/App/View/index/index.php:47
+#: src/App/View/index/index.php:34 src/App/View/index/learn.php:33
+msgid "language"
+msgstr "Lingo"
+
+#: src/App/View/index/index.php:57
 msgid "home.intro"
 msgstr "It be yet another PHP framework swashbucklin' ont' th' scene!"
 
-#: src/App/View/index/index.php:63
+#: src/App/View/index/index.php:73
 msgid "index.intro"
 msgstr ""
 "Be ye wantin an MVC framework peppered with local pirate lingo? It be the "
 "most bare bones framework in the seven seas! Garr!"
 
-#: src/App/View/index/index.php:74
+#: src/App/View/index/index.php:84
 msgid "index.install"
 msgstr ""
 "Ye can download th' Bone MVC source code by sailin' over t' Github. But the "
 "Cap'n recommends ye install "
 
-#: src/App/View/index/index.php:74
+#: src/App/View/index/index.php:84
 msgid "index.install2"
 msgstr "'n' do it that way."
 
-#: src/App/View/index/index.php:75
+#: src/App/View/index/index.php:85
 msgid "visit"
 msgstr "Visit"
 
-#: src/App/View/index/index.php:85
+#: src/App/View/index/index.php:95
 msgid "index.crew"
 msgstr "Gaarrrr! We be needin' a foul-mouthed grog swillin' crew"
 
-#: src/App/View/index/index.php:85
+#: src/App/View/index/index.php:95
 msgid "index.crew2"
 msgstr "t' sail th' ship t' th' fabled Monkey Island."
 
-#: src/App/View/index/index.php:86
+#: src/App/View/index/index.php:96
 msgid "index.crew3"
 msgstr ""
 "If ye like Bone an' want t' help conquer the seven seas, fork it and get "
 "aboard!"
 
-#: src/App/View/index/learn.php:46
+#: src/App/View/index/learn.php:55
 msgid "learn.learn"
 msgstr "Learn Bone MVC Framework"
 
-#: src/App/View/index/learn.php:47
+#: src/App/View/index/learn.php:56
 msgid "learn.tagline"
 msgstr "All our crew be trained by the Melee Island Swordmaster!"
 
-#: src/App/View/index/learn.php:62
+#: src/App/View/index/learn.php:71
 msgid "installation"
 msgstr "Installation"
 
-#: src/App/View/index/learn.php:63
+#: src/App/View/index/learn.php:72
 msgid "learn.composer"
 msgstr "Ahoy matey! First ye be needin'"
 
-#: src/App/View/index/learn.php:63
+#: src/App/View/index/learn.php:72
 msgid "learn.install.bone"
 msgstr "Then install Bone."
 
-#: src/App/View/index/learn.php:65
+#: src/App/View/index/learn.php:74
 msgid "learn.globally"
 msgstr "or if ye haven't installed composer globally ..."
 
-#: src/App/View/index/learn.php:76
-msgid "configure"
-msgstr "Configger"
-
 #: src/App/View/index/learn.php:77
+msgid "docker.devbox"
+msgstr "Docker Dev Box"
+
+#: src/App/View/index/learn.php:78
+msgid "docker.about"
+msgstr ""
+"Bone comes wit' a docker-compose.yml in th' project, so ye can instantly get "
+"a dev server runnin' if ye use Docker (Tested usin' a default VirtualBox "
+"VM). Jus' add this t' yer hosts file"
+
+#: src/App/View/index/learn.php:88
+msgid "docker.browse"
+msgstr ""
+"Then ye can access th' site at https://awesome.scot in yer browser. O' "
+"course if ye don't use docker ye can add it t' yer LAMP stack in th' usual "
+"way."
+
+#: src/App/View/index/learn.php:98
+msgid "configure"
+msgstr "Cap'n's Logs"
+
+#: src/App/View/index/learn.php:99
 msgid "learn.folders"
 msgstr ""
 "Ye can see ye have a config, data, public, and src folder. Dinnae be "
 "touchin' th' vendor folder or th' Cap'n will make ye walk the plank!"
 
-#: src/App/View/index/learn.php:78
+#: src/App/View/index/learn.php:100
 msgid "learn.777"
 msgstr ""
 "Make th' data folder writable. 777 be lettin' every landlubber have write "
 "access, so if ye can we prefer 775 with yer Apache user in th' group."
 
-#: src/App/View/index/learn.php:80
+#: src/App/View/index/learn.php:102
 msgid "learn.vhosts"
 msgstr ""
 "In yer apache virtual hosts, set the document root as th' public folder"
 
-#: src/App/View/index/learn.php:103
+#: src/App/View/index/learn.php:125
 msgid "learn.config"
 msgstr "Th' config folder"
+
+#: src/App/View/index/learn.php:126
+msgid "learn.config.drop"
+msgstr ""
+"Ye can drop in any number o' <span class=\"label label-success\">.php</span> "
+"files into th'    <span class=\"label label-success\">config/</span> folder. "
+"Make sure they return an array wit' th' config    . Ye can o'erride "
+"configuration based on environment var    <span class=\"label label-success"
+"\">APPLICATION_ENV</span>, so fer instance if th' environment was "
+"productionit would load th' additional config th' production subdirectory.</"
+"p><p>Thar are several config files by default:"
+
+#: src/App/View/index/learn.php:140
+msgid "learn.config.registry"
+msgstr ""
+"In yer config files, ye can add anythin' ye wants. It gets stored in th' Bone"
+"\\Mvc\\Registry."
+
+#: src/App/View/index/learn.php:142
+msgid "database"
+msgstr "Database"
+
+#: src/App/View/index/learn.php:143
+msgid "learn.db"
+msgstr ""
+"Set yer default db credentials in th' main config/db.php, 'n any environment "
+"specific configs in a subdirectory"
+
+#: src/App/View/index/learn.php:154
+msgid "i18n"
+msgstr "Lingo"
+
+#: src/App/View/index/learn.php:155
+msgid "learn.i18n.about"
+msgstr ""
+"Bone supports translation into different locales. Translation files "
+"(gettext .po 'n .mo) best be placed in data/translations, under a "
+"subdirectory o' th' locale, eg data/translations/en_GB/en_GB.po. Ye can set "
+"th' default locale 'n an array o' supported locales."
+
+#: src/App/View/index/learn.php:170
+msgid "learn.i18n.usage"
+msgstr "T' use th' translator, ye can simply call:"
+
+#: src/App/View/index/learn.php:181
+msgid "logs"
+msgstr "Cap'n's Logs"
+
+#: src/App/View/index/learn.php:182
+msgid "learn.logs"
+msgstr ""
+"Bone uses monolog/monolog, 'n logs can be found in <span crew=\"label label-"
+"success\">data/logs</span>.            Currently we only support writin' t' "
+"files, but ye can add as many channels as ye like:"
+
+#: src/App/View/index/learn.php:195
+msgid "learn.logs.usage"
+msgstr "T' use th' logger in a controller:"
+
+#: src/App/View/index/learn.php:200
+msgid "mail"
+msgstr "Messages in bottles"
+
+#: src/App/View/index/learn.php:201
+msgid "learn.mail"
+msgstr ""
+"Bone uses Zend Mail. T' configure th' mail client, jus' drop in yer config "
+"(see zend mail docs)"
+
+#: src/App/View/index/learn.php:218
+msgid "learn.mail.hog"
+msgstr ""
+"If ye be usin' th' Docker Box provided by bone, ye also 'ave th' awesome "
+"MailHog at yer disposal. Browse t' awesome.scot:8025 'n ye'll see a catch "
+"all email inbox, so ye ne'er needs t' worry about development emails "
+"reachin' th' real world."
+
+#: src/App/View/index/learn.php:222
+msgid "routes"
+msgstr "Voyages"
+
+#: src/App/View/index/learn.php:223
+msgid "learn.routes"
+msgstr ""
+"Routes follow a default pattern o' /controller/action/param/value/nextparam/"
+"nextvalue/etc/etc<br>Ye can also o'erride routes by definin' them in th' "
+"config array:"
+
+#: src/App/View/index/learn.php:247
+msgid "learn.routes.params"
+msgstr ""
+"When definin' routes, mandatory variables in th' uri 'ave a colon like :"
+"id<br /> Optional uri vars 'ave [ ] surroundin' them like [:id]"
+
+#: src/App/View/index/learn.php:251
+msgid "layouts"
+msgstr "Layouts"
+
+#: src/App/View/index/learn.php:252
+msgid "learn.layouts"
+msgstr "Ignore this config. 'tis ole deprecated nonsense."

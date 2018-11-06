@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-05 23:48+0100\n"
-"PO-Revision-Date: 2018-11-06 15:39+0100\n"
+"POT-Creation-Date: 2018-11-06 18:48+0100\n"
+"PO-Revision-Date: 2018-11-06 19:39+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -15,17 +15,17 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21 src/App/View/index/index.php:62
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:72
 #: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "About"
 
-#: src/App/View/index/index.php:24 src/App/View/index/index.php:73
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:83
 #: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Download"
 
-#: src/App/View/index/index.php:27 src/App/View/index/index.php:84
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:94
 #: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Contribute"
@@ -34,89 +34,212 @@ msgstr "Contribute"
 msgid "learn"
 msgstr "Learn"
 
-#: src/App/View/index/index.php:47
+#: src/App/View/index/index.php:34 src/App/View/index/learn.php:33
+msgid "language"
+msgstr "Language"
+
+#: src/App/View/index/index.php:57
 msgid "home.intro"
 msgstr "A easy to use PHP Framework with a pirate theme"
 
-#: src/App/View/index/index.php:63
+#: src/App/View/index/index.php:73
 msgid "index.intro"
 msgstr ""
 "Be ye wantin an MVC framework peppered with local pirate lingo? It be the "
 "most bare bones framework in the seven seas! Garr!"
 
-#: src/App/View/index/index.php:74
+#: src/App/View/index/index.php:84
 msgid "index.install"
 msgstr ""
 "You can download the Bone MVC source code by browsing over to Github. But we "
 "recommend you install "
 
-#: src/App/View/index/index.php:74
+#: src/App/View/index/index.php:84
 msgid "index.install2"
 msgstr "and do it that way."
 
-#: src/App/View/index/index.php:75
+#: src/App/View/index/index.php:85
 msgid "visit"
 msgstr "Visit"
 
-#: src/App/View/index/index.php:85
+#: src/App/View/index/index.php:95
 msgid "index.crew"
 msgstr "We're always looking for contributors"
 
-#: src/App/View/index/index.php:85
+#: src/App/View/index/index.php:95
 msgid "index.crew2"
 msgstr "to help make Bone MVC even better."
 
-#: src/App/View/index/index.php:86
+#: src/App/View/index/index.php:96
 msgid "index.crew3"
 msgstr ""
 "If you like Bone and would like to help contribute in its ddevelopment, fork "
 "it and get on board!"
 
-#: src/App/View/index/learn.php:46
+#: src/App/View/index/learn.php:55
 msgid "learn.learn"
 msgstr "Learn Bone MVC Framework"
 
-#: src/App/View/index/learn.php:47
+#: src/App/View/index/learn.php:56
 msgid "learn.tagline"
 msgstr "It's easy to get up and running with a new project"
 
-#: src/App/View/index/learn.php:62
+#: src/App/View/index/learn.php:71
 msgid "installation"
 msgstr "Installation"
 
-#: src/App/View/index/learn.php:63
+#: src/App/View/index/learn.php:72
 msgid "learn.composer"
 msgstr "First make sure you have"
 
-#: src/App/View/index/learn.php:63
+#: src/App/View/index/learn.php:72
 msgid "learn.install.bone"
 msgstr "Then install Bone."
 
-#: src/App/View/index/learn.php:65
+#: src/App/View/index/learn.php:74
 msgid "learn.globally"
 msgstr "or if you haven't installed composer globally ..."
 
-#: src/App/View/index/learn.php:76
+#: src/App/View/index/learn.php:77
+msgid "docker.devbox"
+msgstr "Docker Dev Box"
+
+#: src/App/View/index/learn.php:78
+msgid "docker.about"
+msgstr ""
+"Bone comes with a docker-compose.yml in the project, so you can instantly    "
+"get a dev server running if you use Docker (Tested using a default "
+"VirtualBox VM). Just add this to your    hosts file"
+
+#: src/App/View/index/learn.php:88
+msgid "docker.browse"
+msgstr ""
+"Then you can access the site at https://awesome.scot in your browser. Of "
+"course if you don't use docker you can add it to your LAMP stack in the "
+"usual way."
+
+#: src/App/View/index/learn.php:98
 msgid "configure"
 msgstr "Configure"
 
-#: src/App/View/index/learn.php:77
+#: src/App/View/index/learn.php:99
 msgid "learn.folders"
 msgstr ""
 "You can see a config, data, public, and src folder. Leave be vendor folder, "
 "that's where composer installs project dependencies."
 
-#: src/App/View/index/learn.php:78
+#: src/App/View/index/learn.php:100
 msgid "learn.777"
 msgstr ""
 "Make the data folder writable. 777 gives everyone write access, so instead "
 "set it to 775 with yer Apache user in the group."
 
-#: src/App/View/index/learn.php:80
+#: src/App/View/index/learn.php:102
 msgid "learn.vhosts"
 msgstr ""
 "In your Apache virtual hosts, set the document root as the public folder"
 
-#: src/App/View/index/learn.php:89
+#: src/App/View/index/learn.php:125
 msgid "learn.config"
 msgstr "The config folder"
+
+#: src/App/View/index/learn.php:126
+msgid "learn.config.drop"
+msgstr ""
+"You can drop in any number of <span class=\"label label-success\">.php</"
+"span> files into the    <span class=\"label label-success\">config/</span> "
+"folder. Make sure they return an array with the config    . You can override "
+"configuration based on environment var    <span class=\"label label-success"
+"\">APPLICATION_ENV</span>, so for instance if the environment was "
+"productionit would load the additional config the production subdirectory.</"
+"p><p>There are several config files by default:"
+
+#: src/App/View/index/learn.php:140
+msgid "learn.config.registry"
+msgstr ""
+"In your config files, you can add anything you want. It gets stored in the "
+"Bone\\Mvc\\Registry."
+
+#: src/App/View/index/learn.php:142
+msgid "database"
+msgstr "Database"
+
+#: src/App/View/index/learn.php:143
+msgid "learn.db"
+msgstr ""
+"Set your default db credentials in the main config/db.php, and any "
+"environment specific configs in a subdirectory"
+
+#: src/App/View/index/learn.php:154
+msgid "i18n"
+msgstr "Internationalisation"
+
+#: src/App/View/index/learn.php:155
+msgid "learn.i18n.about"
+msgstr ""
+"Bone supports translation into different locales. Translation files "
+"(gettext .po and .mo) should be placed in data/translations, under a "
+"subdirectory of the locale, eg data/translations/en_GB/en_GB.po. You can set "
+"the default locale and an array of supported locales."
+
+#: src/App/View/index/learn.php:170
+msgid "learn.i18n.usage"
+msgstr "To use the translator, you can simply call:"
+
+#: src/App/View/index/learn.php:181
+msgid "logs"
+msgstr "Logs"
+
+#: src/App/View/index/learn.php:182
+msgid "learn.logs"
+msgstr ""
+"Bone uses monolog/monolog, and logs can be found in <span class=\"label "
+"label-success\">data/logs</span>.Currently we only support writing to files, "
+"but you can add as many channels as you like:"
+
+#: src/App/View/index/learn.php:195
+msgid "learn.logs.usage"
+msgstr "To use the logger in a controller:"
+
+#: src/App/View/index/learn.php:200
+msgid "mail"
+msgstr "Mail"
+
+#: src/App/View/index/learn.php:201
+msgid "learn.mail"
+msgstr ""
+"Bone uses Zend Mail. To configure the mail client, just drop in your config "
+"(see zend mail docs)"
+
+#: src/App/View/index/learn.php:218
+msgid "learn.mail.hog"
+msgstr ""
+"If you are using the Docker Box provided by bone, you also have the awesome "
+"MailHog at your disposal. Browse to awesome.scot:8025 and you'll see a catch "
+"all email inbox, so you never need to worry about development emails "
+"reaching the real world."
+
+#: src/App/View/index/learn.php:222
+msgid "routes"
+msgstr "Routes"
+
+#: src/App/View/index/learn.php:223
+msgid "learn.routes"
+msgstr ""
+"Routes follow a default pattern of /controller/action/param/value/nextparam/"
+"nextvalue/etc/etc<br>You can also override routes by defining them in the "
+"config array:"
+
+#: src/App/View/index/learn.php:247
+msgid "learn.routes.params"
+msgstr ""
+"When defining routes, mandatory variables in the uri have a colon like :"
+"id<br /> Optional uri vars have [ ] surrounding them like [:id]"
+
+#: src/App/View/index/learn.php:251
+msgid "layouts"
+msgstr "Layouts"
+
+#: src/App/View/index/learn.php:252
+msgid "learn.layouts"
+msgstr "Ignore this config. It's old deprecated nonsense."
