@@ -6,6 +6,6 @@ $I->amOnPage('/');
 $I->see('Bone MVC Framework');
 $I->see('yet another PHP Framework');
 
-$I->amOnPage('/?locale=fr_BE');
+$I->amOnPage('/fr_BE');
 $I->see('Bone MVC Framework');
 $I->see('Un framework PHP pour les pirates');
