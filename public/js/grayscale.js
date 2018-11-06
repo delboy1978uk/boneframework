@@ -19,6 +19,7 @@ $(function() {
 });
 
 //Google Map Skin - Get more at http://snazzymaps.com/
+/**
 var myOptions = {
     zoom: 15,
     center: new google.maps.LatLng(53.385873, -1.471471),
@@ -135,3 +136,4 @@ var myOptions = {
 };
 
 var map = new google.maps.Map(document.getElementById('map'), myOptions);
+*/

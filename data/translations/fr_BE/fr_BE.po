@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-04 00:39+0100\n"
-"PO-Revision-Date: 2018-11-04 01:48+0100\n"
+"POT-Creation-Date: 2018-11-06 18:48+0100\n"
+"PO-Revision-Date: 2018-11-06 19:39+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -15,22 +15,240 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:72
+#: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "Sur"
 
-#: src/App/View/index/index.php:24
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:83
+#: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Télécharger"
 
-#: src/App/View/index/index.php:27
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:94
+#: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Contribuer"
 
-#: src/App/View/index/index.php:30
+#: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
-msgstr "Apprendre"
+msgstr "Apprendre Bone MVC Framework"
 
-#: src/App/View/index/index.php:47
+#: src/App/View/index/index.php:34 src/App/View/index/learn.php:33
+msgid "language"
+msgstr "La langue"
+
+#: src/App/View/index/index.php:57
 msgid "home.intro"
 msgstr "Un framework PHP pour les pirates"
+
+#: src/App/View/index/index.php:73
+msgid "index.intro"
+msgstr "Un framework PHP pour les pirates"
+
+#: src/App/View/index/index.php:84
+msgid "index.install"
+msgstr ""
+"You can download the Bone MVC source code by browsing over to Github. But we "
+"recommend you install "
+
+#: src/App/View/index/index.php:84
+msgid "index.install2"
+msgstr "et le faire de cette façon."
+
+#: src/App/View/index/index.php:85
+msgid "visit"
+msgstr "Visite"
+
+#: src/App/View/index/index.php:95
+msgid "index.crew"
+msgstr "Nous sommes toujours à la recherche de contributeurs"
+
+#: src/App/View/index/index.php:95
+msgid "index.crew2"
+msgstr "pour aider Bone MVC à être encore meilleur."
+
+#: src/App/View/index/index.php:96
+msgid "index.crew3"
+msgstr ""
+"Si vous aimez Bone et souhaitez contribuer à son développement, rejoignez-le!"
+
+#: src/App/View/index/learn.php:55
+msgid "learn.learn"
+msgstr "Apprendre Bone Framework MVC"
+
+#: src/App/View/index/learn.php:56
+msgid "learn.tagline"
+msgstr "Il est facile de se lancer avec un nouveau projet"
+
+#: src/App/View/index/learn.php:71
+msgid "installation"
+msgstr "Installation"
+
+#: src/App/View/index/learn.php:72
+msgid "learn.composer"
+msgstr "D'abord, assurez-vous d'avoir"
+
+#: src/App/View/index/learn.php:72
+msgid "learn.install.bone"
+msgstr "Ensuite, installez Bone."
+
+#: src/App/View/index/learn.php:74
+msgid "learn.globally"
+msgstr "ou si vous n'avez pas installé le compositeur globalement ..."
+
+#: src/App/View/index/learn.php:77
+msgid "docker.devbox"
+msgstr "Docker boîte de développement"
+
+#: src/App/View/index/learn.php:78
+msgid "docker.about"
+msgstr ""
+"Bone est livré avec un fichier docker-compose.yml dans le projet. Vous "
+"pouvez donc instantanément lancer un serveur de développement si vous "
+"utilisez Docker (testé à l'aide d'une machine virtuelle VirtualBox par "
+"défaut). Ajoutez simplement ceci à votre fichier hosts"
+
+#: src/App/View/index/learn.php:88
+msgid "docker.browse"
+msgstr ""
+"Ensuite, vous pouvez accéder au site à l'adresse https://awesome.scot dans "
+"votre navigateur. Bien sûr, si vous n'utilisez pas docker, vous pouvez "
+"l'ajouter à votre pile LAMP de la manière habituelle."
+
+#: src/App/View/index/learn.php:98
+msgid "configure"
+msgstr "Configurer"
+
+#: src/App/View/index/learn.php:99
+msgid "learn.folders"
+msgstr ""
+"Vous pouvez voir un dossier config, data, public et src. Conserver le "
+"dossier du fournisseur, c’est là que composeur installe les dépendances du "
+"projet."
+
+#: src/App/View/index/learn.php:100
+msgid "learn.777"
+msgstr ""
+"Rendez le dossier de données accessible en écriture. 777 donne à tout le "
+"monde un accès en écriture, donc définissez-le à 775 avec votre utilisateur "
+"Apache du groupe."
+
+#: src/App/View/index/learn.php:102
+msgid "learn.vhosts"
+msgstr ""
+"Dans vos hôtes virtuels Apache, définissez la racine du document en tant que "
+"dossier public."
+
+#: src/App/View/index/learn.php:125
+msgid "learn.config"
+msgstr "Le dossier de configuration"
+
+#: src/App/View/index/learn.php:126
+msgid "learn.config.drop"
+msgstr ""
+"Vous pouvez déposer n'importe quel nombre de fichiers <span class = \"label "
+"label-success\">.php</span> dans la <span class=\"label label-success"
+"\">config/</span>. Assurez-vous qu'ils renvoient un tableau avec la "
+"configuration. Vous pouvez remplacer la configuration en fonction de "
+"l'environnement var <span class=\"label label-success\">APPLICATION_ENV</"
+"span>, par exemple si l'environnement était en production il chargerait la "
+"configuration supplémentaire du sous-répertoire de production.</ p><p> Il "
+"existe plusieurs fichiers de configuration par défaut:"
+
+#: src/App/View/index/learn.php:140
+msgid "learn.config.registry"
+msgstr ""
+"Dans vos fichiers de configuration, vous pouvez ajouter ce que vous voulez. "
+"Il est stocké dans le registre Bone\\Mvc\\Registry."
+
+#: src/App/View/index/learn.php:142
+msgid "database"
+msgstr "Base de données"
+
+#: src/App/View/index/learn.php:143
+msgid "learn.db"
+msgstr ""
+"Définissez vos informations d'identification de base de données par défaut "
+"dans le fichier config / db.php principal, ainsi que toute configuration "
+"spécifique à l'environnement dans un sous-répertoire."
+
+#: src/App/View/index/learn.php:154
+msgid "i18n"
+msgstr "Internationalisation"
+
+#: src/App/View/index/learn.php:155
+msgid "learn.i18n.about"
+msgstr ""
+"Bone prend en charge la traduction dans différents lieux. Les fichiers de "
+"traduction (gettext .po et .mo) doivent être placés dans data / "
+"translations, dans un sous-répertoire de la langue, par exemple data / "
+"translations / en_GB / en_GB.po. Vous pouvez définir les paramètres "
+"régionaux par défaut et un tableau des paramètres régionaux pris en charge."
+
+#: src/App/View/index/learn.php:170
+msgid "learn.i18n.usage"
+msgstr "Pour utiliser le traducteur, vous pouvez simplement appeler:"
+
+#: src/App/View/index/learn.php:181
+msgid "logs"
+msgstr "Les journaux"
+
+#: src/App/View/index/learn.php:182
+msgid "learn.logs"
+msgstr ""
+"Bone utilise monolog/monolog. On peut trouver n logs dans <span crew=\"label "
+"label-success\">data/logs</ span>. Actuellement, nous ne prenons en charge "
+"que les fichiers en écriture, mais vous pouvez ajouter autant de canaux que "
+"vous aimez:"
+
+#: src/App/View/index/learn.php:195
+msgid "learn.logs.usage"
+msgstr ""
+"Bone utilise Zend Mail. Pour configurer le client de messagerie, il suffit "
+"de déposer votre configuration (voir zend mail docs)"
+
+#: src/App/View/index/learn.php:200
+msgid "mail"
+msgstr "Courrier"
+
+#: src/App/View/index/learn.php:201
+msgid "learn.mail"
+msgstr ""
+"Bone utilise Zend Mail. Pour configurer le client de messagerie, il suffit "
+"de déposer votre configuration (voir zend mail docs)"
+
+#: src/App/View/index/learn.php:218
+msgid "learn.mail.hog"
+msgstr ""
+"Si vous utilisez la boîte Docker fournie par bone, vous avez également le "
+"formidable MailHog à votre disposition. Naviguez vers awesome.scot:8025 et "
+"vous verrez apparaître une boîte de réception électronique complète, de "
+"sorte que vous n’aurez jamais à vous soucier des courriels de développement "
+"atteignant le monde réel."
+
+#: src/App/View/index/learn.php:222
+msgid "routes"
+msgstr "Routes"
+
+#: src/App/View/index/learn.php:223
+msgid "learn.routes"
+msgstr ""
+"Les itinéraires suivent un modèle par défaut de /controller/action/param/"
+"value/nextparam/nextvalue/etc/etc<br> Vous pouvez également remplacer les "
+"itinéraires en les définissant dans le tableau de configuration:"
+
+#: src/App/View/index/learn.php:247
+msgid "learn.routes.params"
+msgstr ""
+"Lors de la définition des itinéraires, les variables obligatoires dans l'URI "
+"ont deux points comme: id <br /> Les uri vars facultatifs sont entourées par "
+"[] comme [: id]"
+
+#: src/App/View/index/learn.php:251
+msgid "layouts"
+msgstr "Mises en page"
+
+#: src/App/View/index/learn.php:252
+msgid "learn.layouts"
+msgstr "Ignorer cette config. C'est vieux non-sens obsolète."

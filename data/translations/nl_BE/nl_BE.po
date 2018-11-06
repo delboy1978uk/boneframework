@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
-"POT-Creation-Date: 2018-11-04 00:40+0100\n"
-"PO-Revision-Date: 2018-11-04 00:45+0100\n"
+"POT-Creation-Date: 2018-11-06 18:48+0100\n"
+"PO-Revision-Date: 2018-11-06 19:39+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -15,22 +15,232 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
-#: src/App/View/index/index.php:21
+#: src/App/View/index/index.php:21 src/App/View/index/index.php:72
+#: src/App/View/index/learn.php:21
 msgid "about"
 msgstr "Over"
 
-#: src/App/View/index/index.php:24
+#: src/App/View/index/index.php:24 src/App/View/index/index.php:83
+#: src/App/View/index/learn.php:24
 msgid "download"
 msgstr "Downloaden"
 
-#: src/App/View/index/index.php:27
+#: src/App/View/index/index.php:27 src/App/View/index/index.php:94
+#: src/App/View/index/learn.php:27
 msgid "contribute"
 msgstr "Bijdragen"
 
-#: src/App/View/index/index.php:30
+#: src/App/View/index/index.php:30 src/App/View/index/learn.php:30
 msgid "learn"
-msgstr "Leren"
+msgstr "Leer Bone MVC Framework"
 
-#: src/App/View/index/index.php:47
+#: src/App/View/index/index.php:34 src/App/View/index/learn.php:33
+msgid "language"
+msgstr "Taal"
+
+#: src/App/View/index/index.php:57
 msgid "home.intro"
 msgstr "Een PHP-raamwerk voor piraten"
+
+#: src/App/View/index/index.php:73
+msgid "index.intro"
+msgstr "Een PHP-raamwerk voor piraten"
+
+#: src/App/View/index/index.php:84
+msgid "index.install"
+msgstr ""
+"Je kunt de Bone MVC-broncode downloaden door naar Github te bladeren. Maar "
+"we raden aan om"
+
+#: src/App/View/index/index.php:84
+msgid "index.install2"
+msgstr "te installeren, en doe het op die manier"
+
+#: src/App/View/index/index.php:85
+msgid "visit"
+msgstr "Bezoek"
+
+#: src/App/View/index/index.php:95
+msgid "index.crew"
+msgstr "We zijn altijd op zoek naar medewerekers"
+
+#: src/App/View/index/index.php:95
+msgid "index.crew2"
+msgstr "om Bone MVC nog beter te maken."
+
+#: src/App/View/index/index.php:96
+msgid "index.crew3"
+msgstr ""
+"Als je van Bone houdt en zou willen bijdragen aan de ontwikkeling ervan, "
+"ervoor en aan boord gaan!"
+
+#: src/App/View/index/learn.php:55
+msgid "learn.learn"
+msgstr "Leren"
+
+#: src/App/View/index/learn.php:56
+msgid "learn.tagline"
+msgstr "Het is gemakkelijk om met een nieuw project aan de slag te gaan"
+
+#: src/App/View/index/learn.php:71
+msgid "installation"
+msgstr "Installatie"
+
+#: src/App/View/index/learn.php:72
+msgid "learn.composer"
+msgstr "Zorg eerst dat je "
+
+#: src/App/View/index/learn.php:72
+msgid "learn.install.bone"
+msgstr "hebt. Installeer vervolgens 'Bone MVC'"
+
+#: src/App/View/index/learn.php:74
+msgid "learn.globally"
+msgstr "als je Composer niet wereldwijd hebt geïnstalleerd ..."
+
+#: src/App/View/index/learn.php:77
+msgid "docker.devbox"
+msgstr "Docker development box"
+
+#: src/App/View/index/learn.php:78
+msgid "docker.about"
+msgstr ""
+"Bot wordt geleverd met een docker-compose.yml in het project, dus u kunt het "
+"meteen een dev-server laten draaien als je Docker gebruikt (Getest met een "
+"standaard VirtualBox VM). Voeg dit gewoon toe aan uwhosts bestand"
+
+#: src/App/View/index/learn.php:88
+msgid "docker.browse"
+msgstr ""
+"Vervolgens hebt u toegang tot de site op https://awesome.scot in uw browser. "
+"Als u docker niet gebruikt, kunt u dit natuurlijk op de gebruikelijke manier "
+"aan uw LAMP-stack toevoegen."
+
+#: src/App/View/index/learn.php:98
+msgid "configure"
+msgstr "Configureren"
+
+#: src/App/View/index/learn.php:99
+msgid "learn.folders"
+msgstr ""
+"U ziet een map config, data, public en src. Laat de leveranciersmap staan, "
+"dat is waar Composer projectafhankelijkheden installeert."
+
+#: src/App/View/index/learn.php:100
+msgid "learn.777"
+msgstr ""
+"Maak de datamap schrijfbaar. 777 geeft iedereen schrijftoegang, dus plaats "
+"het in 775 met uw Apache-gebruiker in de groep."
+
+#: src/App/View/index/learn.php:102
+msgid "learn.vhosts"
+msgstr ""
+"Stel in uw Apache virtuele hosts de documentroot in als de openbare map"
+
+#: src/App/View/index/learn.php:125
+msgid "learn.config"
+msgstr "De configuratiemap"
+
+#: src/App/View/index/learn.php:126
+msgid "learn.config.drop"
+msgstr ""
+"U kunt een willekeurig aantal <span class=\"label label-success\">.php</"
+"span> bestanden in de <span class=\"label label-success\">config/</span> "
+"map. Zorg ervoor dat ze een array retourneren met de config. U kunt "
+"configuratie overschrijven op basis van omgevingsvariabelen <span class="
+"\"label label-success\"> APPLICATION_ENV</span>, dus bijvoorbeeld als de "
+"omgeving productie was het zou de extra config de productiesubdirectory "
+"laden. </p><p>Er zijn standaard verschillende configuratiebestanden:"
+
+#: src/App/View/index/learn.php:140
+msgid "learn.config.registry"
+msgstr ""
+"In uw configuratiebestanden kunt u alles toevoegen wat u maar wilt. Het "
+"wordt opgeslagen in het Bone\\Mvc\\Registry."
+
+#: src/App/View/index/learn.php:142
+msgid "database"
+msgstr "Databank"
+
+#: src/App/View/index/learn.php:143
+msgid "learn.db"
+msgstr ""
+"Stel uw standaard db-referenties in de hoofdconfiguratie / db.php en "
+"eventuele omgevingsspecifieke configs in een submap in"
+
+#: src/App/View/index/learn.php:154
+msgid "i18n"
+msgstr "Internationalisering"
+
+#: src/App/View/index/learn.php:155
+msgid "learn.i18n.about"
+msgstr ""
+"Bone ondersteunt vertaling naar verschillende landinstellingen. "
+"Vertaalbestanden (gettext .po en .mo) moeten in gegevens / vertalingen "
+"worden geplaatst, onder een subdirectory van de landinstelling, bijv. Data / "
+"translations / en_GB / en_GB.po. U kunt de standaard locale en een array met "
+"ondersteunde landinstellingen instellen."
+
+#: src/App/View/index/learn.php:170
+msgid "learn.i18n.usage"
+msgstr "Om de vertaler te gebruiken, kunt u eenvoudig bellen:"
+
+#: src/App/View/index/learn.php:181
+msgid "logs"
+msgstr "Logs"
+
+#: src/App/View/index/learn.php:182
+msgid "learn.logs"
+msgstr ""
+"Bone gebruikt monoloog/monoloog, 'n logs zijn te vinden in <span crew="
+"\"label label-success\">data/logs</span>. Momenteel ondersteunen we alleen "
+"het schrijven van 't'-bestanden, maar je kunt zoveel kanalen toevoegen als "
+"je wilt:"
+
+#: src/App/View/index/learn.php:195
+msgid "learn.logs.usage"
+msgstr "Om de logger in een controller te gebruiken:"
+
+#: src/App/View/index/learn.php:200
+msgid "mail"
+msgstr "Mail"
+
+#: src/App/View/index/learn.php:201
+msgid "learn.mail"
+msgstr ""
+"Bone gebruikt Zend Mail. Om de e-mailclient te configureren, hoeft u alleen "
+"uw configuratie in te voeren (zie zend mail docs)"
+
+#: src/App/View/index/learn.php:218
+msgid "learn.mail.hog"
+msgstr ""
+"Als u de door bot geleverde dock-box gebruikt, heeft u ook de geweldige "
+"MailHog tot uw beschikking. Blader naar awesome.scot:8025 en je ziet een e-"
+"mailinbox voor e-mails, dus je hoeft je nooit zorgen te maken dat "
+"ontwikkelingsmails de echte wereld bereiken."
+
+#: src/App/View/index/learn.php:222
+msgid "routes"
+msgstr "Routes"
+
+#: src/App/View/index/learn.php:223
+msgid "learn.routes"
+msgstr ""
+"Routes volgen een standaardpatroon van /controller/actie/param/waarde/"
+"nextparam/volgendewaarde/etc/etc<br> U kunt ook routes overschrijven door ze "
+"in de configuratiearray te definiëren:"
+
+#: src/App/View/index/learn.php:247
+msgid "learn.routes.params"
+msgstr ""
+"Bij het definiëren van routes hebben verplichte variabelen in de uri een "
+"dubbele punt zoals: id <br /> Optionele uri-vars hebben [] eromheen als [: "
+"id]"
+
+#: src/App/View/index/learn.php:251
+msgid "layouts"
+msgstr "Lay-outs"
+
+#: src/App/View/index/learn.php:252
+msgid "learn.layouts"
+msgstr "Negeer deze configuratie. Het is oude verouderde onzin."

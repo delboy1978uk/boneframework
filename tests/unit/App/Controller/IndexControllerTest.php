@@ -13,6 +13,9 @@ class IndexControllerTest extends \Codeception\TestCase\Test
     /** @var IndexController */
     protected $controller;
 
+    /**
+     * @throws \Exception
+     */
     protected function _before()
     {
         if (!defined('APPLICATION_PATH')){
@@ -20,6 +23,7 @@ class IndexControllerTest extends \Codeception\TestCase\Test
         }
         $request = new ServerRequest();
         $this->controller = new IndexController($request);
+        $this->controller->setParam('locale', 'en_PI');
     }
 
     protected function _after()

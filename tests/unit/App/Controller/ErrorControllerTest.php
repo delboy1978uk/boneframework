@@ -15,6 +15,9 @@ class ErrorControllerTest extends \Codeception\TestCase\Test
     /** @var ErrorController */
     protected $controller;
 
+    /**
+     * @throws Exception
+     */
     protected function _before()
     {
         if (!defined('APPLICATION_PATH')){
@@ -53,6 +56,7 @@ class ErrorControllerTest extends \Codeception\TestCase\Test
      * @param $property
      * @param $value
      * @return mixed
+     * @throws \ReflectionException
      */
     public function setPrivateProperty(&$object, $property, $value)
     {

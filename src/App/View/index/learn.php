@@ -4,7 +4,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="/#page-top">
+            <a class="navbar-brand" href="/<?= $this->e($locale) ;?>#page-top">
                 <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> MVC Framework
             </a>
         </div>
@@ -18,16 +18,25 @@
                     <a href="/#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#about">About</a>
+                    <a href="/#about"><?= $this->t('about') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#download">Download</a>
+                    <a href="/#download"><?= $this->t('download') ;?></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="/#contribute">Contribute</a>
+                    <a href="/#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="#">Learn</a>
+                    <a href="#"><?= $this->t('learn') ;?></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->t('language') ;?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/en_PI/learn">Pirate</a></li>
+                        <li><a href="/en_GB/learn">English</a></li>
+                        <li><a href="/nl_BE/learn">Nederlands</a></li>
+                        <li><a href="/fr_BE/learn">Français</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -43,8 +52,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <img height="64" src="/img/skull_and_crossbones.png" />
-                    <h2 class="">Learn Bone MVC Framework</h2>
-                    <p class="intro-text">All our crew be trained by the Melee Island Swordmaster!</p>
+                    <h2 class=""><?= $this->t('learn.learn') ;?></h2>
+                    <p class="intro-text"><?= $this->t('learn.tagline') ;?></p>
                     <div class="page-scroll">
                         <a href="#installation" class="btn btn-circle">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -59,25 +68,49 @@
 <section id="installation" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Installation</h2>
-            <p>Ahoy matey! First ye be needin' <a href="https://getcomposer.org/">Composer</a>! Then install Bone.</p>
+            <h2><?= $this->t('installation') ;?></h2>
+            <p><?= $this->t('learn.composer') ;?> <a href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?></p>
             <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
-            <p class="clear">or if ye haven't installed composer globally ...</p>
+            <p class="clear"><?= $this->t('learn.globally') ;?></p>
             <code>php composer.phar create-project delboy1978uk/bonemvc your/path/here dev-master</code>
-
+            <br class="mb50">
+            <h2><?= $this->t('docker.devbox') ;?></h2>
+            <p><?= $this->t('docker.about') ;?><br class="mb20" />
+                <code>awesome.scot 192.168.99.100</code></p>
+            <div class="code tl">
+                docker-machine start
+                eval $(docker-machine env)
+                cd /path/to/project
+                docker-compose up
+            </div>
+            <p><?= $this->t('docker.browse') ;?></p>
         </div>
     </div>
 </section>
 
-<section id="configger" class="content-section text-center">
+<section id="configger" class="content-section text-center pt50">
     <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Configger</h2>
-                <p>Ye can see ye have a config, data, public, and src folder. Dinnae be touchin' th' vendor folder or th' Cap'n will make ye walk the plank!</p>
-                <p>Make th' data folder writable. 777 be lettin' every landlubber have write access, so if ye can we prefer 775 with yer Apache user in th' group.</p>
+                <h2><?= $this->t('configure') ;?></h2>
+                <p><?= $this->t('learn.folders') ;?></p>
+                <p><?= $this->t('learn.777') ;?></p>
                 <code>chmod -R 775 data</code>
-                <p>In yer apache virtual hosts, set the document root as th' public folder</p>
+                <p><?= $this->t('learn.vhosts') ;?></p>
+                <div class="code tl">
+        &lt;VirtualHost *:80&gt;
+                DocumentRoot "/var/www/bonemvc/public"
+                ServerName awesome.scot
+                SetEnv APPLICATION_ENV development
+                &lt;Directory "/var/www/bonemvc"&gt;
+                        DirectoryIndex index.php
+                        FallbackResource /index.php
+                        Options -Indexes +FollowSymLinks
+                        AllowOverride all
+                        Require all granted
+                &lt;/Directory&gt;
+        &lt;/VirtualHost&gt;
+                </div>
             </div>
         </div>
     </div>
@@ -86,79 +119,125 @@
 <section id="contribute" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Th' config folder</h2>
-            <p>Avast ye! In yer config folder there be a config.dev.php.dist. reaname this to config.dev.php if ye be workin' on yer development ship.</p>
-            <p>In th' config.php, ye can add anything ye want! It gets stored in th' Bone Registry. Bone looks fer the followin' keys: routes, db, templates</p>
-            <br />
-            <h3>Routes</h3>
-            <p>Routes follow a default pattern of /controller/action/param/value/nextparam/nextvalue/etc/etc</p>
-            <p>Ye can also override routes by definin' them in th' config array:</p>
-            <div class="code tl">'routes' => array(
-                '/customised/url/like/so' => array(
-                    'controller' => 'pirate',
-                    'action' => 'swashbuckle',
-                    'params' => array(
-                        'weapon' => 'cutlass',
-                    ),
-                ),
-                '/optional[/:id]' => array(
-                    'controller' => 'index',
-                    'action' => 'index',
-                    'params' => array(),
-                ),<br />
-                '/mandatory/:id' => array(
-                    'controller' => 'index',
-                    'action' => 'index',
-                    'params' => array(
-                        'whatever' => 'you like'
-                    ),
-                ),
-            ),</div>
-            <p>When definin' routes, variables in th' uri have a colon like :id<br /> Optional uri vars have [ ] surrounding them like [:id]<br />
-            Once th' router has X marked th' spot, it will take you to th' controllers action.</p>
-            <h3>Database</h3>
-            <p>Put yer production databse connection details int' th' array. If yer on yer dev ship, put the connection details int' th' config.dev.php, which will override the main settin'.</p>
+            <h2><?= $this->t('learn.config') ;?></h2>
+            <p><?= $this->t('learn.config.drop') ;?></p>
+            <div class="code tl">
+                db.php
+                i18n.php
+                logs.php
+                mail.php
+                routes.php
+                templates.php
+            </div>
+            <p><?= $this->t('learn.config.registry') ;?></p>
+            <br>
+            <h3><?= $this->t('database') ;?></h3>
+            <p><?= $this->t('learn.db') ;?></p>
             <div class="code tl">
                 'db' => array(
-                    'host' => '127.0.0.1',
-                    'database' => 'bone',
-                    'user' => 'LeChuck',
-                    'pass' => 'monkeyIsland'
+                'host' => '127.0.0.1',
+                'database' => 'bone',
+                'user' => 'LeChuck',
+                'pass' => 'monkeyIsland'
                 ),
             </div>
-            <br />
-            <h3>Layouts</h3>
-            <p>In the src/App/View/layouts folder, ye can add twig templates. Right now to switch layout ye can change the value in th' config array, however we'll be addin' the ability to switch between them, and once we have that up an' runnin' you can add all the layouts to th' array.</p>
-            <br />
-            <h3>Controllers an' Actions</h3>
-            <p>In the src folder ye shall see an App folder, which be where ye program yer app. Soon we will allow more than just the App module, meanin' ye can start programmin' HMVC if ye like.</p>
-            <p>In th' controller, ye have access t' a few things</p>
+            <br>
+            <h3><?= $this->t('i18n') ;?></h3>
+            <p><?= $this->t('learn.i18n.about') ;?></p>
             <div class="code tl">
-                public function nonstopAction()
-                {
-                    $this->getRequest();                // the Request object
-                    $this->getParam('param');     // gets a single uri param
-                    $this->getParams();                // gets an array of all the params
-                    $this->getDbAdapter();          // a PDO connection t' yer Db
-                    $this->getHeaders();              // Fer settin' yer headers
-                    $this->hasLayoutEnabled(); // boolean
-                    $this->disableLayout();         // turns the layout off
-                    $this->hasViewEnabled();    // boolean
-                    $this->disableView();             // turns twig off
-                    $this->getTwig();                   // gets yer Twig object
-                    $this->getBody();                   // response body (when view disabled)
-                    $this->setBody($body);        // sets th' response body (when view disabled)
-                }
+                &lt;?php
+
+                    return [
+                        'i18n' => [
+                            'translations_dir' => 'data/translations',
+                            'type' => \Zend\I18n\Translator\Loader\Gettext::class,
+                            'default_locale' => 'en_PI',
+                            'supported_locales' => ['en_PI', 'en_GB', 'nl_BE', 'fr_BE'],
+                        ]
+                    ];
             </div>
-            <p>More help comin' soon! Garr!</p>
+            <p><?= $this->t('learn.i18n.usage') ;?>To use the translator, you can simply call:</p>
+            <div class="code tl">
+                // from a controller:
+                $this->getTranslator()->translate('placeholder.string');
+                // to set locale
+                $this->getTranslator()->setLocale($locale);
+
+                // from a view file:
+                $this->t('placeholder');
+            </div>
+            <br>
+            <h3><?= $this->t('logs') ;?></h3>
+            <p><?= $this->t('learn.logs') ;?></p>
+            <div class="code tl">
+                &lt;?php
+
+                return [
+                    'log' => [
+                        'channels' => [
+                            'default' => 'data/logs/default_log',
+                        ],
+                    ],
+                ];
+            </div>
+            <p><?= $this->t('learn.logs.usage') ;?></p>
+            <div class="code tl">
+                $this->getLog()->debug($message) // or error(), etc, see PSR-3
+            </div>
+            <br>
+            <h3><?= $this->t('mail') ;?></h3>
+            <p><?= $this->t('learn.mail') ;?></p>
+            <div class="code tl">
+                &lt;?php
+
+                return [
+                    'mail' => [
+                    'name'              => '127.0.0.1',
+                    'host'              => 'localhost',
+                    'port'              => 25,
+                //        'connection_class'  => 'login', // plain, login, crammd5
+                //        'connection_config' => [
+                //            'username' => 'user',
+                //            'password' => 'pass',
+                //        ],
+                    ],
+                ];
+            </div>
+            <p><?= $this->t('learn.mail.hog') ;?></p>
+            <br />
+            <h3><?= $this->t('routes') ;?></h3>
+            <p><?= $this->t('learn.routes') ;?></p>
+            <div class="code tl">&lt;?php
+
+            return [
+                'routes' => [
+                    '/' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                    '/:locale' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                    '/optional[/:id]' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                ],
+            ];
+            </div>
+            <p><?= $this->t('learn.routes.params') ;?></p>
+
+            <br />
+            <h3><?= $this->t('layouts') ;?></h3>
+            <p><?= $this->t('learn.layouts') ;?></p>
         </div>
     </div>
 </section>
 
-<!-- Core JavaScript Files -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="js/grayscale.js"></script>

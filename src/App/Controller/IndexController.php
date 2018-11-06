@@ -2,26 +2,26 @@
 
 namespace App\Controller;
 
-use AspectMock\Test;
 use Bone\Mvc\Controller;
-use Bone\Mvc\Dispatcher;
 use Bone\Mvc\Registry;
-use Bone\Mvc\View\PlatesEngine;
 use Zend\Diactoros\Response;
-use Zend\Diactoros\Response\TextResponse;
 
 
 class IndexController extends Controller
 {
+    private $locale;
+
     public function init()
     {
-        $locale = $this->getParam('locale') ?: Registry::ahoy()->get('i18n')['default_locale'];
-        $this->getTranslator()->setLocale($locale);
+        $this->locale = $this->view->locale = $this->getParam('locale', Registry::ahoy()->get('i18n')['default_locale']);
+        $this->getTranslator()->setLocale($this->locale);
     }
 
     public function indexAction()
     {
-
+        if (!$this->getParam('locale')) {
+            return new Response\RedirectResponse('/' . $this->locale);
+        }
     }
 
     public function learnAction()

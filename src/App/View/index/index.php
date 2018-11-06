@@ -27,7 +27,17 @@
                     <a href="#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="/learn"><?= $this->t('learn') ;?></a>
+                    <a href="/<?= $this->e($locale)?>/learn"><?= $this->t('learn') ;?></a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->t('language') ;?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/en_PI">Pirate</a></li>
+                        <li><a href="/en_GB">English</a></li>
+                        <li><a href="/nl_BE">Nederlands</a></li>
+                        <li><a href="/fr_BE">Français</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -60,7 +70,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('about') ;?> Bone</h2>
-            <p>Be ye wantin an MVC framework peppered with local pirate lingo? It be the most bare bones framework in the seven seas! Garr!</p>
+            <p><?= $this->t('index.intro') ?></p>
             <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
         </div>
     </div>
@@ -71,8 +81,8 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2><?= $this->t('download') ;?> Bone MVC</h2>
-                <p>Ye can download th' Bone MVC source code by sailin' over t' Github. But the Cap'n recommends ye install <a target="_blank" href="http://getcomposer.org">Composer</a> 'n' do it that way.</p>
-                <a target="_blank" href="https://github.com/delboy1978uk/bonemvc" class="btn btn-default btn-lg"><i class="fa fa-github"></i> Visit Github</a>
+                <p><?= $this->t('index.install'); ?><a target="_blank" href="http://getcomposer.org">Composer</a> <?= $this->t('index.install2') ;?></p>
+                <a target="_blank" href="https://github.com/delboy1978uk/bonemvc" class="btn btn-default btn-lg"><i class="fa fa-github"></i> <?= $this->t('visit') ;?> Github</a>
             </div>
         </div>
     </div>
@@ -82,8 +92,8 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('contribute') ;?></h2>
-            <p>Gaarrrr! We be needin' a foul-mouthed grog swillin' crew<br />t' sail th' ship t' th' fabled Monkey Island.<br />
-                If ye like Bone an' want t' help conquer the seven seas, fork it and get aboard!</p>
+            <p><?= $this->t('index.crew'); ;?><br /><?= $this->t('index.crew2') ;?><br />
+                <?= $this->t('index.crew3'); ;?></p>
             <p>delboy1978uk@gmail.com</p>
             <ul class="list-inline banner-social-buttons ">
                 <li><a target="_blank" href="https://twitter.com/delboy1978uk" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
@@ -99,9 +109,7 @@
 </section>
 
 <!-- Core JavaScript Files -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/grayscale.js"></script>
+<script src="/js/grayscale.js"></script>
