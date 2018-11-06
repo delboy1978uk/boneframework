@@ -10,11 +10,6 @@ return [
             'action' => 'index',
             'params' => [],
         ],
-        '/learn' => [
-            'controller' => 'index',
-            'action' => 'learn',
-            'params' => [],
-        ],
         '/:locale' => [
             'controller' => 'index',
             'action' => 'index',

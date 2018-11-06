@@ -26,9 +26,7 @@ class IndexController extends Controller
 
     public function learnAction()
     {
-        if (!$this->getParam('locale')) {
-            return new Response\RedirectResponse('/' . $this->locale . '/learn');
-        }
+        
     }
 
     public function jsonAction()

@@ -13,6 +13,9 @@ class IndexControllerTest extends \Codeception\TestCase\Test
     /** @var IndexController */
     protected $controller;
 
+    /**
+     * @throws \Exception
+     */
     protected function _before()
     {
         if (!defined('APPLICATION_PATH')){
