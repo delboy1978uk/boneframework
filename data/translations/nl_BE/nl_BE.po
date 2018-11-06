@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
 "POT-Creation-Date: 2018-11-06 15:17+0100\n"
-"PO-Revision-Date: 2018-11-06 15:27+0100\n"
+"PO-Revision-Date: 2018-11-06 16:49+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -39,7 +39,6 @@ msgid "home.intro"
 msgstr "Een PHP-raamwerk voor piraten"
 
 #: src/App/View/index/index.php:63
-#, fuzzy
 msgid "index.intro"
 msgstr "Een PHP-raamwerk voor piraten"
 
@@ -72,7 +71,6 @@ msgstr ""
 "ervoor en aan boord gaan!"
 
 #: src/App/View/index/learn.php:46
-#, fuzzy
 msgid "learn.learn"
 msgstr "Leren"
 

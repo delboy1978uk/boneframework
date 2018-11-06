@@ -73,12 +73,25 @@
             <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
             <p class="clear"><?= $this->t('learn.globally') ;?></p>
             <code>php composer.phar create-project delboy1978uk/bonemvc your/path/here dev-master</code>
-
+            <br class="mb50">
+            <h2><?= $this->t('docker.devbox') ;?>Docker Dev Box</h2>
+            <p><?= $this->t('docker.about') ;?>Bone comes with a docker-compose.yml in the project, so you can instantly
+                get a dev server running if you use Docker (Tested using a default VirtualBox VM). Just add this to your
+                hosts file<br class="mb20" />
+                <code>awesome.scot 192.168.99.100</code></p>
+            <div class="code tl">
+                docker-machine start
+                eval $(docker-machine env)
+                cd /path/to/project
+                docker-compose up
+            </div>
+            <p>Then you can access the site at https://awesome.scot in your browser. Of course if you don't use docker
+                you can add it to your LAMP stack in the usual way.</p>
         </div>
     </div>
 </section>
 
-<section id="configger" class="content-section text-center">
+<section id="configger" class="content-section text-center pt50">
     <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
@@ -110,77 +123,137 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('learn.config') ;?></h2>
-            <p>In th' config.php, ye can add anything ye want! It gets stored in th' Bone Registry. Bone looks fer the followin' keys: routes, db, templates</p>
+            <p>You can drop in any number of <span class="label label-success">.php</span> files into the
+                <span class="label label-success">config/</span> folder. Make sure they return an array with the config
+                . You can override configuration based on environment var
+                <span class="label label-success">APPLICATION_ENV</span>, so for instance if the environment was production
+            it would load the additional config the production subdirectory.</p>
+            <p>There are several config files by default:</p>
+            <div class="code tl">
+                db.php
+                i18n.php
+                logs.php
+                mail.php
+                routes.php
+                templates.php
+            </div>
+            <p>In your config files, you can add anything you want. It gets stored in the Bone\Mvc\Registry.</p>
+            <br>
+            <h3>Database</h3>
+            <p>Set your default db credentials in the main config/db.php, and any environment specific configs in a
+                subdirectory</p>
+            <div class="code tl">
+                'db' => array(
+                'host' => '127.0.0.1',
+                'database' => 'bone',
+                'user' => 'LeChuck',
+                'pass' => 'monkeyIsland'
+                ),
+            </div>
+            <br>
+            <h3>Internationalisation</h3>
+            <p>Bone supports translation into different locales. Translation files (gettext .po and .mo) should be
+                placed in data/translations, under a subdirectory of the locale, eg data/translations/en_GB/en_GB.po.
+                You can set the default locale and an array of supported locales.</p>
+            <div class="code tl">
+                &lt;?php
+
+                    return [
+                        'i18n' => [
+                            'translations_dir' => 'data/translations',
+                            'type' => \Zend\I18n\Translator\Loader\Gettext::class,
+                            'default_locale' => 'en_PI',
+                            'supported_locales' => ['en_PI', 'en_GB', 'nl_BE', 'fr_BE'],
+                        ]
+                    ];
+            </div>
+            <p>To use the translator, you can simply call:</p>
+            <div class="code tl">
+                // from a controller:
+                $this->getTranslator()->translate('placeholder.string');
+                // to set locale
+                $this->getTranslator()->setLocale($locale);
+
+                // from a view file:
+                $this->t('placeholder');
+            </div>
+            <br>
+            <h3>Logs</h3>
+            <p>Bone uses monolog/monolog, and logs can be found in <span class="label label-success">data/logs</span>.
+            Currently we only support writing to files, but you can add as many channels as you like:</p>
+            <div class="code tl">
+                &lt;?php
+
+                return [
+                    'log' => [
+                        'channels' => [
+                            'default' => 'data/logs/default_log',
+                        ],
+                    ],
+                ];
+            </div>
+            <p>To use the logger in a controller:</p>
+            <div class="code tl">
+                $this->getLog()->debug($message) // or error(), etc, see PSR-3
+            </div>
+            <br>
+            <h3>Mail</h3>
+            <p>Bone uses Zend Mail. To configure the mail client, just drop in your config (see zend mail docs)</p>
+            <div class="code tl">
+                &lt;?php
+
+                return [
+                    'mail' => [
+                    'name'              => '127.0.0.1',
+                    'host'              => 'localhost',
+                    'port'              => 25,
+                //        'connection_class'  => 'login', // plain, login, crammd5
+                //        'connection_config' => [
+                //            'username' => 'user',
+                //            'password' => 'pass',
+                //        ],
+                    ],
+                ];
+            </div>
+            <p>If you are using the Docker Box provided by bone, you also have the awesome MailHog at your disposal.
+            Browse to awesome.scot:8025 and you'll see a catch all email inbox, so you never need to worry about development
+            emails reaching the real world.</p>
             <br />
             <h3>Routes</h3>
             <p>Routes follow a default pattern of /controller/action/param/value/nextparam/nextvalue/etc/etc</p>
-            <p>Ye can also override routes by definin' them in th' config array:</p>
-            <div class="code tl">'routes' => array(
-                '/customised/url/like/so' => array(
-                    'controller' => 'pirate',
-                    'action' => 'swashbuckle',
-                    'params' => array(
-                        'weapon' => 'cutlass',
-                    ),
-                ),
-                '/optional[/:id]' => array(
-                    'controller' => 'index',
-                    'action' => 'index',
-                    'params' => array(),
-                ),<br />
-                '/mandatory/:id' => array(
-                    'controller' => 'index',
-                    'action' => 'index',
-                    'params' => array(
-                        'whatever' => 'you like'
-                    ),
-                ),
-            ),</div>
-            <p>When definin' routes, variables in th' uri have a colon like :id<br /> Optional uri vars have [ ] surrounding them like [:id]<br />
-            Once th' router has X marked th' spot, it will take you to th' controllers action.</p>
-            <h3>Database</h3>
-            <p>Put yer production databse connection details int' th' array. If yer on yer dev ship, put the connection details int' th' config.dev.php, which will override the main settin'.</p>
-            <div class="code tl">
-                'db' => array(
-                    'host' => '127.0.0.1',
-                    'database' => 'bone',
-                    'user' => 'LeChuck',
-                    'pass' => 'monkeyIsland'
-                ),
+            <p>You can also override routes by defining them in the config array:</p>
+            <div class="code tl">&lt;?php
+
+            return [
+                'routes' => [
+                    '/' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                    '/:locale' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                    '/optional[/:id]' => [
+                        'controller' => 'index',
+                        'action' => 'index',
+                        'params' => [],
+                    ],
+                ],
+            ];
             </div>
+            <p>When defining routes, mandatory variables in the uri have a colon like :id<br /> Optional uri vars have
+                [ ] surrounding them like [:id]</p>
+
             <br />
             <h3>Layouts</h3>
-            <p>In the src/App/View/layouts folder, ye can add twig templates. Right now to switch layout ye can change the value in th' config array, however we'll be addin' the ability to switch between them, and once we have that up an' runnin' you can add all the layouts to th' array.</p>
-            <br />
-            <h3>Controllers an' Actions</h3>
-            <p>In the src folder ye shall see an App folder, which be where ye program yer app. Soon we will allow more than just the App module, meanin' ye can start programmin' HMVC if ye like.</p>
-            <p>In th' controller, ye have access t' a few things</p>
-            <div class="code tl">
-                public function nonstopAction()
-                {
-                    $this->getRequest();                // the Request object
-                    $this->getParam('param');     // gets a single uri param
-                    $this->getParams();                // gets an array of all the params
-                    $this->getDbAdapter();          // a PDO connection t' yer Db
-                    $this->getHeaders();              // Fer settin' yer headers
-                    $this->hasLayoutEnabled(); // boolean
-                    $this->disableLayout();         // turns the layout off
-                    $this->hasViewEnabled();    // boolean
-                    $this->disableView();             // turns twig off
-                    $this->getTwig();                   // gets yer Twig object
-                    $this->getBody();                   // response body (when view disabled)
-                    $this->setBody($body);        // sets th' response body (when view disabled)
-                }
-            </div>
-            <p>More help comin' soon! Garr!</p>
+            <p>Ignore this config. It's old deprecated nonsense.</p>
         </div>
     </div>
 </section>
 
-<!-- Core JavaScript Files -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="js/grayscale.js"></script>
