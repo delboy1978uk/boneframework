@@ -1,4 +1,4 @@
-FROM httpd:latest
+FROM httpd:2.4.38
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -10,3 +10,4 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/s
 
 COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY ./httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
+
