@@ -5,9 +5,11 @@
  */
 return [
     'db' => [
-        'host' => '127.0.0.1',
-        'database' => '',
-        'user' => '',
-        'pass' => '',
+        'driver' => 'pdo_mysql',
+        'host' => 'mariadb',
+        'database' => 'awesome',
+        'dbname' => 'awesome',
+        'user' => 'dbuser',
+        'pass' => '[123456]',
     ],
 ];
