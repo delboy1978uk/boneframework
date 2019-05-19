@@ -26,7 +26,7 @@ before_script:
   - "mysql -e 'create database codeception_test;'"
   - nohup php -S awesome.scot:8000 public/index.php &
 script:
-  - php vendor/bin/codecept run --coverage-xml --env travis
+  - php vendor/bin/codecept run -vvv --coverage-xml --env travis
 after_script:
   - phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
