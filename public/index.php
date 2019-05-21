@@ -66,6 +66,15 @@ if (!file_exists('vendor/autoload.php')) {
 }
 $loader = require_once 'vendor/autoload.php';
 
+        $env = new Environment($_SERVER);
+        if (!count($this->registry->getAll())) {
+            $config = $env->fetchConfig($this->configFolder, $this->environment);
+            $this->setConfig($config);
+        }
+        $request = ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
+
+var_dump($request); exit;
+
 /**
  *
  *  Time t'begin th'voyage me hearties!
