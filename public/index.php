@@ -35,6 +35,10 @@
  * I be settin' up th'application path
  *
  */
+
+use Bone\Server\Environment;
+use Zend\Diactoros\ServerRequestFactory;
+
 chdir(dirname(__DIR__));
 if (!defined('APPLICATION_PATH')) {
     define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
@@ -66,12 +70,12 @@ if (!file_exists('vendor/autoload.php')) {
 }
 $loader = require_once 'vendor/autoload.php';
 
-        $env = new Environment($_SERVER);
-        if (!count($this->registry->getAll())) {
-            $config = $env->fetchConfig($this->configFolder, $this->environment);
-            $this->setConfig($config);
-        }
-        $request = ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
+$env = new Environment($_SERVER);
+if (!count($this->registry->getAll())) {
+    $config = $env->fetchConfig($this->configFolder, $this->environment);
+    $this->setConfig($config);
+}
+$request = ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 
 var_dump($request); exit;
 
