@@ -62,12 +62,8 @@ if (!file_exists('vendor/autoload.php')) {
         'Garrrr! Unable t\'load Bone. Run `composer install` or `php composer.phar install`'
     );
 }
-$loader = require_once 'vendor/autoload.php';
 
-
-$request = ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
-
-var_dump($request); exit;
+require_once 'vendor/autoload.php';
 
 /**
  *
