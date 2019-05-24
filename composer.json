@@ -16,7 +16,6 @@
   },
   "require-dev": {
     "codeception/codeception": "*",
-    "codeception/aspect-mock": "*",
     "codeception/c3": "^2.4"
   },
   "autoload": {

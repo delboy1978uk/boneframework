@@ -49,7 +49,7 @@ if (!defined('APPLICATION_ENV'))
 }
 
 if (file_exists('c3.php') && APPLICATION_ENV == 'travis') {
-    require_once 'c3.php';
+//    require_once 'c3.php';
 }
 
 /**
