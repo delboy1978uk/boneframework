@@ -30,11 +30,9 @@
 //                                     (____/ \__/ \_)__)(____)\_)(_/ \__/  \___)
 
 
-/**
- *
- * I be settin' up th'application path
- *
- */
+
+use Zend\Diactoros\ServerRequestFactory;
+
 chdir(dirname(__DIR__));
 if (!defined('APPLICATION_PATH')) {
     define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
@@ -51,7 +49,7 @@ if (!defined('APPLICATION_ENV'))
 }
 
 if (file_exists('c3.php') && APPLICATION_ENV == 'travis') {
-    require_once 'c3.php';
+//    require_once 'c3.php';
 }
 
 /**
@@ -64,7 +62,8 @@ if (!file_exists('vendor/autoload.php')) {
         'Garrrr! Unable t\'load Bone. Run `composer install` or `php composer.phar install`'
     );
 }
-$loader = require_once 'vendor/autoload.php';
+
+require_once 'vendor/autoload.php';
 
 /**
  *
