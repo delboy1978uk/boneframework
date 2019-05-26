@@ -14,8 +14,7 @@ sudo: false
 
 install:
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
-  - composer install -vvv
-
+  - composer install
 
 before_script:
   - export APPLICATION_ENV=travis
