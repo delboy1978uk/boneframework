@@ -17,4 +17,4 @@ env:
          modules:
             config:
                 PhpBrowser:
-                    url: 'http://awesome.scot:8000'
+                    url: 'http://awesome.scot'
