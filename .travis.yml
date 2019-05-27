@@ -1,5 +1,8 @@
 language: php
 
+services:
+  - docker
+
 php:
   - 7.1
   - 7.2
@@ -14,7 +17,7 @@ sudo: false
 
 install:
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
-  - composer install
+  - docker-compose up
 
 before_script:
   - export APPLICATION_ENV=travis
@@ -22,10 +25,9 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 5
   - java -jar selenium-server-standalone-2.42.2.jar -port 4444 &
-  - "mysql -e 'create database codeception_test;'"
-  - nohup php -S awesome.scot:8000 public/index.php &
 script:
-  - php vendor/bin/codecept run -vvv --env travis
+  - docker-compose exec php "composer install"
+  - docker-compose exec php "vendor/bin/codecept run -vvv"
 after_script:
   - phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
