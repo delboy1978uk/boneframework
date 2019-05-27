@@ -8,10 +8,6 @@ php:
   - 7.2
   - 7.3
 
-addons:
-  hosts:
-    - awesome.scot
-
 sudo: false
 
 
