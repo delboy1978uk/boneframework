@@ -10,6 +10,9 @@ php:
 
 sudo: false
 
+addons:
+  hosts:
+    - awesome.scot\
 
 install:
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
@@ -22,7 +25,7 @@ before_script:
   - docker-compose exec php /usr/bin/composer install
 
 script:
-  - docker-compose exec php vendor/bin/codecept run -vvv
+  - docker-compose exec php vendor/bin/codecept run --env=travis -vvv
 
 after_script:
   - phpunit --coverage-clover=coverage.clover

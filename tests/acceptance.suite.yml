@@ -17,4 +17,4 @@ env:
          modules:
             config:
                 PhpBrowser:
-                    url: 'http://localhost'
+                    url: 'http://awesome.scot'
