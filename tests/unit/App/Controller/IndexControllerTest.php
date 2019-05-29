@@ -1,9 +1,11 @@
 <?php
 namespace App\Controller;
 
+use Bone\Mvc\Registry;
+use Codeception\TestCase\Test;
 use Zend\Diactoros\ServerRequest;
 
-class IndexControllerTest extends \Codeception\TestCase\Test
+class IndexControllerTest extends Test
 {
     /**
      * @var \UnitTester
@@ -29,6 +31,15 @@ class IndexControllerTest extends \Codeception\TestCase\Test
     protected function _after()
     {
         unset($this->controller);
+    }
+
+
+    public function testInit()
+    {
+        Registry::ahoy()->set('i18n', ['default_locale' => 'en_GB']);
+
+        $this->assertNull($this->controller->init());
+        $this->assertEquals('en_GB', $this->controller->getTranslator()->getLocale();
     }
 
     public function testIndexAction()
