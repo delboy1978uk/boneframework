@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use Bone\Mvc\Registry;
 use Codeception\TestCase\Test;
+use Zend\Diactoros\Response\RedirectResponse;
 use Zend\Diactoros\ServerRequest;
 use Zend\I18n\Translator\Loader\Gettext;
 
@@ -34,7 +35,6 @@ class IndexControllerTest extends Test
 
         $request = new ServerRequest();
         $this->controller = new IndexController($request);
-        $this->controller->setParam('locale', 'en_PI');
     }
 
     protected function _after()
@@ -51,6 +51,8 @@ class IndexControllerTest extends Test
 
     public function testIndexAction()
     {
+        $this->assertInstanceOf(RedirectResponse::class, $this->controller->indexAction());
+        $this->controller->setParam('locale', 'en_PI');
         $this->assertNull($this->controller->indexAction());
     }
 
