@@ -4,6 +4,7 @@ namespace App\Controller;
 use Bone\Mvc\Registry;
 use Codeception\TestCase\Test;
 use Zend\Diactoros\ServerRequest;
+use Zend\I18n\Translator\Loader\Gettext;
 
 class IndexControllerTest extends Test
 {
@@ -25,8 +26,10 @@ class IndexControllerTest extends Test
         }
 
         Registry::ahoy()->set('i18n', [
+            'translations_dir' => 'data/translations',
+            'type' => Gettext::class,
             'default_locale' => 'en_GB',
-            'supported_locales' => ['en_GB']
+            'supported_locales' => ['en_PI', 'en_GB', 'nl_BE', 'fr_BE'],
         ]);
 
         $request = new ServerRequest();
