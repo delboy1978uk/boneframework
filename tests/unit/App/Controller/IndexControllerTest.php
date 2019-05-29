@@ -23,6 +23,12 @@ class IndexControllerTest extends Test
         if (!defined('APPLICATION_PATH')){
             define('APPLICATION_PATH','.');
         }
+
+        Registry::ahoy()->set('i18n', [
+            'default_locale' => 'en_GB',
+            'supported_locales' => ['en_GB']
+        ]);
+
         $request = new ServerRequest();
         $this->controller = new IndexController($request);
         $this->controller->setParam('locale', 'en_PI');
@@ -36,8 +42,6 @@ class IndexControllerTest extends Test
 
     public function testInit()
     {
-        Registry::ahoy()->set('i18n', ['default_locale' => 'en_GB']);
-
         $this->assertNull($this->controller->init());
         $this->assertEquals('en_GB', $this->controller->getTranslator()->getLocale());
     }
