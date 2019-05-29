@@ -39,7 +39,7 @@ class IndexControllerTest extends Test
         Registry::ahoy()->set('i18n', ['default_locale' => 'en_GB']);
 
         $this->assertNull($this->controller->init());
-        $this->assertEquals('en_GB', $this->controller->getTranslator()->getLocale();
+        $this->assertEquals('en_GB', $this->controller->getTranslator()->getLocale());
     }
 
     public function testIndexAction()
