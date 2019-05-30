@@ -14,8 +14,7 @@
     "delboy1978uk/cdn": "^1.1.2",
     "delboy1978uk/form": "^1.0.0",
     "delboy1978uk/image": "^1.0.0",
-    "delboy1978uk/session": "^1.0",
-    "league/route": "^4.2"
+    "delboy1978uk/session": "^1.0"
   },
   "require-dev": {
     "codeception/codeception": "*"
