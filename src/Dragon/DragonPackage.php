@@ -2,10 +2,11 @@
 
 namespace BoneMvc\Module\Dragon;
 
+use BoneMvc\Module\Dragon\Controller\DragonController;
 use BoneMvc\Module\Dragon\Service\DragonService;
-use Del\Common\Container\RegistrationInterface;
+use Barnacle\RegistrationInterface;
 use Doctrine\ORM\EntityManager;
-use Pimple\Container;
+use Barnacle\Container;
 
 class DragonPackage implements RegistrationInterface
 {
@@ -14,23 +15,23 @@ class DragonPackage implements RegistrationInterface
      */
     public function addToContainer(Container $c)
     {
-        /** @var EntityManager $em */
-        $em = $c['doctrine.entity_manager'];
-        $c['service.Dragon'] = new DragonService($em);
+        $em = $c->get(EntityManager::class);
+        $c[DragonService::class] = new DragonService($em);
+        $c[DragonController::class] = new DragonController($c->get(DragonService::class));
     }
 
     /**
      * @return string
      */
-    public function getEntityPath()
+    public function getEntityPath(): string
     {
-        return 'build/5cef402a1337d/src/Dragon/Entity';
+        return 'src/Dragon/Entity';
     }
 
     /**
      * @return bool
      */
-    public function hasEntityPath()
+    public function hasEntityPath(): bool
     {
         return true;
     }

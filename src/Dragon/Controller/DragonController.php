@@ -1,18 +1,16 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace BoneMvc\Module\Dragon\Controller;
 
-use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
-use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Zend\Diactoros\Response;
+use Zend\Diactoros\Stream;
 
 class DragonController
 {
-    /** @var DragonService */
-    public $service;
-
     /**
      * @param DragonService $service
      */
@@ -22,12 +20,29 @@ class DragonController
     }
 
     /**
-     * @param RequestInterface $request
+     * Controller.
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function indexAction(ServerRequestInterface $request) : ResponseInterface
+    {
+        $response = new Response();
+        $stream = new Stream('php://memory', 'r+');
+        $stream->write('<h1>Here be dragons!</h1>');
+        $response = $response->withBody($stream);
+
+        return $response;
+    }
+
+    /**
+     * @param ServerRequestInterface $request
      * @return ResponseInterface $response
      * @throws \Doctrine\ORM\OptimisticLockException
      * @throws \Doctrine\ORM\ORMException
      */
-    public function create(RequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function create(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
         $post = $this->getJsonPost($request);
         $form = new DragonForm('create');
@@ -44,36 +59,36 @@ class DragonController
     }
 
     /**
-     * @param RequestInterface $request
+     * @param ServerRequestInterface $request
      * @return ResponseInterface $response
      */
-    public function read(RequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function read(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
     }
 
     /**
-     * @param RequestInterface $request
+     * @param ServerRequestInterface $request
      * @return ResponseInterface $response
      */
-    public function update(RequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function update(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
     }
 
     /**
-     * @param RequestInterface $request
+     * @param ServerRequestInterface $request
      * @return ResponseInterface $response
      */
-    public function delete(RequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function delete(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
     }
 
     /**
-     * @param RequestInterface $request
+     * @param ServerRequestInterface $request
      * @return array
      */
-    protected function getJsonPost(RequestInterface $request): array
+    protected function getJsonPost(ServerRequestInterface $request): array
     {
-        return json_decode($request->getBody()->getContents(), true);
+        return json_decode($request->getParsedBody(), true);
     }
 
     /**
