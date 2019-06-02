@@ -2,6 +2,7 @@
 
 namespace BoneMvc\Module\Dragon\Repository;
 
+use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use Doctrine\ORM\EntityRepository;
 

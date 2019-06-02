@@ -72,4 +72,38 @@ class DragonCollection extends ArrayCollection
         }
         return false;
     }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        $collection = [];
+        $it = $this->getIterator();
+        $it->rewind();
+        while($it->valid()) {
+            /** @var Dragon $row */
+            $row = $it->current();
+            $collection[] = $row->toArray();
+            $it->next();
+        }
+
+        return $collection;
+    }
+
+    /**
+     * @return string
+     */
+    public function toJson()
+    {
+        return \json_encode($this->toArray());
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->toJson();
+    }
 }

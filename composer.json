@@ -10,6 +10,7 @@
   "require": {
     "php": "^7.1",
     "ext-json": "*",
+    "ext-pdo": "*",
     "delboy1978uk/bone": "dev-feature/middleware",
     "delboy1978uk/cdn": "^1.1.2",
     "delboy1978uk/form": "^1.0.0",

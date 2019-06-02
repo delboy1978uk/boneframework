@@ -20,6 +20,7 @@ class BoneMvcDoctrinePackage implements RegistrationInterface
         $entityPaths = $c->get('entity_paths');
         $isDevMode = false;
 
+
         $config = Setup::createAnnotationMetadataConfiguration($entityPaths, $isDevMode, null, null, false);
         $config->setProxyDir($c->get('proxy_dir'));
 

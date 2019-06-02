@@ -41,7 +41,7 @@ if (!defined('APPLICATION_PATH')) {
 /**
  *  Now whit environment be this?
  */
-if (!defined('APPLICATION_ENV'))
+if (!defined('APPLICATION_ENV') && getenv('APPLICATION_ENV'))
 {
     define('APPLICATION_ENV', (getenv('APPLICATION_ENV')
         ? getenv('APPLICATION_ENV')

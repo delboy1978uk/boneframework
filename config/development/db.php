@@ -11,5 +11,6 @@ return [
         'dbname' => 'awesome',
         'user' => 'dbuser',
         'pass' => '[123456]',
+        'password' => '[123456]',
     ],
 ];

@@ -5,7 +5,7 @@ namespace BoneMvc\Module\Dragon\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="\BoneMvc\Module\Repository\DragonRepository")
+ * @ORM\Entity(repositoryClass="\BoneMvc\Module\Dragon\Repository\DragonRepository")
  */
 class Dragon
 {

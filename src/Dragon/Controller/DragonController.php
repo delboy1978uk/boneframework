@@ -2,6 +2,8 @@
 
 namespace BoneMvc\Module\Dragon\Controller;
 
+use BoneMvc\Module\Dragon\Collection\DragonCollection;
+use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
 use Psr\Http\Message\ResponseInterface;
@@ -11,6 +13,9 @@ use Zend\Diactoros\Stream;
 
 class DragonController
 {
+    /** @var DragonService $service */
+    private $service;
+
     /**
      * @param DragonService $service
      */
@@ -26,11 +31,24 @@ class DragonController
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function indexAction(ServerRequestInterface $request) : ResponseInterface
+    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
         $response = new Response();
         $stream = new Stream('php://memory', 'r+');
-        $stream->write('<h1>Here be dragons!</h1>');
+
+        $dragons = $this->service->getRepository();
+
+        if (isset($args['id'])) {
+            $id = $args['id'];
+            /** @var Dragon $dragon */
+            $dragon = $this->service->getRepository()->find($id);
+            $json = $dragon->toJson();
+        } else {
+            $dragons = new DragonCollection($dragons->findAll());
+            $json = $dragons->toJson();
+        }
+
+        $stream->write($json);
         $response = $response->withBody($stream);
 
         return $response;
@@ -64,6 +82,7 @@ class DragonController
      */
     public function read(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
+
     }
 
     /**

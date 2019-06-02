@@ -6,7 +6,13 @@ use Bone\Mvc\Controller;
 use Bone\Mvc\Registry;
 use Zend\Diactoros\Response;
 
-
+/**
+ * Class IndexController
+ *
+ * If you need to create a constructor, edit the package to set up automatically via dependency injection
+ *
+ * @package App\Controller
+ */
 class IndexController extends Controller
 {
     private $locale;
