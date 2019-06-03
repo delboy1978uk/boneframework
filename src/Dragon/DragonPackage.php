@@ -54,7 +54,12 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
         return true;
     }
 
-    public function addRoutes(Container $c, Router $router)
+    /**
+     * @param Container $c
+     * @param Router $router
+     * @return Router
+     */
+    public function addRoutes(Container $c, Router $router): Router
     {
         $router->map('GET', '/dragon', [DragonController::class, 'indexAction']);
         $router->map('GET', '/dragon/{id}', [DragonController::class, 'indexAction']);
