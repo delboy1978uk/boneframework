@@ -11,9 +11,6 @@ use Barnacle\Container;
 use League\Route\RouteGroup;
 use League\Route\Router;
 use League\Route\Strategy\JsonStrategy;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response;
 use Zend\Diactoros\ResponseFactory;
 
 class DragonPackage implements RegistrationInterface, RouterConfigInterface
