@@ -33,7 +33,7 @@ class DragonController
      */
     public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
-        throw new \Exception('argh');
+//        throw new \Exception('argh');
         $response = new Response();
         $stream = new Stream('php://memory', 'r+');
 
