@@ -8,10 +8,12 @@
  */
 return [
     'modules' => [
+        'App',
         'BoneMvcDoctrine',
         'Dragon',
     ],
     'packages' => [
 
     ],
+    'viewFolder' => 'src/App/View'
 ];

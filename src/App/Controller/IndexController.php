@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use Bone\Http\Response;
 use Bone\Mvc\Controller;
-use Bone\Mvc\Registry;
-use Zend\Diactoros\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Zend\Diactoros\Stream;
 
 /**
  * Class IndexController
@@ -13,7 +15,7 @@ use Zend\Diactoros\Response;
  *
  * @package App\Controller
  */
-class IndexController extends Controller
+class IndexController
 {
     private $locale;
 
@@ -23,11 +25,16 @@ class IndexController extends Controller
         $this->getTranslator()->setLocale($this->locale);
     }
 
-    public function indexAction()
+    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
-        if (!$this->getParam('locale')) {
-            return new Response\RedirectResponse('/' . $this->locale);
-        }
+        $response = new Response();
+        $stream = new Stream('php://memory', 'r+');
+
+        $test = ['message' => 'success'];
+
+        $stream->write(json_encode($test));
+        $response = $response->withBody($stream);
+        return $response;
     }
 
     public function learnAction()
