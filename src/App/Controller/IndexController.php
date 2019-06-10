@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Bone\Http\Response;
-use Bone\Mvc\Controller;
+use Bone\Mvc\OldController;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Stream;
