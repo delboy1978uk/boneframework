@@ -9,9 +9,9 @@
 return [
     'modules' => [
         'App',
-        'I18n',
         'BoneMvcDoctrine',
         'Dragon',
+//        'I18n',
     ],
     'packages' => [
 

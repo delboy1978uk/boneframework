@@ -49,7 +49,7 @@ class I18nPackage implements RegistrationInterface, RouterConfigInterface
         $defaultLocale = $c->get('i18n')['default_locale'];
         $urlHelper = 'meh';
         $i18n= new InternationalisationMiddleware($urlHelper, $defaultLocale);
-        $router->prependMiddleware($i18n);
+        $router->middleware($i18n);
 
         return $router;
     }

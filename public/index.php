@@ -48,9 +48,6 @@ if (!defined('APPLICATION_ENV') && getenv('APPLICATION_ENV'))
         : 'production'));
 }
 
-if (file_exists('c3.php') && APPLICATION_ENV == 'travis') {
-//    require_once 'c3.php';
-}
 
 /**
  *

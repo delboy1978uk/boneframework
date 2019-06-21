@@ -1,13 +1,11 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace BoneMvc\Module\I18n;
 
-use Locale;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Expressive\Helper\UrlHelper;
 
 class InternationalisationMiddleware implements MiddlewareInterface
 {
@@ -27,7 +25,7 @@ class InternationalisationMiddleware implements MiddlewareInterface
      * @param  $helper
      * @param string|null $defaultLocale
      */
-    public function __construct( $helper, string $defaultLocale = null)
+    public function __construct($helper, string $defaultLocale = null)
     {
         $this->helper = $helper;
         if ($defaultLocale) {
@@ -43,16 +41,16 @@ class InternationalisationMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface
     {
         $uri = $request->getUri();
-        die('aye ' . $uri);
         $path = $uri->getPath();
 
+        var_dump($uri, $path);
+
         if (! preg_match(self::REGEX_LOCALE, $path, $matches)) {
-            Locale::setDefault($this->defaultLocale ?: $this->fallbackLocale);
+//            Locale::setDefault($this->defaultLocale ?: $this->fallbackLocale);
             return $handler->handle($request);
         }
-
         $locale = $matches['locale'];
-        Locale::setDefault(Locale::canonicalize($locale));
+//        Locale::setDefault(Locale::canonicalize($locale));
         $this->helper->setBasePath($locale);
 
         $path = substr($path, strlen($locale) + 1);

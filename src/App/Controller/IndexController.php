@@ -27,6 +27,7 @@ class IndexController
 
     public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
+        throw new \Exception('jgd');
         $response = new Response();
         $stream = new Stream('php://memory', 'r+');
 
