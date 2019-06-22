@@ -2,6 +2,7 @@
 
 return [
     'i18n' => [
+        'enabled' => true,
         'translations_dir' => 'data/translations',
         'type' => \Zend\I18n\Translator\Loader\Gettext::class,
         'default_locale' => 'en_PI',

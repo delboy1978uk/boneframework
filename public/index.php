@@ -63,8 +63,6 @@ if (!file_exists('vendor/autoload.php')) {
 require_once 'vendor/autoload.php';
 
 /**
- *
  *  Time t'begin th'voyage me hearties!
- *
  */
 Bone\Mvc\Application::ahoy()->setSail();
