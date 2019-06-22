@@ -9,6 +9,7 @@
   ],
   "require": {
     "php": "^7.1",
+    "ext-intl": "*",
     "ext-json": "*",
     "ext-pdo": "*",
     "delboy1978uk/bone": "dev-feature/middleware",
