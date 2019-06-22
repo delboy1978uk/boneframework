@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'layouts' => [
-        'layouts/layout',
+    'default_layout' => 'layouts/bonemvc',
+    'available_layouts' => [
+        'layouts/bonemvc',
     ],
 ];
