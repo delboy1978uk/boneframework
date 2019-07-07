@@ -37,9 +37,9 @@ class IndexController
         return $response;
     }
 
-    public function learnAction()
+    public function learnAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
-
+        return new Response();
     }
 
     public function jsonAction()

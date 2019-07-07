@@ -6,9 +6,10 @@ use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
+use JMS\Serializer\SerializerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\JsonResponse;
 use Zend\Diactoros\Stream;
 
 class DragonController
@@ -16,12 +17,18 @@ class DragonController
     /** @var DragonService $service */
     private $service;
 
+    /** @var SerializerInterface $service */
+    private $serializer;
+
     /**
+     * DragonController constructor.
      * @param DragonService $service
+     * @param SerializerInterface $serializer
      */
-    public function __construct(DragonService $service)
+    public function __construct(DragonService $service, SerializerInterface $serializer)
     {
         $this->service = $service;
+        $this->serializer = $serializer;
     }
 
     /**
@@ -33,24 +40,17 @@ class DragonController
      */
     public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
-//        throw new \Exception('argh');
-        $response = new Response();
-        $stream = new Stream('php://memory', 'r+');
 
         $dragons = $this->service->getRepository();
 
         if (isset($args['id'])) {
             $id = $args['id'];
-            /** @var Dragon $dragon */
-            $dragon = $this->service->getRepository()->find($id);
-            $json = $dragon->toJson();
+            /** @var Dragon $data */
+            $data = $this->service->getRepository()->find($id);
         } else {
-            $dragons = new DragonCollection($dragons->findAll());
-            $json = $dragons->toJson();
+            $data = new DragonCollection($dragons->findAll());
         }
-
-        $stream->write($json);
-        $response = $response->withBody($stream);
+        $response = new JsonResponse($data->toArray());
 
         return $response;
     }

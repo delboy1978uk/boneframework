@@ -4,9 +4,10 @@ namespace BoneMvc\Module\Dragon\Collection;
 
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use Doctrine\Common\Collections\ArrayCollection;
+use JsonSerializable;
 use LogicException;
 
-class DragonCollection extends ArrayCollection
+class DragonCollection extends ArrayCollection implements JsonSerializable
 {
     /**
      * @param Dragon $dragon
@@ -76,7 +77,7 @@ class DragonCollection extends ArrayCollection
     /**
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         $collection = [];
         $it = $this->getIterator();
@@ -94,7 +95,7 @@ class DragonCollection extends ArrayCollection
     /**
      * @return string
      */
-    public function toJson()
+    public function jsonSerialize(): string
     {
         return \json_encode($this->toArray());
     }
@@ -102,8 +103,8 @@ class DragonCollection extends ArrayCollection
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
-        return $this->toJson();
+        return $this->jsonSerialize();
     }
 }

@@ -8,6 +8,7 @@ use BoneMvc\Module\Dragon\Service\DragonService;
 use Barnacle\RegistrationInterface;
 use Doctrine\ORM\EntityManager;
 use Barnacle\Container;
+use JMS\Serializer\SerializerInterface;
 use League\Route\RouteGroup;
 use League\Route\Router;
 use League\Route\Strategy\JsonStrategy;
@@ -29,7 +30,8 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
 
         $c[DragonController::class] = $c->factory(function (Container $c) {
             $service = $c->get(DragonService::class);
-            $controller = new DragonController($service);
+            $serializer = $c->get(SerializerInterface::class);
+            $controller = new DragonController($service, $serializer);
 
             return $controller;
         });

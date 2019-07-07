@@ -42,6 +42,7 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface
     public function addRoutes(Container $c, Router $router): Router
     {
         $router->map('GET', '/', [IndexController::class, 'indexAction']);
+        $router->map('GET', '/learn', [IndexController::class, 'learnAction']);
 
         return $router;
     }

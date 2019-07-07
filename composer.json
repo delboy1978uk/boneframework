@@ -17,7 +17,8 @@
     "delboy1978uk/form": "^1.0.0",
     "delboy1978uk/image": "^1.0.0",
     "delboy1978uk/session": "^1.0",
-    "delboy1978uk/generator": "dev-master"
+    "delboy1978uk/generator": "dev-master",
+    "jms/serializer": "^3.1"
   },
   "require-dev": {
     "codeception/codeception": "*",

@@ -3,11 +3,12 @@
 namespace BoneMvc\Module\Dragon\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass="\BoneMvc\Module\Dragon\Repository\DragonRepository")
  */
-class Dragon
+class Dragon implements JsonSerializable
 {
     /**
      * @var int $id
@@ -71,16 +72,18 @@ class Dragon
     /**
      * @return string
      */
-    public function toJson()
+    public function __toString()
     {
-        return \json_encode($this->toArray());
+        return $this->jsonSerialize();
     }
 
     /**
      * @return string
      */
-    public function __toString()
+    public function jsonSerialize()
     {
-        return $this->toJson();
+        return \json_encode($this->toArray());
     }
+
+
 }
