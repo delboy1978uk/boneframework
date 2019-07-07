@@ -2,125 +2,193 @@
 
 namespace BoneMvc\Module\Dragon\Controller;
 
+use Bone\Mvc\View\ViewEngine;
+use Bone\View\Helper\AlertBox;
 use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
-use JMS\Serializer\SerializerInterface;
+use Del\Form\Field\Submit;
+use Del\Form\Form;
+use Del\Icon;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response\JsonResponse;
-use Zend\Diactoros\Stream;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class DragonController
 {
+    /** @var ViewEngine $view */
+    private $view;
+
     /** @var DragonService $service */
     private $service;
-
-    /** @var SerializerInterface $service */
-    private $serializer;
 
     /**
      * DragonController constructor.
      * @param DragonService $service
-     * @param SerializerInterface $serializer
      */
-    public function __construct(DragonService $service, SerializerInterface $serializer)
+    public function __construct(ViewEngine $view, DragonService $service)
     {
+        $this->view = $view;
         $this->service = $service;
-        $this->serializer = $serializer;
-    }
-
-    /**
-     * Controller.
-     *
-     * @param \Psr\Http\Message\ServerRequestInterface $request
-     *
-     * @return \Psr\Http\Message\ResponseInterface
-     */
-    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
-    {
-
-        $dragons = $this->service->getRepository();
-
-        if (isset($args['id'])) {
-            $id = $args['id'];
-            /** @var Dragon $data */
-            $data = $this->service->getRepository()->find($id);
-        } else {
-            $data = new DragonCollection($dragons->findAll());
-        }
-        $response = new JsonResponse($data->toArray());
-
-        return $response;
     }
 
     /**
      * @param ServerRequestInterface $request
-     * @return ResponseInterface $response
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @param array $args
+     * @return ResponseInterface
+     */
+    public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
+    {
+
+        $db = $this->service->getRepository();
+        $dragons = new DragonCollection($db->findAll());
+        $body = $this->view->render('dragon::index', [
+            'dragons' => $dragons,
+        ]);
+
+        return new HtmlResponse($body);
+    }
+
+    /**
+     * @param ServerRequestInterface $request
+     * @param array $args
+     * @return ResponseInterface
+     * @throws \Doctrine\ORM\EntityNotFoundException
+     */
+    public function viewAction(ServerRequestInterface $request, array $args): ResponseInterface
+    {
+        $db = $this->service->getRepository();
+        $id = $args['id'];
+        $dragon = $db->find($id);
+        $body = $this->view->render('dragon::index', [
+            'dragons' => [$dragon],
+        ]);
+
+        return new HtmlResponse($body);
+    }
+
+    /**
+     * @param ServerRequestInterface $request
+     * @param array $args
+     * @return ResponseInterface
      * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function create(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function createAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
-        $post = $this->getJsonPost($request);
-        $form = new DragonForm('create');
-        $form->populate($post);
-        if ($form->isValid()) {
-            $data = $form->getValues();
-            $dragon = $this->service->createFromArray($data);
-            $this->service->saveDragon($dragon);
-
-            return $this->jsonResponse($response, $dragon->toArray());
-        } else {
-            // handle errors
+        $msg = '';
+        $form = new DragonForm('createDragon');
+        if ($request->getMethod() === 'POST') {
+            $post = $request->getParsedBody();
+            $form->populate($post);
+            if ($form->isValid()) {
+                $data = $form->getValues();
+                $dragon = $this->service->createFromArray($data);
+                $this->service->saveDragon($dragon);
+                $msg = $this->alertBox(Icon::CHECK_CIRCLE . ' New dragon added to database.', 'success');
+                $form = new DragonForm('createDragon');
+            } else {
+                $msg = $this->alertBox(Icon::REMOVE . ' There was a problem with the form.', 'danger');
+            }
         }
+
+        $form = $form->render();
+        $body = $this->view->render('dragon::create', [
+            'form' => $form,
+            'msg' => $msg,
+        ]);
+
+        return new HtmlResponse($body);
     }
 
     /**
      * @param ServerRequestInterface $request
-     * @return ResponseInterface $response
+     * @param array $args
+     * @return ResponseInterface
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function read(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function editAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
+        $msg = '';
+        $form = new DragonForm('editDragon');
+        $id = $args['id'];
+        $db = $this->service->getRepository();
+        /** @var Dragon $dragon */
+        $dragon = $db->find($id);
+        $form->populate($dragon->toArray());
 
+        if ($request->getMethod() === 'POST') {
+            $post = $request->getParsedBody();
+            $form->populate($post);
+            if ($form->isValid()) {
+                $data = $form->getValues();
+                $dragon = $this->service->updateFromArray($dragon, $data);
+                $this->service->saveDragon($dragon);
+                $msg = $this->alertBox(Icon::CHECK_CIRCLE . ' Dragon details updated.', 'success');
+            } else {
+                $msg = $this->alertBox(Icon::REMOVE . ' There was a problem with the form.', 'danger');
+            }
+        }
+
+        $form = $form->render();
+        $body = $this->view->render('dragon::edit', [
+            'form' => $form,
+            'msg' => $msg,
+        ]);
+
+        return new HtmlResponse($body);
     }
 
     /**
      * @param ServerRequestInterface $request
-     * @return ResponseInterface $response
+     * @param array $args
+     * @return ResponseInterface
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function update(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function deleteAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
+        $id = $args['id'];
+        $db = $this->service->getRepository();
+        $form = new Form('deleteDragon');
+        $submit = new Submit('submit');
+        $submit->setValue('Delete');
+        $submit->setClass('btn btn-danger');
+        $form->addField($submit);
+        /** @var Dragon $dragon */
+        $dragon = $db->find($id);
+
+        if ($request->getMethod() === 'POST') {
+            $this->service->deleteDragon($dragon);
+            $msg = $this->alertBox(Icon::CHECK_CIRCLE . ' Dragon deleted.', 'warning');
+            $form = '<a href="/dragon" class="btn btn-default">Back</a>';
+        } else {
+            $form = $form->render();
+            $msg = $this->alertBox(Icon::WARNING . ' Warning, please confirm your intention to delete.', 'danger');
+            $msg .= '<p class="lead">Are you sure you want to delete ' . $dragon->getName() . '?</p>';
+        }
+
+        $body = $this->view->render('dragon::delete', [
+            'dragon' => $dragon,
+            'form' => $form,
+            'msg' => $msg,
+        ]);
+
+        return new HtmlResponse($body);
     }
 
     /**
-     * @param ServerRequestInterface $request
-     * @return ResponseInterface $response
+     * @param string $message
+     * @param string $class
+     * @return bool|string
      */
-    public function delete(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    private function alertBox(string $message, string $class = ''): string
     {
-    }
-
-    /**
-     * @param ServerRequestInterface $request
-     * @return array
-     */
-    protected function getJsonPost(ServerRequestInterface $request): array
-    {
-        return json_decode($request->getParsedBody(), true);
-    }
-
-    /**
-     * @param array $data
-     * @return ResponseInterface $response
-     */
-    public function jsonResponse(ResponseInterface $response, array $data): ResponseInterface
-    {
-        $json = json_encode($data);
-        // create proper $response later
-        header('Content-Type: application/json');
-        echo $json;
-        exit;
+        return AlertBox::alertBox([
+            'message' => $message,
+            'class' => $class,
+        ]);
     }
 }

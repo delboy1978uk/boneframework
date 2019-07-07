@@ -26,6 +26,16 @@ class DragonService
     public function createFromArray(array $data)
     {
         $dragon = new Dragon();
+
+        return $this->updateFromArray($dragon, $data);
+    }
+
+    /**
+     * @param array $data
+     * @return $Dragon
+     */
+    public function updateFromArray(Dragon $dragon, array $data)
+    {
         isset($data['id']) ? $dragon->setId($data['id']) : null;
         isset($data['name']) ? $dragon->setName($data['name']) : null;
 
@@ -48,9 +58,9 @@ class DragonService
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function deleteDragon(Dragon $dragon)
+    public function deleteDragon(Dragon $dragon): void
     {
-        return $this->getRepository()->delete($dragon);
+        $this->getRepository()->delete($dragon);
     }
 
     /**

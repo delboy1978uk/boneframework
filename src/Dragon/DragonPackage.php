@@ -2,13 +2,16 @@
 
 namespace BoneMvc\Module\Dragon;
 
+use Barnacle\Exception\NotFoundException;
 use Bone\Mvc\Router\RouterConfigInterface;
+use Bone\Mvc\View\PlatesEngine;
+use Bone\Mvc\View\ViewEngine;
+use BoneMvc\Module\Dragon\Controller\DragonApiController;
 use BoneMvc\Module\Dragon\Controller\DragonController;
 use BoneMvc\Module\Dragon\Service\DragonService;
 use Barnacle\RegistrationInterface;
 use Doctrine\ORM\EntityManager;
 use Barnacle\Container;
-use JMS\Serializer\SerializerInterface;
 use League\Route\RouteGroup;
 use League\Route\Router;
 use League\Route\Strategy\JsonStrategy;
@@ -18,22 +21,31 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
 {
     /**
      * @param Container $c
+     * @throws NotFoundException
      */
     public function addToContainer(Container $c)
     {
+        /** @var PlatesEngine $viewEngine */
+        $viewEngine = $c->get(PlatesEngine::class);
+        $viewEngine->addFolder('dragon', 'src/Dragon/View/Dragon/');
+
         $c[DragonService::class] = $c->factory(function (Container $c) {
             $em =  $c->get(EntityManager::class);
-            $service = new DragonService($em);
-
-            return $service;
+            return new DragonService($em);
         });
 
         $c[DragonController::class] = $c->factory(function (Container $c) {
             $service = $c->get(DragonService::class);
-            $serializer = $c->get(SerializerInterface::class);
-            $controller = new DragonController($service, $serializer);
+            /** @var PlatesEngine $viewEngine */
+            $viewEngine = $c->get(PlatesEngine::class);
 
-            return $controller;
+            return new DragonController($viewEngine, $service);
+        });
+
+        $c[DragonApiController::class] = $c->factory(function (Container $c) {
+            $service = $c->get(DragonService::class);
+
+            return new DragonApiController($service);
         });
     }
 
@@ -61,15 +73,22 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
     public function addRoutes(Container $c, Router $router): Router
     {
         $router->map('GET', '/dragon', [DragonController::class, 'indexAction']);
-        $router->map('GET', '/dragon/{id}', [DragonController::class, 'indexAction']);
+        $router->map('GET', '/dragon/{id:number}', [DragonController::class, 'viewAction']);
+        $router->map('GET', '/dragon/create', [DragonController::class, 'createAction']);
+        $router->map('GET', '/dragon/edit/{id:number}', [DragonController::class, 'editAction']);
+        $router->map('GET', '/dragon/delete/{id:number}', [DragonController::class, 'deleteAction']);
+
+        $router->map('POST', '/dragon/create', [DragonController::class, 'createAction']);
+        $router->map('POST', '/dragon/edit/{id:number}', [DragonController::class, 'editAction']);
+        $router->map('POST', '/dragon/delete/{id:number}', [DragonController::class, 'deleteAction']);
 
         $factory = new ResponseFactory();
         $strategy = new JsonStrategy($factory);
         $strategy->setContainer($c);
 
         $router->group('/api', function (RouteGroup $route) {
-            $route->map('GET', '/dragon', [DragonController::class, 'indexAction']);
-            $route->map('GET', '/dragon/{id}', [DragonController::class, 'indexAction']);
+            $route->map('GET', '/dragon', [DragonApiController::class, 'indexAction']);
+            $route->map('GET', '/dragon/{id:number}', [DragonApiController::class, 'indexAction']);
         })
         ->setStrategy($strategy);
 

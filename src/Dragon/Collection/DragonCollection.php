@@ -2,12 +2,13 @@
 
 namespace BoneMvc\Module\Dragon\Collection;
 
+use ArrayAccess;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use Doctrine\Common\Collections\ArrayCollection;
 use JsonSerializable;
 use LogicException;
 
-class DragonCollection extends ArrayCollection implements JsonSerializable
+class DragonCollection extends ArrayCollection implements JsonSerializable, ArrayAccess
 {
     /**
      * @param Dragon $dragon
