@@ -54,4 +54,17 @@ class DragonRepository extends EntityRepository
         $this->_em->remove($dragon);
         $this->_em->flush($dragon);
     }
+
+    /**
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getTotalDragonCount()
+    {
+        $qb = $this->createQueryBuilder('d');
+        $qb->select('count(d.id)');
+        $query = $qb->getQuery();
+
+        return (int) $query->getSingleScalarResult();
+    }
 }

@@ -27,6 +27,9 @@ class DragonController
     /** @var Paginator $paginator */
     private $paginator;
 
+    /** @var int $numPerPage */
+    private $numPerPage = 5;
+
     /**
      * DragonController constructor.
      * @param DragonService $service
@@ -43,16 +46,20 @@ class DragonController
      * @param array $args
      * @return ResponseInterface
      * @throws \Bone\View\Helper\Exception\PaginatorException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
+        $db = $this->service->getRepository();
+        $total = $db->getTotalDragonCount();
+
+        $this->paginator->setUrl('/dragon?page=:page');
         $page = (int) $request->getQueryParams()['page'] ?: 1;
         $this->paginator->setCurrentPage($page);
-        $this->paginator->setPageCount(8);
-        $this->paginator->setUrl('dragon?page=:page');
-        $this->paginator->setUrlPart(':page');
-        $db = $this->service->getRepository();
-        $dragons = new DragonCollection($db->findBy([], null, 5, ($page *  5) - 5));
+        $this->paginator->setPageCountByTotalRecords($total, $this->numPerPage);
+
+        $dragons = new DragonCollection($db->findBy([], null, $this->numPerPage, ($page *  $this->numPerPage) - $this->numPerPage));
+
         $body = $this->view->render('dragon::index', [
             'dragons' => $dragons,
             'paginator' => $this->paginator->render(),
