@@ -79,8 +79,8 @@ class DragonController
         $db = $this->service->getRepository();
         $id = $args['id'];
         $dragon = $db->find($id);
-        $body = $this->view->render('dragon::index', [
-            'dragons' => [$dragon],
+        $body = $this->view->render('dragon::view', [
+            'dragon' => $dragon,
         ]);
 
         return new HtmlResponse($body);

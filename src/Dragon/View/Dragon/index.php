@@ -1,6 +1,5 @@
 <?php
 
-use Bone\View\Helper\AlertBox;
 use Del\Icon;
 
 ?>
@@ -21,7 +20,7 @@ use Del\Icon;
     /** @var \BoneMvc\Module\Dragon\Entity\Dragon $dragon */
     foreach ($dragons as $dragon) { ?>
         <tr>
-            <td><?= $dragon->getId() ;?></td>
+            <td><a href="/dragon/<?= $dragon->getId() ;?>"><?= $dragon->getId() ;?></a></td>
             <td><?= $dragon->getName() ;?></td>
             <td><a href="/dragon/edit/<?= $dragon->getId() ;?>"><?= Icon::EDIT ;?></a></td>
             <td><a href="/dragon/delete/<?= $dragon->getId() ;?>"><?= Icon::REMOVE ;?></a></td>
