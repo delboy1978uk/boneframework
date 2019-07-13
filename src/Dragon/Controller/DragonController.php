@@ -4,6 +4,7 @@ namespace BoneMvc\Module\Dragon\Controller;
 
 use Bone\Mvc\View\ViewEngine;
 use Bone\View\Helper\AlertBox;
+use Bone\View\Helper\Paginator;
 use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
@@ -23,6 +24,9 @@ class DragonController
     /** @var DragonService $service */
     private $service;
 
+    /** @var Paginator $paginator */
+    private $paginator;
+
     /**
      * DragonController constructor.
      * @param DragonService $service
@@ -31,20 +35,27 @@ class DragonController
     {
         $this->view = $view;
         $this->service = $service;
+        $this->paginator =  new Paginator();
     }
 
     /**
      * @param ServerRequestInterface $request
      * @param array $args
      * @return ResponseInterface
+     * @throws \Bone\View\Helper\Exception\PaginatorException
      */
     public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
-
+        $page = (int) $request->getQueryParams()['page'] ?: 1;
+        $this->paginator->setCurrentPage($page);
+        $this->paginator->setPageCount(8);
+        $this->paginator->setUrl('dragon?page=:page');
+        $this->paginator->setUrlPart(':page');
         $db = $this->service->getRepository();
-        $dragons = new DragonCollection($db->findAll());
+        $dragons = new DragonCollection($db->findBy([], null, 5, ($page *  5) - 5));
         $body = $this->view->render('dragon::index', [
             'dragons' => $dragons,
+            'paginator' => $this->paginator->render(),
         ]);
 
         return new HtmlResponse($body);

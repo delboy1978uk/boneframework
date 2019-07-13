@@ -6,6 +6,7 @@ use App\Controller\IndexController;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Barnacle\RegistrationInterface;
 use Barnacle\Container;
+use Bone\Mvc\View\PlatesEngine;
 use League\Route\Router;
 
 class AppPackage implements RegistrationInterface, RouterConfigInterface
@@ -15,7 +16,10 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface
      */
     public function addToContainer(Container $c)
     {
-
+        $c[IndexController::class] = $c->factory(function (Container $c) {
+            $view = $c->get(PlatesEngine::class);
+            return new IndexController($view);
+        });
     }
 
     /**

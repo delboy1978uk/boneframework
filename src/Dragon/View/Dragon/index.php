@@ -6,7 +6,7 @@ use Del\Icon;
 ?>
 <a href="/dragon/create" class="btn btn-default pull-right"><?= Icon::ADD ;?> Add a Dragon</a>
 <h1>OMG! Dragons!</h1>
-
+<?= $paginator ?>
 <table class="table table-condensed table-bordered">
     <thead>
         <tr>
