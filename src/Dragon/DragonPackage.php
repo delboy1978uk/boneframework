@@ -88,7 +88,10 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
 
         $router->group('/api', function (RouteGroup $route) {
             $route->map('GET', '/dragon', [DragonApiController::class, 'indexAction']);
-            $route->map('GET', '/dragon/{id:number}', [DragonApiController::class, 'indexAction']);
+            $route->map('GET', '/dragon/{id:number}', [DragonApiController::class, 'viewAction']);
+            $route->map('POST', '/dragon', [DragonApiController::class, 'createAction']);
+            $route->map('PUT', '/dragon/{id:number}', [DragonApiController::class, 'updateAction']);
+            $route->map('DELETE', '/dragon/{id:number}', [DragonApiController::class, 'deleteAction']);
         })
         ->setStrategy($strategy);
 
