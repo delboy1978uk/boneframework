@@ -24,18 +24,25 @@ class DragonApiController
     }
 
     /**
-     * Controller.
-     *
-     * @param \Psr\Http\Message\ServerRequestInterface $request
-     *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @param ServerRequestInterface $request
+     * @param array $args
+     * @return ResponseInterface
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
+        $params = $request->getQueryParams();
+        $limit = $params['limit'];
+        $offset = $params['offset'];
         $db = $this->service->getRepository();
-        $dragons = new DragonCollection($db->findAll());
+        $dragons = new DragonCollection($db->findBy([], null, $limit, $offset));
+        $total = $db->getTotalDragonCount();
 
-        return new JsonResponse($dragons->toArray());
+        $payload['_embedded'] = $dragons->toArray();
+        $payload['count'] = $limit;
+        $payload['total'] = $total;
+
+        return new JsonResponse($payload);
     }
 
     /**
@@ -45,7 +52,7 @@ class DragonApiController
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function createAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function createAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
         $post = json_decode($request->getBody()->getContents(), true) ?: $request->getParsedBody();
         $form = new DragonForm('create');
@@ -60,9 +67,7 @@ class DragonApiController
         }
 
         return new JsonResponse([
-            'error' => [
-                'error_messages' => $form->render(),
-            ],
+            'error' => $form->getErrorMessages(),
         ]);
     }
 
@@ -72,7 +77,7 @@ class DragonApiController
      * @return ResponseInterface
      * @throws \Doctrine\ORM\EntityNotFoundException
      */
-    public function viewAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function viewAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
         $dragon = $this->service->getRepository()->find($args['id']);
 
@@ -87,7 +92,7 @@ class DragonApiController
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function updateAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function updateAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
         $db = $this->service->getRepository();
         $dragon = $db->find($args['id']);
@@ -105,9 +110,7 @@ class DragonApiController
         }
 
         return new JsonResponse([
-            'error' => [
-                'error_messages' => $form->render(),
-            ],
+            'error' => $form->getErrorMessages(),
         ]);
     }
 
@@ -119,7 +122,7 @@ class DragonApiController
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function deleteAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function deleteAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
         $db = $this->service->getRepository();
         $dragon = $db->find($args['id']);

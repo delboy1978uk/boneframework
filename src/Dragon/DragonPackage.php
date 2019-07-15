@@ -3,6 +3,8 @@
 namespace BoneMvc\Module\Dragon;
 
 use Barnacle\Exception\NotFoundException;
+use Bone\Http\Middleware\HalCollection;
+use Bone\Http\Middleware\HalEntity;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Bone\Mvc\View\PlatesEngine;
 use Bone\Mvc\View\ViewEngine;
@@ -87,8 +89,8 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
         $strategy->setContainer($c);
 
         $router->group('/api', function (RouteGroup $route) {
-            $route->map('GET', '/dragon', [DragonApiController::class, 'indexAction']);
-            $route->map('GET', '/dragon/{id:number}', [DragonApiController::class, 'viewAction']);
+            $route->map('GET', '/dragon', [DragonApiController::class, 'indexAction'])->prependMiddleware(new HalCollection(5));
+            $route->map('GET', '/dragon/{id:number}', [DragonApiController::class, 'viewAction'])->prependMiddleware(new HalEntity());
             $route->map('POST', '/dragon', [DragonApiController::class, 'createAction']);
             $route->map('PUT', '/dragon/{id:number}', [DragonApiController::class, 'updateAction']);
             $route->map('DELETE', '/dragon/{id:number}', [DragonApiController::class, 'deleteAction']);
