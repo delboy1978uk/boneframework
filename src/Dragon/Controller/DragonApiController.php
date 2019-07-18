@@ -5,6 +5,7 @@ namespace BoneMvc\Module\Dragon\Controller;
 use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
+use League\Route\Http\Exception\NotFoundException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
@@ -27,6 +28,7 @@ class DragonApiController
      * @param ServerRequestInterface $request
      * @param array $args
      * @return ResponseInterface
+     * @throws NotFoundException
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
@@ -37,9 +39,13 @@ class DragonApiController
         $db = $this->service->getRepository();
         $dragons = new DragonCollection($db->findBy([], null, $limit, $offset));
         $total = $db->getTotalDragonCount();
+        $count = count($dragons);
+        if ($count < 1) {
+            throw new NotFoundException();
+        }
 
         $payload['_embedded'] = $dragons->toArray();
-        $payload['count'] = $limit;
+        $payload['count'] = $count;
         $payload['total'] = $total;
 
         return new JsonResponse($payload);
