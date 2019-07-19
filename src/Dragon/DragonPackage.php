@@ -7,7 +7,6 @@ use Bone\Http\Middleware\HalCollection;
 use Bone\Http\Middleware\HalEntity;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Bone\Mvc\View\PlatesEngine;
-use Bone\Mvc\View\ViewEngine;
 use BoneMvc\Module\Dragon\Controller\DragonApiController;
 use BoneMvc\Module\Dragon\Controller\DragonController;
 use BoneMvc\Module\Dragon\Service\DragonService;
