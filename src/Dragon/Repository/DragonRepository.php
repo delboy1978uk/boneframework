@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BoneMvc\Module\Dragon\Repository;
 
 use BoneMvc\Module\Dragon\Collection\DragonCollection;
@@ -10,17 +12,16 @@ use Doctrine\ORM\EntityRepository;
 class DragonRepository extends EntityRepository
 {
     /**
-     * @param mixed $id
-     * @param null $lockMode
-     * @param null $lockVersion
+     * @param int $id
+     * @param int|null $lockMode
+     * @param int|null $lockVersion
      * @return Dragon
-     * @throws EntityNotFoundException
+     * @throws \Doctrine\ORM\ORMException
      */
     public function find($id, $lockMode = null, $lockVersion = null): Dragon
     {
         /** @var Dragon $dragon */
         $dragon =  parent::find($id, $lockMode, $lockVersion);
-
         if (!$dragon) {
             throw new EntityNotFoundException('Dragon not found.', 404);
         }
@@ -56,10 +57,11 @@ class DragonRepository extends EntityRepository
     }
 
     /**
-     * @return mixed
+     * @return int
+     * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    public function getTotalDragonCount()
+    public function getTotalDragonCount(): int
     {
         $qb = $this->createQueryBuilder('d');
         $qb->select('count(d.id)');

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BoneMvc\Module\Dragon\Collection;
 
 use BoneMvc\Module\Dragon\Entity\Dragon;
@@ -14,7 +16,7 @@ class DragonCollection extends ArrayCollection implements JsonSerializable
      * @return $this
      * @throws LogicException
      */
-    public function update(Dragon $dragon)
+    public function update(Dragon $dragon): DragonCollection
     {
         $key = $this->findKey($dragon);
         if($key) {
@@ -27,7 +29,7 @@ class DragonCollection extends ArrayCollection implements JsonSerializable
     /**
      * @param Dragon $dragon
      */
-    public function append(Dragon $dragon)
+    public function append(Dragon $dragon): void
     {
         $this->add($dragon);
     }
@@ -35,16 +37,16 @@ class DragonCollection extends ArrayCollection implements JsonSerializable
     /**
      * @return Dragon|null
      */
-    public function current()
+    public function current(): ?Dragon
     {
         return parent::current();
     }
 
     /**
      * @param Dragon $dragon
-     * @return bool|int
+     * @return int|null
      */
-    public function findKey(Dragon $dragon)
+    public function findKey(Dragon $dragon): ?int
     {
         $it = $this->getIterator();
         $it->rewind();
@@ -54,14 +56,14 @@ class DragonCollection extends ArrayCollection implements JsonSerializable
             }
             $it->next();
         }
-        return false;
+        return null;
     }
 
     /**
      * @param int $id
-     * @return Dragon|bool
+     * @return Dragon|null
      */
-    public function findById(int $id)
+    public function findById(int $id): ?Dragon
     {
         $it = $this->getIterator();
         $it->rewind();
@@ -71,7 +73,7 @@ class DragonCollection extends ArrayCollection implements JsonSerializable
             }
             $it->next();
         }
-        return false;
+        return null;
     }
 
     /**

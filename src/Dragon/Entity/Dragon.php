@@ -1,14 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BoneMvc\Module\Dragon\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass="\BoneMvc\Module\Dragon\Repository\DragonRepository")
  */
-class Dragon implements JsonSerializable
+class Dragon
 {
     /**
      * @var int $id
@@ -25,9 +28,15 @@ class Dragon implements JsonSerializable
     private $name;
 
     /**
+     * @var DateTime $dob
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $dob;
+
+    /**
      * @return int
      */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -35,7 +44,7 @@ class Dragon implements JsonSerializable
     /**
      * @param int $id
      */
-    public function setId($id)
+    public function setId($id): void
     {
         $this->id = $id;
     }
@@ -43,7 +52,7 @@ class Dragon implements JsonSerializable
     /**
      * @return string
      */
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -51,19 +60,37 @@ class Dragon implements JsonSerializable
     /**
      * @param string $name
      */
-    public function setName(string $name)
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
     /**
-     * @return array
+     * @return DateTime
      */
-    public function toArray()
+    public function getDob(): ?DateTime
+    {
+        return $this->dob;
+    }
+
+    /**
+     * @param DateTime $dob
+     */
+    public function setDob(DateTime $dob): void
+    {
+        $this->dob = $dob;
+    }
+
+    /**
+     * @return array
+     * @param string $dateFormat
+     */
+    public function toArray(string $dateFormat = 'd/m/Y'): array
     {
         $data = [
             'id' => $this->getId(),
             'name' => $this->getName(),
+            'dob' => ($dob = $this->getDob()) ? $dob->format($dateFormat) : null,
         ];
 
         return $data;
@@ -72,18 +99,16 @@ class Dragon implements JsonSerializable
     /**
      * @return string
      */
-    public function __toString()
+    public function jsonSerialize(): string
     {
-        return $this->jsonSerialize();
+        return \json_encode($this->toArray());
     }
 
     /**
      * @return string
      */
-    public function jsonSerialize()
+    public function __toString(): string
     {
-        return \json_encode($this->toArray());
+        return $this->jsonSerialize();
     }
-
-
 }

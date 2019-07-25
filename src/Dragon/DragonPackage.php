@@ -1,18 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BoneMvc\Module\Dragon;
 
+use Barnacle\Container;
 use Barnacle\Exception\NotFoundException;
+use Barnacle\RegistrationInterface;
+use BoneMvc\Module\Dragon\Controller\DragonApiController;
+use BoneMvc\Module\Dragon\Controller\DragonController;
+use BoneMvc\Module\Dragon\Service\DragonService;
 use Bone\Http\Middleware\HalCollection;
 use Bone\Http\Middleware\HalEntity;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Bone\Mvc\View\PlatesEngine;
-use BoneMvc\Module\Dragon\Controller\DragonApiController;
-use BoneMvc\Module\Dragon\Controller\DragonController;
-use BoneMvc\Module\Dragon\Service\DragonService;
-use Barnacle\RegistrationInterface;
 use Doctrine\ORM\EntityManager;
-use Barnacle\Container;
 use League\Route\RouteGroup;
 use League\Route\Router;
 use League\Route\Strategy\JsonStrategy;
@@ -22,7 +24,6 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
 {
     /**
      * @param Container $c
-     * @throws NotFoundException
      */
     public function addToContainer(Container $c)
     {
@@ -55,7 +56,7 @@ class DragonPackage implements RegistrationInterface, RouterConfigInterface
      */
     public function getEntityPath(): string
     {
-        return 'src/Dragon/Entity';
+        return '/src/Dragon/Entity';
     }
 
     /**

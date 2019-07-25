@@ -2,13 +2,13 @@
 
 namespace BoneMvc\Module\Dragon\Controller;
 
-use Bone\Mvc\View\ViewEngine;
-use Bone\View\Helper\AlertBox;
-use Bone\View\Helper\Paginator;
 use BoneMvc\Module\Dragon\Collection\DragonCollection;
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Form\DragonForm;
 use BoneMvc\Module\Dragon\Service\DragonService;
+use Bone\Mvc\View\ViewEngine;
+use Bone\View\Helper\AlertBox;
+use Bone\View\Helper\Paginator;
 use Del\Form\Field\Submit;
 use Del\Form\Form;
 use Del\Icon;
@@ -18,42 +18,40 @@ use Zend\Diactoros\Response\HtmlResponse;
 
 class DragonController
 {
-    /** @var ViewEngine $view */
-    private $view;
-
-    /** @var DragonService $service */
-    private $service;
+    /** @var int $numPerPage */
+    private $numPerPage = 10;
 
     /** @var Paginator $paginator */
     private $paginator;
 
-    /** @var int $numPerPage */
-    private $numPerPage = 5;
+    /** @var DragonService $service */
+    private $service;
+
+    /** @var ViewEngine $view */
+    private $view;
 
     /**
-     * DragonController constructor.
      * @param DragonService $service
      */
     public function __construct(ViewEngine $view, DragonService $service)
     {
-        $this->view = $view;
+        $this->paginator = new Paginator();
         $this->service = $service;
-        $this->paginator =  new Paginator();
+        $this->view = $view;
     }
 
     /**
      * @param ServerRequestInterface $request
      * @param array $args
-     * @return ResponseInterface
-     * @throws \Bone\View\Helper\Exception\PaginatorException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return ResponseInterface $response
+     * @throws \Exception
      */
     public function indexAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
         $db = $this->service->getRepository();
         $total = $db->getTotalDragonCount();
 
-        $this->paginator->setUrl('/dragon?page=:page');
+        $this->paginator->setUrl('dragon?page=:page');
         $page = (int) $request->getQueryParams()['page'] ?: 1;
         $this->paginator->setCurrentPage($page);
         $this->paginator->setPageCountByTotalRecords($total, $this->numPerPage);
@@ -70,9 +68,8 @@ class DragonController
 
     /**
      * @param ServerRequestInterface $request
-     * @param array $args
-     * @return ResponseInterface
-     * @throws \Doctrine\ORM\EntityNotFoundException
+     * @return ResponseInterface $response
+     * @throws \Exception
      */
     public function viewAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
@@ -88,10 +85,8 @@ class DragonController
 
     /**
      * @param ServerRequestInterface $request
-     * @param array $args
-     * @return ResponseInterface
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @return ResponseInterface $response
+     * @throws \Exception
      */
     public function createAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
@@ -122,10 +117,8 @@ class DragonController
 
     /**
      * @param ServerRequestInterface $request
-     * @param array $args
-     * @return ResponseInterface
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @return ResponseInterface $response
+     * @throws \Exception
      */
     public function editAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
@@ -161,10 +154,8 @@ class DragonController
 
     /**
      * @param ServerRequestInterface $request
-     * @param array $args
-     * @return ResponseInterface
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @return ResponseInterface $response
+     * @throws \Exception
      */
     public function deleteAction(ServerRequestInterface $request, array $args): ResponseInterface
     {
@@ -200,9 +191,9 @@ class DragonController
     /**
      * @param string $message
      * @param string $class
-     * @return bool|string
+     * @return string
      */
-    private function alertBox(string $message, string $class = ''): string
+    private function alertBox(string $message, string $class): string
     {
         return AlertBox::alertBox([
             'message' => $message,

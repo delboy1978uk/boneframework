@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace BoneMvc\Module\Dragon\Controller;
 
@@ -12,11 +14,10 @@ use Zend\Diactoros\Response\JsonResponse;
 
 class DragonApiController
 {
-    /** @var DragonService $service */
+    /** @param DragonService $service */
     private $service;
 
     /**
-     * DragonController constructor.
      * @param DragonService $service
      */
     public function __construct(DragonService $service)
@@ -133,6 +134,7 @@ class DragonApiController
         $db = $this->service->getRepository();
         $dragon = $db->find($args['id']);
         $this->service->deleteDragon($dragon);
+
         return new JsonResponse(['deleted' => true]);
     }
 }

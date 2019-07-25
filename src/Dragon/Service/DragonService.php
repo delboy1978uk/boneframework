@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BoneMvc\Module\Dragon\Service;
 
 use BoneMvc\Module\Dragon\Entity\Dragon;
 use BoneMvc\Module\Dragon\Repository\DragonRepository;
+use DateTime;
 use Doctrine\ORM\EntityManager;
 
 class DragonService
@@ -21,9 +24,9 @@ class DragonService
 
     /**
      * @param array $data
-     * @return $Dragon
+     * @return Dragon
      */
-    public function createFromArray(array $data)
+    public function createFromArray(array $data): Dragon
     {
         $dragon = new Dragon();
 
@@ -31,13 +34,19 @@ class DragonService
     }
 
     /**
+     * @param Dragon $dragon
      * @param array $data
-     * @return $Dragon
+     * @return Dragon
      */
-    public function updateFromArray(Dragon $dragon, array $data)
+    public function updateFromArray(Dragon $dragon, array $data): Dragon
     {
         isset($data['id']) ? $dragon->setId($data['id']) : null;
         isset($data['name']) ? $dragon->setName($data['name']) : null;
+
+        if (isset($data['dob']) && !empty($data['dob'])) {
+            $dob = $data['dob'] instanceof DateTime ? $data['dob'] : DateTime::createFromFormat('d/m/Y', $data['dob']);
+            $dragon->setDob($dob);
+        }
 
         return $dragon;
     }
