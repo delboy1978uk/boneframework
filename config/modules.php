@@ -11,6 +11,9 @@ return [
         'App',
         'BoneMvcDoctrine',
         'Dragon',
+        'Orc',
+        'Unicorn',
+        'Wall',
     ],
     'packages' => [
 

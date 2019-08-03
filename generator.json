@@ -1,0 +1,70 @@
+{
+  "namespace": "BoneMvc\\Module",
+  "entity": "Unicorn",
+  "fields": [
+    {
+      "name": "name",
+      "type": "varchar",
+      "length": "30",
+      "nullable": false,
+      "form": {
+        "type": "text",
+        "label": "Name of Unicorn",
+        "values": []
+      }
+    },
+    {
+      "name": "dob",
+      "type": "date",
+      "nullable": true,
+      "form": {
+        "type": "text",
+        "label": "Date of Birth",
+        "values": []
+      }
+    },
+    {
+      "name": "food",
+      "type": "int",
+      "length": "1",
+      "nullable": true,
+      "form": {
+        "type": "select",
+        "label": "Favourite Food",
+        "values": {
+          "1": "Beef",
+          "2": "Chicken",
+          "3": "Pork",
+          "4": "Marshmallows"
+        }
+      }
+    },
+    {
+      "name": "canFly",
+      "type": "bool",
+      "nullable": false,
+      "form": {
+        "type": "checkbox",
+        "label": "Can Fly",
+        "values":{
+          "1": ""
+        }
+      }
+    },
+    {
+      "name": "drink",
+      "type": "int",
+      "length": "1",
+      "nullable": true,
+      "form": {
+        "type": "radio",
+        "label": "Favourite Drink",
+        "values": {
+          "1": "Pepsi",
+          "2": "Coke",
+          "3": "Beer"
+        }
+      }
+    }
+  ]
+}
