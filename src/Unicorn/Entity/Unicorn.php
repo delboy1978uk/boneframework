@@ -41,7 +41,7 @@ class Unicorn
 
     /**
      * @var bool $canFly
-     * @ORM\Column(type="boolean", nullable=false)
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $canFly;
 
@@ -118,15 +118,15 @@ class Unicorn
     /**
      * @return bool
      */
-    public function getCanFly(): bool
+    public function getCanFly(): ?bool
     {
         return $this->canFly;
     }
 
     /**
-     * @param bool $canFly
+     * @param bool|null $canFly
      */
-    public function setCanFly(bool $canFly): void
+    public function setCanFly(?bool $canFly): void
     {
         $this->canFly = $canFly;
     }

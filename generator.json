@@ -42,7 +42,7 @@
     {
       "name": "canFly",
       "type": "bool",
-      "nullable": false,
+      "nullable": true,
       "form": {
         "type": "checkbox",
         "label": "Can Fly",

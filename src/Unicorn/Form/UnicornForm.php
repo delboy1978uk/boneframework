@@ -38,11 +38,9 @@ class UnicornForm extends AbstractForm
 
         $canFly = new CheckBox('canFly');
         $canFly->setOptions([
-             1 => 'qwer',
-             2 => 'jgf',
+             1 => '',
         ]);
         $canFly->setLabel('Can Fly');
-        $canFly->setRequired(true);
         $this->addField($canFly);
 
         $drink = new Radio('drink');

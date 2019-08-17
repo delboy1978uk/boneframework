@@ -49,7 +49,8 @@ class UnicornService
             $unicorn->setDob($dob);
         }
         isset($data['food']) ? $unicorn->setFood((int) $data['food']) : null;
-        isset($data['canFly']) ? $unicorn->setCanFly((bool) $data['c']) : null;
+        $canFly = $data['canFly'] ?? false;
+        $unicorn->setCanFly((bool) $canFly);
         isset($data['drink']) ? $unicorn->setDrink((int) $data['drink']) : null;
 
         return $unicorn;
