@@ -14,16 +14,15 @@
     "ext-pdo": "*",
     "delboy1978uk/bone": "dev-feature/middleware",
     "delboy1978uk/cdn": "^1.1.2",
-    "delboy1978uk/form": "^1.4",
+    "delboy1978uk/form": "^1.5.2",
     "delboy1978uk/image": "^1.0.0",
     "delboy1978uk/session": "^1.0",
     "delboy1978uk/generator": "dev-master",
-    "jms/serializer": "^3.1",
-    "squizlabs/php_codesniffer": "^3.4"
+    "jms/serializer": "^3.1"
   },
   "require-dev": {
     "codeception/codeception": "*",
-    "codeception/c3": "^2.4",
+    "squizlabs/php_codesniffer": "^3.4",
     "phpro/grumphp": "^0.15.2"
   },
   "autoload": {
