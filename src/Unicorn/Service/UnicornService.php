@@ -41,16 +41,16 @@ class UnicornService
     public function updateFromArray(Unicorn $unicorn, array $data): Unicorn
     {
         isset($data['id']) ? $unicorn->setId($data['id']) : null;
-        isset($data['name']) ? $unicorn->setName($data['name']) : null;
+        isset($data['name']) ? $unicorn->setName($data['name']) : $unicorn->setName('');
 
+        $unicorn->setDob(null);
         if (isset($data['dob'])) {
             $dob = $data['dob'] instanceof DateTime ? $data['dob'] : DateTime::createFromFormat('d/m/Y', $data['dob']);
             $dob = $dob ?: null;
             $unicorn->setDob($dob);
         }
         isset($data['food']) ? $unicorn->setFood((int) $data['food']) : null;
-        $canFly = $data['canFly'] ?? false;
-        $unicorn->setCanFly((bool) $canFly);
+        $unicorn->setCanFly(isset($data['canFly']));
         isset($data['drink']) ? $unicorn->setDrink((int) $data['drink']) : null;
 
         return $unicorn;

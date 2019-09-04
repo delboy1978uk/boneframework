@@ -25,7 +25,7 @@ class Unicorn
      * @var string $name
      * @ORM\Column(type="string", length=30, nullable=false)
      */
-    private $name;
+    private $name = '';
 
     /**
      * @var DateTime $dob
@@ -43,7 +43,7 @@ class Unicorn
      * @var bool $canFly
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $canFly;
+    private $canFly = false;
 
     /**
      * @var int $drink
