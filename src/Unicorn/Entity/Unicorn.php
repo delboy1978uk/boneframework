@@ -11,7 +11,7 @@ use JsonSerializable;
 /**
  * @ORM\Entity(repositoryClass="\BoneMvc\Module\Unicorn\Repository\UnicornRepository")
  */
-class Unicorn
+class Unicorn implements JsonSerializable
 {
     /**
      * @var int $id
@@ -25,7 +25,7 @@ class Unicorn
      * @var string $name
      * @ORM\Column(type="string", length=30, nullable=false)
      */
-    private $name = '';
+    private $name;
 
     /**
      * @var DateTime $dob
@@ -43,7 +43,7 @@ class Unicorn
      * @var bool $canFly
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $canFly = false;
+    private $canFly;
 
     /**
      * @var int $drink

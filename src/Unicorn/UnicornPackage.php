@@ -33,6 +33,7 @@ class UnicornPackage implements RegistrationInterface, RouterConfigInterface
 
         $c[UnicornService::class] = $c->factory(function (Container $c) {
             $em =  $c->get(EntityManager::class);
+
             return new UnicornService($em);
         });
 

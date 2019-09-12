@@ -10,9 +10,6 @@ return [
     'modules' => [
         'App',
         'BoneMvcDoctrine',
-        'Beer',
-        'Dragon',
-        'Orc',
         'Unicorn',
     ],
     'packages' => [

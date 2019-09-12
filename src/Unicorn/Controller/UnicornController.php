@@ -131,7 +131,7 @@ class UnicornController
         $form->populate($unicorn->toArray());
 
         if ($request->getMethod() === 'POST') {
-            $post = $this->getPost($request);
+            $post = $request->getParsedBody();
             $form->populate($post);
             if ($form->isValid()) {
                 $data = $form->getValues();
@@ -186,19 +186,6 @@ class UnicornController
         ]);
 
         return new HtmlResponse($body);
-    }
-
-
-
-    /**
-     * @param ServerRequestInterface $request
-     * @return array
-     */
-    protected function getPost(ServerRequestInterface $request): array
-    {
-        $data = $request->getParsedBody();
-
-        return array_merge((new Unicorn())->toArray(), $data);
     }
 
     /**
