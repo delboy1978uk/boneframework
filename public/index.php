@@ -31,11 +31,10 @@
 
 
 
-use Zend\Diactoros\ServerRequestFactory;
-
 chdir(dirname(__DIR__));
+
 if (!defined('APPLICATION_PATH')) {
-    define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
+    define('APPLICATION_PATH', dirname(__DIR__) . '/');
 }
 
 /**
@@ -47,7 +46,6 @@ if (!defined('APPLICATION_ENV') && getenv('APPLICATION_ENV'))
         ? getenv('APPLICATION_ENV')
         : 'production'));
 }
-
 
 /**
  *

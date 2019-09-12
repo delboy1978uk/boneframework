@@ -6,14 +6,16 @@
  * and if using migrant command (an extended doctrine migrations) will add to entity paths for generating migrations
  * @see https://github.com/delboy1978uk/common for more details
  */
-return [
-    'modules' => [
-        'App',
-        'BoneMvcDoctrine',
-        'Unicorn',
-    ],
-    'packages' => [
 
+use BoneMvc\Module\App\AppPackage;
+use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
+use BoneMvc\Module\Unicorn\UnicornPackage;
+
+return [
+    'packages' => [
+        AppPackage::class,
+        BoneMvcDoctrinePackage::class,
+        UnicornPackage::class,
     ],
     'viewFolder' => 'src/App/View'
 ];
