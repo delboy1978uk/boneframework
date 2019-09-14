@@ -9,6 +9,7 @@
 
 use BoneMvc\Module\App\AppPackage;
 use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
+use BoneMvc\Module\BoneMvcUser\BoneMvcUserPackage;
 use BoneMvc\Module\Unicorn\UnicornPackage;
 
 return [
@@ -16,6 +17,7 @@ return [
         AppPackage::class,
         BoneMvcDoctrinePackage::class,
         UnicornPackage::class,
+        BoneMvcUserPackage::class
     ],
     'viewFolder' => 'src/App/View'
 ];
