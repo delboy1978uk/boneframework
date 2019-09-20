@@ -18,7 +18,7 @@
     "ext-intl": "*",
     "ext-json": "*",
     "ext-pdo": "*",
-    "delboy1978uk/bone": "dev-feature/middleware",
+    "delboy1978uk/bone": "^3.0",
     "delboy1978uk/bone-doctrine": "^1.0.0",
     "delboy1978uk/bone-user": "^1.0.0",
     "delboy1978uk/cdn": "^1.1.2",

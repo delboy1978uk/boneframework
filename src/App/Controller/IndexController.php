@@ -2,13 +2,10 @@
 
 namespace App\Controller;
 
-use Bone\Http\Response;
-use Bone\Mvc\OldController;
 use Bone\Mvc\View\ViewEngine;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
-use Zend\Diactoros\Stream;
 
 /**
  * Class IndexController
@@ -19,7 +16,6 @@ use Zend\Diactoros\Stream;
  */
 class IndexController
 {
-    private $locale;
 
     /** @var ViewEngine $view */
     private $view;
@@ -30,12 +26,6 @@ class IndexController
     public function __construct(ViewEngine $view)
     {
         $this->view = $view;
-    }
-
-    public function init()
-    {
-        $this->locale = $this->view->locale = $this->getParam('locale', Registry::ahoy()->get('i18n')['default_locale']);
-        $this->getTranslator()->setLocale($this->locale);
     }
 
     /**
