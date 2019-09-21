@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace BoneMvcTest\Controller;
 
+use App\Controller\IndexController;
 use Bone\Mvc\View\PlatesEngine;
 use Codeception\TestCase\Test;
 use Psr\Http\Message\ResponseInterface;

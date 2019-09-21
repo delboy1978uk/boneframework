@@ -21,3 +21,4 @@ coverage:
     whitelist:
         include:
             - src/App/Controller/*
+            - src/App/AppPackage.php
