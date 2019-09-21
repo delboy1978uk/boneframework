@@ -25,7 +25,6 @@ before_script:
   - docker-compose exec php /usr/bin/composer install
 
 script:
-  - docker-compose exec php vendor/bin/codecept run acceptance --env=travis -vvv
   - docker-compose exec php vendor/bin/codecept run  unit --coverage-xml --env=travis -vvv
 
 after_script:
