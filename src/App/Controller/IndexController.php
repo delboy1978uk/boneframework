@@ -2,40 +2,53 @@
 
 namespace App\Controller;
 
-use Bone\Mvc\Controller;
-use Bone\Mvc\Registry;
-use Zend\Diactoros\Response;
+use Bone\Mvc\View\ViewEngine;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Zend\Diactoros\Response\HtmlResponse;
 
-
-class IndexController extends Controller
+/**
+ * Class IndexController
+ *
+ * If you need to create a constructor, edit the package to set up automatically via dependency injection
+ *
+ * @package App\Controller
+ */
+class IndexController
 {
-    private $locale;
 
-    public function init()
+    /** @var ViewEngine $view */
+    private $view;
+
+    /**
+     * DragonController constructor.
+     */
+    public function __construct(ViewEngine $view)
     {
-        $this->locale = $this->view->locale = $this->getParam('locale', Registry::ahoy()->get('i18n')['default_locale']);
-        $this->getTranslator()->setLocale($this->locale);
+        $this->view = $view;
     }
 
-    public function indexAction()
+    /**
+     * @param ServerRequestInterface $request
+     * @param array $args
+     * @return ResponseInterface
+     */
+    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
-        if (!$this->getParam('locale')) {
-            return new Response\RedirectResponse('/' . $this->locale);
-        }
+        $body = $this->view->render('index/index');
+
+        return new HtmlResponse($body);
     }
 
-    public function learnAction()
+    /**
+     * @param ServerRequestInterface $request
+     * @param array $args
+     * @return ResponseInterface
+     */
+    public function learnAction(ServerRequestInterface $request, array $args) : ResponseInterface
     {
+        $body = $this->view->render('index/learn');
 
-    }
-
-    public function jsonAction()
-    {
-        // example of a Json page
-        $array = array(
-          'Rum' => 'tasty',
-          'Grog' => 'the best!',
-        );
-        $this->sendJsonResponse($array);
+        return new HtmlResponse($body);
     }
 }

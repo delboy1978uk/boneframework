@@ -7,22 +7,34 @@
       "email": "delboy1978uk@gmail.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/delboy1978uk/route"
+    }
+  ],
   "require": {
     "php": "^7.1",
+    "ext-intl": "*",
     "ext-json": "*",
-    "delboy1978uk/bone": "^2.5",
+    "ext-pdo": "*",
+    "delboy1978uk/bone": "^3.0",
     "delboy1978uk/cdn": "^1.1.2",
-    "delboy1978uk/form": "^1.0.0",
+    "delboy1978uk/form": "^1.5.4",
     "delboy1978uk/image": "^1.0.0",
-    "delboy1978uk/session": "^1.0"
+    "delboy1978uk/session": "^1.0",
+    "league/route": "dev-master"
   },
   "require-dev": {
-    "codeception/codeception": "*"
+    "roave/security-advisories": "dev-master",
+    "codeception/codeception": "*",
+    "squizlabs/php_codesniffer": "^3.4"
   },
   "autoload": {
     "psr-4": {
       "App\\": "src/App/",
-      "Bone\\Module\\": "src/"
+      "BoneMvc\\Module\\": "src/",
+      "BoneMvcTest\\": "tests/unit/"
     }
   }
 }

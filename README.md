@@ -231,3 +231,11 @@ Ye can manipulate images usin' the gd PHP functions, with the ```Del\Image``` cl
 Ye can set Session variables usin' ```Del\SessionManager```, see GitHub for info.
 
 #### Get Swashbucklin'! Gaarrrrr!
+
+
+
+
+
+
+
+

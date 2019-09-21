@@ -32,14 +32,15 @@
 
 
 chdir(dirname(__DIR__));
+
 if (!defined('APPLICATION_PATH')) {
-    define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
+    define('APPLICATION_PATH', dirname(__DIR__) . '/');
 }
 
 /**
  *  Now whit environment be this?
  */
-if (!defined('APPLICATION_ENV'))
+if (!defined('APPLICATION_ENV') && getenv('APPLICATION_ENV'))
 {
     define('APPLICATION_ENV', (getenv('APPLICATION_ENV')
         ? getenv('APPLICATION_ENV')
@@ -58,10 +59,7 @@ if (!file_exists('vendor/autoload.php')) {
 }
 
 require_once 'vendor/autoload.php';
-
 /**
- *
  *  Time t'begin th'voyage me hearties!
- *
  */
 Bone\Mvc\Application::ahoy()->setSail();

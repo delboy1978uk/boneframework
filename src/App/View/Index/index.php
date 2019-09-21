@@ -27,16 +27,16 @@
                     <a href="#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
                 <li class="">
-                    <a href="/<?= $this->e($locale)?>/learn"><?= $this->t('learn') ;?></a>
+                    <a href="/<?= Locale::getDefault(); ?>/learn"><?= $this->t('learn') ;?></a>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->t('language') ;?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/en_PI">Pirate</a></li>
-                        <li><a href="/en_GB">English</a></li>
-                        <li><a href="/nl_BE">Nederlands</a></li>
-                        <li><a href="/fr_BE">Français</a></li>
+                        <li><a href="/en_PI/">Pirate</a></li>
+                        <li><a href="/en_GB/">English</a></li>
+                        <li><a href="/nl_BE/">Nederlands</a></li>
+                        <li><a href="/fr_BE/">Français</a></li>
                     </ul>
                 </li>
             </ul>

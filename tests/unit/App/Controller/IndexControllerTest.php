@@ -1,11 +1,14 @@
 <?php
-namespace App\Controller;
 
-use Bone\Mvc\Registry;
+namespace BoneMvcTest\Controller;
+
+use App\Controller\IndexController;
+use Bone\Mvc\View\PlatesEngine;
 use Codeception\TestCase\Test;
-use Zend\Diactoros\Response\RedirectResponse;
+use Psr\Http\Message\ResponseInterface;
+use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\ServerRequest;
-use Zend\I18n\Translator\Loader\Gettext;
+use Zend\Diactoros\Uri;
 
 class IndexControllerTest extends Test
 {
@@ -22,19 +25,10 @@ class IndexControllerTest extends Test
      */
     protected function _before()
     {
-        if (!defined('APPLICATION_PATH')){
-            define('APPLICATION_PATH','.');
-        }
-
-        Registry::ahoy()->set('i18n', [
-            'translations_dir' => 'data/translations',
-            'type' => Gettext::class,
-            'default_locale' => 'en_GB',
-            'supported_locales' => ['en_PI', 'en_GB', 'nl_BE', 'fr_BE'],
-        ]);
-
-        $request = new ServerRequest();
-        $this->controller = new IndexController($request);
+        $view = $this->make(PlatesEngine::class, ['render' => function() {
+            return 'rendered content';
+        }]);
+        $this->controller = new IndexController($view);
     }
 
     protected function _after()
@@ -42,27 +36,13 @@ class IndexControllerTest extends Test
         unset($this->controller);
     }
 
-
-    public function testInit()
-    {
-        $this->assertNull($this->controller->init());
-        $this->assertEquals('en_GB', $this->controller->getTranslator()->getLocale());
-    }
-
     public function testIndexAction()
     {
-        $this->assertInstanceOf(RedirectResponse::class, $this->controller->indexAction());
-        $this->controller->setParam('locale', 'en_PI');
-        $this->assertNull($this->controller->indexAction());
+        $this->assertInstanceOf(HtmlResponse::class, $this->controller->indexAction(new ServerRequest([], [], new Uri('/')), []));
     }
 
     public function testLearnAction()
     {
-        $this->assertNull($this->controller->learnAction());
-    }
-
-    public function testJsonAction()
-    {
-        $this->assertNull($this->controller->jsonAction());
+        $this->assertInstanceOf(ResponseInterface::class, $this->controller->learnAction(new ServerRequest([], [], '/'), []));
     }
 }

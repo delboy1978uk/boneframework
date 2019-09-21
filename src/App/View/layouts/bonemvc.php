@@ -17,6 +17,7 @@ use Del\Cdn;
     <?= Cdn::bootstrapCssLink() ;?>
     <?= Cdn::delCssLink() ;?>
     <?= Cdn::fontAwesomeCssLink() ;?>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css"/ >
 
     <!-- Fonts -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,6 +31,7 @@ use Del\Cdn;
     <!-- Javascript -->
     <?= Cdn::jQueryJavascript() ;?>
     <?= Cdn::bootstrapJavascript() ;?>
+    <script src="/js/jquery.datetimepicker.js"></script>
 
 </head>
 
@@ -37,6 +39,18 @@ use Del\Cdn;
 <?= $this->section('header'); ?>
 <?= $content ;?>
 <?= $this->section('footer'); ?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tt').tooltip();
+        $('.datepicker').datetimepicker({
+            "format": "d/m/Y",
+            "timepicker": false
+        });
+        $('.datetimepicker').datetimepicker({
+            "format": "d/m/Y H:i",
+        });
+    });
+</script>
 </body>
 </html>
 
