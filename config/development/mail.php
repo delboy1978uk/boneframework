@@ -2,8 +2,8 @@
 
 return [
     'mail' => [
-        'name'              => 'mail',
-        'host'              => 'mail',
-        'port'              => 1025,
+        'name' => 'mail',
+        'host' => 'mail',
+        'port' => 1025,
     ],
 ];
