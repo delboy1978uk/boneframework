@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Bone\Mvc\View\ViewEngine;
+use Bone\Mvc\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
@@ -14,20 +14,8 @@ use Zend\Diactoros\Response\HtmlResponse;
  *
  * @package App\Controller
  */
-class IndexController
+class IndexController extends Controller
 {
-
-    /** @var ViewEngine $view */
-    private $view;
-
-    /**
-     * DragonController constructor.
-     */
-    public function __construct(ViewEngine $view)
-    {
-        $this->view = $view;
-    }
-
     /**
      * @param ServerRequestInterface $request
      * @param array $args
