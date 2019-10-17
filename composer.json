@@ -27,7 +27,8 @@
     "delboy1978uk/bone-doctrine": "^1.0",
     "delboy1978uk/bone-user": "^1.0.1",
     "delboy1978uk/generator": "^1.2",
-    "delboy1978uk/bone-mail": "^1.0.1"
+    "delboy1978uk/bone-mail": "^1.0.1",
+    "delboy1978uk/booty": "^1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
