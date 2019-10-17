@@ -8,6 +8,7 @@ use Bone\Mvc\View\PlatesEngine;
 use BoneMvc\Module\App\AppPackage;
 use Codeception\TestCase\Test;
 use League\Route\Router;
+use Zend\I18n\Translator\Translator;
 
 class AppPackageTest extends Test
 {
@@ -35,15 +36,24 @@ class AppPackageTest extends Test
     public function testAddToContainer()
     {
         $container = new Container();
+
         $view = new PlatesEngine('src/App/View');
         $router = new Router();
+        $translator = $this->getMockBuilder(Translator::class)->getMock();
+
         $container[PlatesEngine::class] = $view;
         $container[Router::class] = $router;
+        $container[Translator::class] = $translator;
+
         $this->assertFalse($this->package->hasEntityPath());
         $this->assertEmpty($this->package->getEntityPath());
+
         $this->package->addToContainer($container);
+
         $this->assertInstanceOf(IndexController::class, $container->get(IndexController::class));
+
         $router = $this->package->addRoutes($container, $router);
+
         $this->assertInstanceOf(Router::class, $router);
     }
 }
