@@ -10,13 +10,13 @@ use Del\UserPackage;
 
 return [
     'packages' => [
-        AppPackage::class,
         BoneMvcDoctrinePackage::class,
         MailPackage::class,
         PersonPackage::class,
         UserPackage::class,
         BoneMvcUserPackage::class,
         TestPackage::class,
+        AppPackage::class,
     ],
     'viewFolder' => 'src/App/View'
 ];
