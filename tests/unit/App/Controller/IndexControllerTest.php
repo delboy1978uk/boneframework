@@ -6,6 +6,7 @@ use App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\Mvc\Controller\Init;
 use Bone\Mvc\View\PlatesEngine;
+use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
 use League\Route\Router;
 use Psr\Http\Message\ResponseInterface;
@@ -35,15 +36,18 @@ class IndexControllerTest extends Test
         $view = $this->getMockBuilder(PlatesEngine::class)->getMock();
         $view->expects($this->any())->method('render')->willReturn('x');
         $translator = $this->getMockBuilder(Translator::class)->getMock();
+        $site = $this->getMockBuilder(SiteConfig::class)->disableOriginalConstructor()->getMock();
 
         $container[PlatesEngine::class] = $view;
         $container[Router::class] = $router;
+        $container[SiteConfig::class] = $site;
         $container[Translator::class] = $translator;
 
         $view = $this->make(PlatesEngine::class, ['render' => function() {
             return 'rendered content';
         }]);
-        $this->controller = new IndexController($view);
+        $container[PlatesEngine::class] = $view;
+        $this->controller = new IndexController();
         $this->controller = Init::controller($this->controller, $container);
     }
 

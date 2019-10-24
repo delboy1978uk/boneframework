@@ -5,6 +5,7 @@ namespace BoneMvcTest;
 use App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\Mvc\View\PlatesEngine;
+use Bone\Server\SiteConfig;
 use BoneMvc\Module\App\AppPackage;
 use Codeception\TestCase\Test;
 use League\Route\Router;
@@ -40,6 +41,8 @@ class AppPackageTest extends Test
         $view = new PlatesEngine('src/App/View');
         $router = new Router();
         $translator = $this->getMockBuilder(Translator::class)->getMock();
+        $site = $this->getMockBuilder(SiteConfig::class)->disableOriginalConstructor()->getMock();
+        $container[SiteConfig::class] = $site;
 
         $container[PlatesEngine::class] = $view;
         $container[Router::class] = $router;
