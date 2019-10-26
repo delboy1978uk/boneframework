@@ -23,7 +23,7 @@
     "delboy1978uk/form": "^1.5.4",
     "delboy1978uk/image": "^2.0",
     "delboy1978uk/session": "^1.0",
-    "league/route": "dev-master",
+    "league/route": "dev-master as 4.3.1",
     "delboy1978uk/bone-doctrine": "^1.0",
     "delboy1978uk/bone-user": "^1.0.1",
     "delboy1978uk/generator": "^1.2",
