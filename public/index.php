@@ -30,7 +30,6 @@
 //                                     (____/ \__/ \_)__)(____)\_)(_/ \__/  \___)
 
 
-
 chdir(dirname(__DIR__));
 
 if (!defined('APPLICATION_PATH')) {

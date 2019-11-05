@@ -6,4 +6,6 @@ COPY ./ssmtp.conf /etc/ssmtp/ssmtp.conf
 
 RUN usermod -a -G staff www-data
 RUN echo "export PATH=$PATH:bin:vendor/bin" > /root/.bashrc
+RUN touch /var/www/error_log
+RUN ln -sf /dev/stderr /var/www/error_log
 
