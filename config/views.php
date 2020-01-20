@@ -6,6 +6,6 @@
  */
 return [
     'views' => [
-        'bonemvcuser' => 'src/App/View/bone-user',
+//        'bonemvcuser' => 'src/App/View/bone-user',
     ],
 ];

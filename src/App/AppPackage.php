@@ -48,6 +48,7 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface
     {
         $router->map('GET', '/', [IndexController::class, 'indexAction']);
         $router->map('GET', '/learn', [IndexController::class, 'learnAction']);
+        $router->map('GET', '/testing', [IndexController::class, 'testOauth2Action']);
 
         return $router;
     }

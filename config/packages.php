@@ -1,5 +1,6 @@
 <?php
 
+use Bone\OAuth2\BoneOAuth2Package;
 use BoneMvc\Mail\MailPackage;
 use BoneMvc\Module\App\AppPackage;
 use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
@@ -15,6 +16,7 @@ return [
         PersonPackage::class,
         UserPackage::class,
         BoneMvcUserPackage::class,
+        BoneOAuth2Package::class,
         TestPackage::class,
         AppPackage::class,
     ],
