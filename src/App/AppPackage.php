@@ -7,7 +7,10 @@ use Bone\Mvc\Controller\Init;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Barnacle\RegistrationInterface;
 use Barnacle\Container;
+use Bone\OAuth2\Http\Middleware\ResourceServerMiddleware;
+use League\OAuth2\Server\ResourceServer;
 use League\Route\Router;
+use Zend\Diactoros\ResponseFactory;
 
 class AppPackage implements RegistrationInterface, RouterConfigInterface
 {
@@ -48,7 +51,8 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface
     {
         $router->map('GET', '/', [IndexController::class, 'indexAction']);
         $router->map('GET', '/learn', [IndexController::class, 'learnAction']);
-        $router->map('GET', '/testing', [IndexController::class, 'testOauth2Action']);
+        $router->map('GET', '/testing', [IndexController::class, 'testOauth2Action'])
+            ->middleware(new ResourceServerMiddleware($c->get(ResourceServer::class), new ResponseFactory()));
 
         return $router;
     }
