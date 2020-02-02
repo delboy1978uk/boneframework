@@ -40,14 +40,4 @@ class IndexController extends Controller
 
         return new HtmlResponse($body);
     }
-
-    /**
-     * @param ServerRequestInterface $request
-     * @param array $args
-     * @return ResponseInterface
-     */
-    public function testOauth2Action(ServerRequestInterface $request, array $args) : ResponseInterface
-    {
-        return new JsonResponse(['pong' => time()]);
-    }
 }
