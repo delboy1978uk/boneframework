@@ -20,20 +20,23 @@
     "ext-pdo": "*",
     "delboy1978uk/bone": "^3.3",
     "delboy1978uk/cdn": "^1.1.2",
-    "delboy1978uk/form": "^1.5.4",
-    "delboy1978uk/image": "^2.0",
-    "delboy1978uk/session": "^1.0",
+    "delboy1978uk/form": "^2.1",
+    "delboy1978uk/image": "^2.1",
+    "delboy1978uk/session": "^1.1",
     "league/route": "dev-master as 4.3.1",
     "delboy1978uk/bone-doctrine": "^1.0",
     "delboy1978uk/bone-user": "^1.0.1",
     "delboy1978uk/generator": "^1.2",
     "delboy1978uk/bone-mail": "^1.0.1",
-    "delboy1978uk/booty": "^1.0"
+    "delboy1978uk/booty": "^1.0",
+    "delboy1978uk/bone-oauth2": "^1.0",
+    "delboy1978uk/bone-open-api": "^0.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
     "codeception/codeception": "*",
-    "squizlabs/php_codesniffer": "^3.4"
+    "squizlabs/php_codesniffer": "^3.4",
+    "codeception/module-asserts": "^1.1"
   },
   "autoload": {
     "psr-4": {

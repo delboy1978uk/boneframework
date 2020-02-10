@@ -7,6 +7,7 @@ use Bone\Mvc\Controller\Init;
 use Bone\Mvc\Router\RouterConfigInterface;
 use Barnacle\RegistrationInterface;
 use Barnacle\Container;
+use Bone\OAuth2\Http\Middleware\ResourceServerMiddleware;
 use League\Route\Router;
 
 class AppPackage implements RegistrationInterface, RouterConfigInterface
