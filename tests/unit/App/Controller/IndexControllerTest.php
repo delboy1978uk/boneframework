@@ -10,10 +10,10 @@ use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
 use League\Route\Router;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
-use Zend\Diactoros\ServerRequest;
-use Zend\Diactoros\Uri;
-use Zend\I18n\Translator\Translator;
+use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\ServerRequest;
+use Laminas\Diactoros\Uri;
+use Laminas\I18n\Translator\Translator;
 
 class IndexControllerTest extends Test
 {

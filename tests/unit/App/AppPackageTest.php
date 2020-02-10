@@ -9,7 +9,7 @@ use Bone\Server\SiteConfig;
 use BoneMvc\Module\App\AppPackage;
 use Codeception\TestCase\Test;
 use League\Route\Router;
-use Zend\I18n\Translator\Translator;
+use Laminas\I18n\Translator\Translator;
 
 class AppPackageTest extends Test
 {
