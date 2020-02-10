@@ -1,6 +1,7 @@
 <?php
 
 use Bone\OAuth2\BoneOAuth2Package;
+use Bone\OpenApi\OpenApiPackage;
 use BoneMvc\Mail\MailPackage;
 use BoneMvc\Module\App\AppPackage;
 use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
@@ -17,6 +18,7 @@ return [
         UserPackage::class,
         BoneMvcUserPackage::class,
         BoneOAuth2Package::class,
+        OpenApiPackage::class,
         TestPackage::class,
         AppPackage::class,
     ],

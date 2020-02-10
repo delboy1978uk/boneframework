@@ -3,7 +3,7 @@
 return [
     'error_log' => '/var/www/error_log',
     'error_reporting' => -1,
-    'display_errors' => false,
+    'display_errors' => true,
 ];
 
 
