@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64cab5547cf806324c9032acd8bf0980",
+    "content-hash": "d3cecc421922094e634d649f4e087de0",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -232,6 +232,42 @@
             ],
             "description": "Doctrine functionality for BoneMvcFramework",
             "time": "2019-09-25T18:47:27+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-firewall",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-firewall.git",
+                "reference": "2b23f04723f31a60c2925839c3937cb7f21c6319"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/2b23f04723f31a60c2925839c3937cb7f21c6319",
+                "reference": "2b23f04723f31a60c2925839c3937cb7f21c6319",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Firewall\\Firewall\\\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Firewall package for Bone MVC Framework",
+            "time": "2020-02-10T23:55:55+00:00"
         },
         {
             "name": "delboy1978uk/bone-mail",
