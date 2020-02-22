@@ -6,7 +6,6 @@ use BoneMvc\Mail\MailPackage;
 use BoneMvc\Module\App\AppPackage;
 use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
 use BoneMvc\Module\BoneMvcUser\BoneMvcUserPackage;
-use BoneMvc\Module\Test\TestPackage;
 use Del\Person\PersonPackage;
 use Del\UserPackage;
 
@@ -19,7 +18,6 @@ return [
         BoneMvcUserPackage::class,
         BoneOAuth2Package::class,
         OpenApiPackage::class,
-        TestPackage::class,
         AppPackage::class,
     ],
     'viewFolder' => 'src/App/View'
