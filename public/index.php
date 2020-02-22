@@ -29,10 +29,6 @@
 //                                      ) _ ((  O )/    / ) _) / \/ \\ \/ /( (__
 //                                     (____/ \__/ \_)__)(____)\_)(_/ \__/  \___)
 
-use Del\Stack;
-use DelTest\I18nMiddleware;
-use Laminas\Diactoros\ServerRequest;
-use Laminas\Diactoros\Uri;
 
 chdir(dirname(__DIR__));
 
@@ -62,7 +58,6 @@ if (!file_exists('vendor/autoload.php')) {
 }
 
 require_once 'vendor/autoload.php';
-require_once 'vendor/delboy1978uk/stack/vendor/autoload.php';
 
 /**
  *  Time t'begin th'voyage me hearties!
