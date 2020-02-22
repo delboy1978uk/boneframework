@@ -8,7 +8,7 @@ use Bone\Mvc\View\PlatesEngine;
 use Bone\Server\SiteConfig;
 use BoneMvc\Module\App\AppPackage;
 use Codeception\TestCase\Test;
-use League\Route\Router;
+use Bone\Mvc\Router;
 use Laminas\I18n\Translator\Translator;
 
 class AppPackageTest extends Test

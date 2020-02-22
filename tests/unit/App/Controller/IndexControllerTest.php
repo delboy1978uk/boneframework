@@ -8,7 +8,7 @@ use Bone\Mvc\Controller\Init;
 use Bone\Mvc\View\PlatesEngine;
 use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
-use League\Route\Router;
+use Bone\Mvc\Router;
 use Psr\Http\Message\ResponseInterface;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Laminas\Diactoros\ServerRequest;
