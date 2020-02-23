@@ -1,5 +1,6 @@
 <?php
 
+use Bone\Firewall\FirewallPackage;
 use Bone\OAuth2\BoneOAuth2Package;
 use Bone\OpenApi\OpenApiPackage;
 use BoneMvc\Mail\MailPackage;
@@ -13,6 +14,7 @@ return [
     'packages' => [
         BoneMvcDoctrinePackage::class,
         MailPackage::class,
+        FirewallPackage::class,
         PersonPackage::class,
         UserPackage::class,
         BoneMvcUserPackage::class,
