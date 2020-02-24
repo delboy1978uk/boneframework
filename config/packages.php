@@ -14,7 +14,6 @@ return [
     'packages' => [
         BoneMvcDoctrinePackage::class,
         MailPackage::class,
-        FirewallPackage::class,
         PersonPackage::class,
         UserPackage::class,
         BoneMvcUserPackage::class,

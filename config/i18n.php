@@ -1,6 +1,6 @@
 <?php
 
-use Zend\I18n\Translator\Loader\Gettext;
+use Laminas\I18n\Translator\Loader\Gettext;
 
 return [
     'i18n' => [
