@@ -1,6 +1,5 @@
 <?php
 
-use Bone\Firewall\FirewallPackage;
 use Bone\OAuth2\BoneOAuth2Package;
 use Bone\OpenApi\OpenApiPackage;
 use BoneMvc\Mail\MailPackage;
