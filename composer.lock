@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64cab5547cf806324c9032acd8bf0980",
+    "content-hash": "32a7a42b7857ba0ebaa64de0c11214ff",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -197,6 +197,42 @@
             ],
             "description": "Bone MVC Framework Library",
             "time": "2020-02-26T16:09:42+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-db",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-db.git",
+                "reference": "241aee70c4a4b0f8414d83e35cb10a032cf28ca0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-db/zipball/241aee70c4a4b0f8414d83e35cb10a032cf28ca0",
+                "reference": "241aee70c4a4b0f8414d83e35cb10a032cf28ca0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Db\\\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Db package for Bone MVC Framework",
+            "time": "2020-02-26T22:25:48+00:00"
         },
         {
             "name": "delboy1978uk/bone-doctrine",

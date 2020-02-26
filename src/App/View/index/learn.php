@@ -4,7 +4,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="/<?= $this->e($locale) ;?>#page-top">
+            <a class="navbar-brand" href="/<?= $this->l() ;?>#page-top">
                 <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> MVC Framework
             </a>
         </div>

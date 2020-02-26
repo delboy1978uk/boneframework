@@ -31,7 +31,8 @@
     "delboy1978uk/bone-mail": "^1.0.1",
     "delboy1978uk/booty": "^1.0",
     "delboy1978uk/bone-oauth2": "^1.0",
-    "delboy1978uk/bone-open-api": "^1.0"
+    "delboy1978uk/bone-open-api": "^1.0",
+    "delboy1978uk/bone-db": "^0.0.1"
  },
   "require-dev": {
     "roave/security-advisories": "dev-master",
