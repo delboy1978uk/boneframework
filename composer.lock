@@ -146,27 +146,27 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.5.0",
+            "version": "v3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "a305b0a5edd26b69bf4ba18b8ba31f79b0b6ad23"
+                "reference": "205c53ac7ba457410cc91a9482d578dd17707602"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/a305b0a5edd26b69bf4ba18b8ba31f79b0b6ad23",
-                "reference": "a305b0a5edd26b69bf4ba18b8ba31f79b0b6ad23",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/205c53ac7ba457410cc91a9482d578dd17707602",
+                "reference": "205c53ac7ba457410cc91a9482d578dd17707602",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.2",
-                "delboy1978uk/bone-firewall": "^0.1",
+                "delboy1978uk/bone-firewall": "^1.1",
+                "delboy1978uk/bone-i18n": "^0.0",
                 "delboy1978uk/form": "^2.1",
                 "delboy1978uk/icon": "^1.0",
                 "delboy1978uk/session": "^1.1",
                 "laminas/laminas-diactoros": "2.*",
                 "laminas/laminas-httphandlerrunner": "^1.1",
-                "laminas/laminas-i18n": "^2.9",
                 "laminas/laminas-mail": "^2.10",
                 "laminas/laminas-servicemanager": "^3.3",
                 "league/plates": "^3.3",
@@ -196,7 +196,7 @@
                 }
             ],
             "description": "Bone MVC Framework Library",
-            "time": "2020-02-23T20:29:58+00:00"
+            "time": "2020-02-26T16:09:42+00:00"
         },
         {
             "name": "delboy1978uk/bone-doctrine",
@@ -236,16 +236,16 @@
         },
         {
             "name": "delboy1978uk/bone-firewall",
-            "version": "v0.1.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-firewall.git",
-                "reference": "12fec86eaf90355c327669fdc07a1a0c59170aad"
+                "reference": "3fa6428b4dfb39fdb79c27955f18b921dcc9c8f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/12fec86eaf90355c327669fdc07a1a0c59170aad",
-                "reference": "12fec86eaf90355c327669fdc07a1a0c59170aad",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/3fa6428b4dfb39fdb79c27955f18b921dcc9c8f6",
+                "reference": "3fa6428b4dfb39fdb79c27955f18b921dcc9c8f6",
                 "shasum": ""
             },
             "require-dev": {
@@ -268,7 +268,46 @@
                 }
             ],
             "description": "Firewall package for Bone MVC Framework",
-            "time": "2020-02-23T20:04:02+00:00"
+            "time": "2020-02-26T13:30:01+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-i18n",
+            "version": "v0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-i18n.git",
+                "reference": "7642c32172235df684c607fc9713edbbd088f8e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-i18n/zipball/7642c32172235df684c607fc9713edbbd088f8e7",
+                "reference": "7642c32172235df684c607fc9713edbbd088f8e7",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-i18n": "^2.10"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\I18n\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "I18n package for Bone MVC Framework",
+            "time": "2020-02-26T16:15:40+00:00"
         },
         {
             "name": "delboy1978uk/bone-mail",
@@ -5177,16 +5216,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.0.0",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f"
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/a48807183a4b819072f26e347bbd0b5199a9d15f",
-                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
                 "shasum": ""
             },
             "require": {
@@ -5226,7 +5265,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-09T09:16:15+00:00"
+            "time": "2020-02-22T12:28:44+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
