@@ -20,5 +20,4 @@ return [
         OpenApiPackage::class,
         AppPackage::class,
     ],
-    'viewFolder' => 'src/App/View'
 ];

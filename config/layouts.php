@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'viewFolder' => 'src/App/View',
     'default_layout' => 'layouts/bonemvc',
     'available_layouts' => [
         'layouts/bonemvc',
