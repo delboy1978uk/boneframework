@@ -4,7 +4,7 @@ namespace BoneMvcTest;
 
 use App\Controller\IndexController;
 use Barnacle\Container;
-use Bone\Mvc\View\PlatesEngine;
+use Bone\View\PlatesEngine;
 use Bone\Server\SiteConfig;
 use BoneMvc\Module\App\AppPackage;
 use Codeception\TestCase\Test;

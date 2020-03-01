@@ -5,7 +5,7 @@ namespace BoneMvcTest\Controller;
 use App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\Mvc\Controller\Init;
-use Bone\Mvc\View\PlatesEngine;
+use Bone\View\PlatesEngine;
 use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
 use Bone\Mvc\Router;
