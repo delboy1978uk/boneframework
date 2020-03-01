@@ -1,0 +1,126 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/oauth2/authorize": {
+            "get": {
+                "tags": [
+                    "auth"
+                ],
+                "operationId": "Bone\\OAuth2\\Controller\\AuthServerController::authorizeAction",
+                "parameters": [
+                    {
+                        "name": "response_type",
+                        "in": "query",
+                        "description": "the type of response",
+                        "required": true,
+                        "type": "string",
+                        "default": "code"
+                    },
+                    {
+                        "name": "client_id",
+                        "in": "query",
+                        "description": "the client identifier",
+                        "required": true,
+                        "type": "string",
+                        "default": "testclient"
+                    },
+                    {
+                        "name": "client_secret",
+                        "in": "query",
+                        "description": "the client identifier",
+                        "required": false,
+                        "type": "string",
+                        "default": "testclient"
+                    },
+                    {
+                        "name": "redirect_uri",
+                        "in": "query",
+                        "description": "where to send the response",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "description": "with a CSRF token. This parameter is optional but highly recommended.",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "scope",
+                        "in": "query",
+                        "description": "allowed scopes, space separated",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An access token"
+                    }
+                }
+            }
+        },
+        "/oauth2/token": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "operationId": "accessToken",
+                "parameters": [
+                    {
+                        "name": "grant_type",
+                        "in": "formData",
+                        "description": "the type of grant",
+                        "required": true,
+                        "type": "string",
+                        "default": "client_credentials"
+                    },
+                    {
+                        "name": "client_id",
+                        "in": "formData",
+                        "description": "the client id",
+                        "required": true,
+                        "type": "string",
+                        "default": "ceac682a9a4808bf910ad49134230e0e"
+                    },
+                    {
+                        "name": "client_secret",
+                        "in": "formData",
+                        "description": "the client secret",
+                        "required": false,
+                        "type": "string",
+                        "default": "JDJ5JDEwJGNEd1J1VEdOY0YxS3QvL0pWQzMxay52"
+                    },
+                    {
+                        "name": "scope",
+                        "in": "formData",
+                        "description": "the scopes you wish to use",
+                        "required": false,
+                        "type": "string",
+                        "default": "admin"
+                    },
+                    {
+                        "name": "redirect_uri",
+                        "in": "formData",
+                        "description": "with the same redirect URI the user was redirect back to",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "code",
+                        "in": "formData",
+                        "description": "with the authorization code from the query string",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An access token"
+                    }
+                }
+            }
+        }
+    }
+}

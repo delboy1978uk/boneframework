@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32a7a42b7857ba0ebaa64de0c11214ff",
+    "content-hash": "f9feee62b180fe6235ac353f29fe3f9f",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -146,22 +146,26 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.5.6",
+            "version": "v3.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "2ac5d7c0dbed530f42d907629e4a0b13027bad81"
+                "reference": "37ce3f682bb39e76881671f301973151afb18bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/2ac5d7c0dbed530f42d907629e4a0b13027bad81",
-                "reference": "2ac5d7c0dbed530f42d907629e4a0b13027bad81",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/37ce3f682bb39e76881671f301973151afb18bca",
+                "reference": "37ce3f682bb39e76881671f301973151afb18bca",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.2",
+                "delboy1978uk/bone-db": "^1.0",
                 "delboy1978uk/bone-firewall": "^1.1",
+                "delboy1978uk/bone-http": "^0.1.0",
                 "delboy1978uk/bone-i18n": "^1.1",
+                "delboy1978uk/bone-log": "^0.1.0",
+                "delboy1978uk/bone-view": "^0.1.0",
                 "delboy1978uk/form": "^2.1",
                 "delboy1978uk/icon": "^1.0",
                 "delboy1978uk/session": "^1.1",
@@ -196,20 +200,20 @@
                 }
             ],
             "description": "Bone MVC Framework Library",
-            "time": "2020-02-26T22:15:09+00:00"
+            "time": "2020-03-01T12:47:35+00:00"
         },
         {
             "name": "delboy1978uk/bone-db",
-            "version": "v0.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-db.git",
-                "reference": "241aee70c4a4b0f8414d83e35cb10a032cf28ca0"
+                "reference": "eb7887f53294129d272eeb35a60abf1e085636bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-db/zipball/241aee70c4a4b0f8414d83e35cb10a032cf28ca0",
-                "reference": "241aee70c4a4b0f8414d83e35cb10a032cf28ca0",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-db/zipball/eb7887f53294129d272eeb35a60abf1e085636bd",
+                "reference": "eb7887f53294129d272eeb35a60abf1e085636bd",
                 "shasum": ""
             },
             "require-dev": {
@@ -218,7 +222,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Bone\\Db\\\\": "src/"
+                    "Bone\\Db\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -232,20 +236,20 @@
                 }
             ],
             "description": "Db package for Bone MVC Framework",
-            "time": "2020-02-26T22:25:48+00:00"
+            "time": "2020-02-27T21:17:58+00:00"
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "da2f9bebbc4e31f98fea3ebad5b91d3b133d5f60"
+                "reference": "2ab377ebcf2b9731158df42f153a0ef0d0bf17dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/da2f9bebbc4e31f98fea3ebad5b91d3b133d5f60",
-                "reference": "da2f9bebbc4e31f98fea3ebad5b91d3b133d5f60",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/2ab377ebcf2b9731158df42f153a0ef0d0bf17dc",
+                "reference": "2ab377ebcf2b9731158df42f153a0ef0d0bf17dc",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +272,7 @@
                 }
             ],
             "description": "Doctrine functionality for BoneMvcFramework",
-            "time": "2019-09-25T18:47:27+00:00"
+            "time": "2020-02-27T22:04:50+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -305,6 +309,42 @@
             ],
             "description": "Firewall package for Bone MVC Framework",
             "time": "2020-02-26T13:30:01+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-http",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-http.git",
+                "reference": "f55a8a10573e0183ccf2f746bd9601862e7cb9c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/f55a8a10573e0183ccf2f746bd9601862e7cb9c3",
+                "reference": "f55a8a10573e0183ccf2f746bd9601862e7cb9c3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Http\\\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Http package for Bone MVC Framework",
+            "time": "2020-03-01T12:37:02+00:00"
         },
         {
             "name": "delboy1978uk/bone-i18n",
@@ -346,17 +386,53 @@
             "time": "2020-02-26T21:30:57+00:00"
         },
         {
-            "name": "delboy1978uk/bone-mail",
-            "version": "v1.0.3",
+            "name": "delboy1978uk/bone-log",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/delboy1978uk/bone-mail.git",
-                "reference": "70402e60015dfe074efa3c1fbf3ef9d643b5b6b3"
+                "url": "https://github.com/delboy1978uk/bone-log.git",
+                "reference": "989a84b42bd1e0ee87f6b7eae68c921fe813c39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-mail/zipball/70402e60015dfe074efa3c1fbf3ef9d643b5b6b3",
-                "reference": "70402e60015dfe074efa3c1fbf3ef9d643b5b6b3",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-log/zipball/989a84b42bd1e0ee87f6b7eae68c921fe813c39b",
+                "reference": "989a84b42bd1e0ee87f6b7eae68c921fe813c39b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Log\\\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Log package for Bone MVC Framework",
+            "time": "2020-03-01T12:27:41+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-mail",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-mail.git",
+                "reference": "91763e6704cd3c67866461693f3fe3ab258eec65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-mail/zipball/91763e6704cd3c67866461693f3fe3ab258eec65",
+                "reference": "91763e6704cd3c67866461693f3fe3ab258eec65",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +460,7 @@
                 }
             ],
             "description": "Mail package for Bone MVC Framework",
-            "time": "2020-02-10T13:26:13+00:00"
+            "time": "2020-02-27T22:22:42+00:00"
         },
         {
             "name": "delboy1978uk/bone-oauth2",
@@ -480,16 +556,16 @@
         },
         {
             "name": "delboy1978uk/bone-user",
-            "version": "v1.2.3",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-user.git",
-                "reference": "9004c7eaca443c9153bede19b7cd08abdb85388a"
+                "reference": "74a91de9f1888b0702fdc0f6717702b5f3752f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/9004c7eaca443c9153bede19b7cd08abdb85388a",
-                "reference": "9004c7eaca443c9153bede19b7cd08abdb85388a",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/74a91de9f1888b0702fdc0f6717702b5f3752f83",
+                "reference": "74a91de9f1888b0702fdc0f6717702b5f3752f83",
                 "shasum": ""
             },
             "require": {
@@ -515,7 +591,43 @@
                 }
             ],
             "description": "Integration of delboy1978uk/user for BoneMvcFramework",
-            "time": "2020-02-22T14:44:21+00:00"
+            "time": "2020-02-27T21:10:03+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-view",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-view.git",
+                "reference": "37f688bd0c794411cd50cdcd4a9f78a0eaa1800d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-view/zipball/37f688bd0c794411cd50cdcd4a9f78a0eaa1800d",
+                "reference": "37f688bd0c794411cd50cdcd4a9f78a0eaa1800d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\View\\\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "View package for Bone MVC Framework",
+            "time": "2020-03-01T12:40:57+00:00"
         },
         {
             "name": "delboy1978uk/booty",
@@ -759,16 +871,16 @@
         },
         {
             "name": "delboy1978uk/generator",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/generator.git",
-                "reference": "c8f5e005458fe7c29a3f6aa73c2b10fa760d6d39"
+                "reference": "e911d2a563c0ab8c9144454b37b4c3e4e91187ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/generator/zipball/c8f5e005458fe7c29a3f6aa73c2b10fa760d6d39",
-                "reference": "c8f5e005458fe7c29a3f6aa73c2b10fa760d6d39",
+                "url": "https://api.github.com/repos/delboy1978uk/generator/zipball/e911d2a563c0ab8c9144454b37b4c3e4e91187ea",
+                "reference": "e911d2a563c0ab8c9144454b37b4c3e4e91187ea",
                 "shasum": ""
             },
             "require": {
@@ -799,7 +911,7 @@
                 }
             ],
             "description": "A basic crud entity, form and service generator",
-            "time": "2020-01-19T21:18:01+00:00"
+            "time": "2020-03-01T12:20:54+00:00"
         },
         {
             "name": "delboy1978uk/icon",
@@ -3973,16 +4085,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.4",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "f512001679f37e6a042b51897ed24a2f05eba656"
+                "reference": "4fa15ae7be74e53f6ec8c83ed403b97e23b665e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/f512001679f37e6a042b51897ed24a2f05eba656",
-                "reference": "f512001679f37e6a042b51897ed24a2f05eba656",
+                "url": "https://api.github.com/repos/symfony/console/zipball/4fa15ae7be74e53f6ec8c83ed403b97e23b665e9",
+                "reference": "4fa15ae7be74e53f6ec8c83ed403b97e23b665e9",
                 "shasum": ""
             },
             "require": {
@@ -4045,20 +4157,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-25T12:44:29+00:00"
+            "time": "2020-02-24T13:10:00+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v5.0.4",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "4176e7cb846fe08f32518b7e0ed8462e2db8d9bb"
+                "reference": "6251f201187ca9d66f6b099d3de65d279e971138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/4176e7cb846fe08f32518b7e0ed8462e2db8d9bb",
-                "reference": "4176e7cb846fe08f32518b7e0ed8462e2db8d9bb",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/6251f201187ca9d66f6b099d3de65d279e971138",
+                "reference": "6251f201187ca9d66f6b099d3de65d279e971138",
                 "shasum": ""
             },
             "require": {
@@ -4094,7 +4206,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-14T07:43:07+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4331,7 +4443,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v5.0.4",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -4381,16 +4493,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.0.4",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "69b44e3b8f90949aee2eb3aa9b86ceeb01cbf62a"
+                "reference": "a4b613d7e44f62941adff5a802cff70adee57d3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/69b44e3b8f90949aee2eb3aa9b86ceeb01cbf62a",
-                "reference": "69b44e3b8f90949aee2eb3aa9b86ceeb01cbf62a",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/a4b613d7e44f62941adff5a802cff70adee57d3f",
+                "reference": "a4b613d7e44f62941adff5a802cff70adee57d3f",
                 "shasum": ""
             },
             "require": {
@@ -4436,7 +4548,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-21T11:12:28+00:00"
+            "time": "2020-02-03T13:51:17+00:00"
         },
         {
             "name": "true/punycode",
@@ -5305,26 +5417,25 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "2e32a6d48972b2c1976ed5d8967145b6cec4a4a9"
+                "reference": "7462d5f123dfc080dfdf26897032a6513644fc95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/2e32a6d48972b2c1976ed5d8967145b6cec4a4a9",
-                "reference": "2e32a6d48972b2c1976ed5d8967145b6cec4a4a9",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7462d5f123dfc080dfdf26897032a6513644fc95",
+                "reference": "7462d5f123dfc080dfdf26897032a6513644fc95",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
+                "php": "^7.2",
                 "phpdocumentor/reflection-common": "^2.0"
             },
             "require-dev": {
-                "ext-tokenizer": "^7.1",
-                "mockery/mockery": "~1",
-                "phpunit/phpunit": "^7.0"
+                "ext-tokenizer": "^7.2",
+                "mockery/mockery": "~1"
             },
             "type": "library",
             "extra": {
@@ -5348,7 +5459,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2019-08-22T18:11:29+00:00"
+            "time": "2020-02-18T18:59:58+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -5856,12 +5967,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "974eed9766dc388dc01c231fa82faeff0df8892e"
+                "reference": "71174ad65ddde2852b10107ebf2f75d04eb47b43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/974eed9766dc388dc01c231fa82faeff0df8892e",
-                "reference": "974eed9766dc388dc01c231fa82faeff0df8892e",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/71174ad65ddde2852b10107ebf2f75d04eb47b43",
+                "reference": "71174ad65ddde2852b10107ebf2f75d04eb47b43",
                 "shasum": ""
             },
             "conflict": {
@@ -5905,7 +6016,7 @@
                 "drupal/core": ">=7,<7.69|>=8,<8.7.11|>=8.8,<8.8.1",
                 "drupal/drupal": ">=7,<7.69|>=8,<8.7.11|>=8.8,<8.8.1",
                 "endroid/qr-code-bundle": "<3.4.2",
-                "enshrined/svg-sanitize": "<0.12",
+                "enshrined/svg-sanitize": "<0.13.1",
                 "erusev/parsedown": "<1.7.2",
                 "ezsystems/ezfind-ls": ">=5.3,<5.3.6.1|>=5.4,<5.4.11.1|>=2017.12,<2017.12.0.1",
                 "ezsystems/ezplatform": ">=1.7,<1.7.9.1|>=1.13,<1.13.5.1|>=2.5,<2.5.4",
@@ -6051,7 +6162,7 @@
                 "typo3/phar-stream-wrapper": ">=1,<2.1.1|>=3,<3.1.1",
                 "ua-parser/uap-php": "<3.8",
                 "usmanhalalit/pixie": "<1.0.3|>=2,<2.0.2",
-                "verot/class.upload.php": "<1.0.3|>=2,<2.0.4",
+                "verot/class.upload.php": "<=1.0.3|>=2,<=2.0.4",
                 "wallabag/tcpdf": "<6.2.22",
                 "willdurand/js-translation-bundle": "<2.1.1",
                 "yii2mod/yii2-cms": "<1.9.2",
@@ -6108,7 +6219,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-02-27T10:27:06+00:00"
+            "time": "2020-02-29T00:01:08+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -6781,16 +6892,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.0.4",
+            "version": "v5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "ff60c90cb7950b592ebc84ad1289d0345bf24f9f"
+                "reference": "a0b51ba9938ccc206d9284de7eb527c2d4550b44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/ff60c90cb7950b592ebc84ad1289d0345bf24f9f",
-                "reference": "ff60c90cb7950b592ebc84ad1289d0345bf24f9f",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/a0b51ba9938ccc206d9284de7eb527c2d4550b44",
+                "reference": "a0b51ba9938ccc206d9284de7eb527c2d4550b44",
                 "shasum": ""
             },
             "require": {
@@ -6830,20 +6941,20 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-04T09:41:09+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.4",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "9e3de195e5bc301704dd6915df55892f6dfc208b"
+                "reference": "4ad8e149799d3128621a3a1f70e92b9897a8930d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/9e3de195e5bc301704dd6915df55892f6dfc208b",
-                "reference": "9e3de195e5bc301704dd6915df55892f6dfc208b",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4ad8e149799d3128621a3a1f70e92b9897a8930d",
+                "reference": "4ad8e149799d3128621a3a1f70e92b9897a8930d",
                 "shasum": ""
             },
             "require": {
@@ -6900,7 +7011,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-10T21:54:01+00:00"
+            "time": "2020-02-04T09:32:40+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
