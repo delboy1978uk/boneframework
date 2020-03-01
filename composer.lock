@@ -146,16 +146,16 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.5.9",
+            "version": "v3.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "599f563aa8bc1f6f0d8a3951a4373da0cc4f09b6"
+                "reference": "81b7a1a58f14abf3cee71ed6a14ff7cb606f3729"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/599f563aa8bc1f6f0d8a3951a4373da0cc4f09b6",
-                "reference": "599f563aa8bc1f6f0d8a3951a4373da0cc4f09b6",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/81b7a1a58f14abf3cee71ed6a14ff7cb606f3729",
+                "reference": "81b7a1a58f14abf3cee71ed6a14ff7cb606f3729",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +165,7 @@
                 "delboy1978uk/bone-http": "^0.1.0",
                 "delboy1978uk/bone-i18n": "^1.1",
                 "delboy1978uk/bone-log": "^1.0",
-                "delboy1978uk/bone-view": "^0.1.0",
+                "delboy1978uk/bone-view": "^1.0",
                 "delboy1978uk/form": "^2.1",
                 "delboy1978uk/icon": "^1.0",
                 "delboy1978uk/session": "^1.1",
@@ -200,7 +200,7 @@
                 }
             ],
             "description": "Bone MVC Framework Library",
-            "time": "2020-03-01T16:27:32+00:00"
+            "time": "2020-03-01T23:31:13+00:00"
         },
         {
             "name": "delboy1978uk/bone-db",
@@ -595,16 +595,16 @@
         },
         {
             "name": "delboy1978uk/bone-view",
-            "version": "v0.1.2",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-view.git",
-                "reference": "936d8ff9dc4bf7842ad8282f9efbf923d17f016a"
+                "reference": "b9983ef633b074bdbb124f89668d2169458a42fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-view/zipball/936d8ff9dc4bf7842ad8282f9efbf923d17f016a",
-                "reference": "936d8ff9dc4bf7842ad8282f9efbf923d17f016a",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-view/zipball/b9983ef633b074bdbb124f89668d2169458a42fd",
+                "reference": "b9983ef633b074bdbb124f89668d2169458a42fd",
                 "shasum": ""
             },
             "require-dev": {
@@ -627,7 +627,7 @@
                 }
             ],
             "description": "View package for Bone MVC Framework",
-            "time": "2020-03-01T17:01:58+00:00"
+            "time": "2020-03-01T23:20:33+00:00"
         },
         {
             "name": "delboy1978uk/booty",
