@@ -5,7 +5,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> MVC Framework
+                <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> Framework
             </a>
         </div>
 
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <img src="/img/skull_and_crossbones.png" />
-                    <h1 class="brand-heading">Bone MVC Framework</h1>
+                    <h1 class="brand-heading">Bone Framework</h1>
                     <p class="intro-text"><?= $this->t('home.intro') ;?></p>
                     <div class="page-scroll">
                         <a href="#about" class="btn btn-circle">
