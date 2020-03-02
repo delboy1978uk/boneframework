@@ -122,7 +122,7 @@ in the same way.
 
 ### the module package class
 A module at the very least will implement `Barnacle\RegistrationInterface`, and if it is an MVC module containing routes 
-then it should also implement `Bone\Mvc\Router\RouterConfigInterface`. There are four methods in all to implement:
+then it should also implement `Bone\Router\RouterConfigInterface`. There are four methods in all to implement:
 - `hasEntityPath(): bool`, if your module uses doctrine entities return true (requires `delboy1978uk/bone-doctrine` package)
 - `getEntityPath(): string`, if you return true, this is the folder your entity class resides.
 - `addToContainer(Container $c)`, described below

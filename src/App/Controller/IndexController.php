@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Bone\Mvc\Controller;
+use Bone\Controller\Controller;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

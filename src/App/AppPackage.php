@@ -3,9 +3,9 @@
 namespace BoneMvc\Module\App;
 
 use App\Controller\IndexController;
-use Bone\Mvc\Controller\Init;
-use Bone\Mvc\Router;
-use Bone\Mvc\Router\RouterConfigInterface;
+use Bone\Controller\Init;
+use Bone\Router\Router;
+use Bone\Router\RouterConfigInterface;
 use Barnacle\RegistrationInterface;
 use Barnacle\Container;
 

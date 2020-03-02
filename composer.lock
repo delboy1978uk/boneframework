@@ -146,23 +146,23 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.5.10",
+            "version": "v3.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "81b7a1a58f14abf3cee71ed6a14ff7cb606f3729"
+                "reference": "aafa3b2e4c5f4f143d27e457d9e982a8bfafb395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/81b7a1a58f14abf3cee71ed6a14ff7cb606f3729",
-                "reference": "81b7a1a58f14abf3cee71ed6a14ff7cb606f3729",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/aafa3b2e4c5f4f143d27e457d9e982a8bfafb395",
+                "reference": "aafa3b2e4c5f4f143d27e457d9e982a8bfafb395",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.2",
                 "delboy1978uk/bone-db": "^1.0",
                 "delboy1978uk/bone-firewall": "^1.1",
-                "delboy1978uk/bone-http": "^0.1.0",
+                "delboy1978uk/bone-http": "^1.0",
                 "delboy1978uk/bone-i18n": "^1.1",
                 "delboy1978uk/bone-log": "^1.0",
                 "delboy1978uk/bone-view": "^1.0",
@@ -200,7 +200,7 @@
                 }
             ],
             "description": "Bone MVC Framework Library",
-            "time": "2020-03-01T23:31:13+00:00"
+            "time": "2020-03-02T00:22:56+00:00"
         },
         {
             "name": "delboy1978uk/bone-db",
@@ -312,16 +312,16 @@
         },
         {
             "name": "delboy1978uk/bone-http",
-            "version": "v0.1.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-http.git",
-                "reference": "104f274f1509ffd853163c8e206427fed94f1100"
+                "reference": "16c85e37bbaefbfc335e8d563b17c0ad672babdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/104f274f1509ffd853163c8e206427fed94f1100",
-                "reference": "104f274f1509ffd853163c8e206427fed94f1100",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/16c85e37bbaefbfc335e8d563b17c0ad672babdc",
+                "reference": "16c85e37bbaefbfc335e8d563b17c0ad672babdc",
                 "shasum": ""
             },
             "require-dev": {
@@ -344,7 +344,7 @@
                 }
             ],
             "description": "Http package for Bone MVC Framework",
-            "time": "2020-03-01T16:24:36+00:00"
+            "time": "2020-03-02T00:14:06+00:00"
         },
         {
             "name": "delboy1978uk/bone-i18n",
@@ -387,16 +387,16 @@
         },
         {
             "name": "delboy1978uk/bone-log",
-            "version": "v1.0.3",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-log.git",
-                "reference": "94ce94fd9481971af4986a5b50536c1db3c75e12"
+                "reference": "255e3c1a4a7cb193128a8f6d6cc193673ac26616"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-log/zipball/94ce94fd9481971af4986a5b50536c1db3c75e12",
-                "reference": "94ce94fd9481971af4986a5b50536c1db3c75e12",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-log/zipball/255e3c1a4a7cb193128a8f6d6cc193673ac26616",
+                "reference": "255e3c1a4a7cb193128a8f6d6cc193673ac26616",
                 "shasum": ""
             },
             "require-dev": {
@@ -419,7 +419,7 @@
                 }
             ],
             "description": "Log package for Bone MVC Framework",
-            "time": "2020-03-01T18:15:42+00:00"
+            "time": "2020-03-02T12:02:13+00:00"
         },
         {
             "name": "delboy1978uk/bone-mail",
@@ -5967,12 +5967,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "71174ad65ddde2852b10107ebf2f75d04eb47b43"
+                "reference": "5f81a65d531dc88975b8fe32331cfb8a79c34fe3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/71174ad65ddde2852b10107ebf2f75d04eb47b43",
-                "reference": "71174ad65ddde2852b10107ebf2f75d04eb47b43",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5f81a65d531dc88975b8fe32331cfb8a79c34fe3",
+                "reference": "5f81a65d531dc88975b8fe32331cfb8a79c34fe3",
                 "shasum": ""
             },
             "conflict": {
@@ -6091,7 +6091,7 @@
                 "serluck/phpwhois": "<=4.2.6",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
-                "silverstripe/assets": ">=1,<1.3.5",
+                "silverstripe/assets": ">=1,<1.3.5|>=1.4,<1.4.4",
                 "silverstripe/cms": "<4.3.6|>=4.4,<4.4.4",
                 "silverstripe/comments": ">=1.3,<1.9.99|>=2,<2.9.99|>=3,<3.1.1",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
@@ -6219,7 +6219,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-02-29T00:01:08+00:00"
+            "time": "2020-03-02T07:11:48+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
