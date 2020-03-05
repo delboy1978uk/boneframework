@@ -5,7 +5,7 @@ namespace BoneMvcTest\Controller;
 use App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\Controller\Init;
-use Bone\View\PlatesEngine;
+use Bone\View\ViewEngine;
 use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
 use Bone\Router\Router;
@@ -33,20 +33,20 @@ class IndexControllerTest extends Test
         $container = new Container();
 
         $router = new Router();
-        $view = $this->getMockBuilder(PlatesEngine::class)->getMock();
+        $view = $this->getMockBuilder(ViewEngine::class)->getMock();
         $view->expects($this->any())->method('render')->willReturn('x');
         $translator = $this->getMockBuilder(Translator::class)->getMock();
         $site = $this->getMockBuilder(SiteConfig::class)->disableOriginalConstructor()->getMock();
 
-        $container[PlatesEngine::class] = $view;
+        $container[ViewEngine::class] = $view;
         $container[Router::class] = $router;
         $container[SiteConfig::class] = $site;
         $container[Translator::class] = $translator;
 
-        $view = $this->make(PlatesEngine::class, ['render' => function() {
+        $view = $this->make(ViewEngine::class, ['render' => function() {
             return 'rendered content';
         }]);
-        $container[PlatesEngine::class] = $view;
+        $container[ViewEngine::class] = $view;
         $this->controller = new IndexController();
         $this->controller = Init::controller($this->controller, $container);
     }
