@@ -2,7 +2,7 @@
 
 namespace BoneMvcTest;
 
-use App\Controller\IndexController;
+use Bone\App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\View\ViewEngine;
 use Bone\Server\SiteConfig;
