@@ -853,16 +853,16 @@
         },
         {
             "name": "delboy1978uk/common",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/common.git",
-                "reference": "7c89756571770353e5ffbce500dffa93de0659ad"
+                "reference": "93cd23c75d60a2e5ec173e85be0e668d4d4fb6c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/common/zipball/7c89756571770353e5ffbce500dffa93de0659ad",
-                "reference": "7c89756571770353e5ffbce500dffa93de0659ad",
+                "url": "https://api.github.com/repos/delboy1978uk/common/zipball/93cd23c75d60a2e5ec173e85be0e668d4d4fb6c4",
+                "reference": "93cd23c75d60a2e5ec173e85be0e668d4d4fb6c4",
                 "shasum": ""
             },
             "require": {
@@ -897,7 +897,7 @@
                 }
             ],
             "description": "Stuff that winds up in every project",
-            "time": "2020-03-05T15:09:37+00:00"
+            "time": "2020-03-05T16:02:14+00:00"
         },
         {
             "name": "delboy1978uk/country",

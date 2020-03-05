@@ -43,6 +43,7 @@
   "autoload": {
     "psr-4": {
       "App\\": "src/App/",
+      "Skeleton\\": "src/Skeleton/",
       "BoneMvc\\Module\\": "src/",
       "BoneMvcTest\\": "tests/unit/"
     },
