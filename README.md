@@ -116,7 +116,7 @@ If you are using the Docker Box provided by bone, you also have the awesome Mail
 awesome.scot:8025 and you'll see a catch all email inbox, so you never need to worry about development emails reaching the real world.
 
 ## modules and packages
-Modules can be created in your `src/` folder. The default module is `BoneMvc\Module\App\AppPackage`.
+Modules can be created in your `src/` folder. The default module is `Bone\App\AppPackage`.
 Modules are enabled by adding them in `config/packages.php`. Vendor packages can also be installed via composer and enabled
 in the same way.
 

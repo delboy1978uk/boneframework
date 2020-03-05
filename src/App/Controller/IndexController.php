@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace Bone\App\Controller;
 
 use Bone\Controller\Controller;
 use Laminas\Diactoros\Response\HtmlResponse;

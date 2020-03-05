@@ -2,9 +2,9 @@
 
 return [
     'viewFolder' => 'src/App/View',
-    'default_layout' => 'layouts/bonemvc',
+    'default_layout' => 'layouts/bone',
     'available_layouts' => [
-        'layouts/bonemvc',
+        'layouts/bone',
     ],
     'error_pages' => [
         'exception' => 'error/error',

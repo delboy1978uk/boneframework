@@ -6,7 +6,7 @@ use App\Controller\IndexController;
 use Barnacle\Container;
 use Bone\View\ViewEngine;
 use Bone\Server\SiteConfig;
-use BoneMvc\Module\App\AppPackage;
+use Bone\App\AppPackage;
 use Codeception\TestCase\Test;
 use Bone\Router\Router;
 use Laminas\I18n\Translator\Translator;

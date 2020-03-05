@@ -146,16 +146,16 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.6.2",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "fc487022eba1264638b1f23cab3ca0aeaac3f78e"
+                "reference": "4624d4672e8b24786eefccc99c07accb40196807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/fc487022eba1264638b1f23cab3ca0aeaac3f78e",
-                "reference": "fc487022eba1264638b1f23cab3ca0aeaac3f78e",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/4624d4672e8b24786eefccc99c07accb40196807",
+                "reference": "4624d4672e8b24786eefccc99c07accb40196807",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
                 }
             ],
             "description": "Bone Framework core application",
-            "time": "2020-03-05T14:19:23+00:00"
+            "time": "2020-03-05T18:55:02+00:00"
         },
         {
             "name": "delboy1978uk/bone-controller",
@@ -279,16 +279,16 @@
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "2ab377ebcf2b9731158df42f153a0ef0d0bf17dc"
+                "reference": "0ed9ad4e6eb2db82f0ce77918d0b76481f5d5af8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/2ab377ebcf2b9731158df42f153a0ef0d0bf17dc",
-                "reference": "2ab377ebcf2b9731158df42f153a0ef0d0bf17dc",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/0ed9ad4e6eb2db82f0ce77918d0b76481f5d5af8",
+                "reference": "0ed9ad4e6eb2db82f0ce77918d0b76481f5d5af8",
                 "shasum": ""
             },
             "require": {
@@ -297,7 +297,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "BoneMvc\\Module\\BoneMvcDoctrine\\": "src/"
+                    "Bone\\BoneDoctrine\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -310,8 +310,8 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Doctrine functionality for BoneMvcFramework",
-            "time": "2020-02-27T22:04:50+00:00"
+            "description": "Doctrine functionality for Bone Framework",
+            "time": "2020-03-05T18:33:22+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -462,16 +462,16 @@
         },
         {
             "name": "delboy1978uk/bone-mail",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-mail.git",
-                "reference": "7b9193cdf948d37607dcaf6c5905aac983237618"
+                "reference": "e437c1292fb90c8197e891560f9f604f9b73cd3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-mail/zipball/7b9193cdf948d37607dcaf6c5905aac983237618",
-                "reference": "7b9193cdf948d37607dcaf6c5905aac983237618",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-mail/zipball/e437c1292fb90c8197e891560f9f604f9b73cd3d",
+                "reference": "e437c1292fb90c8197e891560f9f604f9b73cd3d",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "BoneMvc\\Mail\\": "src/"
+                    "Bone\\Mail\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -498,21 +498,21 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Mail package for Bone MVC Framework",
-            "time": "2020-03-05T14:06:49+00:00"
+            "description": "Mail package for Bone Framework",
+            "time": "2020-03-05T17:54:18+00:00"
         },
         {
             "name": "delboy1978uk/bone-oauth2",
-            "version": "v1.0.9",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-oauth2.git",
-                "reference": "7678b3e6d8ca072a5ab65ecd2f319f73d189c317"
+                "reference": "3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-oauth2/zipball/7678b3e6d8ca072a5ab65ecd2f319f73d189c317",
-                "reference": "7678b3e6d8ca072a5ab65ecd2f319f73d189c317",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-oauth2/zipball/3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90",
+                "reference": "3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90",
                 "shasum": ""
             },
             "require": {
@@ -548,20 +548,20 @@
                 }
             ],
             "description": "OAuth2 functionality for Bone Mvc Framework",
-            "time": "2020-03-05T14:07:52+00:00"
+            "time": "2020-03-05T18:39:38+00:00"
         },
         {
             "name": "delboy1978uk/bone-open-api",
-            "version": "v1.0.7",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-open-api.git",
-                "reference": "e1f1d2cf9642591abd9be2be519910a79b5842d5"
+                "reference": "1e4ff3cd14b3683a888a298a7b1556bfa1d6a700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-open-api/zipball/e1f1d2cf9642591abd9be2be519910a79b5842d5",
-                "reference": "e1f1d2cf9642591abd9be2be519910a79b5842d5",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-open-api/zipball/1e4ff3cd14b3683a888a298a7b1556bfa1d6a700",
+                "reference": "1e4ff3cd14b3683a888a298a7b1556bfa1d6a700",
                 "shasum": ""
             },
             "require": {
@@ -591,7 +591,7 @@
                 }
             ],
             "description": "OpenApi package for Bone MVC Framework",
-            "time": "2020-03-05T14:08:48+00:00"
+            "time": "2020-03-05T18:41:26+00:00"
         },
         {
             "name": "delboy1978uk/bone-router",
@@ -703,16 +703,16 @@
         },
         {
             "name": "delboy1978uk/bone-user",
-            "version": "v1.2.10",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-user.git",
-                "reference": "e0c3060a4b69ab7ea24fe35f350c99f63d015b8a"
+                "reference": "c86d752adae97b617f658c4d77dd34280c17e33e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/e0c3060a4b69ab7ea24fe35f350c99f63d015b8a",
-                "reference": "e0c3060a4b69ab7ea24fe35f350c99f63d015b8a",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/c86d752adae97b617f658c4d77dd34280c17e33e",
+                "reference": "c86d752adae97b617f658c4d77dd34280c17e33e",
                 "shasum": ""
             },
             "require": {
@@ -724,7 +724,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "BoneMvc\\Module\\BoneMvcUser\\": "src/"
+                    "Bone\\User\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -737,8 +737,8 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Integration of delboy1978uk/user for BoneMvcFramework",
-            "time": "2020-03-05T14:13:35+00:00"
+            "description": "Integration of delboy1978uk/user for Bone Framework",
+            "time": "2020-03-05T19:07:35+00:00"
         },
         {
             "name": "delboy1978uk/bone-view",
@@ -1021,16 +1021,16 @@
         },
         {
             "name": "delboy1978uk/generator",
-            "version": "v1.2.6",
+            "version": "v1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/generator.git",
-                "reference": "a04c8b863d44e33cdc091b046f12ff7860b8c7c4"
+                "reference": "77637e5bce959c8c9dbb5c893cc058769a9710de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/generator/zipball/a04c8b863d44e33cdc091b046f12ff7860b8c7c4",
-                "reference": "a04c8b863d44e33cdc091b046f12ff7860b8c7c4",
+                "url": "https://api.github.com/repos/delboy1978uk/generator/zipball/77637e5bce959c8c9dbb5c893cc058769a9710de",
+                "reference": "77637e5bce959c8c9dbb5c893cc058769a9710de",
                 "shasum": ""
             },
             "require": {
@@ -1061,7 +1061,7 @@
                 }
             ],
             "description": "A basic crud entity, form and service generator",
-            "time": "2020-03-05T14:16:23+00:00"
+            "time": "2020-03-05T16:33:29+00:00"
         },
         {
             "name": "delboy1978uk/icon",

@@ -1,8 +1,8 @@
 <?php
 
-namespace BoneMvc\Module\App;
+namespace Bone\App;
 
-use App\Controller\IndexController;
+use Bone\App\Controller\IndexController;
 use Bone\Controller\Init;
 use Bone\Router\Router;
 use Bone\Router\RouterConfigInterface;

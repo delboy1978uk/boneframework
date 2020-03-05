@@ -1,21 +1,17 @@
 <?php
 
+use Bone\App\AppPackage;
 use Bone\OAuth2\BoneOAuth2Package;
 use Bone\OpenApi\OpenApiPackage;
-use BoneMvc\Mail\MailPackage;
-use BoneMvc\Module\App\AppPackage;
-use BoneMvc\Module\BoneMvcDoctrine\BoneMvcDoctrinePackage;
-use BoneMvc\Module\BoneMvcUser\BoneMvcUserPackage;
-use Del\Person\PersonPackage;
-use Del\UserPackage;
+use Bone\Mail\MailPackage;
+use Bone\BoneDoctrine\BoneDoctrinePackage;
+use Bone\User\BoneUserPackage;
 
 return [
     'packages' => [
-        BoneMvcDoctrinePackage::class,
+        BoneDoctrinePackage::class,
         MailPackage::class,
-        PersonPackage::class,
-        UserPackage::class,
-        BoneMvcUserPackage::class,
+        BoneUserPackage::class,
         BoneOAuth2Package::class,
         OpenApiPackage::class,
         AppPackage::class,
