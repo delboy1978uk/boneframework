@@ -853,16 +853,16 @@
         },
         {
             "name": "delboy1978uk/common",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/common.git",
-                "reference": "5006833a7c736a1da8b9c81fb733060cb0fe91c6"
+                "reference": "7c89756571770353e5ffbce500dffa93de0659ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/common/zipball/5006833a7c736a1da8b9c81fb733060cb0fe91c6",
-                "reference": "5006833a7c736a1da8b9c81fb733060cb0fe91c6",
+                "url": "https://api.github.com/repos/delboy1978uk/common/zipball/7c89756571770353e5ffbce500dffa93de0659ad",
+                "reference": "7c89756571770353e5ffbce500dffa93de0659ad",
                 "shasum": ""
             },
             "require": {
@@ -897,7 +897,7 @@
                 }
             ],
             "description": "Stuff that winds up in every project",
-            "time": "2020-02-10T21:59:10+00:00"
+            "time": "2020-03-05T15:09:37+00:00"
         },
         {
             "name": "delboy1978uk/country",
@@ -5613,16 +5613,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.10.2",
+            "version": "v1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
+                "reference": "451c3cd1418cf640de218914901e51b064abb093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/451c3cd1418cf640de218914901e51b064abb093",
+                "reference": "451c3cd1418cf640de218914901e51b064abb093",
                 "shasum": ""
             },
             "require": {
@@ -5672,7 +5672,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2020-01-20T15:57:02+00:00"
+            "time": "2020-03-05T15:02:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
