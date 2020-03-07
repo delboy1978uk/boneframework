@@ -146,20 +146,21 @@
         },
         {
             "name": "delboy1978uk/bone",
-            "version": "v3.6.3",
+            "version": "v3.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone.git",
-                "reference": "4624d4672e8b24786eefccc99c07accb40196807"
+                "reference": "be43bfff046878e8ce9cc3caef07b6ef3d275dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/4624d4672e8b24786eefccc99c07accb40196807",
-                "reference": "4624d4672e8b24786eefccc99c07accb40196807",
+                "url": "https://api.github.com/repos/delboy1978uk/bone/zipball/be43bfff046878e8ce9cc3caef07b6ef3d275dad",
+                "reference": "be43bfff046878e8ce9cc3caef07b6ef3d275dad",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.2",
+                "delboy1978uk/bone-console": "^1.0",
                 "delboy1978uk/bone-controller": "^1.0",
                 "delboy1978uk/bone-db": "^1.0",
                 "delboy1978uk/bone-firewall": "^1.1",
@@ -170,7 +171,6 @@
                 "delboy1978uk/bone-server": "^1.0",
                 "delboy1978uk/bone-traits": "^1.0",
                 "delboy1978uk/bone-view": "^1.0",
-                "delboy1978uk/form": "^2.1",
                 "delboy1978uk/icon": "^1.0",
                 "delboy1978uk/session": "^1.1",
                 "laminas/laminas-diactoros": "2.*",
@@ -203,7 +203,43 @@
                 }
             ],
             "description": "Bone Framework core application",
-            "time": "2020-03-05T18:55:02+00:00"
+            "time": "2020-03-07T12:56:50+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-console",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-console.git",
+                "reference": "3feddcf15b052d09315cd0b18cbb4f0403d6741c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-console/zipball/3feddcf15b052d09315cd0b18cbb4f0403d6741c",
+                "reference": "3feddcf15b052d09315cd0b18cbb4f0403d6741c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Run Bone Framework in the terminal",
+            "time": "2020-03-07T12:33:38+00:00"
         },
         {
             "name": "delboy1978uk/bone-controller",
@@ -387,19 +423,20 @@
         },
         {
             "name": "delboy1978uk/bone-i18n",
-            "version": "v1.1.3",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-i18n.git",
-                "reference": "95f2e71bcca0f65a383e74fda684122b620d674c"
+                "reference": "9586b0ceaeaa7dc704935a5c73515a52cfb7e986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-i18n/zipball/95f2e71bcca0f65a383e74fda684122b620d674c",
-                "reference": "95f2e71bcca0f65a383e74fda684122b620d674c",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-i18n/zipball/9586b0ceaeaa7dc704935a5c73515a52cfb7e986",
+                "reference": "9586b0ceaeaa7dc704935a5c73515a52cfb7e986",
                 "shasum": ""
             },
             "require": {
+                "delboy1978uk/form": "^2.1",
                 "laminas/laminas-i18n": "^2.10"
             },
             "require-dev": {
@@ -422,7 +459,7 @@
                 }
             ],
             "description": "I18n package for Bone MVC Framework",
-            "time": "2020-03-05T14:05:41+00:00"
+            "time": "2020-03-07T12:48:26+00:00"
         },
         {
             "name": "delboy1978uk/bone-log",
@@ -503,16 +540,16 @@
         },
         {
             "name": "delboy1978uk/bone-oauth2",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-oauth2.git",
-                "reference": "3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90"
+                "reference": "eef75fd40aafd364c64d4c8e2c2b6aa6665135a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-oauth2/zipball/3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90",
-                "reference": "3302661ae9f4d5b9af26f3dfbe64252b4c7b3b90",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-oauth2/zipball/eef75fd40aafd364c64d4c8e2c2b6aa6665135a8",
+                "reference": "eef75fd40aafd364c64d4c8e2c2b6aa6665135a8",
                 "shasum": ""
             },
             "require": {
@@ -548,20 +585,20 @@
                 }
             ],
             "description": "OAuth2 functionality for Bone Mvc Framework",
-            "time": "2020-03-05T18:39:38+00:00"
+            "time": "2020-03-07T12:51:22+00:00"
         },
         {
             "name": "delboy1978uk/bone-open-api",
-            "version": "v1.0.8",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-open-api.git",
-                "reference": "1e4ff3cd14b3683a888a298a7b1556bfa1d6a700"
+                "reference": "e54e7a9848b85d6d6b1671c564d629c69c4adf18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-open-api/zipball/1e4ff3cd14b3683a888a298a7b1556bfa1d6a700",
-                "reference": "1e4ff3cd14b3683a888a298a7b1556bfa1d6a700",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-open-api/zipball/e54e7a9848b85d6d6b1671c564d629c69c4adf18",
+                "reference": "e54e7a9848b85d6d6b1671c564d629c69c4adf18",
                 "shasum": ""
             },
             "require": {
@@ -591,7 +628,7 @@
                 }
             ],
             "description": "OpenApi package for Bone MVC Framework",
-            "time": "2020-03-05T18:41:26+00:00"
+            "time": "2020-03-07T11:37:07+00:00"
         },
         {
             "name": "delboy1978uk/bone-router",
@@ -703,16 +740,16 @@
         },
         {
             "name": "delboy1978uk/bone-user",
-            "version": "v1.3.2",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-user.git",
-                "reference": "c86d752adae97b617f658c4d77dd34280c17e33e"
+                "reference": "8cb43ad6be9f03b7ae932ac315c993bf19b097c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/c86d752adae97b617f658c4d77dd34280c17e33e",
-                "reference": "c86d752adae97b617f658c4d77dd34280c17e33e",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/8cb43ad6be9f03b7ae932ac315c993bf19b097c0",
+                "reference": "8cb43ad6be9f03b7ae932ac315c993bf19b097c0",
                 "shasum": ""
             },
             "require": {
@@ -738,7 +775,7 @@
                 }
             ],
             "description": "Integration of delboy1978uk/user for Bone Framework",
-            "time": "2020-03-05T19:07:35+00:00"
+            "time": "2020-03-07T12:49:57+00:00"
         },
         {
             "name": "delboy1978uk/bone-view",
@@ -2822,16 +2859,16 @@
         },
         {
             "name": "laminas/laminas-mime",
-            "version": "2.7.2",
+            "version": "2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-mime.git",
-                "reference": "2dbace2c69542e5a251af3becb6d7209ac9fb42b"
+                "reference": "e844abb02e868fae154207929190292ad25057cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-mime/zipball/2dbace2c69542e5a251af3becb6d7209ac9fb42b",
-                "reference": "2dbace2c69542e5a251af3becb6d7209ac9fb42b",
+                "url": "https://api.github.com/repos/laminas/laminas-mime/zipball/e844abb02e868fae154207929190292ad25057cc",
+                "reference": "e844abb02e868fae154207929190292ad25057cc",
                 "shasum": ""
             },
             "require": {
@@ -2845,7 +2882,7 @@
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "laminas/laminas-mail": "^2.6",
-                "phpunit/phpunit": "^5.7.21 || ^6.3"
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.20"
             },
             "suggest": {
                 "laminas/laminas-mail": "Laminas\\Mail component"
@@ -2872,7 +2909,7 @@
                 "laminas",
                 "mime"
             ],
-            "time": "2019-12-31T17:25:27+00:00"
+            "time": "2020-03-06T08:38:03+00:00"
         },
         {
             "name": "laminas/laminas-servicemanager",
