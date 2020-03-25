@@ -24,22 +24,6 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface
     }
 
     /**
-     * @return string
-     */
-    public function getEntityPath(): string
-    {
-        return '';
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasEntityPath(): bool
-    {
-        return false;
-    }
-
-    /**
      * @param Container $c
      * @param Router $router
      * @return Router
