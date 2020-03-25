@@ -1,10 +1,15 @@
-Bone MVC Framework
-==================
+# bone framework
 [![Latest Stable Version](https://poser.pugx.org/delboy1978uk/bonemvc/v/stable)](https://packagist.org/packages/delboy1978uk/bonemvc) [![Total Downloads](https://poser.pugx.org/delboy1978uk/bone/downloads)](https://packagist.org/packages/delboy1978uk/bonemvc) [![Latest Unstable Version](https://poser.pugx.org/delboy1978uk/bonemvc/v/unstable)](https://packagist.org/packages/delboy1978uk/bonemvc) [![License](https://poser.pugx.org/delboy1978uk/bonemvc/license)](https://packagist.org/packages/delboy1978uk/bonemvc)<br />
 [![Build Status](https://travis-ci.org/delboy1978uk/bonemvc.png?branch=master)](https://travis-ci.org/delboy1978uk/bonemvc) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bonemvc/?branch=master)<br />
-Be ye wantin an MVC framework peppered with local pirate lingo?<br />
+Be ye wantin a PHP framework peppered with local pirate lingo?<br />
 It be the most bare bones framework in the seven seas!<br />
 http://bonemvc.delboysplace.co.uk
+
+## features
+- PSR-7 http messaging 
+- PSR-11 dependency injection container configuration
+- PSR-15 middleware routing
+
 
 Bone now be on v3.x! The entire deign o' th' ship has been streamlined and be far more manoeuvrable!
 We be usin' a PSR-11 dependency injection container, coupled with a PSR-15 middleware router, in a modular manner! 
