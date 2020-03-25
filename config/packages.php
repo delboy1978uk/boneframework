@@ -9,11 +9,6 @@ use Bone\User\BoneUserPackage;
 
 return [
     'packages' => [
-        BoneDoctrinePackage::class,
-        MailPackage::class,
-        BoneUserPackage::class,
-        BoneOAuth2Package::class,
-        OpenApiPackage::class,
         AppPackage::class,
     ],
 ];

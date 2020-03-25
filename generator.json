@@ -1,1 +1,0 @@
-{"namespace":"Random\\Developer","entity":"Jedi","fields":[{"name":"name","type":"varchar","length":"30","nullable":false,"form":{"type":"text","label":"Jedi Name","values":[]}},{"name":"lightsaberColor","type":"int","length":"1","nullable":false,"form":{"type":"select","label":"Lightsaber Color","values":{"1":"Blue","2":"Green"}}}]}
