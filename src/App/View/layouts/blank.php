@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= isset($title) ? $this->e($title) : 'Bone MVC Framework';?></title>
+    <title><?= isset($title) ? $this->e($title) : 'Bone Framework';?></title>
 </head>
 
 <body>

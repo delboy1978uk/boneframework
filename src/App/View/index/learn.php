@@ -5,7 +5,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/<?= $this->l() ;?>#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light">Bone</span> MVC Framework
+                <i class="fa fa-play-circle"></i>  <span class="light">Bone</span>  Framework
             </a>
         </div>
 
@@ -70,9 +70,9 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('installation') ;?></h2>
             <p><?= $this->t('learn.composer') ;?> <a href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?></p>
-            <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
+            <code>composer create-project delboy1978uk/boneframework your/path/here</code>
             <p class="clear"><?= $this->t('learn.globally') ;?></p>
-            <code>php composer.phar create-project delboy1978uk/bonemvc your/path/here dev-master</code>
+            <code>php composer.phar create-project delboy1978uk/boneframework your/path/here</code>
             <br class="mb50">
             <h2><?= $this->t('docker.devbox') ;?></h2>
             <p><?= $this->t('docker.about') ;?><br class="mb20" />
@@ -99,10 +99,10 @@
                 <p><?= $this->t('learn.vhosts') ;?></p>
                 <div class="code tl">
         &lt;VirtualHost *:80&gt;
-                DocumentRoot "/var/www/bonemvc/public"
+                DocumentRoot "/var/www/public"
                 ServerName awesome.scot
                 SetEnv APPLICATION_ENV development
-                &lt;Directory "/var/www/bonemvc"&gt;
+                &lt;Directory "/var/www/"&gt;
                         DirectoryIndex index.php
                         FallbackResource /index.php
                         Options -Indexes +FollowSymLinks

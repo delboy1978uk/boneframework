@@ -71,7 +71,7 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2><?= $this->t('about') ;?> Bone</h2>
             <p><?= $this->t('index.intro') ?></p>
-            <code>composer create-project delboy1978uk/bonemvc your/path/here dev-master</code>
+            <code>composer create-project delboy1978uk/boneframework your/path/here dev-master</code>
         </div>
     </div>
 </section>
@@ -80,7 +80,7 @@
     <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><?= $this->t('download') ;?> Bone MVC</h2>
+                <h2><?= $this->t('download') ;?> Bone Framework</h2>
                 <p><?= $this->t('index.install'); ?><a target="_blank" href="http://getcomposer.org">Composer</a> <?= $this->t('index.install2') ;?></p>
                 <a target="_blank" href="https://github.com/delboy1978uk/bonemvc" class="btn btn-default btn-lg"><i class="fa fa-github"></i> <?= $this->t('visit') ;?> Github</a>
             </div>
