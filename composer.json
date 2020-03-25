@@ -8,12 +8,6 @@
     }
   ],
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/delboy1978uk/route"
-    }
-  ],
   "require": {
     "php": "^7.1",
     "ext-fileinfo": "*",
@@ -22,8 +16,7 @@
     "ext-pdo": "*",
     "delboy1978uk/bone": "^3.6",
     "delboy1978uk/cdn": "^1.1.2",
-    "delboy1978uk/image": "^2.1",
-    "league/route": "dev-master as 4.3.1",
+    "delboy1978uk/image": "^2.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
