@@ -48,9 +48,6 @@ class AppPackageTest extends Test
         $container[Router::class] = $router;
         $container[Translator::class] = $translator;
 
-        $this->assertFalse($this->package->hasEntityPath());
-        $this->assertEmpty($this->package->getEntityPath());
-
         $this->package->addToContainer($container);
 
         $this->assertInstanceOf(IndexController::class, $container->get(IndexController::class));
