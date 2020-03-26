@@ -15,6 +15,7 @@ addons:
     - awesome.scot
 
 install:
+  - apt-get install unzip
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
   - sudo /etc/init.d/mysql stop
   - docker-compose build
