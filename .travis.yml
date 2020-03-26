@@ -8,14 +8,14 @@ php:
   - 7.2
   - 7.3
 
-sudo: false
+sudo: false	
 
 addons:
   hosts:
     - awesome.scot
-
+before_install:
+  - sudo apt-get -y install unzip
 install:
-  - apt-get install unzip
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
   - sudo /etc/init.d/mysql stop
   - docker-compose build
