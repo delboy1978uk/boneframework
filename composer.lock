@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79c1cb07a44a49e90a3e91c8cc1c6dfd",
+    "content-hash": "ea289298f12367b2e5c13643d3d487ea",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -627,16 +627,16 @@
         },
         {
             "name": "delboy1978uk/cdn",
-            "version": "v1.2.1",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/cdn.git",
-                "reference": "034988501549cf313fb6e96c622fd8cfa32d236c"
+                "reference": "4d03eaddf22ad58216073cb3b04c1f543ad52b1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/cdn/zipball/034988501549cf313fb6e96c622fd8cfa32d236c",
-                "reference": "034988501549cf313fb6e96c622fd8cfa32d236c",
+                "url": "https://api.github.com/repos/delboy1978uk/cdn/zipball/4d03eaddf22ad58216073cb3b04c1f543ad52b1e",
+                "reference": "4d03eaddf22ad58216073cb3b04c1f543ad52b1e",
                 "shasum": ""
             },
             "require": {
@@ -656,7 +656,7 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "time": "2020-10-30T20:52:49+00:00"
+            "time": "2020-11-19T10:22:21+00:00"
         },
         {
             "name": "delboy1978uk/css",

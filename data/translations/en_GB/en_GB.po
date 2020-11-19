@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BoneMVC\n"
 "POT-Creation-Date: 2018-11-06 18:48+0100\n"
-"PO-Revision-Date: 2018-11-06 19:39+0100\n"
+"PO-Revision-Date: 2020-11-19 13:19+0100\n"
 "Last-Translator: Derek McLean <delboy1978uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-KeywordsList: translate;t;gettext_noop\n"
-"X-Poedit-Basepath: ../../../\n"
+"X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: src\n"
 
@@ -40,13 +40,13 @@ msgstr "Language"
 
 #: src/App/View/index/index.php:57
 msgid "home.intro"
-msgstr "A easy to use PHP Framework with a pirate theme"
+msgstr "An easy to use PHP Framework with a pirate theme"
 
 #: src/App/View/index/index.php:73
 msgid "index.intro"
 msgstr ""
-"Be ye wantin an MVC framework peppered with local pirate lingo? It be the "
-"most bare bones framework in the seven seas! Garr!"
+"Be ye wantin a DIC middleware based framework peppered with local pirate "
+"lingo? It be the most bare bones framework in the seven seas! Garr!"
 
 #: src/App/View/index/index.php:84
 msgid "index.install"
@@ -68,7 +68,7 @@ msgstr "We're always looking for contributors"
 
 #: src/App/View/index/index.php:95
 msgid "index.crew2"
-msgstr "to help make Bone MVC even better."
+msgstr "to help make Bone Framework even better."
 
 #: src/App/View/index/index.php:96
 msgid "index.crew3"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: src/App/View/index/learn.php:55
 msgid "learn.learn"
-msgstr "Learn Bone MVC Framework"
+msgstr "Learn Bone Framework"
 
 #: src/App/View/index/learn.php:56
 msgid "learn.tagline"

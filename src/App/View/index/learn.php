@@ -1,125 +1,87 @@
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="/<?= $this->l() ;?>#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light">Bone</span>  Framework
-            </a>
-        </div>
-
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class="hidden">
-                    <a href="/#page-top"></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Bone Framework</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><?= $this->t('about') ;?></a>
                 </li>
-                <li class="page-scroll">
-                    <a href="/#about"><?= $this->t('about') ;?></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#download"><?= $this->t('download') ;?></a>
                 </li>
-                <li class="page-scroll">
-                    <a href="/#download"><?= $this->t('download') ;?></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contribute"><?= $this->t('contribute') ;?></a>
                 </li>
-                <li class="page-scroll">
-                    <a href="/#contribute"><?= $this->t('contribute') ;?></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/<?= Locale::getDefault(); ?>/learn"><?= $this->t('learn') ;?></a>
                 </li>
-                <li class="">
-                    <a href="#"><?= $this->t('learn') ;?></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->t('language') ;?> <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/en_PI/learn">Pirate</a></li>
-                        <li><a href="/en_GB/learn">English</a></li>
-                        <li><a href="/nl_BE/learn">Nederlands</a></li>
-                        <li><a href="/fr_BE/learn">Français</a></li>
-                    </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= $this->t('language') ;?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/en_PI/learn">Pirate</a>
+                        <a class="dropdown-item" href="/en_GB/learn">English</a>
+                        <a class="dropdown-item" href="/nl_BE/learn">Nederlands</a>
+                        <a class="dropdown-item" href="/fr_BE/learn">Français</a>
+                    </div>
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
 
 
-<section class="intro">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <img height="64" src="/img/skull_and_crossbones.png" />
-                    <h2 class=""><?= $this->t('learn.learn') ;?></h2>
-                    <p class="intro-text"><?= $this->t('learn.tagline') ;?></p>
-                    <div class="page-scroll">
-                        <a href="#installation" class="btn btn-circle">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <img src="/img/skull_and_crossbones.png" />
+            <h1 class="mx-auto my-0 text-uppercase"><?= $this->t('learn.learn') ;?></h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5"><?= $this->t('learn.tagline') ;?></h2>
+            <a class="btn btn-primary js-scroll-trigger p0 pl10 pr10" href="#installation"><i class="fa fa-5x fa-angle-double-down animated"></i></a>
         </div>
     </div>
-</section>
+</header>
 
-<section id="installation" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2><?= $this->t('installation') ;?></h2>
-            <p><?= $this->t('learn.composer') ;?> <a href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?></p>
-            <code>composer create-project delboy1978uk/boneframework your/path/here</code>
-            <p class="clear"><?= $this->t('learn.globally') ;?></p>
-            <code>php composer.phar create-project delboy1978uk/boneframework your/path/here</code>
-            <br class="mb50">
-            <h2><?= $this->t('docker.devbox') ;?></h2>
-            <p><?= $this->t('docker.about') ;?><br class="mb20" />
-                <code>awesome.scot 192.168.99.100</code></p>
-            <div class="code tl">
-                docker-machine start
-                eval $(docker-machine env)
-                cd /path/to/project
-                docker-compose up
-            </div>
-            <p><?= $this->t('docker.browse') ;?></p>
-        </div>
-    </div>
-</section>
-
-<section id="configger" class="content-section text-center pt50">
-    <div class="download-section">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2><?= $this->t('configure') ;?></h2>
-                <p><?= $this->t('learn.folders') ;?></p>
-                <p><?= $this->t('learn.777') ;?></p>
-                <code>chmod -R 775 data</code>
-                <p><?= $this->t('learn.vhosts') ;?></p>
+<section class="about-section text-center" id="installation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-white"><?= $this->t('installation') ;?></h2>
+                <p class="text-white"><?= $this->t('learn.composer') ;?>
+                    <a target="_blank" href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?>
+                </p>
+                <code>composer create-project delboy1978uk/boneframework your/path/here</code>
+                <p class="clear text-white"><?= $this->t('learn.globally') ;?></p>
+                <code>php composer.phar create-project delboy1978uk/boneframework your/path/here</code>
+                <br class="mb50">
+                <h2 class="text-white"><?= $this->t('docker.devbox') ;?></h2>
+                <p class="text-white"><?= $this->t('docker.about') ;?><br class="mb20" />
+                    <code>awesome.scot 192.168.99.100</code></p>
                 <div class="code tl">
-        &lt;VirtualHost *:80&gt;
-                DocumentRoot "/var/www/public"
-                ServerName awesome.scot
-                SetEnv APPLICATION_ENV development
-                &lt;Directory "/var/www/"&gt;
-                        DirectoryIndex index.php
-                        FallbackResource /index.php
-                        Options -Indexes +FollowSymLinks
-                        AllowOverride all
-                        Require all granted
-                &lt;/Directory&gt;
-        &lt;/VirtualHost&gt;
+                    docker-machine start
+                    eval $(docker-machine env)
+                    cd /path/to/project
+                    docker-compose up
                 </div>
+                <p><?= $this->t('docker.browse') ;?></p>
             </div>
         </div>
+        <img class="img-fluid" src="assets/img/ipad.png" alt="" />
     </div>
 </section>
 
 <section id="contribute" class="container content-section text-center">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2><?= $this->t('learn.config') ;?></h2>
+        <div class="col-lg-8 mx-auto">
+            <h2 class="text-center pt20"><?= $this->t('learn.config') ;?></h2>
             <p><?= $this->t('learn.config.drop') ;?></p>
             <div class="code tl">
                 db.php
