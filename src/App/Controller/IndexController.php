@@ -49,9 +49,9 @@ class IndexController extends Controller
      * @param array $args
      * @return ResponseInterface
      */
-    public function indexAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function indexAction(ServerRequestInterface $request) : ResponseInterface
     {
-        $body = $this->view->render('index/index');
+        $body = $this->view->render('app::index');
 
         return new HtmlResponse($body);
     }
@@ -61,9 +61,9 @@ class IndexController extends Controller
      * @param array $args
      * @return ResponseInterface
      */
-    public function learnAction(ServerRequestInterface $request, array $args) : ResponseInterface
+    public function learnAction(ServerRequestInterface $request) : ResponseInterface
     {
-        $body = $this->view->render('index/learn');
+        $body = $this->view->render('app::learn');
 
         return new HtmlResponse($body);
     }
