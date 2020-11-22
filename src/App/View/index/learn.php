@@ -1,80 +1,36 @@
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<section id="learn-jumbo" class="jumbotron text-center bg-white">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Bone Framework</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about"><?= $this->t('about') ;?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#download"><?= $this->t('download') ;?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contribute"><?= $this->t('contribute') ;?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/<?= Locale::getDefault(); ?>/learn"><?= $this->t('learn') ;?></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?= $this->t('language') ;?>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/en_PI/learn">Pirate</a>
-                        <a class="dropdown-item" href="/en_GB/learn">English</a>
-                        <a class="dropdown-item" href="/nl_BE/learn">Nederlands</a>
-                        <a class="dropdown-item" href="/fr_BE/learn">Français</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <img src="/img/skull_and_crossbones.png" />
+        <h1 class="jumbotron-heading text-white"><?= $this->t('learn.learn') ;?></h1>
+        <p class="lead text-white"><?= $this->t('learn.tagline') ;?></p>
     </div>
-</nav>
-
-
-
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center">
-            <img src="/img/skull_and_crossbones.png" />
-            <h1 class="mx-auto my-0 text-uppercase"><?= $this->t('learn.learn') ;?></h1>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5"><?= $this->t('learn.tagline') ;?></h2>
-            <a class="btn btn-primary js-scroll-trigger p0 pl10 pr10" href="#installation"><i class="fa fa-5x fa-angle-double-down animated"></i></a>
-        </div>
-    </div>
-</header>
+</section>
 
 <section class="about-section text-center" id="installation">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="text-white"><?= $this->t('installation') ;?></h2>
-                <p class="text-white"><?= $this->t('learn.composer') ;?>
+                <h2 ><?= $this->t('installation') ;?></h2>
+                <p ><?= $this->t('learn.composer') ;?>
                     <a target="_blank" href="https://getcomposer.org/">Composer</a>! <?= $this->t('learn.install.bone') ;?>
                 </p>
                 <code>composer create-project delboy1978uk/boneframework your/path/here</code>
-                <p class="clear text-white"><?= $this->t('learn.globally') ;?></p>
+                <br>&nbsp;
+                <p><?= $this->t('learn.globally') ;?></p>
                 <code>php composer.phar create-project delboy1978uk/boneframework your/path/here</code>
                 <br class="mb50">
-                <h2 class="text-white"><?= $this->t('docker.devbox') ;?></h2>
-                <p class="text-white"><?= $this->t('docker.about') ;?><br class="mb20" />
+                <h2 ><?= $this->t('docker.devbox') ;?></h2>
+                <p ><?= $this->t('docker.about') ;?><br class="mb20" />
                     <code>awesome.scot 192.168.99.100</code></p>
                 <div class="code tl">
-                    docker-machine start
-                    eval $(docker-machine env)
-                    cd /path/to/project
-                    docker-compose up
+                    docker-machine start <br>
+                    eval $(docker-machine env) <br>
+                    cd /path/to/project <br>
+                    docker-compose up <br>
                 </div>
                 <p><?= $this->t('docker.browse') ;?></p>
             </div>
         </div>
-        <img class="img-fluid" src="assets/img/ipad.png" alt="" />
     </div>
 </section>
 
