@@ -7,7 +7,7 @@ use Del\Icon;
     <div class="container">
         <img src="/img/skull_and_crossbones.png" />
         <h1 class="jumbotron-heading text-white">Bone Framework</h1>
-        <p class="lead text-white"><?= $this->t('home.intro') ;?></p>
+        <p class="lead text-white">It be yet another PHP framework swashbuckling onto the scene!</p>
     </div>
 </section>
 
