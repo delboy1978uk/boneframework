@@ -20,7 +20,7 @@ use Del\Icon;
                 <h2 class="text-muted"><?= $this->t('about') ;?> Bone</h2>
                 <p class="text-muted">Be ye wantin a DIC middleware based framework peppered with local pirate lingo?
                     It be the most awesome framework in the seven seas! Garr!</p>
-                <code>composer create-project delboy1978uk/boneframework your/path/here dev-master</code>
+                <code>composer create-project delboy1978uk/boneframework your/path/here</code>
             </div>
         </div>
         <img class="img-fluid" src="assets/img/ipad.png" alt="" />
