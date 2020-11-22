@@ -123,7 +123,7 @@
             or CSS or JavaScript, you must deply those assets using the <span class="code">bone assets:deploy</span> command.</p>
             <h4 class="text-muted">Ready to rock Bone Framework packages</h4>
             <p class="text-muted">Several Packages are available already for installation via composer to Bone Framework</p>
-            <ul class="list-group text-left">
+            <ul class="list-group text-left text-muted">
                 <li class="list-group-item">
                     <a target="_blank" href="//github.com/delboy1978uk/bone-crypt">delboy1978uk/bone-crypt</a>
                     <span class="pull-right">OpenSSL encryption/decryption package</span>
@@ -251,7 +251,7 @@ public function addRoutes(Container $c, Router $router): Router
             <span class="code">Bone\Controller\Controller</span>, a class providing a translator, view engine,
                 and site config object.</p>
             <p class="text-muted">Bone also provides some interfaces and convenience getter and setter traits:</p>
-            <ul class="list-group text-left">
+            <ul class="list-group text-left text-muted">
                 <li class="list-group-item">I18nAwareInterface
                     <span class="pull-right">use HasTranslatorTrait</span>
                 </li>
