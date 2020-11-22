@@ -24,14 +24,36 @@ html {
   background-position: bottom;
 }
 
-code, div.code, span.code {
+code, div.code {
   background: #006600;
   color: #00dd1c;
   padding: 10px;
   margin: 5px;
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
+div.code pre {
+  color: #00dd1c;
+}
+span.code {
+  color: #e83e8c;
+}
 
 footer div p a:visited, footer div p a {
   color: #999999;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
 }

@@ -744,16 +744,16 @@
         },
         {
             "name": "delboy1978uk/icon",
-            "version": "v1.1.1",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/icon.git",
-                "reference": "5b5a5d1ba1508d39e580c7a294d5b700cf84c79d"
+                "reference": "79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/icon/zipball/5b5a5d1ba1508d39e580c7a294d5b700cf84c79d",
-                "reference": "5b5a5d1ba1508d39e580c7a294d5b700cf84c79d",
+                "url": "https://api.github.com/repos/delboy1978uk/icon/zipball/79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6",
+                "reference": "79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6",
                 "shasum": ""
             },
             "type": "library",
@@ -773,7 +773,7 @@
                 }
             ],
             "description": "PHP Class for generating Font Awesome icons.",
-            "time": "2020-10-30T20:41:17+00:00"
+            "time": "2020-11-22T13:15:50+00:00"
         },
         {
             "name": "delboy1978uk/image",

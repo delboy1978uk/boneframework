@@ -47,7 +47,6 @@ use Del\Icon;
                 </a>
             </strong>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
                 <i class="fa fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -64,7 +63,7 @@ use Del\Icon;
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $this->l() ?>/learn"><?= $this->t('learn') ;?></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?= $this->t('language') ;?>
                         </a>

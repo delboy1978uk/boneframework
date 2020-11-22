@@ -110,8 +110,8 @@ use Del\Icon;
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class="featured-text text-center text-lg-left">
-                    <h2><?= $this->t('download') ;?> Bone Framework</h2>
-                    <p><?= $this->t('index.install'); ?><a target="_blank" href="http://getcomposer.org">Composer</a> <?= $this->t('index.install2') ;?></p>
+                    <h2 class="text-muted"><?= $this->t('download') ;?> Bone Framework</h2>
+                    <p class="text-muted"><?= $this->t('index.install'); ?><a target="_blank" href="http://getcomposer.org">Composer</a> <?= $this->t('index.install2') ;?></p>
                     <a target="_blank" href="https://github.com/delboy1978uk/boneframework" class="btn btn-primary btn-lg">
                         <i class="fa fa-github"></i> <?= $this->t('visit') ;?> Github
                     </a>
@@ -142,10 +142,11 @@ use Del\Icon;
     <div class="container">
         <div class="social d-flex justify-content-center">
             <i class="fa fa-discord"></i>
-            <a class="mx-2" target="_blank" href="https://twitter.com/delboy1978uk"><i class="fa fa-2x fa-twitter"></i></a>
-            <a class="mx-2" target="_blank" href="https://github.com/delboy1978uk/boneframework"><i class="fa fa-2x fa-github"></i></a>
-            <a class="mx-2" target="_blank" href="https://www.youtube.com/channel/UCBUmyhXk0FvW8S2b4KyCNmw"><i class="fa fa-2x fa-youtube"></i></a>
-            <a class="mx-2" target="_blank" href="http://delboy1978uk.wordpress.com"><i class="fa fa-2x fa-wordpress"></i></a>
+            <a class="mx-2" target="_blank" href="//twitter.com/delboy1978uk"><i class="fa fa-2x fa-twitter"></i></a>
+            <a class="mx-2" target="_blank" href="//github.com/delboy1978uk/boneframework"><i class="fa fa-2x fa-github"></i></a>
+            <a class="mx-2" target="_blank" href="//www.youtube.com/channel/UCBUmyhXk0FvW8S2b4KyCNmw"><i class="fa fa-2x fa-youtube"></i></a>
+            <a class="mx-2" target="_blank" href="//delboy1978uk.wordpress.com"><i class="fa fa-2x fa-wordpress"></i></a>
+            <a class="mx-2" target="_blank" href="//discord.gg/RB9Fsfk"><i class="fa fa-2x fa-comments"></i></a>
         </div>
     </div>
 </section>
