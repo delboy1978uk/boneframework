@@ -41,6 +41,8 @@
                 <code>php composer.phar create-project delboy1978uk/boneframework your/path/here</code>
                 <br class="mb50">
                 <h2 class="text-muted"><?= $this->t('docker.devbox'); ?></h2>
+                <p class="text-muted">To install Bone via Docker, instead use Git to clone the project</p>
+                <div class="code tl">git clone https://github.com/delboy1978uk/boneframework yourProjectName</div>
                 <p class="text-muted"><?= $this->t('docker.about'); ?><br class="mb20"/>
                     <code>awesome.scot 192.168.99.100</code></p>
                 <div class="code tl">
