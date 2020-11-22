@@ -18,7 +18,8 @@ use Del\Icon;
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2 class="text-muted"><?= $this->t('about') ;?> Bone</h2>
-                <p class="text-muted"><?= $this->t('index.intro') ?></p>
+                <p class="text-muted">Be ye wantin a DIC middleware based framework peppered with local pirate lingo?
+                    It be the most awesome framework in the seven seas! Garr!</p>
                 <code>composer create-project delboy1978uk/boneframework your/path/here dev-master</code>
             </div>
         </div>
