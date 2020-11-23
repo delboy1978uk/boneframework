@@ -100,23 +100,26 @@
                 functionality.</p>
             <ul class="list-group text-left">
                 <li class="list-group-item">
-                    RouterConfigInterface <span class="pull-right">To set up routes to controller methods</span>
-                </li>
-                <li class="list-group-item">
-                    I18nRegistrationInterface <span class="pull-right">To set up translation directories</span>
-                </li>
-                <li class="list-group-item">
                     AssetRegistrationInterface <span class="pull-right">For vendor package asset folders</span>
                 </li>
                 <li class="list-group-item">
-                    ViewRegistrationInterface <span class="pull-right">To set up view folders</span>
+                    CommandRegistrationInterface <span class="pull-right">To add bone CLI commands</span>
                 </li>
                 <li class="list-group-item">
                     EntityRegistrationInterface <span class="pull-right">To set up
                         <a href="//github.com/delboy1978uk/bone-doctrine">bone-doctrine</a> database entity folders</span>
                 </li>
                 <li class="list-group-item">
-                    CommandRegistrationInterface <span class="pull-right">To add bone CLI commands</span>
+                    I18nRegistrationInterface <span class="pull-right">To set up translation directories</span>
+                </li>
+                <li class="list-group-item">
+                    MiddlewareRegistrationInterface <span class="pull-right">To add middleware to to the container</span>
+                </li>
+                <li class="list-group-item">
+                    RouterConfigInterface <span class="pull-right">To set up routes to controller methods</span>
+                </li>
+                <li class="list-group-item">
+                    ViewRegistrationInterface <span class="pull-right">To set up view folders</span>
                 </li>
             </ul>
             <br>
