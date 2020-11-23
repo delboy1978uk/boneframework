@@ -58,11 +58,11 @@ class IndexControllerTest extends Test
 
     public function testIndexAction()
     {
-        $this->assertInstanceOf(HtmlResponse::class, $this->controller->indexAction(new ServerRequest([], [], new Uri('/')), []));
+        $this->assertInstanceOf(HtmlResponse::class, $this->controller->index(new ServerRequest([], [], new Uri('/')), []));
     }
 
     public function testLearnAction()
     {
-        $this->assertInstanceOf(ResponseInterface::class, $this->controller->learnAction(new ServerRequest([], [], '/'), []));
+        $this->assertInstanceOf(ResponseInterface::class, $this->controller->learn(new ServerRequest([], [], '/'), []));
     }
 }
