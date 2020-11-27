@@ -2,6 +2,7 @@
 
 return [
     'default_layout' => 'layouts::bone',
+    'admin_layout' => 'layouts::admin',
     'error_pages' => [
         'exception' => 'error::error',
         401 => 'error::not-authorised',

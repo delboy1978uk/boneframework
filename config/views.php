@@ -7,5 +7,7 @@
 return [
     'views' => [
 //        'boneuser' => 'src/App/View/bone-user',
+//        'email.user' => 'src/App/View/email',
+//        'contact' => 'src/App/View/contact',
     ],
 ];

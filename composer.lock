@@ -40,16 +40,16 @@
         },
         {
             "name": "delboy1978uk/barnacle",
-            "version": "v2.3.2",
+            "version": "v2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/barnacle.git",
-                "reference": "fb777b9bd8b1af0390b02ef45f6f5504653c340d"
+                "reference": "02d6919353763dbb471926102f72746f21f34186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/barnacle/zipball/fb777b9bd8b1af0390b02ef45f6f5504653c340d",
-                "reference": "fb777b9bd8b1af0390b02ef45f6f5504653c340d",
+                "url": "https://api.github.com/repos/delboy1978uk/barnacle/zipball/02d6919353763dbb471926102f72746f21f34186",
+                "reference": "02d6919353763dbb471926102f72746f21f34186",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2020-03-08T02:07:37+00:00"
+            "time": "2020-11-26T14:25:08+00:00"
         },
         {
             "name": "delboy1978uk/bone",
@@ -188,16 +188,16 @@
         },
         {
             "name": "delboy1978uk/bone-controller",
-            "version": "v1.1.2",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-controller.git",
-                "reference": "adad7a36c51d32e9506eb416f455ee177873e9c5"
+                "reference": "f4c6719b07c802ad4d6f855ba774595b0961c46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-controller/zipball/adad7a36c51d32e9506eb416f455ee177873e9c5",
-                "reference": "adad7a36c51d32e9506eb416f455ee177873e9c5",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-controller/zipball/f4c6719b07c802ad4d6f855ba774595b0961c46f",
+                "reference": "f4c6719b07c802ad4d6f855ba774595b0961c46f",
                 "shasum": ""
             },
             "require": {
@@ -232,7 +232,7 @@
                 }
             ],
             "description": "Controller package for Bone Framework",
-            "time": "2020-03-15T20:20:05+00:00"
+            "time": "2020-11-27T16:09:42+00:00"
         },
         {
             "name": "delboy1978uk/bone-db",
@@ -277,16 +277,16 @@
         },
         {
             "name": "delboy1978uk/bone-firewall",
-            "version": "v1.2.5",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-firewall.git",
-                "reference": "406169dabb23ffed9c1c7fbe096fd8e566752c63"
+                "reference": "20944889c609c5511a9bdb0ab468f6e9f761bb25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/406169dabb23ffed9c1c7fbe096fd8e566752c63",
-                "reference": "406169dabb23ffed9c1c7fbe096fd8e566752c63",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/20944889c609c5511a9bdb0ab468f6e9f761bb25",
+                "reference": "20944889c609c5511a9bdb0ab468f6e9f761bb25",
                 "shasum": ""
             },
             "require": {
@@ -319,32 +319,33 @@
                 }
             ],
             "description": "Firewall package for Bone MVC Framework",
-            "time": "2020-11-24T13:11:21+00:00"
+            "time": "2020-11-24T17:30:38+00:00"
         },
         {
             "name": "delboy1978uk/bone-http",
-            "version": "v2.0.4",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-http.git",
-                "reference": "9e8be3c418abce1b40d37e7482dbbfe1551ebf24"
+                "reference": "f5dfc1665f0262f717a9f3d2d0dd5790c6683ab2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/9e8be3c418abce1b40d37e7482dbbfe1551ebf24",
-                "reference": "9e8be3c418abce1b40d37e7482dbbfe1551ebf24",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/f5dfc1665f0262f717a9f3d2d0dd5790c6683ab2",
+                "reference": "f5dfc1665f0262f717a9f3d2d0dd5790c6683ab2",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.3",
                 "delboy1978uk/bone-router": "^1.0",
+                "delboy1978uk/bone-server": "^1.2.0",
+                "laminas/laminas-diactoros": "2.*",
                 "php": ">7.1",
                 "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
                 "codeception/codeception": "^2.2",
-                "laminas/laminas-diactoros": "2.*",
                 "roave/security-advisories": "dev-master"
             },
             "type": "library",
@@ -364,7 +365,7 @@
                 }
             ],
             "description": "Http package for Bone MVC Framework",
-            "time": "2020-11-23T13:11:50+00:00"
+            "time": "2020-11-27T03:20:02+00:00"
         },
         {
             "name": "delboy1978uk/bone-i18n",
@@ -545,21 +546,22 @@
         },
         {
             "name": "delboy1978uk/bone-view",
-            "version": "v1.3.5",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-view.git",
-                "reference": "a81ccee9c33fb8c7ba71676fab90e11529f4a421"
+                "reference": "ca9fd34fac19a760aac9a5d77e3f13ff338aab82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-view/zipball/a81ccee9c33fb8c7ba71676fab90e11529f4a421",
-                "reference": "a81ccee9c33fb8c7ba71676fab90e11529f4a421",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-view/zipball/ca9fd34fac19a760aac9a5d77e3f13ff338aab82",
+                "reference": "ca9fd34fac19a760aac9a5d77e3f13ff338aab82",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.2",
                 "delboy1978uk/bone-http": "^2.0",
+                "delboy1978uk/bone-server": "^1.2",
                 "delboy1978uk/icon": "^1.0",
                 "league/plates": "^3.3",
                 "php": ">7.1"
@@ -585,7 +587,7 @@
                 }
             ],
             "description": "View package for Bone MVC Framework",
-            "time": "2020-11-24T13:05:35+00:00"
+            "time": "2020-11-27T16:31:10+00:00"
         },
         {
             "name": "delboy1978uk/booty",
@@ -1794,24 +1796,24 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930"
+                "reference": "21e45061c3429b1e06233475cc0e1f6fc774d5b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e55d12f9d6a0e7f9c85992b73df1267f46279930",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/21e45061c3429b1e06233475cc0e1f6fc774d5b0",
+                "reference": "21e45061c3429b1e06233475cc0e1f6fc774d5b0",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5",
+                "php": ">=7.2.5",
                 "psr/container": "^1.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.4|^4.4|^5.0"
+                "symfony/phpunit-bridge": "^5.0"
             },
             "type": "library",
             "extra": {
@@ -1840,7 +1842,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2020-03-03T09:12:48+00:00"
+            "time": "2020-11-24T20:35:42+00:00"
         },
         {
             "name": "psr/container",
@@ -3005,16 +3007,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.3",
+            "version": "9.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "6b20e2055f7c29b56cb3870b3de7cc463d7add41"
+                "reference": "0a7f0acf9269c190fd982b5c04423feae986b6e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6b20e2055f7c29b56cb3870b3de7cc463d7add41",
-                "reference": "6b20e2055f7c29b56cb3870b3de7cc463d7add41",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0a7f0acf9269c190fd982b5c04423feae986b6e0",
+                "reference": "0a7f0acf9269c190fd982b5c04423feae986b6e0",
                 "shasum": ""
             },
             "require": {
@@ -3068,7 +3070,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-10-30T10:46:41+00:00"
+            "time": "2020-11-27T06:15:15+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3452,12 +3454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "563faed0e5e24a5b639fbd30d8f3921bb11fccc0"
+                "reference": "fa05999280434eacf621cc78ab9179d9394c7998"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/563faed0e5e24a5b639fbd30d8f3921bb11fccc0",
-                "reference": "563faed0e5e24a5b639fbd30d8f3921bb11fccc0",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/fa05999280434eacf621cc78ab9179d9394c7998",
+                "reference": "fa05999280434eacf621cc78ab9179d9394c7998",
                 "shasum": ""
             },
             "conflict": {
@@ -3581,7 +3583,7 @@
                 "paragonie/random_compat": "<2",
                 "passbolt/passbolt_api": "<2.11",
                 "paypal/merchant-sdk-php": "<3.12",
-                "pear/archive_tar": "<1.4.4",
+                "pear/archive_tar": "<1.4.11",
                 "personnummer/personnummer": "<3.0.2",
                 "phpfastcache/phpfastcache": ">=5,<5.0.13",
                 "phpmailer/phpmailer": "<6.1.6",
@@ -3748,7 +3750,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-11-23T21:01:44+00:00"
+            "time": "2020-11-26T07:02:13+00:00"
         },
         {
             "name": "sebastian/cli-parser",
