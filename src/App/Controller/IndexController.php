@@ -3,16 +3,15 @@
 namespace Bone\App\Controller;
 
 use Bone\Controller\Controller;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Bone\Http\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Class IndexController
  * If you need to create a constructor, edit the package class to set it  up automatically via dependency injection
- * @package App\Controller
  *
- * The below annotations are for use with delboy1978uk/bone-open-api, youy can remove them if you wont be using it
+ * The below annotations are for use with delboy1978uk/bone-open-api, you can remove them if you wont be using it
  * @OA\Info(
  *     version="1.0.0",
  *     title="Bone Framework API",
