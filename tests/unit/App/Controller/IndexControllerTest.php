@@ -3,6 +3,7 @@
 namespace BoneMvcTest\Controller;
 
 use Bone\App\Controller\IndexController;
+use Bone\Http\Response\HtmlResponse;
 use Barnacle\Container;
 use Bone\Controller\Init;
 use Bone\View\ViewEngine;
@@ -10,7 +11,6 @@ use Bone\Server\SiteConfig;
 use Codeception\TestCase\Test;
 use Bone\Router\Router;
 use Psr\Http\Message\ResponseInterface;
-use Laminas\Diactoros\Response\HtmlResponse;
 use Laminas\Diactoros\ServerRequest;
 use Laminas\Diactoros\Uri;
 use Laminas\I18n\Translator\Translator;

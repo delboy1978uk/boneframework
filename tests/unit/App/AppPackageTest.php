@@ -55,5 +55,7 @@ class AppPackageTest extends Test
         $router = $this->package->addRoutes($container, $router);
 
         $this->assertInstanceOf(Router::class, $router);
+        $this->assertCount(3, $this->package->addViews());
+        $this->assertEmpty($this->package->addViewExtensions($container));
     }
 }
