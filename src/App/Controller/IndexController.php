@@ -51,7 +51,7 @@ class IndexController extends Controller
     public function index(ServerRequestInterface $request) : ResponseInterface
     {
         $body = $this->view->render('app::index');
-
+throw new \Exception('argh');
         return new HtmlResponse($body);
     }
 

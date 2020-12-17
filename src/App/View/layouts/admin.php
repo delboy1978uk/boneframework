@@ -27,33 +27,21 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
     <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title><?= isset($title) ? $this->e($title) : 'The Lonergan Clinic';?></title>
+    <title><?= isset($title) ? $this->e($title) : 'Bone Framework';?></title>
 
-    <!-- Bootstrap Core CSS -->
     <?= Cdn::bootstrapCssLink() ;?>
     <?= Cdn::delCssLink() ;?>
     <?= Cdn::fontAwesomeCssLink('4.7.1') ;?>
     <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css"/ >
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!--Javascript -->
     <?= Cdn::jQueryJavascript() ?>
 
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <link rel="stylesheet" href="/plugins/jqvmap/jqvmap.min.css">
     <link rel="stylesheet" href="/css/admin/adminlte.min.css">
-    <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css"
-    <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.css">
-
-    <link rel="stylesheet" href="/plugins/fullcalendar/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-daygrid/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-timegrid/main.min.css">
-    <link rel="stylesheet" href="/plugins/fullcalendar-bootstrap/main.min.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -129,46 +117,9 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="/admin/calendar" class="nav-link">
+                        <a href="/admin/somewhere" class="nav-link">
                             <i class="nav-icon fa fa-calendar"></i>
-                            <p>Calendar<span class="badge badge-danger right">2</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/self-referrals" class="nav-link">
-                            <i class="nav-icon fa fa-phone"></i>
-                            <p>Self Referrals</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/referrals" class="nav-link">
-                            <i class="nav-icon fa fa-edit"></i>
-                            <p>Referrals</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/messages" class="nav-link">
-                            <i class="nav-icon fa fa-envelope"></i>
-                            <p>Messages</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/patients" class="nav-link">
-                            <i class="nav-icon fa fa-address-book"></i>
-                            <p>Patients</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/dentists" class="nav-link">
-                            <i class="nav-icon fa fa-users"></i>
-                            <p>Dentists</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin/dog" class="nav-link">
-                            <i class="nav-icon fa fa-users"></i>
-                            <p>Dogs</p>
+                            <p>Some Admin Link!</p>
                         </a>
                     </li>
                 </ul>
@@ -184,8 +135,9 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
     <footer class="text-muted">
         <div class="container">
             <br>
-            <p><?= Icon::HOME ?>  13 St Patrick's Avenue, Castlebar, Co. Mayo, Ireland | <?= Icon::PHONE ?> 09490 60645 | <?= Icon::ENVELOPE ?> <a href="mailto:info@thelonerganclinic.com">info@thelonerganclinic.com</a>.</p>
-            <p>© 2020 <?= date('Y') > 2020 ? ' - ' . date('Y') : '' ?> The Lonergan Clinic | Site created by <a target="_blank" href="//mcleandigital.co.uk">McLean Digital Limited</a></p>
+            <?php /** @todo get vars in here */ ?>
+            <p><?= Icon::HOME ?>  Address here | <?= Icon::PHONE ?> phone here | <?= Icon::ENVELOPE ?> <a href="mailto:emailhere">emailhere</a>.</p>
+            <p>© 2020 <?= date('Y') > 2020 ? ' - ' . date('Y') : '' ?> sitename | Site created by <a target="_blank" href="//authorurl">author</a></p>
         </div>
     </footer>
 
@@ -200,15 +152,8 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/plugins/chart.js/Chart.min.js"></script>
-<script src="/plugins/sparklines/sparkline.js"></script>
-<script src="/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="/plugins/jquery-knob/jquery.knob.min.js"></script>
 <script src="/plugins/moment/moment.min.js"></script>
 <script src="/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="/plugins/summernote/summernote-bs4.min.js"></script>
-<script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/admin/adminlte.js"></script>
 <script src="/js/jquery.datetimepicker.js"></script>
 <script type="text/javascript">
