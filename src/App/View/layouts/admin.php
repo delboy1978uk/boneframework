@@ -52,7 +52,7 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="/admin" class="nav-link">Home</a>
+                <a href="/user/home" class="nav-link">Home</a>
             </li>
         </ul>
 
@@ -92,7 +92,7 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
     </nav>
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <a href="/admin" class="brand-link">
+        <a href="/user/home" class="brand-link">
             <img src="/img/tlc-logo-header.png" alt="AdminLTE Logo" class="brand-image "
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Administration</span>
@@ -104,7 +104,7 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
                     <img src="<?= $image ? $image->outputBase64Src() : '' ?>" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="/admin" class="d-block"><?php
+                    <a href="/user/home" class="d-block"><?php
                         $name = $user->getEmail();
                         if ($person->getFirstname()) {
                             $name = $person->getLastname() ? $person->getFirstname() . ' ' . $person->getLastname() : $person->getFirstname();
