@@ -4,9 +4,22 @@
   "authors": [
     {
       "name": "Derek Stephen McLean",
-      "email": "delboy1978uk@gmail.com"
+      "email": "delboy1978uk@gmail.com",
+      "role": "developer",
     }
   ],
+  "keywords": [
+    "bone",
+    "framework",
+    "middleware",
+    "psr-7",
+    "psr7",
+    "psr-11",
+    "psr11",
+    "psr-15",
+    "psr15"
+  ],
+  "homepage": "https://github.com/delboy1978uk/boneframework",
   "license": "MIT",
   "require": {
     "php": "^7.1",
