@@ -104,3 +104,14 @@ footer div p a:visited, footer div p a {
     text-align: center;
   }
 }
+.img-circle {
+  border-radius: 50%;
+}
+#user-avatar {
+  height: 40px;
+  margin-right: 10px;
+}
+a.nav-link.dropdown-toggle.avatar {
+  padding-top: 0;
+  padding-bottom: 0;
+}

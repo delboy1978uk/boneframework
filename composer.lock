@@ -188,20 +188,21 @@
         },
         {
             "name": "delboy1978uk/bone-controller",
-            "version": "v1.2.2",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-controller.git",
-                "reference": "f4c6719b07c802ad4d6f855ba774595b0961c46f"
+                "reference": "7c90c35d5f5c53c8cb484b986ed10aadcdd4e6e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-controller/zipball/f4c6719b07c802ad4d6f855ba774595b0961c46f",
-                "reference": "f4c6719b07c802ad4d6f855ba774595b0961c46f",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-controller/zipball/7c90c35d5f5c53c8cb484b986ed10aadcdd4e6e6",
+                "reference": "7c90c35d5f5c53c8cb484b986ed10aadcdd4e6e6",
                 "shasum": ""
             },
             "require": {
                 "delboy1978uk/barnacle": "^2.3",
+                "delboy1978uk/bone-db": "^1.2",
                 "delboy1978uk/bone-i18n": "^1.1",
                 "delboy1978uk/bone-log": "^1.0",
                 "delboy1978uk/bone-server": "^1.0",
@@ -232,20 +233,20 @@
                 }
             ],
             "description": "Controller package for Bone Framework",
-            "time": "2020-11-27T16:09:42+00:00"
+            "time": "2020-12-19T18:32:04+00:00"
         },
         {
             "name": "delboy1978uk/bone-db",
-            "version": "v1.1.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-db.git",
-                "reference": "a1960594e612ee0c04c46c3d45906d3494dabeb1"
+                "reference": "1972f8367682a61c81fd1ae07cdb75db5e8c1eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-db/zipball/a1960594e612ee0c04c46c3d45906d3494dabeb1",
-                "reference": "a1960594e612ee0c04c46c3d45906d3494dabeb1",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-db/zipball/1972f8367682a61c81fd1ae07cdb75db5e8c1eda",
+                "reference": "1972f8367682a61c81fd1ae07cdb75db5e8c1eda",
                 "shasum": ""
             },
             "require": {
@@ -272,8 +273,8 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Db package for Bone MVC Framework",
-            "time": "2020-03-08T01:58:04+00:00"
+            "description": "Db package for Bone Framework",
+            "time": "2020-12-19T16:15:15+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -418,16 +419,16 @@
         },
         {
             "name": "delboy1978uk/bone-log",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-log.git",
-                "reference": "e44fe4d9b35950a13a338356278fd0f92b2b395b"
+                "reference": "78ab147c3df592b568748712325e444b69e79cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-log/zipball/e44fe4d9b35950a13a338356278fd0f92b2b395b",
-                "reference": "e44fe4d9b35950a13a338356278fd0f92b2b395b",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-log/zipball/78ab147c3df592b568748712325e444b69e79cf1",
+                "reference": "78ab147c3df592b568748712325e444b69e79cf1",
                 "shasum": ""
             },
             "require": {
@@ -456,7 +457,7 @@
                 }
             ],
             "description": "Log package for Bone MVC Framework",
-            "time": "2020-03-15T20:05:15+00:00"
+            "time": "2020-12-20T04:54:43+00:00"
         },
         {
             "name": "delboy1978uk/bone-router",
@@ -694,16 +695,16 @@
         },
         {
             "name": "delboy1978uk/form",
-            "version": "v2.3.6",
+            "version": "v2.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/form.git",
-                "reference": "973c28e445fc148dfd94a50016a91fb52c9cc6a6"
+                "reference": "6c7ccf07b214561f31e521c127d335470a413dee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/form/zipball/973c28e445fc148dfd94a50016a91fb52c9cc6a6",
-                "reference": "973c28e445fc148dfd94a50016a91fb52c9cc6a6",
+                "url": "https://api.github.com/repos/delboy1978uk/form/zipball/6c7ccf07b214561f31e521c127d335470a413dee",
+                "reference": "6c7ccf07b214561f31e521c127d335470a413dee",
                 "shasum": ""
             },
             "require": {
@@ -742,20 +743,20 @@
                 }
             ],
             "description": "Super Easy HTML form generation.",
-            "time": "2020-11-28T15:11:24+00:00"
+            "time": "2020-12-16T14:31:07+00:00"
         },
         {
             "name": "delboy1978uk/icon",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/icon.git",
-                "reference": "79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6"
+                "reference": "86dce2e73c62aed371387640ac7557b073f96235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/icon/zipball/79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6",
-                "reference": "79b3ddb4cc5e94f4877fc359eccb35c6dfd259a6",
+                "url": "https://api.github.com/repos/delboy1978uk/icon/zipball/86dce2e73c62aed371387640ac7557b073f96235",
+                "reference": "86dce2e73c62aed371387640ac7557b073f96235",
                 "shasum": ""
             },
             "type": "library",
@@ -775,7 +776,7 @@
                 }
             ],
             "description": "PHP Class for generating Font Awesome icons.",
-            "time": "2020-11-22T13:15:50+00:00"
+            "time": "2020-12-19T16:53:55+00:00"
         },
         {
             "name": "delboy1978uk/image",
@@ -820,16 +821,16 @@
         },
         {
             "name": "delboy1978uk/router",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/router.git",
-                "reference": "371d2b772bc86f441f8b62db2907ba5a0ecfb18b"
+                "reference": "48c585c732d2800b5bd5a5827dbbffda6c47b64c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/router/zipball/371d2b772bc86f441f8b62db2907ba5a0ecfb18b",
-                "reference": "371d2b772bc86f441f8b62db2907ba5a0ecfb18b",
+                "url": "https://api.github.com/repos/delboy1978uk/router/zipball/48c585c732d2800b5bd5a5827dbbffda6c47b64c",
+                "reference": "48c585c732d2800b5bd5a5827dbbffda6c47b64c",
                 "shasum": ""
             },
             "require": {
@@ -884,7 +885,7 @@
                 "psr7",
                 "router"
             ],
-            "time": "2020-12-06T12:46:18+00:00"
+            "time": "2020-12-19T13:50:59+00:00"
         },
         {
             "name": "delboy1978uk/session",
@@ -2935,16 +2936,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.12.1",
+            "version": "1.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d"
+                "reference": "245710e971a030f42e08f4912863805570f23d39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/8ce87516be71aae9b956f81906aaf0338e0d8a2d",
-                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/245710e971a030f42e08f4912863805570f23d39",
+                "reference": "245710e971a030f42e08f4912863805570f23d39",
                 "shasum": ""
             },
             "require": {
@@ -2956,7 +2957,7 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^6.0",
-                "phpunit/phpunit": "^8.0 || ^9.0 <9.3"
+                "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "type": "library",
             "extra": {
@@ -2994,7 +2995,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2020-09-29T09:10:42+00:00"
+            "time": "2020-12-19T10:15:11+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4603,16 +4604,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3e0564fb08d44a98bd5f1960204c958e57bd586b"
+                "reference": "47c02526c532fb381374dab26df05e7313978976"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3e0564fb08d44a98bd5f1960204c958e57bd586b",
-                "reference": "3e0564fb08d44a98bd5f1960204c958e57bd586b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/47c02526c532fb381374dab26df05e7313978976",
+                "reference": "47c02526c532fb381374dab26df05e7313978976",
                 "shasum": ""
             },
             "require": {
@@ -4679,20 +4680,34 @@
                 "console",
                 "terminal"
             ],
-            "time": "2020-11-28T11:24:18+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-18T08:03:05+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "b8d8eb06b0942e84a69e7acebc3e9c1e6e6e7256"
+                "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/b8d8eb06b0942e84a69e7acebc3e9c1e6e6e7256",
-                "reference": "b8d8eb06b0942e84a69e7acebc3e9c1e6e6e7256",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
+                "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
                 "shasum": ""
             },
             "require": {
@@ -4727,7 +4742,21 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2020-10-28T21:31:18+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-08T17:02:38+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4781,16 +4810,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "aa13a09811e6d2ad43f8fb336bebdb7691d85d3c"
+                "reference": "1c93f7a1dff592c252574c79a8635a8a80856042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/aa13a09811e6d2ad43f8fb336bebdb7691d85d3c",
-                "reference": "aa13a09811e6d2ad43f8fb336bebdb7691d85d3c",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/1c93f7a1dff592c252574c79a8635a8a80856042",
+                "reference": "1c93f7a1dff592c252574c79a8635a8a80856042",
                 "shasum": ""
             },
             "require": {
@@ -4845,7 +4874,21 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-11-01T16:14:45+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-18T08:03:05+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -4911,16 +4954,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "fd8305521692f27eae3263895d1ef1571c71a78d"
+                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/fd8305521692f27eae3263895d1ef1571c71a78d",
-                "reference": "fd8305521692f27eae3263895d1ef1571c71a78d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
+                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
                 "shasum": ""
             },
             "require": {
@@ -4951,7 +4994,21 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-11-18T09:42:36+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-08T17:02:38+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -5401,16 +5458,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242"
+                "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/40e975edadd4e32cd16f3753b3bad65d9ac48242",
-                "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242",
+                "url": "https://api.github.com/repos/symfony/string/zipball/5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
+                "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
                 "shasum": ""
             },
             "require": {
@@ -5463,20 +5520,34 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2020-10-24T12:08:07+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-05T07:33:16+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "bb73619b2ae5121bbbcd9f191dfd53ded17ae598"
+                "reference": "290ea5e03b8cf9b42c783163123f54441fb06939"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/bb73619b2ae5121bbbcd9f191dfd53ded17ae598",
-                "reference": "bb73619b2ae5121bbbcd9f191dfd53ded17ae598",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/290ea5e03b8cf9b42c783163123f54441fb06939",
+                "reference": "290ea5e03b8cf9b42c783163123f54441fb06939",
                 "shasum": ""
             },
             "require": {
@@ -5521,7 +5592,21 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-11-28T10:57:20+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-12-08T17:02:38+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -5627,5 +5712,6 @@
         "ext-json": "*",
         "ext-pdo": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
