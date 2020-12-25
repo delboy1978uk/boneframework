@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/delboy1978uk/boneframework.png?branch=master)](https://travis-ci.org/delboy1978uk/boneframework) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/boneframework/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/boneframework/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/boneframework/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/boneframework/?branch=master)<br />
 Be ye wantin a PHP framework peppered with local pirate lingo?<br />
 It be the most fearsome framework in the seven seas!<br />
-http://bonemvc.delboysplace.co.uk
+http://boneframework.delboysplace.co.uk
 
 ## features
 - PSR-7 http messaging 
