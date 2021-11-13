@@ -2,7 +2,7 @@
 
 return [
     'site' => [
-        'title' => 'WTF',
+        'title' => 'Bone Framework',
         'domain' => 'awesome.scot',
         'baseUrl' => 'https://awesome.scot',
         'contactEmail' => 'abc@awesome.scot',
