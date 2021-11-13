@@ -2,7 +2,7 @@
 
 return [
     'site' => [
-        'title' => 'Bone MVC Framework',
+        'title' => 'WTF',
         'domain' => 'awesome.scot',
         'baseUrl' => 'https://awesome.scot',
         'contactEmail' => 'abc@awesome.scot',

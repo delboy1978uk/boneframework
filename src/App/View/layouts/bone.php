@@ -1,7 +1,9 @@
 <?php
+
 use Del\Cdn;
 use Del\Icon;
 
+/** @var \Bone\Server\SiteConfig $config */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +24,7 @@ use Del\Icon;
     <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title><?= isset($title) ? $this->e($title) : 'Bone Framework';?></title>
+    <title><?= isset($config) ? $this->e($config->getTitle()) : 'Bone Framework';?></title>
 
     <!-- Bootstrap Core CSS -->
     <?= Cdn::bootstrapCssLink() ;?>
