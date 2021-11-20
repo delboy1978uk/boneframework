@@ -22,13 +22,13 @@ details on our default VirtualHost config etc. If you already have a setup, inst
 composer create-project delboy1978uk/boneframework your/path/here
 ```
 #### via docker
-The Docker dev environment saves you from all the usual devops nonsense. If you can run `docker` and `docker-compose` 
-working on your machine, simply add `awesome.scot` to your `/etc/hosts` using the IP of your Docker machine (usually 
-127.0.0.1 on Linux, or a VM IP like 192.168.99.100 (run `docker-machine env` to find out)). Clone the server, then start 
-it up.
+The Docker dev environment saves you from all the usual devops nonsense. You can add `awesome.scot` to your `/etc/hosts` 
+to `127.0.0.1`. Clone `delboy1978uk/lamp`, then replace the code folder `delboy1978uk/boneframework`, then start it up.
 ```
-git clone https://github.com/delboy1978uk/boneframework myproject
+git clone https://github.com/delboy1978uk/lamp myproject
 cd myproject
+rm -fr code
+git clone https://github.com/delboy1978uk/boneframework code
 docker-compose up
 ```
 Then browse to `https://awesome.scot`, and you will see the site running.
@@ -47,7 +47,6 @@ To shut down your server, CTRL-C out, then type `docker-compose down`.
 ## a quick introduction to bone framework
 #### skeleton project files
 There are a few folders and files in your project, here's a quick description:
-- build (Docker dev environment files)
 - config (Configuration for your application)
 - data (Files your project will use (translations, cache, uploads, etc))
 - public (The usual index.php endpoint and front end assets like css and images and js)
