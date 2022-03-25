@@ -312,16 +312,16 @@
         },
         {
             "name": "delboy1978uk/bone-firewall",
-            "version": "v1.2.8",
+            "version": "v1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-firewall.git",
-                "reference": "e0dd6eaae7c5d8950f250486396b04527c0963b6"
+                "reference": "63da2aea08481cd4bf76aac2eb3536f8d791706e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/e0dd6eaae7c5d8950f250486396b04527c0963b6",
-                "reference": "e0dd6eaae7c5d8950f250486396b04527c0963b6",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-firewall/zipball/63da2aea08481cd4bf76aac2eb3536f8d791706e",
+                "reference": "63da2aea08481cd4bf76aac2eb3536f8d791706e",
                 "shasum": ""
             },
             "require": {
@@ -333,9 +333,11 @@
                 "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
-                "codeception/codeception": "^2.2",
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^2.0",
+                "codeception/module-phpbrowser": "^1.0.0",
                 "laminas/laminas-diactoros": "^2.2",
-                "roave/security-advisories": "dev-master"
+                "roave/security-advisories": "dev-latest"
             },
             "type": "library",
             "autoload": {
@@ -353,25 +355,25 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Firewall package for Bone MVC Framework",
+            "description": "Firewall package for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-firewall/issues",
-                "source": "https://github.com/delboy1978uk/bone-firewall/tree/v1.2.8"
+                "source": "https://github.com/delboy1978uk/bone-firewall/tree/v1.2.9"
             },
-            "time": "2020-11-28T10:46:08+00:00"
+            "time": "2022-02-26T23:07:18+00:00"
         },
         {
             "name": "delboy1978uk/bone-http",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-http.git",
-                "reference": "5e83727dba6ef5290d3e5ed46f8505c00ff18b1e"
+                "reference": "5349e7c68e6a1d601b02da02753e4902c406484a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/5e83727dba6ef5290d3e5ed46f8505c00ff18b1e",
-                "reference": "5e83727dba6ef5290d3e5ed46f8505c00ff18b1e",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-http/zipball/5349e7c68e6a1d601b02da02753e4902c406484a",
+                "reference": "5349e7c68e6a1d601b02da02753e4902c406484a",
                 "shasum": ""
             },
             "require": {
@@ -405,12 +407,12 @@
                     "email": "delboy1978uk@gmail.com"
                 }
             ],
-            "description": "Http package for Bone MVC Framework",
+            "description": "Http package for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-http/issues",
-                "source": "https://github.com/delboy1978uk/bone-http/tree/v2.3.1"
+                "source": "https://github.com/delboy1978uk/bone-http/tree/v2.3.2"
             },
-            "time": "2022-03-09T18:28:05+00:00"
+            "time": "2022-03-25T01:50:55+00:00"
         },
         {
             "name": "delboy1978uk/bone-i18n",
