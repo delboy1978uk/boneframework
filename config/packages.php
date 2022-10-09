@@ -3,6 +3,7 @@
 use Bone\App\AppPackage;
 use Bone\BoneDoctrine\BoneDoctrinePackage;
 use Bone\Mail\MailPackage;
+use Bone\OAuth2\BoneOAuth2Package;
 use Bone\Paseto\PasetoPackage;
 use Del\Person\PersonPackage;
 use Bone\User\BoneUserPackage;
@@ -16,6 +17,7 @@ return [
         PersonPackage::class,
         UserPackage::class,
         BoneUserPackage::class,
+        BoneOAuth2Package::class,
         AppPackage::class,
     ],
 ];
