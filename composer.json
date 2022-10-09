@@ -32,7 +32,8 @@
     "delboy1978uk/image": "^2.1",
     "delboy1978uk/bone-mail": "^1.1",
     "delboy1978uk/bone-doctrine": "^1.5",
-    "delboy1978uk/bone-paseto": "^1.0"
+    "delboy1978uk/bone-paseto": "^1.0",
+    "delboy1978uk/bone-user": "^2.2"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

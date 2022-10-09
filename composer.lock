@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c22a52439e67962565c167dd99b5997b",
+    "content-hash": "84b30e6e1211025d098e2062311b72b1",
     "packages": [
         {
             "name": "delboy1978uk/barnacle",
@@ -723,6 +723,57 @@
             "time": "2021-11-20T15:01:49+00:00"
         },
         {
+            "name": "delboy1978uk/bone-user",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-user.git",
+                "reference": "0f0725d2e33ca08a1a193cf64595806121f0831c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user/zipball/0f0725d2e33ca08a1a193cf64595806121f0831c",
+                "reference": "0f0725d2e33ca08a1a193cf64595806121f0831c",
+                "shasum": ""
+            },
+            "require": {
+                "delboy1978uk/bone-doctrine": "^1.4",
+                "delboy1978uk/bone-mail": "^1.0",
+                "delboy1978uk/bone-paseto": "^1.0",
+                "delboy1978uk/form": "^2.0",
+                "delboy1978uk/user": "^4.0",
+                "laminas/laminas-diactoros": "^2.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^1.0.0",
+                "codeception/module-phpbrowser": "^1.0.0",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\User\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "Integration of delboy1978uk/user for Bone Framework",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/bone-user/issues",
+                "source": "https://github.com/delboy1978uk/bone-user/tree/v2.2.2"
+            },
+            "time": "2022-04-03T20:38:00+00:00"
+        },
+        {
             "name": "delboy1978uk/bone-view",
             "version": "v1.7.1",
             "source": {
@@ -852,6 +903,51 @@
                 "source": "https://github.com/delboy1978uk/cdn/tree/v2.0.0"
             },
             "time": "2020-11-19T10:22:21+00:00"
+        },
+        {
+            "name": "delboy1978uk/country",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/country.git",
+                "reference": "93e4af1ebf0c3a4b94013bd1a71f8ac7f7600448"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/country/zipball/93e4af1ebf0c3a4b94013bd1a71f8ac7f7600448",
+                "reference": "93e4af1ebf0c3a4b94013bd1a71f8ac7f7600448",
+                "shasum": ""
+            },
+            "require": {
+                "delboy1978uk/image": "^2.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0",
+                "codeception/module-asserts": "^1.1",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Del\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "A PHP library of countries and flags.",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/country/issues",
+                "source": "https://github.com/delboy1978uk/country/tree/v2.4.0"
+            },
+            "time": "2022-03-10T01:20:32+00:00"
         },
         {
             "name": "delboy1978uk/css",
@@ -1024,6 +1120,52 @@
             "time": "2022-01-02T15:34:18+00:00"
         },
         {
+            "name": "delboy1978uk/person",
+            "version": "v6.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/person.git",
+                "reference": "cf76c59e4ea676b6f8b59cdada4833b4b9317963"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/person/zipball/cf76c59e4ea676b6f8b59cdada4833b4b9317963",
+                "reference": "cf76c59e4ea676b6f8b59cdada4833b4b9317963",
+                "shasum": ""
+            },
+            "require": {
+                "delboy1978uk/bone-doctrine": "^1.4",
+                "delboy1978uk/country": "^2.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0",
+                "codeception/module-asserts": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DelTesting\\": "tests/unit/Del/",
+                    "Del\\Person\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "A persistable person entity, repository, and service.",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/person/issues",
+                "source": "https://github.com/delboy1978uk/person/tree/v6.4.1"
+            },
+            "time": "2022-01-03T10:57:25+00:00"
+        },
+        {
             "name": "delboy1978uk/router",
             "version": "v4.3.6",
             "source": {
@@ -1140,6 +1282,55 @@
                 "source": "https://github.com/delboy1978uk/session/tree/v1.5.0"
             },
             "time": "2022-03-10T01:59:55+00:00"
+        },
+        {
+            "name": "delboy1978uk/user",
+            "version": "v4.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/user.git",
+                "reference": "c0357caa83736e5da77d8992e41db75c14221d28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/user/zipball/c0357caa83736e5da77d8992e41db75c14221d28",
+                "reference": "c0357caa83736e5da77d8992e41db75c14221d28",
+                "shasum": ""
+            },
+            "require": {
+                "delboy1978uk/bone-console": "^1.1",
+                "delboy1978uk/person": "^6.1",
+                "laminas/laminas-crypt": "^3.3",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0",
+                "codeception/module-asserts": "^1.1",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Del\\": "src/",
+                    "DelTesting\\": "tests/unit/Del/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "A persistable user object",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/user/issues",
+                "source": "https://github.com/delboy1978uk/user/tree/v4.5.1"
+            },
+            "time": "2022-01-03T15:03:03+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2408,6 +2599,70 @@
             "time": "2022-09-13T10:33:30+00:00"
         },
         {
+            "name": "laminas/laminas-crypt",
+            "version": "3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-crypt.git",
+                "reference": "0972bb907fd555c16e2a65309b66720acf2b8699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-crypt/zipball/0972bb907fd555c16e2a65309b66720acf2b8699",
+                "reference": "0972bb907fd555c16e2a65309b66720acf2b8699",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "laminas/laminas-math": "^3.4",
+                "laminas/laminas-servicemanager": "^3.11.2",
+                "laminas/laminas-stdlib": "^3.6",
+                "php": "^7.4 || ~8.0.0 || ~8.1.0",
+                "psr/container": "^1.1"
+            },
+            "conflict": {
+                "zendframework/zend-crypt": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~2.3.0",
+                "phpunit/phpunit": "^9.5.11"
+            },
+            "suggest": {
+                "ext-openssl": "Required for most features of Laminas\\Crypt"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Crypt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Strong cryptography tools and password hashing",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "crypt",
+                "laminas"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-crypt/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-crypt/issues",
+                "rss": "https://github.com/laminas/laminas-crypt/releases.atom",
+                "source": "https://github.com/laminas/laminas-crypt"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-04-12T14:28:29+00:00"
+        },
+        {
             "name": "laminas/laminas-diactoros",
             "version": "2.17.0",
             "source": {
@@ -2872,6 +3127,73 @@
                 }
             ],
             "time": "2022-09-20T08:29:59+00:00"
+        },
+        {
+            "name": "laminas/laminas-math",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-math.git",
+                "reference": "146d8187ab247ae152e811a6704a953d43537381"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-math/zipball/146d8187ab247ae152e811a6704a953d43537381",
+                "reference": "146d8187ab247ae152e811a6704a953d43537381",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.3 || ~8.0.0 || ~8.1.0"
+            },
+            "conflict": {
+                "zendframework/zend-math": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "phpunit/phpunit": "^9.5.5"
+            },
+            "suggest": {
+                "ext-bcmath": "If using the bcmath functionality",
+                "ext-gmp": "If using the gmp functionality"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Math\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Create cryptographically secure pseudo-random numbers, and manage big integers",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "laminas",
+                "math"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-math/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-math/issues",
+                "rss": "https://github.com/laminas/laminas-math/releases.atom",
+                "source": "https://github.com/laminas/laminas-math"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2021-12-06T02:02:07+00:00"
         },
         {
             "name": "laminas/laminas-mime",
