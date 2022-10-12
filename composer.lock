@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8272d735c83ba441a1a61536b0d64d7e",
+    "content-hash": "117fad3a277fce5b7fc21e9ec6263b9c",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -342,16 +342,16 @@
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "dev-feature/fixtures",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "e8c8fdba838cb0f1f2ad53a93f574ac1da006263"
+                "reference": "7ac1d2c3920aa5b807ffb9abf773c872432cfcbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/e8c8fdba838cb0f1f2ad53a93f574ac1da006263",
-                "reference": "e8c8fdba838cb0f1f2ad53a93f574ac1da006263",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/7ac1d2c3920aa5b807ffb9abf773c872432cfcbb",
+                "reference": "7ac1d2c3920aa5b807ffb9abf773c872432cfcbb",
                 "shasum": ""
             },
             "require": {
@@ -388,9 +388,9 @@
             "description": "Doctrine functionality for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-doctrine/issues",
-                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/feature/fixtures"
+                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.6.0"
             },
-            "time": "2022-10-11T19:13:35+00:00"
+            "time": "2022-10-12T21:10:43+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -9966,17 +9966,9 @@
             "time": "2021-07-28T10:34:58+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "delboy1978uk/bone-doctrine",
-            "version": "dev-feature/fixtures",
-            "alias": "1.5.3",
-            "alias_normalized": "1.5.3.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "delboy1978uk/bone-doctrine": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
