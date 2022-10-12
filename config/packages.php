@@ -4,7 +4,7 @@ use Bone\App\AppPackage;
 use Bone\BoneDoctrine\BoneDoctrinePackage;
 use Bone\Mail\MailPackage;
 use Bone\OAuth2\BoneOAuth2Package;
-use Bone\OpenApi\OpenApi\OpenApiPackage;
+use Bone\OpenApi\OpenApiPackage;
 use Bone\Paseto\PasetoPackage;
 use Del\Person\PersonPackage;
 use Bone\User\BoneUserPackage;
