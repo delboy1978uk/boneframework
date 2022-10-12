@@ -46,7 +46,8 @@
   "autoload": {
     "psr-4": {
       "Bone\\App\\": "src/App/",
-      "BoneMvcTest\\": "tests/unit/"
+      "BoneMvcTest\\": "tests/unit/",
+      "Fixtures\\": "data/fixtures/"
     },
     "classmap": ["data/proxies/"]
   }
