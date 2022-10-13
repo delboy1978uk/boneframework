@@ -1147,16 +1147,16 @@
         },
         {
             "name": "delboy1978uk/form",
-            "version": "v2.4.2",
+            "version": "v2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/form.git",
-                "reference": "5dd1639cc31deedac67b68af211da60d2afe1b20"
+                "reference": "cd9e638e2c81bed6a8787791b964099a6666cadf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/form/zipball/5dd1639cc31deedac67b68af211da60d2afe1b20",
-                "reference": "5dd1639cc31deedac67b68af211da60d2afe1b20",
+                "url": "https://api.github.com/repos/delboy1978uk/form/zipball/cd9e638e2c81bed6a8787791b964099a6666cadf",
+                "reference": "cd9e638e2c81bed6a8787791b964099a6666cadf",
                 "shasum": ""
             },
             "require": {
@@ -1195,9 +1195,9 @@
             "description": "Super Easy HTML form generation.",
             "support": {
                 "issues": "https://github.com/delboy1978uk/form/issues",
-                "source": "https://github.com/delboy1978uk/form/tree/v2.4.2"
+                "source": "https://github.com/delboy1978uk/form/tree/v2.4.3"
             },
-            "time": "2022-10-13T07:13:34+00:00"
+            "time": "2022-10-13T07:33:41+00:00"
         },
         {
             "name": "delboy1978uk/icon",
