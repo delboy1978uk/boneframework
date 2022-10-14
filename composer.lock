@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "117fad3a277fce5b7fc21e9ec6263b9c",
+    "content-hash": "ad9c4159954c7515bb7a6f0b3a42a7b6",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -934,6 +934,46 @@
                 "source": "https://github.com/delboy1978uk/bone-user/tree/v2.2.2"
             },
             "time": "2022-04-03T20:38:00+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-user-api",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-user-api.git",
+                "reference": "560b189360a649960c4a34b0a9d0c8dc4cf57c73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user-api/zipball/560b189360a649960c4a34b0a9d0c8dc4cf57c73",
+                "reference": "560b189360a649960c4a34b0a9d0c8dc4cf57c73",
+                "shasum": ""
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\BoneUserApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "BoneUserApi package for Bone Framework",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/bone-user-api/issues",
+                "source": "https://github.com/delboy1978uk/bone-user-api/tree/v1.0.0"
+            },
+            "time": "2020-11-03T17:30:30+00:00"
         },
         {
             "name": "delboy1978uk/bone-view",

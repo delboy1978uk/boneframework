@@ -2,6 +2,7 @@
 
 use Bone\App\AppPackage;
 use Bone\BoneDoctrine\BoneDoctrinePackage;
+use Bone\BoneUserApi\BoneUserApiPackage;
 use Bone\Mail\MailPackage;
 use Bone\OAuth2\BoneOAuth2Package;
 use Bone\OpenApi\OpenApiPackage;
@@ -20,6 +21,7 @@ return [
         BoneUserPackage::class,
         BoneOAuth2Package::class,
         OpenApiPackage::class,
+        BoneUserApiPackage::class,
         AppPackage::class,
     ],
 ];
