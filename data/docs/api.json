@@ -1,57 +1,75 @@
 {
     "openapi": "3.0.0",
+    "info": {
+        "title": "Bone Framework API",
+        "description": "This be a swashbucklin' API.",
+        "version": "1.0.0"
+    },
     "paths": {
         "/oauth2/authorize": {
             "get": {
                 "tags": [
                     "auth"
                 ],
-                "operationId": "Bone\\OAuth2\\Controller\\AuthServerController::authorizeAction",
+                "summary": "Authorize a client via OAuth2",
+                "operationId": "fb3eee73f2845b9b521ddcd4c949df96",
                 "parameters": [
                     {
                         "name": "response_type",
                         "in": "query",
                         "description": "the type of response",
                         "required": true,
-                        "type": "string",
-                        "default": "code"
+                        "schema": {
+                            "type": "string",
+                            "default": "code"
+                        }
                     },
                     {
                         "name": "client_id",
                         "in": "query",
                         "description": "the client identifier",
                         "required": true,
-                        "type": "string",
-                        "default": "testclient"
+                        "schema": {
+                            "type": "string"
+                        }
                     },
                     {
                         "name": "client_secret",
                         "in": "query",
                         "description": "the client identifier",
                         "required": false,
-                        "type": "string",
-                        "default": "testclient"
+                        "schema": {
+                            "type": "string",
+                            "default": "testclient"
+                        }
                     },
                     {
                         "name": "redirect_uri",
                         "in": "query",
                         "description": "where to send the response",
                         "required": false,
-                        "type": "string"
+                        "schema": {
+                            "type": "string"
+                        }
                     },
                     {
                         "name": "state",
                         "in": "query",
                         "description": "with a CSRF token. This parameter is optional but highly recommended.",
                         "required": false,
-                        "type": "string"
+                        "schema": {
+                            "type": "string"
+                        }
                     },
                     {
                         "name": "scope",
                         "in": "query",
                         "description": "allowed scopes, space separated",
                         "required": false,
-                        "type": "string"
+                        "schema": {
+                            "type": "string",
+                            "default": "basic"
+                        }
                     }
                 ],
                 "responses": {
@@ -66,61 +84,298 @@
                 "tags": [
                     "auth"
                 ],
+                "summary": "Fetch an OAuth2 access token",
                 "operationId": "accessToken",
-                "parameters": [
-                    {
-                        "name": "grant_type",
-                        "in": "formData",
-                        "description": "the type of grant",
-                        "required": true,
-                        "type": "string",
-                        "default": "client_credentials"
-                    },
-                    {
-                        "name": "client_id",
-                        "in": "formData",
-                        "description": "the client id",
-                        "required": true,
-                        "type": "string",
-                        "default": "ceac682a9a4808bf910ad49134230e0e"
-                    },
-                    {
-                        "name": "client_secret",
-                        "in": "formData",
-                        "description": "the client secret",
-                        "required": false,
-                        "type": "string",
-                        "default": "JDJ5JDEwJGNEd1J1VEdOY0YxS3QvL0pWQzMxay52"
-                    },
-                    {
-                        "name": "scope",
-                        "in": "formData",
-                        "description": "the scopes you wish to use",
-                        "required": false,
-                        "type": "string",
-                        "default": "admin"
-                    },
-                    {
-                        "name": "redirect_uri",
-                        "in": "formData",
-                        "description": "with the same redirect URI the user was redirect back to",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "code",
-                        "in": "formData",
-                        "description": "with the authorization code from the query string",
-                        "required": false,
-                        "type": "string"
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "required": [
+                                    "grant_type",
+                                    "client_id"
+                                ],
+                                "properties": {
+                                    "grant_type": {
+                                        "description": "the type of grant",
+                                        "type": "string",
+                                        "default": "client_credentials"
+                                    },
+                                    "client_id": {
+                                        "description": "the client id",
+                                        "type": "string"
+                                    },
+                                    "client_secret": {
+                                        "description": "the client secret",
+                                        "type": "string"
+                                    },
+                                    "scope": {
+                                        "description": "the scopes you wish to use",
+                                        "type": "string"
+                                    },
+                                    "redirect_uri": {
+                                        "description": "the redirect url for post authorization",
+                                        "type": "string"
+                                    },
+                                    "code": {
+                                        "description": "with the authorization code from the query string",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
                     }
-                ],
+                },
                 "responses": {
                     "200": {
                         "description": "An access token"
                     }
                 }
             }
+        },
+        "/oauth2/register": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Register an OAuth2 Client",
+                "operationId": "registerClient",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "redirect_uris",
+                                    "client_id",
+                                    "token_endpoint_auth_method",
+                                    "logo_uri"
+                                ],
+                                "properties": {
+                                    "redirect_uris": {
+                                        "description": "an array of redirect uri's (only one supported at present)",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "example": "http://fake/callback"
+                                        }
+                                    },
+                                    "client_name": {
+                                        "description": "the client name",
+                                        "type": "string",
+                                        "example": "Test Client"
+                                    },
+                                    "token_endpoint_auth_method": {
+                                        "description": "none, client_secret_post, or client_secret_basic",
+                                        "type": "string",
+                                        "example": "client_secret_basic"
+                                    },
+                                    "logo_uri": {
+                                        "description": "the application's logo",
+                                        "type": "string",
+                                        "example": "https://fake/image.jpg"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An access token"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "register"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/ping": {
+            "get": {
+                "tags": [
+                    "status"
+                ],
+                "summary": "Check basic connectivity. Returns a timestamp.",
+                "operationId": "6bb6ff7aad3ae50c581a7a0d16f1d4fb",
+                "responses": {
+                    "200": {
+                        "description": "Sends a response with the time"
+                    }
+                }
+            }
+        },
+        "/api/user/profile": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "User profile data.",
+                "operationId": "1bb6adbd53cde98e48acc74b92a404f5",
+                "responses": {
+                    "200": {
+                        "description": "User profile data"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "basic"
+                        ]
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Update user profile data.",
+                "operationId": "b5625c22f653aa2d9de337a58179364d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password",
+                                    "confirm"
+                                ],
+                                "properties": {
+                                    "firstname": {
+                                        "description": "The user's firstname",
+                                        "type": "string",
+                                        "example": "Captain"
+                                    },
+                                    "middlename": {
+                                        "description": "The users middlename",
+                                        "type": "string",
+                                        "example": "Jack"
+                                    },
+                                    "lastname": {
+                                        "description": "The user's surname",
+                                        "type": "string",
+                                        "example": "Sparrow"
+                                    },
+                                    "aka": {
+                                        "description": "The user's nickname",
+                                        "type": "string",
+                                        "example": "outlaw pirate"
+                                    },
+                                    "dob": {
+                                        "description": "The user's date of birth",
+                                        "type": "date",
+                                        "example": "2014-09-18"
+                                    },
+                                    "birthplace": {
+                                        "description": "The user's birthplace",
+                                        "type": "string",
+                                        "example": "Jamaica"
+                                    },
+                                    "country": {
+                                        "description": "The user's country",
+                                        "type": "string",
+                                        "example": "JM"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success message"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "basic"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/api/user/register": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Register a new user.",
+                "operationId": "8f845afffc5c6bea87fb7f4bc639985c",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password",
+                                    "confirm"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "description": "The new user's email",
+                                        "type": "string",
+                                        "example": "fake@email.com"
+                                    },
+                                    "password": {
+                                        "description": "The users chosen password",
+                                        "type": "string",
+                                        "example": "xxxxxxxxxx"
+                                    },
+                                    "confirm": {
+                                        "description": "Password confirmation",
+                                        "type": "string",
+                                        "example": "xxxxxxxxxx"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Email sent"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "register"
+                        ]
+                    }
+                ]
+            }
         }
+    },
+    "components": {
+        "securitySchemes": {
+            "bone-oauth2": {
+                "type": "oauth2",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://awesome.scot/oauth2/authorize",
+                        "scopes": {
+                            "basic": "Access public API data",
+                            "register-client": "Create and rewgistger clients"
+                        }
+                    }
+                }
+            },
+            "api_key": {
+                "type": "apiKey",
+                "description": "Class IndexController\nIf you need to create a constructor, edit the package class to set it  up automatically via dependency injection\n\nThe below annotations are for use with delboy1978uk/bone-open-api, you can remove them if you wont be using it",
+                "name": "api_key",
+                "in": "header"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "By delboy1978uk",
+        "url": "https://github.com/delboy1978uk/boneframework"
     }
 }
