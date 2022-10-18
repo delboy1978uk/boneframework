@@ -937,16 +937,16 @@
         },
         {
             "name": "delboy1978uk/bone-user-api",
-            "version": "v1.0.0",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-user-api.git",
-                "reference": "560b189360a649960c4a34b0a9d0c8dc4cf57c73"
+                "reference": "3aec5d1abbcaf4a4bfbc8a7288a3d08c7f013d24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-user-api/zipball/560b189360a649960c4a34b0a9d0c8dc4cf57c73",
-                "reference": "560b189360a649960c4a34b0a9d0c8dc4cf57c73",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user-api/zipball/3aec5d1abbcaf4a4bfbc8a7288a3d08c7f013d24",
+                "reference": "3aec5d1abbcaf4a4bfbc8a7288a3d08c7f013d24",
                 "shasum": ""
             },
             "require-dev": {
@@ -971,9 +971,9 @@
             "description": "BoneUserApi package for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-user-api/issues",
-                "source": "https://github.com/delboy1978uk/bone-user-api/tree/v1.0.0"
+                "source": "https://github.com/delboy1978uk/bone-user-api/tree/v1.0.5"
             },
-            "time": "2020-11-03T17:30:30+00:00"
+            "time": "2022-10-18T16:00:22+00:00"
         },
         {
             "name": "delboy1978uk/bone-view",
