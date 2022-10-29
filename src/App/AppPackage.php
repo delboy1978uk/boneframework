@@ -4,6 +4,7 @@ namespace Bone\App;
 
 use Bone\App\Controller\IndexController;
 use Bone\Controller\Init;
+use Bone\OAuth2\Http\Middleware\ResourceServerMiddleware;
 use Bone\Router\Router;
 use Bone\Router\RouterConfigInterface;
 use Barnacle\RegistrationInterface;
@@ -53,8 +54,9 @@ class AppPackage implements RegistrationInterface, RouterConfigInterface, ViewRe
      */
     public function addRoutes(Container $c, Router $router): Router
     {
+        $auth = $c->get(ResourceServerMiddleware::class);
         $router->map('GET', '/', [IndexController::class, 'index']);
-        $router->map('GET', '/learn', [IndexController::class, 'learn']);
+        $router->map('GET', '/listings', [IndexController::class, 'listings'])->middleware($auth);
 
         return $router;
     }

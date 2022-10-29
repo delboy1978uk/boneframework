@@ -11,12 +11,6 @@ class LoadScopes implements FixtureInterface
     public function load(ObjectManager $manager): void
     {
         $entity = new Scope();
-        $entity->setIdentifier('register');
-        $entity->setDescription('register a client via the api');
-        $manager->persist($entity);
-        $manager->flush();
-
-        $entity = new Scope();
         $entity->setIdentifier('basic');
         $entity->setDescription('access api data');
         $manager->persist($entity);

@@ -4,6 +4,7 @@ namespace Bone\App\Controller;
 
 use Bone\Controller\Controller;
 use Bone\Http\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -48,7 +49,7 @@ class IndexController extends Controller
      * @param array $args
      * @return ResponseInterface
      */
-    public function index(ServerRequestInterface $request) : ResponseInterface
+    public function index(ServerRequestInterface $request): ResponseInterface
     {
         $body = $this->view->render('app::index');
 
@@ -60,10 +61,140 @@ class IndexController extends Controller
      * @param array $args
      * @return ResponseInterface
      */
-    public function learn(ServerRequestInterface $request) : ResponseInterface
+    public function listings(ServerRequestInterface $request): ResponseInterface
     {
-        $body = $this->view->render('app::learn');
+        $body = [
+            [
+                'id' => '201',
+                'title' => 'Red jacket',
+                'images' => [
+                    '0' => [
+                        'url' => 'https://raw.githubusercontent.com/delboy1978uk/react-native-course/274f3d22b0750009b09720084d86818e326fccb7/app/assets/jacket.jpg?token=GHSAT0AAAAAABVTXNRPXTPAHKGLTTI6GKRWY2W2ESA',
+                    ],
+                ],
+                'price' => '100',
+                'categoryId' => '5',
+                'userId' => '1',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '3',
+                'title' => 'Gray couch in a great condition',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'couch2',
+                    ],
+                ],
+                'categoryId' => '1',
+                'price' => '1200',
+                'userId' => '2',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '1',
+                'title' => 'Room & Board couch (great condition) - delivery included',
+                'description' => 'I\'m selling my furniture at a discount price. Pick up at Venice. DM me asap.',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'couch1',
+                    ],
+                    '1' => [
+                        'fileName' => 'couch2',
+                    ],
+                    '2' => [
+                        'fileName' => 'couch3',
+                    ],
+                ],
+                'price' => '1000',
+                'categoryId' => '1',
+                'userId' => '1',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '2',
+                'title' => 'Designer wear shoes',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'shoes1',
+                    ],
+                ],
+                'categoryId' => '5',
+                'price' => '100',
+                'userId' => '2',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '102',
+                'title' => 'Canon 400D (Great Condition)',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'camera1',
+                    ],
+                ],
+                'price' => '300',
+                'categoryId' => '3',
+                'userId' => '1',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '101',
+                'title' => 'Nikon D850 for sale',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'camera2',
+                    ],
+                ],
+                'price' => '350',
+                'categoryId' => '3',
+                'userId' => '1',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '4',
+                'title' => 'Sectional couch - Delivery available',
+                'description' => 'No rips no stains no odors',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'couch3',
+                    ],
+                ],
+                'categoryId' => '1',
+                'price' => '950',
+                'userId' => '2',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ], [
+                'id' => '6',
+                'title' => 'Brown leather shoes',
+                'images' => [
+                    '0' => [
+                        'fileName' => 'shoes2',
+                    ],
+                ],
+                'categoryId' => '5',
+                'price' => '50',
+                'userId' => '2',
+                'location' => [
+                    'latitude' => '37.78825',
+                    'longitude' => '-122.4324',
+                ],
+            ],
+        ];
 
-        return new HtmlResponse($body);
+        return new JsonResponse($body);
     }
 }
