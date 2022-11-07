@@ -69,7 +69,7 @@ class IndexController extends Controller
                 'title' => 'Red jacket',
                 'images' => [
                     '0' => [
-                        'url' => 'https://raw.githubusercontent.com/delboy1978uk/react-native-course/274f3d22b0750009b09720084d86818e326fccb7/app/assets/jacket.jpg?token=GHSAT0AAAAAABVTXNRPXTPAHKGLTTI6GKRWY2W2ESA',
+                        'url' => 'https://github.com/delboy1978uk/react-native-course/blob/274f3d22b0750009b09720084d86818e326fccb7/app/assets/couch.jpg?raw=true',
                     ],
                 ],
                 'price' => '100',

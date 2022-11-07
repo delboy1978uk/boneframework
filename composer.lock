@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad9c4159954c7515bb7a6f0b3a42a7b6",
+    "content-hash": "12939617b22fd56c10c801dd5edb4ecd",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -7319,6 +7319,52 @@
             "time": "2022-01-31T19:25:15+00:00"
         },
         {
+            "name": "delboy1978uk/bone-vendor-dev",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-vendor-dev.git",
+                "reference": "1fd4bf52d748b75901a04fdb372949b141557a63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-vendor-dev/zipball/1fd4bf52d748b75901a04fdb372949b141557a63",
+                "reference": "1fd4bf52d748b75901a04fdb372949b141557a63",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": "^5.2"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "bin": [
+                "bin/vendor-tool"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\VendorDev\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Stephen McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "VendorDev package for Bone Framework",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/bone-vendor-dev/issues",
+                "source": "https://github.com/delboy1978uk/bone-vendor-dev/tree/v1.0.4"
+            },
+            "time": "2020-12-19T14:42:59+00:00"
+        },
+        {
             "name": "guzzlehttp/psr7",
             "version": "2.4.1",
             "source": {
@@ -9954,6 +10000,68 @@
                 }
             ],
             "time": "2022-02-25T11:15:52+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v5.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "6e75fe6874cbc7e4773d049616ab450eff537bf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/6e75fe6874cbc7e4773d049616ab450eff537bf1",
+                "reference": "6e75fe6874cbc7e4773d049616ab450eff537bf1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v5.4.11"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-06-27T16:58:25+00:00"
         },
         {
             "name": "theseer/tokenizer",

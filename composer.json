@@ -22,7 +22,7 @@
   "homepage": "https://github.com/delboy1978uk/boneframework",
   "license": "MIT",
   "require": {
-    "php": ">=7.3",
+    "php": ">=7.4",
     "ext-fileinfo": "*",
     "ext-intl": "*",
     "ext-json": "*",
@@ -42,7 +42,8 @@
     "roave/security-advisories": "dev-latest",
     "codeception/codeception": "^4.0",
     "squizlabs/php_codesniffer": "^3.4",
-    "codeception/module-asserts": "^1.1"
+    "codeception/module-asserts": "^1.1",
+    "delboy1978uk/bone-vendor-dev": "^1.0"
   },
   "autoload": {
     "psr-4": {
