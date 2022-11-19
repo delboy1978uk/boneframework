@@ -2,7 +2,7 @@
 
 return [
     'bone-native' => [
-        'deepLink' => 'exp://192.168.0.204:19000/--',
+        'deepLink' => 'exp://10.10.1.60:19000/--/',
     ],
 ];
 

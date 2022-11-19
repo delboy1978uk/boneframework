@@ -9,7 +9,7 @@ return [
     'bone-user' => [
 //        'loginRedirectRoute' => '/admin',
         'enableRegistration' => true,
-        'requireProfile' => true,
+        'requireProfile' => false,
         'rememberMeCookie' => true,
     ],
 ];

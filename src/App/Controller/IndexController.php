@@ -66,13 +66,13 @@ class IndexController extends Controller
         $body = [
             [
                 'id' => '201',
-                'title' => 'Red jacket',
+                'title' => 'The Black Pig',
                 'images' => [
                     '0' => [
-                        'url' => 'https://github.com/delboy1978uk/react-native-course/blob/274f3d22b0750009b09720084d86818e326fccb7/app/assets/couch.jpg?raw=true',
+                        'url' => 'https://img.freepik.com/premium-photo/pirate-ship-stormy-sea_667573-28.jpg',
                     ],
                 ],
-                'price' => '100',
+                'price' => '15000',
                 'categoryId' => '5',
                 'userId' => '1',
                 'location' => [
@@ -81,14 +81,14 @@ class IndexController extends Controller
                 ],
             ], [
                 'id' => '3',
-                'title' => 'Gray couch in a great condition',
+                'title' => 'Bone Framework Flag',
                 'images' => [
                     '0' => [
-                        'fileName' => 'couch2',
+                        'url' => 'https://www.theflagshop.co.uk/pub/media/catalog/product/cache/1aa45e34d8351bef7860daeb50e7952c/s/k/skull-bandana-flag-std_1.jpg',
                     ],
                 ],
                 'categoryId' => '1',
-                'price' => '1200',
+                'price' => '15',
                 'userId' => '2',
                 'location' => [
                     'latitude' => '37.78825',
@@ -96,17 +96,11 @@ class IndexController extends Controller
                 ],
             ], [
                 'id' => '1',
-                'title' => 'Room & Board couch (great condition) - delivery included',
+                'title' => 'Retro computer game',
                 'description' => 'I\'m selling my furniture at a discount price. Pick up at Venice. DM me asap.',
                 'images' => [
                     '0' => [
-                        'fileName' => 'couch1',
-                    ],
-                    '1' => [
-                        'fileName' => 'couch2',
-                    ],
-                    '2' => [
-                        'fileName' => 'couch3',
+                        'url' => 'https://static.wikia.nocookie.net/monkeyisland/images/1/16/Stan_vessels.gif/revision/latest?cb=20120508160429',
                     ],
                 ],
                 'price' => '1000',
@@ -118,10 +112,10 @@ class IndexController extends Controller
                 ],
             ], [
                 'id' => '2',
-                'title' => 'Designer wear shoes',
+                'title' => 'Box office franchise',
                 'images' => [
                     '0' => [
-                        'fileName' => 'shoes1',
+                        'url' => 'https://www.slashfilm.com/img/gallery/pirates-of-the-caribbeans-writer-originally-had-a-very-different-star-in-mind-for-jack-sparrow/intro-1659627032.webp',
                     ],
                 ],
                 'categoryId' => '5',
