@@ -10,6 +10,6 @@ return [
 //        'loginRedirectRoute' => '/admin',
         'enableRegistration' => true,
         'requireProfile' => false,
-        'rememberMeCookie' => true,
+        'rememberMeCookie' => false,
     ],
 ];

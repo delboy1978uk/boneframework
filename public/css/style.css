@@ -2,9 +2,6 @@ html {
   background-color: #f8f9fa;
   height: 100%;
 }
-:root {
-  --jumbotron-padding-y: 3rem;
-}
 
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
@@ -114,4 +111,8 @@ footer div p a:visited, footer div p a {
 a.nav-link.dropdown-toggle.avatar {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.login-logo > img {
+  height: 90px;
 }
