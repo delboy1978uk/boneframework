@@ -320,14 +320,99 @@
                                         "description": "The new user's email",
                                         "type": "string",
                                         "example": "fake@email.com"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Email sent"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "register"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/api/user/validate-email-token": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Validates an email token.",
+                "operationId": "99c674e2f710bf28328d2c5afef13f4f",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "token"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "description": "The email of the user.",
+                                        "type": "string",
+                                        "example": "fake@email.com"
                                     },
-                                    "password": {
-                                        "description": "The users chosen password",
+                                    "token": {
+                                        "description": "The security token from the email.",
+                                        "type": "string",
+                                        "example": "xxxxxxxxxx"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "{ok: true}}"
+                    }
+                }
+            }
+        },
+        "/api/user/activate": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Activate a new user.",
+                "operationId": "09eb9ce9b2712891551e1bbb302cb057",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "token"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "description": "The account to activate",
+                                        "type": "string",
+                                        "example": "fake@email.com"
+                                    },
+                                    "token": {
+                                        "description": "The security token from the email",
                                         "type": "string",
                                         "example": "xxxxxxxxxx"
                                     },
-                                    "confirm": {
-                                        "description": "Password confirmation",
+                                    "clientId": {
+                                        "description": "The clientId of the app",
+                                        "type": "string",
+                                        "example": "xxxxxxxxxx"
+                                    },
+                                    "password": {
+                                        "description": "The new users password",
                                         "type": "string",
                                         "example": "xxxxxxxxxx"
                                     }
@@ -349,6 +434,40 @@
                         ]
                     }
                 ]
+            }
+        },
+        "/api/user/resend-activation-email": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Resend an activation email.",
+                "operationId": "37577ba04300f64ec0e7d12fa9c1d9da",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "token"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "description": "The account to resend the email to",
+                                        "type": "string",
+                                        "example": "fake@email.com"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "{ok: true}"
+                    }
+                }
             }
         }
     },
