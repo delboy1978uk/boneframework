@@ -4,7 +4,7 @@ return [
     'oauth2' => [
         'clientCredentialsTokenTTL' => 'PT1H', // 1hour
         'authCodeTTL' => 'PT1M', // 1 minute
-        'accessTokenTTL' => 'PT5M', // 5 minutes
+        'accessTokenTTL' => 'P1M', // 5 minutes
         'refreshTokenTTL' => 'P1M', // 1 month
         'privateKeyPath' => __DIR__ . '/../data/keys/private.key',
         'publicKeyPath' => __DIR__ . '/../data/keys/public.key',

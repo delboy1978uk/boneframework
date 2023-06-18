@@ -1335,16 +1335,16 @@
         },
         {
             "name": "delboy1978uk/person",
-            "version": "v6.5.3",
+            "version": "v6.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/person.git",
-                "reference": "213042def0d4a1093b8ab8f51b8c24fdcdc054da"
+                "reference": "83686b26e2717e601b632087034fb1dfdda9937c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/person/zipball/213042def0d4a1093b8ab8f51b8c24fdcdc054da",
-                "reference": "213042def0d4a1093b8ab8f51b8c24fdcdc054da",
+                "url": "https://api.github.com/repos/delboy1978uk/person/zipball/83686b26e2717e601b632087034fb1dfdda9937c",
+                "reference": "83686b26e2717e601b632087034fb1dfdda9937c",
                 "shasum": ""
             },
             "require": {
@@ -1376,9 +1376,9 @@
             "description": "A persistable person entity, repository, and service.",
             "support": {
                 "issues": "https://github.com/delboy1978uk/person/issues",
-                "source": "https://github.com/delboy1978uk/person/tree/v6.5.3"
+                "source": "https://github.com/delboy1978uk/person/tree/v6.5.4"
             },
-            "time": "2023-06-18T14:32:01+00:00"
+            "time": "2023-06-18T15:36:15+00:00"
         },
         {
             "name": "delboy1978uk/router",
