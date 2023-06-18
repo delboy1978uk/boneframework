@@ -948,16 +948,16 @@
         },
         {
             "name": "delboy1978uk/bone-user-api",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-user-api.git",
-                "reference": "b8c7e9deaa7e1e05e18cd3d7274f7abf0d0584fa"
+                "reference": "bc495fa56134ce80c7cce5f847406b187df22692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-user-api/zipball/b8c7e9deaa7e1e05e18cd3d7274f7abf0d0584fa",
-                "reference": "b8c7e9deaa7e1e05e18cd3d7274f7abf0d0584fa",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-user-api/zipball/bc495fa56134ce80c7cce5f847406b187df22692",
+                "reference": "bc495fa56134ce80c7cce5f847406b187df22692",
                 "shasum": ""
             },
             "require-dev": {
@@ -982,9 +982,9 @@
             "description": "BoneUserApi package for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-user-api/issues",
-                "source": "https://github.com/delboy1978uk/bone-user-api/tree/v1.6.0"
+                "source": "https://github.com/delboy1978uk/bone-user-api/tree/v1.6.1"
             },
-            "time": "2023-06-18T14:14:57+00:00"
+            "time": "2023-06-18T16:59:16+00:00"
         },
         {
             "name": "delboy1978uk/bone-view",
@@ -1335,16 +1335,16 @@
         },
         {
             "name": "delboy1978uk/person",
-            "version": "v6.5.4",
+            "version": "v6.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/person.git",
-                "reference": "83686b26e2717e601b632087034fb1dfdda9937c"
+                "reference": "469aee6f3e38a6930f6d674a8d64fe10aa12eb3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/person/zipball/83686b26e2717e601b632087034fb1dfdda9937c",
-                "reference": "83686b26e2717e601b632087034fb1dfdda9937c",
+                "url": "https://api.github.com/repos/delboy1978uk/person/zipball/469aee6f3e38a6930f6d674a8d64fe10aa12eb3a",
+                "reference": "469aee6f3e38a6930f6d674a8d64fe10aa12eb3a",
                 "shasum": ""
             },
             "require": {
@@ -1376,9 +1376,9 @@
             "description": "A persistable person entity, repository, and service.",
             "support": {
                 "issues": "https://github.com/delboy1978uk/person/issues",
-                "source": "https://github.com/delboy1978uk/person/tree/v6.5.4"
+                "source": "https://github.com/delboy1978uk/person/tree/v6.5.5"
             },
-            "time": "2023-06-18T15:36:15+00:00"
+            "time": "2023-06-18T16:00:00+00:00"
         },
         {
             "name": "delboy1978uk/router",
