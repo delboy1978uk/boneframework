@@ -344,16 +344,16 @@
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "7ac1d2c3920aa5b807ffb9abf773c872432cfcbb"
+                "reference": "b222b27ecf2c8032e290f904cce1f3d043043f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/7ac1d2c3920aa5b807ffb9abf773c872432cfcbb",
-                "reference": "7ac1d2c3920aa5b807ffb9abf773c872432cfcbb",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/b222b27ecf2c8032e290f904cce1f3d043043f82",
+                "reference": "b222b27ecf2c8032e290f904cce1f3d043043f82",
                 "shasum": ""
             },
             "require": {
@@ -390,9 +390,9 @@
             "description": "Doctrine functionality for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-doctrine/issues",
-                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.6.0"
+                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.7.0"
             },
-            "time": "2022-10-12T21:10:43+00:00"
+            "time": "2023-06-25T14:19:27+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
