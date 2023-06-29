@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86fa855ac0ae64c2b8d0d472de5657a5",
+    "content-hash": "0633bd4355de5a735b3b2e27b75dcc31",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -896,6 +896,50 @@
                 "source": "https://github.com/delboy1978uk/bone-server/tree/v1.2.1"
             },
             "time": "2021-11-20T15:01:49+00:00"
+        },
+        {
+            "name": "delboy1978uk/bone-settings",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delboy1978uk/bone-settings.git",
+                "reference": "f141bfa9cb5f2d9922fee7ea49a1f05147474d5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-settings/zipball/f141bfa9cb5f2d9922fee7ea49a1f05147474d5c",
+                "reference": "f141bfa9cb5f2d9922fee7ea49a1f05147474d5c",
+                "shasum": ""
+            },
+            "require": {
+                "delboy1978uk/bone-oauth2": "^1.5"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.2",
+                "codeception/module-asserts": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bone\\Settings\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek McLean",
+                    "email": "delboy1978uk@gmail.com"
+                }
+            ],
+            "description": "A generic settings entity",
+            "support": {
+                "issues": "https://github.com/delboy1978uk/bone-settings/issues",
+                "source": "https://github.com/delboy1978uk/bone-settings/tree/v1.1.0"
+            },
+            "time": "2023-06-28T20:24:51+00:00"
         },
         {
             "name": "delboy1978uk/bone-user",
