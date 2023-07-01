@@ -345,16 +345,16 @@
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "v1.8.0",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6"
+                "reference": "80a2ad2017c6849813371754419bc4780e6a3f87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6",
-                "reference": "51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/80a2ad2017c6849813371754419bc4780e6a3f87",
+                "reference": "80a2ad2017c6849813371754419bc4780e6a3f87",
                 "shasum": ""
             },
             "require": {
@@ -392,9 +392,9 @@
             "description": "Doctrine functionality for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-doctrine/issues",
-                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.8.0"
+                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.8.1"
             },
-            "time": "2023-06-26T19:53:25+00:00"
+            "time": "2023-07-01T14:23:15+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -899,20 +899,21 @@
         },
         {
             "name": "delboy1978uk/bone-settings",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-settings.git",
-                "reference": "f141bfa9cb5f2d9922fee7ea49a1f05147474d5c"
+                "reference": "06c6b82e1db927987795bf5f794539c4620974f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-settings/zipball/f141bfa9cb5f2d9922fee7ea49a1f05147474d5c",
-                "reference": "f141bfa9cb5f2d9922fee7ea49a1f05147474d5c",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-settings/zipball/06c6b82e1db927987795bf5f794539c4620974f3",
+                "reference": "06c6b82e1db927987795bf5f794539c4620974f3",
                 "shasum": ""
             },
             "require": {
-                "delboy1978uk/bone-oauth2": "^1.5"
+                "delboy1978uk/bone-oauth2": "^1.5",
+                "php": "^8.1"
             },
             "require-dev": {
                 "codeception/codeception": "^4.2",
@@ -937,9 +938,9 @@
             "description": "A generic settings entity",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-settings/issues",
-                "source": "https://github.com/delboy1978uk/bone-settings/tree/v1.1.0"
+                "source": "https://github.com/delboy1978uk/bone-settings/tree/v1.2.0"
             },
-            "time": "2023-06-28T20:24:51+00:00"
+            "time": "2023-07-01T15:36:07+00:00"
         },
         {
             "name": "delboy1978uk/bone-user",
