@@ -345,16 +345,16 @@
         },
         {
             "name": "delboy1978uk/bone-doctrine",
-            "version": "v1.7.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delboy1978uk/bone-doctrine.git",
-                "reference": "ffdccc61360ff5d6278c669cd31efdf7167b6390"
+                "reference": "51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/ffdccc61360ff5d6278c669cd31efdf7167b6390",
-                "reference": "ffdccc61360ff5d6278c669cd31efdf7167b6390",
+                "url": "https://api.github.com/repos/delboy1978uk/bone-doctrine/zipball/51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6",
+                "reference": "51b59e2f1c4ddd0509773c0ef8cefb8e511fdda6",
                 "shasum": ""
             },
             "require": {
@@ -392,9 +392,9 @@
             "description": "Doctrine functionality for Bone Framework",
             "support": {
                 "issues": "https://github.com/delboy1978uk/bone-doctrine/issues",
-                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.7.1"
+                "source": "https://github.com/delboy1978uk/bone-doctrine/tree/v1.8.0"
             },
-            "time": "2023-06-25T15:18:26+00:00"
+            "time": "2023-06-26T19:53:25+00:00"
         },
         {
             "name": "delboy1978uk/bone-firewall",
@@ -5518,16 +5518,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v6.3.0",
+            "version": "v6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "357bf04b1380f71e40b2d6592dbf7f2a948ca6b1"
+                "reference": "52cff7608ef6e38376ac11bd1fbb0a220107f066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/357bf04b1380f71e40b2d6592dbf7f2a948ca6b1",
-                "reference": "357bf04b1380f71e40b2d6592dbf7f2a948ca6b1",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/52cff7608ef6e38376ac11bd1fbb0a220107f066",
+                "reference": "52cff7608ef6e38376ac11bd1fbb0a220107f066",
                 "shasum": ""
             },
             "require": {
@@ -5594,7 +5594,7 @@
                 "psr6"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache/tree/v6.3.0"
+                "source": "https://github.com/symfony/cache/tree/v6.3.1"
             },
             "funding": [
                 {
@@ -5610,7 +5610,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-10T09:21:01+00:00"
+            "time": "2023-06-24T11:51:27+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -8437,17 +8437,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "237f1821ece806de66072813d8cbe5bdbc8f3117"
+                "reference": "885786b30f50e83a88941df2062d68de623599fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/237f1821ece806de66072813d8cbe5bdbc8f3117",
-                "reference": "237f1821ece806de66072813d8cbe5bdbc8f3117",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/885786b30f50e83a88941df2062d68de623599fd",
+                "reference": "885786b30f50e83a88941df2062d68de623599fd",
                 "shasum": ""
             },
             "conflict": {
                 "3f/pygmentize": "<1.2",
-                "admidio/admidio": "<4.2.8",
+                "admidio/admidio": "<4.2.9",
                 "adodb/adodb-php": "<=5.20.20|>=5.21,<=5.21.3",
                 "aheinze/cockpit": "<=2.2.1",
                 "akaunting/akaunting": "<2.1.13",
@@ -8481,7 +8481,7 @@
                 "baserproject/basercms": "<4.7.5",
                 "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
                 "bigfork/silverstripe-form-capture": ">=3,<3.1.1",
-                "billz/raspap-webgui": "<=2.6.6",
+                "billz/raspap-webgui": "<2.8.9",
                 "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
                 "bmarshall511/wordpress_zero_spam": "<5.2.13",
                 "bolt/bolt": "<3.7.2",
@@ -8696,7 +8696,7 @@
                 "marcwillmann/turn": "<0.3.3",
                 "matyhtf/framework": "<3.0.6",
                 "mautic/core": "<4.3|= 2.13.1",
-                "mediawiki/core": ">=1.27,<1.27.6|>=1.29,<1.29.3|>=1.30,<1.30.2|>=1.31,<1.31.9|>=1.32,<1.32.6|>=1.32.99,<1.33.3|>=1.33.99,<1.34.3|>=1.34.99,<1.35",
+                "mediawiki/core": "<=1.39.3",
                 "mediawiki/matomo": "<2.4.3",
                 "melisplatform/melis-asset-manager": "<5.0.1",
                 "melisplatform/melis-cms": "<5.0.1",
@@ -8710,7 +8710,7 @@
                 "modx/revolution": "<= 2.8.3-pl|<2.8",
                 "mojo42/jirafeau": "<4.4",
                 "monolog/monolog": ">=1.8,<1.12",
-                "moodle/moodle": "<4.2-rc.2|= 3.11",
+                "moodle/moodle": "<4.2-rc.2|= 4.2.0|= 3.11",
                 "mustache/mustache": ">=2,<2.14.1",
                 "namshi/jose": "<2.2",
                 "neoan3-apps/template": "<1.1.1",
@@ -8818,7 +8818,7 @@
                 "shopware/core": "<=6.4.20",
                 "shopware/platform": "<=6.4.20",
                 "shopware/production": "<=6.3.5.2",
-                "shopware/shopware": "<=5.7.14",
+                "shopware/shopware": "<=5.7.17",
                 "shopware/storefront": "<=6.4.8.1",
                 "shopxo/shopxo": "<2.2.6",
                 "showdoc/showdoc": "<2.10.4",
@@ -8914,7 +8914,7 @@
                 "thelia/thelia": ">=2.1-beta.1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "thinkcmf/thinkcmf": "<=5.1.7",
-                "thorsten/phpmyfaq": "<3.2-beta",
+                "thorsten/phpmyfaq": "<3.2-beta.2",
                 "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
                 "tinymighty/wiki-seo": "<1.2.2",
                 "titon/framework": ">=0,<9.9.99",
@@ -8960,7 +8960,7 @@
                 "wintercms/winter": "<1.0.475|>=1.1,<1.1.10|>=1.2,<1.2.1",
                 "woocommerce/woocommerce": "<6.6",
                 "wp-cli/wp-cli": "<2.5",
-                "wp-graphql/wp-graphql": "<0.3.5",
+                "wp-graphql/wp-graphql": "<=1.14.5",
                 "wpanel/wpanel4-cms": "<=4.3.1",
                 "wpcloud/wp-stateless": "<3.2",
                 "wwbn/avideo": "<=12.4",
@@ -9045,7 +9045,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-22T20:04:46+00:00"
+            "time": "2023-06-30T21:04:19+00:00"
         },
         {
             "name": "sebastian/cli-parser",
