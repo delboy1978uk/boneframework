@@ -22,7 +22,7 @@
   "homepage": "https://github.com/delboy1978uk/boneframework",
   "license": "MIT",
   "require": {
-    "php": ">=7.3",
+    "php": "^8.0",
     "ext-fileinfo": "*",
     "ext-intl": "*",
     "ext-json": "*",

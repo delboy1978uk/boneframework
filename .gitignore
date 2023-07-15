@@ -2,6 +2,7 @@
 .~lock.*
 .buildpath
 .DS_Store
+.env
 .idea
 .project
 .settings
