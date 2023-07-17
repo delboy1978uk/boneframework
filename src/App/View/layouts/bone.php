@@ -44,7 +44,7 @@ use Del\Icon;
         <div class="container">
             <strong>
                 <a class="navbar-brand js-scroll-trigger" href="/">
-                    <img src="/img/skull_and_crossbones_small.png" alt=""/>&nbsp;
+                    <img src="/img/logo_small.png" alt=""/>&nbsp;
                     Bone Framework
                 </a>
             </strong>

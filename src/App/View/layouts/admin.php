@@ -93,7 +93,7 @@ $image = $person->getImage() ? new Image('data/uploads/' . $person->getImage()) 
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="/user/home" class="brand-link">
-            <img src="/img/skull_and_crossbones.png" alt="AdminLTE Logo" class="brand-image "
+            <img src="/img/logo.png" alt="AdminLTE Logo" class="brand-image "
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Administration</span>
         </a>

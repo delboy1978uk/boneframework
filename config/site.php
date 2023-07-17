@@ -9,7 +9,7 @@ return [
         'serverEmail' => 'noreply@awesome.scot',
         'company' => 'Pirates Inc.',
         'address' => '1 Big Tree, Booty Island',
-        'logo' => '/img/skull_and_crossbones.png',
+        'logo' => '/img/logo.png',
         'emailLogo' => '/img/emails/logo.png',
     ],
 ];

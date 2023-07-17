@@ -15,7 +15,7 @@
 </div>
 <section id="learn-jumbo" class="jumbotron text-center bg-white">
     <div class="container">
-        <img src="/img/skull_and_crossbones.png"/>
+        <img src="/img/logo.png"/>
         <h1 class="jumbotron-heading text-white"><?= $this->t('learn.learn'); ?></h1>
         <p class="lead text-white"><?= $this->t('learn.tagline'); ?></p>
     </div>
