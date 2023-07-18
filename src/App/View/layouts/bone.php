@@ -27,16 +27,19 @@ use Del\Icon;
     <title><?= isset($config) ? $this->e($config->getTitle()) : 'Bone Framework';?></title>
 
     <!-- Bootstrap Core CSS -->
-    <?= Cdn::bootstrapCssLink() ;?>
+<!--    --><?php //= Cdn::bootstrapCssLink() ;?>
     <?= Cdn::delCssLink() ;?>
     <?= Cdn::fontAwesomeCssLink('4.7.1') ;?>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/ >
-    <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css"/ >
+<!--    <link rel="stylesheet" type="text/css" href="/css/style.css"/ >-->
+<!--    <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css"/ >-->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/build/app.css" />
 
     <!--Javascript -->
-    <?= Cdn::jQueryJavascript() ?>
-    <script src="/js/jquery.datetimepicker.js"></script>
+<!--    --><?php //= Cdn::jQueryJavascript() ?>
+<!--    <script src="/js/jquery.datetimepicker.js"></script>-->
+
+    <script src="/build/app.js" type="text/javascript"></script>
 </head>
 <body class="bg-light">
 <section id="nav">
@@ -92,18 +95,7 @@ use Del\Icon;
     </div>
 </footer>
 <!-- Bootstrap core JS-->
-<?= Cdn::bootstrapJavascript() ?>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.tt').tooltip();
-        $('.datepicker').datetimepicker({
-            "format": "d/m/Y",
-            "timepicker": false
-        });
-        $('.datetimepicker').datetimepicker({
-            "format": "d/m/Y H:i",
-        });
-    });
-</script>
+<?php //= Cdn::bootstrapJavascript() ?>
+
 </body>
 </html>
