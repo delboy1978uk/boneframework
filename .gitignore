@@ -8,5 +8,6 @@
 .settings
 *.dev.php
 error_log
+node_modules
 vendor/*
 c3tmp/*

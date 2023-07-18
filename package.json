@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^4.4.0"
+  }
+}
