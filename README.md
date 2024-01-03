@@ -177,7 +177,7 @@ locale and an array of supported locales.
         ], 
     ];
 ```
-To use the translator, you can simply call:To use the translator, you can simply call:
+To use the translator, you can simply call:
 ```php
 <?php
 // from a controller: 
