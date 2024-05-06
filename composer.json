@@ -27,22 +27,21 @@
     "ext-intl": "*",
     "ext-json": "*",
     "ext-pdo": "*",
-    "delboy1978uk/bone": "^3.9",
+    "delboy1978uk/bone": "^3.10",
     "delboy1978uk/cdn": "^2.0",
     "delboy1978uk/image": "^2.1",
-    "delboy1978uk/bone-mail": "^1.1",
-    "delboy1978uk/bone-doctrine": "^1.6.0",
-    "delboy1978uk/bone-paseto": "^1.0",
-    "delboy1978uk/bone-user": "^2.2",
-    "delboy1978uk/bone-oauth2": "^1.5",
-    "delboy1978uk/bone-open-api": "^1.2",
-    "delboy1978uk/bone-user-api": "^1.0",
-    "delboy1978uk/bone-settings": "^1.1"
+    "delboy1978uk/bone-mail": "^1.2",
+    "delboy1978uk/bone-doctrine": "^2.0",
+    "delboy1978uk/bone-paseto": "^1.1",
+    "delboy1978uk/bone-user": "^2.4",
+    "delboy1978uk/bone-oauth2": "^1.6",
+    "delboy1978uk/bone-open-api": "^1.3",
+    "delboy1978uk/bone-user-api": "^1.7",
+    "delboy1978uk/bone-settings": "^1.3"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
-    "delboy1978uk/dev-tools": "^1.0",
-    "delboy1978uk/bone-vendor-dev": "^1.0"
+    "delboy1978uk/dev-tools": "^1.0"
   },
   "autoload": {
     "psr-4": {
