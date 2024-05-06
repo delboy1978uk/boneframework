@@ -42,7 +42,7 @@
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "delboy1978uk/dev-tools": "^1.0",
-    "delboy1978uk/bone-vendor-dev": "^1.0",
+    "delboy1978uk/bone-vendor-dev": "^1.0"
   },
   "autoload": {
     "psr-4": {
