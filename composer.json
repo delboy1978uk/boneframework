@@ -8,6 +8,7 @@
       "role": "developer"
     }
   ],
+  "abandoned": "boneframework/skeleton",
   "keywords": [
     "bone",
     "framework",
